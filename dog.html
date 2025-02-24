@@ -1,0 +1,272 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+    <link
+            rel="stylesheet"
+            as="style"
+            onload="this.rel='stylesheet'"
+            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+    />
+    <title>Mach Lilies Limited</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/twFVkng4/logo-size-invert.jpg"/>
+</head>
+<body>
+<div
+        class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
+        style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'
+>
+    <div class="layout-container flex h-full grow flex-col">
+        <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#293038] px-10 py-3"
+        >
+            <div class="flex items-center gap-4 text-white">
+                <div class="size-4">
+                    <img
+                            src="https://i.ibb.co/twFVkng4/logo-size-invert.jpg"
+                            alt="logo-size-invert-1"
+                    >
+                </div>
+                <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                    Mach Lilies
+                </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+                <!-- Updated navigation links to point to section IDs -->
+                <div class="flex items-center gap-9">
+                    <a class="text-white text-sm font-medium leading-normal" href="#services">Services</a>
+                    <a class="text-white text-sm font-medium leading-normal" href="#portfolio">Portfolio</a>
+                    <a class="text-white text-sm font-medium leading-normal" href="#about">About Us</a>
+                    <a class="text-white text-sm font-medium leading-normal" href="#contact">Contact</a>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                            onclick="window.location.href='mailto:machlilieslimited@gmail.com'"
+                    >
+                        <a href="mailto:machlilieslimited@gmail.com">Book a Consultation</a>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="px-40 flex flex-1 justify-center py-5">
+            <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                <div class="@container">
+                    <div class="@[480px]:p-4">
+                        <div
+                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/328e3c68-786c-4cba-a586-3fa7a64a20af.png");'
+                        >
+                            <div class="flex flex-col gap-2 text-left">
+                                <h1
+                                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                                >
+                                    Welcome to Mach Lilies
+                                </h1>
+                                <h2
+                                        class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                                >
+                                    Your trusted tech consulting partner.
+                                </h2>
+                            </div>
+                            <button
+                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                            >
+                                <a href="mailto:machlilieslimited@gmail.com">Book a Consultation</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Section -->
+                <div id="services" class="flex flex-col gap-10 px-4 py-10 @container">
+                    <div class="flex flex-col gap-4">
+                        <h1
+                                class="text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+                        >
+                            Our Services
+                        </h1>
+                        <p class="text-white text-base font-normal leading-normal max-w-[720px]">
+                            We offer a wide range of tech consulting services tailored to your needs.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#3c4753] bg-[#1c2126] p-4 flex-col">
+                            <div class="text-white" data-icon="FileCode" data-size="24px" data-weight="regular">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24px"
+                                        height="24px"
+                                        fill="currentColor"
+                                        viewBox="0 0 256 256"
+                                >
+                                    <path
+                                            d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Zm40,136V96H152a8,8,0,0,1-8-8V40H56V216H200Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-white text-base font-bold leading-tight">Software Development</h2>
+                                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
+                                    Custom software solutions for your business.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#3c4753] bg-[#1c2126] p-4 flex-col">
+                            <div class="text-white" data-icon="Cloud" data-size="24px" data-weight="regular">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24px"
+                                        height="24px"
+                                        fill="currentColor"
+                                        viewBox="0 0 256 256"
+                                >
+                                    <path
+                                            d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-white text-base font-bold leading-tight">Cloud Solutions</h2>
+                                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
+                                    Efficient and cost-effective cloud solutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#3c4753] bg-[#1c2126] p-4 flex-col">
+                            <div class="text-white" data-icon="Info" data-size="24px" data-weight="regular">
+                                <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24px"
+                                        height="24px"
+                                        fill="currentColor"
+                                        viewBox="0 0 256 256"
+                                >
+                                    <path
+                                            d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-white text-base font-bold leading-tight">
+                                    Artificial Intelligence & ML
+                                </h2>
+                                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
+                                    AI / ML custom LLM development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us Section -->
+                <div id="about" class="flex flex-col gap-10 px-4 py-10 @container">
+                    <div class="flex flex-col gap-4">
+                        <h1
+                                class="text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+                        >
+                            About Us
+                        </h1>
+                        <p class="text-white text-base font-normal leading-normal max-w-[720px]">
+                            Mach Lilies is a forward-thinking tech consulting firm dedicated to helping businesses
+                            thrive in today’s digital landscape. We specialize in crafting custom software solutions,
+                            designing efficient and secure cloud strategies, and turning complex data into clear,
+                            actionable insights. Our passionate team of experts works closely with clients to
+                            understand their unique goals, enabling us to deliver tailored, scalable solutions that
+                            drive real results. Above all, we believe in the power of innovation and collaboration to
+                            propel businesses toward long-term success.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Our Portfolio Section -->
+                <div id="portfolio" class="flex flex-col gap-10 px-4 py-10 @container">
+                    <div class="flex flex-col gap-4">
+                        <h1
+                                class="text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+                        >
+                            Our Portfolio
+                        </h1>
+                        <p class="text-white text-base font-normal leading-normal max-w-[720px]">
+                            Check out our past projects and client testimonials.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div
+                                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                    style='background-image: url("https://cdn.usegalileo.ai/sdxl10/7bf8c67a-e871-4698-b0fa-57d8bb818d30.png");'
+                            ></div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Project 1</p>
+                                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
+                                    Project 1: Developed a custom e-commerce platform for a client. The platform saw a
+                                    30% increase in sales. Technologies used: React, Node.js, MongoDB.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div
+                                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                    style='background-image: url("https://cdn.usegalileo.ai/sdxl10/e5e5fd8c-ae87-4fec-8530-856387999969.png");'
+                            ></div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Project 2</p>
+                                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
+                                    Project 2: Implemented a cloud migration strategy for a large enterprise. The
+                                    migration resulted in 50% cost savings. Technologies used: AWS, Docker,
+                                    Kubernetes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div
+                                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                                    style='background-image: url("https://cdn.usegalileo.ai/sdxl10/d50c3895-9550-4d42-b4ff-7a661c74cc84.png");'
+                            ></div>
+                            <div>
+                                <p class="text-white text-base font-medium leading-normal">Project 3</p>
+                                <p class="text-[#9dabb8] text-sm font-normal leading-normal">
+                                    Project 3: Analyzed a client's data and provided insights leading to a 20% increase
+                                    in efficiency. Technologies used: Python, Pandas, Tableau.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div id="contact" class="@container">
+                    <div
+                            class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20"
+                    >
+                        <div class="flex flex-col gap-2 text-left">
+                            <h1
+                                    class="text-white tracking-light text-[20px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+                            >
+                                Ready to take your business to next level?
+                            </h1>
+                            <p class="text-white text-base font-normal leading-normal max-w-[720px]">
+                                Book a consultation with us.
+                            </p>
+                        </div>
+                        <div class="flex flex-1 justify-center">
+                            <div class="flex justify-center">
+                                <button
+                                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
+                                >
+                                    <a href="mailto:machlilieslimited@gmail.com">Book a Consultation</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Contact -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
