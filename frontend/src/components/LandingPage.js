@@ -112,7 +112,7 @@ const LandingPage = () => {
       title: "Healthcare Data Analytics",
       description: "Reduced patient wait times by 60% through predictive analytics",
       metrics: "60% Efficiency Gain",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f",
+      image: "https://images.pexels.com/photos/16053029/pexels-photo-16053029.jpeg",
       tech: ["Python", "TensorFlow", "AWS"]
     },
     {
