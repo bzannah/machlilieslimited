@@ -1,809 +1,1058 @@
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
-    <link
-            rel="stylesheet"
-            as="style"
-            onload="this.rel='stylesheet'"
-            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
-    />
-    <title>Mach Lilies Limited</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"/>
+    <title>Mach Lilies Limited - Next-Gen Tech Solutions</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co/twFVkng4/logo-size-invert.jpg"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #3B82F6;
+            --primary-dark: #2563EB;
+            --primary-light: #60A5FA;
+            --dark: #0F172A;
+            --dark-secondary: #1E293B;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Gradient text animation */
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Glow effect */
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5),
+                        0 0 40px rgba(59, 130, 246, 0.3),
+                        0 0 60px rgba(59, 130, 246, 0.1);
+        }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Magnetic button effect */
+        .magnetic-btn {
+            position: relative;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Noise texture overlay */
+        .noise::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            z-index: 1;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        /* Animated gradient background */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0F172A, #1E293B, #334155, #0F172A);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+        
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* 3D tilt effect */
+        .tilt-3d {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+        
+        /* Reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Cursor glow */
+        .cursor-glow {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Liquid blob animation */
+        @keyframes blob {
+            0%, 100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+        
+        .blob {
+            animation: blob 7s infinite;
+        }
+        
+        /* Premium hover effect */
+        .premium-hover {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .premium-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .premium-hover:hover::before {
+            left: 100%;
+        }
+        
+        /* Parallax layers */
+        .parallax-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Grid pattern */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        /* Loading animation */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.33);
+            }
+            80%, 100% {
+                opacity: 0;
+            }
+        }
+        
+        .pulse-ring {
+            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        
+        /* Text reveal animation */
+        @keyframes text-reveal {
+            from {
+                clip-path: inset(0 100% 0 0);
+            }
+            to {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+        
+        .text-reveal {
+            animation: text-reveal 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+    </style>
 </head>
-<body>
-<div
-        class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden"
-        style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'
->
-    <div class="layout-container flex h-full grow flex-col">
-        <header
-                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#293038] px-10 py-3"
-        >
-            <!-- Modern Logo Section -->
-            <div class="flex items-center gap-3 relative">
-                <!-- Logo Background Effect -->
-                <div class="absolute -left-3 -top-3 -bottom-3 -right-20 bg-gradient-to-r from-[#111418] to-transparent opacity-50 blur-md z-0"></div>
-                
-                <!-- Logo with glowing effect -->
-                <div class="size-10 relative group z-10">
-                    <div class="absolute inset-0 bg-[#1980e6] rounded-full opacity-20 blur-md group-hover:opacity-30 group-hover:blur-lg transition-all duration-300"></div>
-                    <div class="absolute inset-0 rounded-full overflow-hidden border-2 border-[#293038] shadow-lg">
-                        <img src="https://i.ibb.co/twFVkng4/logo-size-invert.jpg" alt="Mach Lilies" class="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-300">
-                    </div>
+<body class="animated-gradient noise">
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    
+    <!-- Advanced Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass px-6 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo with animation -->
+            <div class="flex items-center space-x-3 group">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-md opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://i.ibb.co/twFVkng4/logo-size-invert.jpg" alt="Mach Lilies" class="relative w-10 h-10 rounded-full border-2 border-white/20">
                 </div>
-                
-                <!-- Company Name with Modern Typography -->
-                <div class="flex flex-col justify-center z-10">
-                    <h2 class="text-white text-lg font-black leading-none tracking-tight">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#e1e5ea]">Mach</span>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1980e6] to-[#35a6ff]">Lilies</span>
-                    </h2>
-                    <div class="flex items-center gap-1.5 mt-0.5">
-                        <div class="h-0.5 w-5 bg-[#1980e6] rounded-full opacity-80"></div>
-                        <span class="text-[#9dabb8] text-xs font-medium">Tech Consulting</span>
-                    </div>
+                <div>
+                    <h1 class="text-xl font-bold">
+                        <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Mach</span>
+                        <span class="text-white">Lilies</span>
+                    </h1>
+                    <p class="text-xs text-gray-400">Next-Gen Solutions</p>
                 </div>
             </div>
-
-            <div class="flex flex-1 justify-end gap-8">
-                <!-- Updated navigation links to point to section IDs -->
-                <div class="flex items-center gap-9">
-                    <a class="text-white text-sm font-medium leading-normal" href="#services">Services</a>
-                    <a class="text-white text-sm font-medium leading-normal" href="#portfolio">Portfolio</a>
-                    <a class="text-white text-sm font-medium leading-normal" href="#about">About Us</a>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium">Home</a>
+                <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium">Portfolio</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium">Contact</a>
+            </div>
+            
+            <!-- CTA Button -->
+            <button class="magnetic-btn relative group overflow-hidden px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium text-sm transition-all duration-300 hover:scale-105">
+                <span class="relative z-10">Get Started</span>
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section with Parallax -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 grid-pattern opacity-20"></div>
+        
+        <!-- Floating orbs -->
+        <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-20 blob"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl opacity-20 blob" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500 rounded-full blur-3xl opacity-10 blob" style="animation-delay: 4s;"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
+            <!-- Animated badge -->
+            <div class="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full mb-8 reveal">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm text-gray-300">Available for new projects</span>
+            </div>
+            
+            <!-- Main heading with animation -->
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight reveal" style="animation-delay: 0.2s;">
+                <span class="block">Transform Ideas Into</span>
+                <span class="block gradient-text text-6xl md:text-8xl lg:text-9xl">Digital Reality</span>
+            </h1>
+            
+            <!-- Subheading -->
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 reveal" style="animation-delay: 0.4s;">
+                We craft exceptional digital experiences that drive innovation, elevate brands, and accelerate business growth in the modern tech landscape.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6 reveal" style="animation-delay: 0.6s;">
+                <button class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg text-white font-semibold overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                    <span class="relative z-10 flex items-center">
+                        Start Your Journey
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+                
+                <button class="group px-8 py-4 glass rounded-lg text-white font-semibold border border-white/20 hover:border-white/40 transition-all duration-300">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Watch Demo
+                    </span>
+                </button>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 reveal" style="animation-delay: 0.8s;">
+                <div class="glass p-6 rounded-2xl premium-hover">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">150+</h3>
+                    <p class="text-gray-400">Projects Delivered</p>
                 </div>
-                <div class="flex gap-2">
-                    <button
-                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-                            onclick="window.location.href='mailto:machlilieslimited@gmail.com'"
-                    >
-                        <a href="mailto:machlilieslimited@gmail.com">Book a Consultation</a>
-                    </button>
+                <div class="glass p-6 rounded-2xl premium-hover">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">98%</h3>
+                    <p class="text-gray-400">Client Satisfaction</p>
+                </div>
+                <div class="glass p-6 rounded-2xl premium-hover">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">50+</h3>
+                    <p class="text-gray-400">Team Experts</p>
+                </div>
+                <div class="glass p-6 rounded-2xl premium-hover">
+                    <h3 class="text-4xl font-bold gradient-text mb-2">24/7</h3>
+                    <p class="text-gray-400">Support Available</p>
                 </div>
             </div>
-        </header>
-
-        <div class="px-40 flex flex-1 justify-center py-5">
-            <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                <div class="@container">
-                    <div class="@[480px]:p-4">
-                        <div
-                                class="relative w-full min-h-[90vh] overflow-hidden bg-[#090c10]"
-                        >
-                            <!-- Animated gradient background -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#0a1219] via-[#111827] to-[#0c1b2b] opacity-90 z-0"></div>
-                            
-                            <!-- Particle overlay effect -->
-                            <div class="absolute inset-0 z-10">
-                                <div class="absolute top-0 right-0 w-2/3 h-full overflow-hidden opacity-10">
-                                    <div class="absolute -right-10 top-0 w-[800px] h-[800px] rounded-full bg-[#1980e6] blur-[120px]"></div>
-                                    <div class="absolute right-1/4 top-1/3 w-[600px] h-[600px] rounded-full bg-[#1668c4] blur-[100px]"></div>
-                                </div>
-                                <div class="hidden lg:block absolute left-1/4 bottom-0 w-40 h-40 bg-[#1980e6] rounded-full opacity-5 blur-xl"></div>
-                                <div class="hidden lg:block absolute left-1/3 top-1/4 w-24 h-24 bg-[#1980e6] rounded-full opacity-10 blur-xl"></div>
-                                <div class="absolute bottom-20 right-20 w-64 h-64 bg-[#1980e6] rounded-full opacity-5 blur-3xl"></div>
-                            </div>
-                            
-                            <!-- Geometric design elements -->
-                            <div class="absolute inset-0 z-10 overflow-hidden">
-                                <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                                    <div class="absolute top-20 left-[10%] w-40 h-1 bg-white rotate-45"></div>
-                                    <div class="absolute top-40 right-[15%] w-20 h-1 bg-[#1980e6] -rotate-45"></div>
-                                    <div class="absolute bottom-32 left-[20%] w-60 h-1 bg-white rotate-12"></div>
-                                    <div class="absolute top-1/3 right-1/4 w-32 h-1 bg-[#1980e6] -rotate-12"></div>
-                                    <div class="absolute bottom-60 right-[30%] w-40 h-1 bg-white rotate-45"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- Hero content container -->
-                            <div class="relative h-full min-h-[90vh] px-4 md:px-8 lg:px-16 max-w-8xl mx-auto flex items-center z-20">
-                                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 py-16 w-full">
-                                    <!-- Text content -->
-                                    <div class="lg:col-span-3 flex flex-col justify-center">
-                                        <div class="mb-6 flex items-center">
-                                            <div class="h-1 w-12 bg-[#1980e6] rounded-full mr-4"></div>
-                                            <span class="text-[#1980e6] uppercase tracking-widest text-sm font-medium">Tech Consulting</span>
-                                        </div>
-                                        
-                                        <h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-black leading-tight tracking-tight mb-6">
-                                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#9dabb8]">
-                                                Mach Lilies! Ideas Into
-                                            </span>
-                                            <div class="mt-1 inline-block relative">
-                                                <span class="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#1980e6] to-[#35a6ff]">Digital Excellence</span>
-                                                <div class="absolute -bottom-2 left-0 h-3 w-full bg-[#1980e6] opacity-20 rounded-full"></div>
-                                            </div>
-                                        </h1>
-                                        
-                                        <p class="text-[#9dabb8] text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
-                                            Mach Lilies delivers custom software solutions and data-driven strategies that help businesses thrive in today's technology-powered economy.
-                                        </p>
-                                        
-                                        <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                                            <a href="mailto:machlilieslimited@gmail.com" class="group relative overflow-hidden rounded-lg bg-[#1980e6] px-6 py-4 text-white shadow-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(25,128,230,0.4)]">
-                                                <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-[#1980e6] via-[#1668c4] to-[#0c4a94] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
-                                                <span class="relative z-10 flex items-center justify-center font-bold">
-                                                    Start Your Project
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                            
-                                            <a href="#services" class="flex items-center justify-center rounded-lg border border-[#2a3038] px-6 py-4 text-white transition-all duration-300 hover:border-[#1980e6] hover:text-[#1980e6]">
-                                                <span class="font-medium">Explore Services</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        
-                                        <!-- Social proof / stats -->
-                                        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-[#2a3038]">
-                                            <div>
-                                                <div class="text-white font-bold text-3xl">25+</div>
-                                                <div class="text-[#9dabb8] text-sm">Successful Projects</div>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-bold text-3xl">98%</div>
-                                                <div class="text-[#9dabb8] text-sm">Client Satisfaction</div>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-bold text-3xl">10+</div>
-                                                <div class="text-[#9dabb8] text-sm">Years Experience</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Hero image / illustration -->
-                                    <div class="lg:col-span-2 flex items-center justify-center">
-                                        <div class="relative w-full max-w-md mx-auto">
-                                            <!-- Main image container with shine effect -->
-                                            <div class="relative rounded-lg overflow-hidden group perspective-1000">
-                                                <div class="relative transform transition-transform duration-500 group-hover:scale-[1.02] group-hover:rotate-1">
-                                                    <!-- Shine effect overlay -->
-                                                    <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-700 z-10"></div>
-                                                    
-                                                    <!-- Actual image with overlay -->
-                                                    <div class="relative rounded-lg overflow-hidden shadow-2xl border border-[#2a3038]">
-                                                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                                             alt="Digital Transformation" 
-                                                             class="w-full object-cover h-[450px]">
-                                                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a1219] via-[#0a121980] to-transparent"></div>
-                                                        
-                                                        <!-- Overlay text -->
-                                                        <div class="absolute bottom-0 left-0 right-0 p-6">
-                                                            <div class="flex items-center gap-3 mb-3">
-                                                                <div class="h-8 w-8 rounded-full flex items-center justify-center bg-[#1980e6]">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                                                    </svg>
-                                                                </div>
-                                                                <span class="text-white font-medium">Smart Solutions</span>
-                                                            </div>
-                                                            <p class="text-[#d1d5db] text-sm">
-                                                                We create innovative tech solutions that drive real business results
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Floating info cards -->
-                                                <div class="absolute -top-4 -right-4 max-w-[180px] p-3 rounded-lg bg-[#1c2126] border border-[#2a3038] shadow-lg transform rotate-3">
-                                                    <div class="flex items-center gap-2 mb-1">
-                                                        <div class="w-2 h-2 rounded-full bg-[#1980e6]"></div>
-                                                        <span class="text-white text-xs font-medium">Enterprise Grade</span>
-                                                    </div>
-                                                    <span class="text-[#9dabb8] text-xs">Scalable solutions for growing businesses</span>
-                                                </div>
-                                                
-                                                <div class="absolute -bottom-5 -left-5 max-w-[180px] p-3 rounded-lg bg-[#1c2126] border border-[#2a3038] shadow-lg transform -rotate-2">
-                                                    <div class="flex items-center gap-2 mb-1">
-                                                        <div class="w-2 h-2 rounded-full bg-[#1980e6]"></div>
-                                                        <span class="text-white text-xs font-medium">Data-Driven</span>
-                                                    </div>
-                                                    <span class="text-[#9dabb8] text-xs">Insights that power better decisions</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Subtle scroll indicator -->
-                            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center animate-bounce">
-                                <span class="text-[#9dabb8] text-sm mb-2">Scroll to explore</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#1980e6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Services Section -->
-                <div id="services" class="flex flex-col gap-12 px-4 py-16 @container bg-gradient-to-b from-[#111418] to-[#151c24]">
-                    <div class="flex flex-col items-center text-center mb-4">
-                        <div class="inline-block mb-2">
-                            <div class="h-1.5 w-12 bg-[#1980e6] rounded-full mb-1.5"></div>
-                            <div class="h-1.5 w-20 bg-[#1980e6] rounded-full"></div>
-                        </div>
-                        <h1 class="text-white text-4xl font-black leading-tight tracking-tight mb-3">
-                            Our <span class="text-[#1980e6]">Services</span>
-                        </h1>
-                        <p class="text-[#9dabb8] text-lg max-w-2xl mx-auto">
-                            We deliver cutting-edge tech solutions tailored to your unique business challenges
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        <!-- Software Development Card -->
-                        <div class="group flex flex-col rounded-xl bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] shadow-lg overflow-hidden hover:shadow-[0_0_25px_rgba(25,128,230,0.15)] transition-all duration-300 hover:-translate-y-1">
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-r from-[#1a47ab30] to-[#1980e680] opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                                <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Software Development" class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute top-4 left-4 rounded-full bg-[#1980e6] p-3 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="white" viewBox="0 0 256 256">
-                                        <path d="M181.66,146.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,0,1-11.32-11.32L164.69,152l-18.35-18.34a8,8,0,0,1,11.32-11.32Zm-72-24a8,8,0,0,0-11.32,0l-24,24a8,8,0,0,0,0,11.32l24,24a8,8,0,0,0,11.32-11.32L91.31,152l18.35-18.34A8,8,0,0,0,109.66,122.34ZM216,88V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="p-6 flex-1 flex flex-col">
-                                <h2 class="text-white text-xl font-bold mb-3">Software Development</h2>
-                                <p class="text-[#9dabb8] flex-1">
-                                    Custom software solutions designed to streamline operations, enhance customer experiences, and drive business growth.
-                                </p>
-                                <div class="mt-6 space-y-3">
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">Custom web & mobile applications</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">API development & integration</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">Legacy system modernization</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Cloud Solutions Card -->
-                        <div class="group flex flex-col rounded-xl bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] shadow-lg overflow-hidden hover:shadow-[0_0_25px_rgba(25,128,230,0.15)] transition-all duration-300 hover:-translate-y-1">
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-r from-[#1a47ab30] to-[#1980e680] opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cloud Solutions" class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute top-4 left-4 rounded-full bg-[#1980e6] p-3 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="white" viewBox="0 0 256 256">
-                                        <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm12,152a12,12,0,1,1-12-12A12,12,0,0,1,140,176Zm0-24a12,12,0,0,1-24,0V88a12,12,0,0,1,24,0Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="p-6 flex-1 flex flex-col">
-                                <h2 class="text-white text-xl font-bold mb-3">Cloud Solutions</h2>
-                                <p class="text-[#9dabb8] flex-1">
-                                    Secure, scalable cloud infrastructure and migration services that optimize performance and reduce operational costs.
-                                </p>
-                                <div class="mt-6 space-y-3">
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">Cloud migration & optimization</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183L215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">Serverless architecture</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183L215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">DevOps & CI/CD implementation</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- AI & ML Card -->
-                        <div class="group flex flex-col rounded-xl bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] shadow-lg overflow-hidden hover:shadow-[0_0_25px_rgba(25,128,230,0.15)] transition-all duration-300 hover:-translate-y-1">
-                            <div class="relative overflow-hidden h-48">
-                                <div class="absolute inset-0 bg-gradient-to-r from-[#1a47ab30] to-[#1980e680] opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI and ML" class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute top-4 left-4 rounded-full bg-[#1980e6] p-3 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="white" viewBox="0 0 256 256">
-                                        <path d="M208,88H176V56A16,16,0,0,0,160,40H96A16,16,0,0,0,80,56V88H48A16,16,0,0,0,32,104v96a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V104A16,16,0,0,0,208,88ZM96,56h64V88H96ZM208,200H48V104H208ZM120,144a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H128A8,8,0,0,1,120,144Zm-32,0a8,8,0,1,1,8,8A8,8,0,0,1,88,144Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="p-6 flex-1 flex flex-col">
-                                <h2 class="text-white text-xl font-bold mb-3">AI & Machine Learning</h2>
-                                <p class="text-[#9dabb8] flex-1">
-                                    Advanced AI solutions that transform data into insights, automate processes, and create intelligent applications.
-                                </p>
-                                <div class="mt-6 space-y-3">
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183L215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">Custom LLM development</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183L215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">Predictive analytics</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <div class="text-[#1980e6] mr-2 mt-0.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183L215.51,63.51a12,12,0,0,1,17,17Z"></path>
-                                            </svg>
-                                        </div>
-                                        <span class="text-white text-sm">Computer vision & NLP solutions</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Services Section - Bento Grid -->
+    <section id="services" class="relative py-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">What We Do</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">
+                    <span class="gradient-text">Cutting-Edge</span> Services
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    We deliver innovative solutions that transform businesses and create lasting impact in the digital world.
+                </p>
+            </div>
+            
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+                <!-- Large Feature Card -->
+                <div class="lg:col-span-2 lg:row-span-2 glass rounded-3xl p-8 group overflow-hidden relative reveal">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full blur-3xl transform translate-x-32 -translate-y-32 group-hover:translate-x-24 group-hover:-translate-y-24 transition-transform duration-500"></div>
                     
-                    <!-- Additional Service Areas -->
-                    <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-8">
-                        <div class="bg-[#1c2126] border border-[#2a3038] p-5 rounded-lg flex flex-col items-center text-center hover:border-[#1980e6] transition-colors duration-300 hover:shadow-[0_0_15px_rgba(25,128,230,0.15)]">
-                            <div class="text-[#1980e6] mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm12,152a12,12,0,1,1-12-12A12,12,0,0,1,140,176Zm0-24a12,12,0,0,1-24,0V88a12,12,0,0,1,24,0Z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-white font-medium text-sm">Tech Consulting</h3>
+                    <div class="relative z-10 h-full flex flex-col">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
                         </div>
-                        <div class="bg-[#1c2126] border border-[#2a3038] p-5 rounded-lg flex flex-col items-center text-center hover:border-[#1980e6] transition-colors duration-300 hover:shadow-[0_0_15px_rgba(25,128,230,0.15)]">
-                            <div class="text-[#1980e6] mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M208,40H48A24,24,0,0,0,24,64V192a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40ZM162.46,130.66l-56,32a8,8,0,0,1-12-6.93L94.17,93.17l62.56.27a8,8,0,0,1,5.73,13.22Z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-white font-medium text-sm">IoT Solutions</h3>
-                        </div>
-                        <div class="bg-[#1c2126] border border-[#2a3038] p-5 rounded-lg flex flex-col items-center text-center hover:border-[#1980e6] transition-colors duration-300 hover:shadow-[0_0_15px_rgba(25,128,230,0.15)]">
-                            <div class="text-[#1980e6] mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM152,88V44l44,44Zm-32,88a36,36,0,1,1,36-36A36,36,0,0,1,120,176Z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-white font-medium text-sm">Data Analytics</h3>
-                        </div>
-                        <div class="bg-[#1c2126] border border-[#2a3038] p-5 rounded-lg flex flex-col items-center text-center hover:border-[#1980e6] transition-colors duration-300 hover:shadow-[0_0_15px_rgba(25,128,230,0.15)]">
-                            <div class="text-[#1980e6] mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M48,48V208H208V48Zm36,84H64V112H84Zm20,0V112h20v20Zm40,0H124V112h20Zm20,0V112h20v20Z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-white font-medium text-sm">UI/UX Design</h3>
-                        </div>
-                        <div class="bg-[#1c2126] border border-[#2a3038] p-5 rounded-lg flex flex-col items-center text-center hover:border-[#1980e6] transition-colors duration-300 hover:shadow-[0_0_15px_rgba(25,128,230,0.15)]">
-                            <div class="text-[#1980e6] mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M128,40a96,96,0,0,0,0,192c37.83,0,71.93-23.14,88.32-56.78A8,8,0,0,0,201.1,164C186.05,194.83,158.45,216,128,216a80,80,0,0,1,0-160c30.45,0,58.05,21.17,73.1,52a8,8,0,0,0,15.22-4.95C199.93,63.14,165.83,40,128,40Z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-white font-medium text-sm">Security Services</h3>
-                        </div>
-                    </div>
-                    
-                    <!-- CTA Button -->
-                    <div class="flex justify-center mt-8">
-                        <a href="mailto:machlilieslimited@gmail.com" class="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white bg-[#1980e6] rounded-lg shadow-md transition duration-300 ease-out hover:bg-[#1668c4]">
-                            <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-[#1980e6] via-[#1668c4] to-[#0c4a94] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
-                            <span class="relative flex items-center">
-                                Discuss Your Project
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- About Us Section -->
-                <div id="about" class="flex flex-col gap-12 px-4 py-16 @container bg-gradient-to-b from-[#151c24] to-[#111418]">
-                    <div class="flex flex-col items-center text-center mb-4">
-                        <div class="inline-block mb-2">
-                            <div class="h-1.5 w-12 bg-[#1980e6] rounded-full mb-1.5"></div>
-                            <div class="h-1.5 w-20 bg-[#1980e6] rounded-full"></div>
-                        </div>
-                        <h1 class="text-white text-4xl font-black leading-tight tracking-tight mb-3">
-                            About <span class="text-[#1980e6]">Us</span>
-                        </h1>
-                        <p class="text-[#9dabb8] text-lg max-w-2xl mx-auto">
-                            A forward-thinking tech consulting firm helping businesses thrive in today's digital landscape
+                        
+                        <h3 class="text-2xl font-bold mb-4">Custom Software Development</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">
+                            Build scalable, robust applications tailored to your unique business needs. From web platforms to mobile apps, we create solutions that drive growth.
                         </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        <!-- Company Overview Card -->
-                        <div class="col-span-1 lg:col-span-2 bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] rounded-xl p-8 shadow-lg">
-                            <div class="flex flex-col gap-6">
-                                <div class="flex items-center gap-4">
-                                    <div class="h-12 w-1 bg-[#1980e6] rounded-full"></div>
-                                    <h2 class="text-white text-2xl font-bold">Our Vision</h2>
-                                </div>
-                                
-                                <p class="text-[#9dabb8] text-base leading-relaxed">
-                                    Mach Lilies is a forward-thinking tech consulting firm dedicated to helping businesses
-                                    thrive in today's digital landscape. We specialize in crafting custom software solutions,
-                                    designing efficient and secure cloud strategies, and turning complex data into clear,
-                                    actionable insights.
-                                </p>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 flex items-center justify-center rounded-full bg-[#1980e6] bg-opacity-20 p-3 mt-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="#1980e6" viewBox="0 0 256 256">
-                                                <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm49.5,85.75-47.5,47.5a8,8,0,0,1-11.32,0l-16.17-16.17a8,8,0,0,1,11.32-11.32L128,144l41.83-41.83a8,8,0,0,1,11.32,0A8,8,0,0,1,177.5,109.75Z"></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-white text-lg font-semibold mb-2">Innovation</h3>
-                                            <p class="text-[#9dabb8]">We constantly push boundaries to create solutions that give our clients a competitive edge.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 flex items-center justify-center rounded-full bg-[#1980e6] bg-opacity-20 p-3 mt-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="#1980e6" viewBox="0 0 256 256">
-                                                <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm49.5,85.75-47.5,47.5a8,8,0,0,1-11.32,0l-16.17-16.17a8,8,0,0,1,11.32-11.32L128,144l41.83-41.83a8,8,0,0,1,11.32,0A8,8,0,0,1,177.5,109.75Z"></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-white text-lg font-semibold mb-2">Expertise</h3>
-                                            <p class="text-[#9dabb8]">Our team brings deep technical knowledge and industry experience to every project.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 flex items-center justify-center rounded-full bg-[#1980e6] bg-opacity-20 p-3 mt-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="#1980e6" viewBox="0 0 256 256">
-                                                <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm49.5,85.75-47.5,47.5a8,8,0,0,1-11.32,0l-16.17-16.17a8,8,0,0,1,11.32-11.32L128,144l41.83-41.83a8,8,0,0,1,11.32,0A8,8,0,0,1,177.5,109.75Z"></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-white text-lg font-semibold mb-2">Collaboration</h3>
-                                            <p class="text-[#9dabb8]">We work closely with clients to understand their unique goals and deliver tailored solutions.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex items-start gap-4">
-                                        <div class="flex-shrink-0 flex items-center justify-center rounded-full bg-[#1980e6] bg-opacity-20 p-3 mt-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="#1980e6" viewBox="0 0 256 256">
-                                                <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm49.5,85.75-47.5,47.5a8,8,0,0,1-11.32,0l-16.17-16.17a8,8,0,0,1,11.32-11.32L128,144l41.83-41.83a8,8,0,0,1,11.32,0A8,8,0,0,1,177.5,109.75Z"></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-white text-lg font-semibold mb-2">Reliability</h3>
-                                            <p class="text-[#9dabb8]">We deliver on our promises with solutions that stand the test of time and evolving business needs.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-300">
+                                <svg class="w-4 h-4 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                Full-stack development
+                            </div>
+                            <div class="flex items-center text-sm text-gray-300">
+                                <svg class="w-4 h-4 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                API integration
+                            </div>
+                            <div class="flex items-center text-sm text-gray-300">
+                                <svg class="w-4 h-4 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                Cloud-native architecture
                             </div>
                         </div>
                         
-                        <!-- Key Stats Card -->
-                        <div class="col-span-1 flex flex-col gap-6">
-                            <!-- Why Choose Us Card -->
-                            <div class="bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] rounded-xl p-6 shadow-lg h-full">
-                                <h2 class="text-white text-xl font-bold mb-4">Why Choose Us?</h2>
-                                
-                                <div class="space-y-5">
-                                    <div class="group flex items-center gap-3 p-3 rounded-lg border border-[#2a3038] hover:border-[#1980e6] transition-all duration-300 bg-[#161b21] hover:shadow-[0_0_15px_rgba(25,128,230,0.1)]">
-                                        <div class="text-[#1980e6] group-hover:scale-110 transition-transform duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M208.4,131.2A80,80,0,0,1,71.7,184.4a7.8,7.8,0,0,1-1.5-8.5,8.1,8.1,0,0,1,7.3-4.9h32.3c-.3-1.9-.6-3.8-.8-5.6-.3-3.9-.6-7.2-.6-10.4A8,8,0,0,1,116.5,147h14.1a4.1,4.1,0,0,0,4.1-3.3L137,134a7.9,7.9,0,0,1,6.9-5.9,8.2,8.2,0,0,1,8.1,3.9l9.9,16.6a8.2,8.2,0,0,1-2.2,10.7,7.9,7.9,0,0,1-4.9,1.7h-10.1c.5,3.4,1,6.9,1.4,10.4.1.8.2,1.7.2,2.6h36.3a7.9,7.9,0,0,1,7.3,4.9,7.8,7.8,0,0,1-1.5,8.5,80,80,0,0,1-60.2,27A80.7,80.7,0,0,1,48,136a80,80,0,1,1,160.4-4.8ZM128,40a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0V48A8,8,0,0,0,128,40ZM43.3,104H35a8,8,0,0,0,0,16h8.3a8,8,0,0,0,0-16Zm31.4-42.9L67.3,53.7a8,8,0,0,0-11.3,11.3l7.4,7.4a8.1,8.1,0,0,0,11.3,0,8,8,0,0,0,0-11.3Zm106.6,0a8,8,0,0,0-11.3,0,8.1,8.1,0,0,0,0,11.3l7.4,7.4a8,8,0,0,0,11.3-11.3ZM221,104h-8.3a8,8,0,0,0,0,16H221a8,8,0,0,0,0-16Z"></path>
-                                            </svg>
-                                        </div>
-                                        <p class="text-white">Forward-thinking approach</p>
-                                    </div>
-                                    
-                                    <div class="group flex items-center gap-3 p-3 rounded-lg border border-[#2a3038] hover:border-[#1980e6] transition-all duration-300 bg-[#161b21] hover:shadow-[0_0_15px_rgba(25,128,230,0.1)]">
-                                        <div class="text-[#1980e6] group-hover:scale-110 transition-transform duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM136,168a8,8,0,0,1-16,0V136a8,8,0,0,1,16,0ZM128,112a12,12,0,1,1,12-12A12,12,0,0,1,128,112Z"></path>
-                                            </svg>
-                                        </div>
-                                        <p class="text-white">Industry expertise</p>
-                                    </div>
-                                    
-                                    <div class="group flex items-center gap-3 p-3 rounded-lg border border-[#2a3038] hover:border-[#1980e6] transition-all duration-300 bg-[#161b21] hover:shadow-[0_0_15px_rgba(25,128,230,0.1)]">
-                                        <div class="text-[#1980e6] group-hover:scale-110 transition-transform duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
-                                            </svg>
-                                        </div>
-                                        <p class="text-white">Tailored solutions</p>
-                                    </div>
-                                    
-                                    <div class="group flex items-center gap-3 p-3 rounded-lg border border-[#2a3038] hover:border-[#1980e6] transition-all duration-300 bg-[#161b21] hover:shadow-[0_0_15px_rgba(25,128,230,0.1)]">
-                                        <div class="text-[#1980e6] group-hover:scale-110 transition-transform duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                                <path d="M223.9,146.8a7.2,7.2,0,0,0-1.8-5.5l-36.4-41.4V60a8.1,8.1,0,0,0-8-8h-32a8.1,8.1,0,0,0-8,8v11.4L102.1,32a7.9,7.9,0,0,0-11.4,0L3.1,141.3a7.8,7.8,0,0,0-1.8,5.5,7.9,7.9,0,0,0,7.9,7.9h32.1v52.1a20.2,20.2,0,0,0,20.1,20.1H192.3a20.2,20.2,0,0,0,20.1-20.1V154.7h31.5A7.9,7.9,0,0,0,223.9,146.8ZM196.4,204.8a4.1,4.1,0,0,1-4.1,4.1H61.3a4.1,4.1,0,0,1-4.1-4.1V140.8L122,65.6a4.1,4.1,0,0,1,5.5-.5,3.9,3.9,0,0,1,.6.5L196.4,140Z"></path>
-                                            </svg>
-                                        </div>
-                                        <p class="text-white font-medium">5.0 Overall Rating</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="mt-6 text-blue-400 font-semibold flex items-center group-hover:text-blue-300 transition-colors">
+                            Learn more
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-
-                <!-- Our Portfolio Section -->
-                <div id="portfolio" class="py-16 bg-gradient-to-b from-[#111418] to-[#151c24]">
-                    <div class="container mx-auto px-4 max-w-6xl">
-                        <!-- Section Header -->
-                        <div class="text-center mb-12">
-                            <div class="inline-block mb-2">
-                                <div class="h-1.5 w-12 bg-[#1980e6] rounded-full mb-1.5"></div>
-                                <div class="h-1.5 w-20 bg-[#1980e6] rounded-full"></div>
+                
+                <!-- Medium Card 1 -->
+                <div class="lg:col-span-2 glass rounded-3xl p-8 group overflow-hidden relative reveal" style="animation-delay: 0.1s;">
+                    <div class="flex items-center justify-between h-full">
+                        <div class="flex-1">
+                            <div class="w-14 h-14 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                </svg>
                             </div>
-                            <h2 class="text-white text-4xl font-black leading-tight tracking-tight mb-3">
-                                Our <span class="text-[#1980e6]">Portfolio</span>
-                            </h2>
-                            <p class="text-[#9dabb8] text-lg max-w-2xl mx-auto">
-                                Explore our past projects and discover how we've helped businesses achieve their goals
+                            <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                            <p class="text-gray-400 text-sm">
+                                Stunning interfaces that captivate users and drive engagement.
                             </p>
                         </div>
-
-                        <!-- Project Cards Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <!-- E-commerce Project Card -->
-                            <div class="bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(25,128,230,0.15)] transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                                <div class="relative h-48">
-                                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                         alt="E-commerce Platform" 
-                                         class="w-full h-full object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-[#161b21] to-transparent opacity-60"></div>
-                                    <div class="absolute top-4 left-4">
-                                        <span class="inline-block px-2.5 py-1 text-xs font-medium rounded-full bg-[#1980e6] text-white">E-commerce</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="p-6 flex-grow">
-                                    <h3 class="text-white text-xl font-bold mb-2">Retail E-commerce Platform</h3>
-                                    <p class="text-[#9dabb8] text-sm">
-                                        Built a scalable e-commerce platform with integrated payment systems and inventory management, resulting in a 35% increase in online sales.
-                                    </p>
-                                </div>
-                                
-                                <div class="px-6 pb-6 pt-2 mt-auto border-t border-[#2a3038] mx-4">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center">
-                                            <div class="text-[#1980e6] mr-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm12,152a12,12,0,1,1-12-12A12,12,0,0,1,140,176Zm0-24a12,12,0,0,1-24,0V88a12,12,0,0,1,24,0Z"></path>
-                                                </svg>
-                                            </div>
-                                            <span class="text-white text-xs">35% Sales Increase</span>
-                                        </div>
-                                        <span class="text-[#9dabb8] text-xs">React, Node.js, MongoDB</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Healthcare App Card -->
-                            <div class="bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(25,128,230,0.15)] transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                                <div class="relative h-48">
-                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                         alt="Healthcare Application" 
-                                         class="w-full h-full object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-[#161b21] to-transparent opacity-60"></div>
-                                    <div class="absolute top-4 left-4">
-                                        <span class="inline-block px-2.5 py-1 text-xs font-medium rounded-full bg-[#1980e6] text-white">Healthcare</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="p-6 flex-grow">
-                                    <h3 class="text-white text-xl font-bold mb-2">Patient Management System</h3>
-                                    <p class="text-[#9dabb8] text-sm">
-                                        Developed a HIPAA-compliant patient management system that reduced administrative work by 40% and improved patient experience.
-                                    </p>
-                                </div>
-                                
-                                <div class="px-6 pb-6 pt-2 mt-auto border-t border-[#2a3038] mx-4">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center">
-                                            <div class="text-[#1980e6] mr-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm12,152a12,12,0,1,1-12-12A12,12,0,0,1,140,176Zm0-24a12,12,0,0,1-24,0V88a12,12,0,0,1,24,0Z"></path>
-                                                </svg>
-                                            </div>
-                                            <span class="text-white text-xs">40% Efficiency Gain</span>
-                                        </div>
-                                        <span class="text-[#9dabb8] text-xs">Angular, .NET, SQL Server</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Data Analytics Card -->
-                            <div class="bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(25,128,230,0.15)] transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                                <div class="relative h-48">
-                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                         alt="Data Analytics Dashboard" 
-                                         class="w-full h-full object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-[#161b21] to-transparent opacity-60"></div>
-                                    <div class="absolute top-4 left-4">
-                                        <span class="inline-block px-2.5 py-1 text-xs font-medium rounded-full bg-[#1980e6] text-white">Data Analytics</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="p-6 flex-grow">
-                                    <h3 class="text-white text-xl font-bold mb-2">Business Intelligence Dashboard</h3>
-                                    <p class="text-[#9dabb8] text-sm">
-                                        Created an intuitive data visualization platform that transformed complex metrics into actionable insights, boosting decision-making efficiency by 20%.
-                                    </p>
-                                </div>
-                                
-                                <div class="px-6 pb-6 pt-2 mt-auto border-t border-[#2a3038] mx-4">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center">
-                                            <div class="text-[#1980e6] mr-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256">
-                                                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm12,152a12,12,0,1,1-12-12A12,12,0,0,1,140,176Zm0-24a12,12,0,0,1-24,0V88a12,12,0,0,1,24,0Z"></path>
-                                                </svg>
-                                            </div>
-                                            <span class="text-white text-xs">20% Efficiency Boost</span>
-                                        </div>
-                                        <span class="text-[#9dabb8] text-xs">Python, Pandas, Tableau</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="ml-4 opacity-20 group-hover:opacity-30 transition-opacity">
+                            <svg class="w-24 h-24 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
                         </div>
-                        
-                        <!-- Client Testimonial -->
-                        <div class="mt-16 bg-gradient-to-br from-[#1c2126] to-[#161b21] border border-[#2a3038] rounded-xl p-8 shadow-lg overflow-hidden relative">
-                            <div class="absolute top-6 left-8 text-[#1980e6] opacity-10">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M116,72v88a48.05,48.05,0,0,1-48,48,8,8,0,0,1,0-16,32,32,0,0,0,32-32v-8H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56h60A16,16,0,0,1,116,72ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Z"></path>
+                    </div>
+                </div>
+                
+                <!-- Small Cards -->
+                <div class="glass rounded-3xl p-6 group overflow-hidden relative reveal" style="animation-delay: 0.2s;">
+                    <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Cloud Solutions</h3>
+                    <p class="text-gray-400 text-sm">
+                        Scalable infrastructure that grows with your business.
+                    </p>
+                </div>
+                
+                <div class="glass rounded-3xl p-6 group overflow-hidden relative reveal" style="animation-delay: 0.3s;">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">AI & Machine Learning</h3>
+                    <p class="text-gray-400 text-sm">
+                        Intelligent solutions that automate and optimize.
+                    </p>
+                </div>
+                
+                <!-- Wide Card -->
+                <div class="lg:col-span-2 glass rounded-3xl p-8 group overflow-hidden relative reveal" style="animation-delay: 0.4s;">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                                 </svg>
                             </div>
-                            
-                            <div class="flex flex-col md:flex-row gap-8 items-center">
-                                <div class="md:w-3/4 relative z-10">
-                                    <p class="text-[#9dabb8] text-lg italic mb-6">
-                                        "Mach Lilies transformed our outdated systems into a streamlined digital experience that's increased productivity and customer satisfaction. Their expertise and professionalism exceeded our expectations at every stage."
-                                    </p>
-                                    
-                                    <div class="flex items-center gap-4">
-                                        <div class="h-12 w-12 rounded-full bg-[#1980e6] flex items-center justify-center text-white font-bold text-lg">
-                                            JD
-                                        </div>
-                                        <div>
-                                            <h4 class="text-white font-semibold">Mike Fahey</h4>
-                                            <p class="text-[#9dabb8] text-sm">CTO, Brightstack Ltd</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="md:w-1/4 flex flex-col items-center gap-3">
-                                    <div class="flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#1980e6" viewBox="0 0 256 256">
-                                            <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#1980e6" viewBox="0 0 256 256">
-                                            <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#1980e6" viewBox="0 0 256 256">
-                                            <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#1980e6" viewBox="0 0 256 256">
-                                            <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#1980e6" viewBox="0 0 256 256">
-                                            <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
-                                        </svg>
-                                    </div>
-                                    <p class="text-white font-medium">5.0 Overall Rating</p>
-                                </div>
-                            </div>
+                            <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
+                            <p class="text-gray-400">
+                                Transform raw data into actionable insights that drive strategic decisions.
+                            </p>
                         </div>
-                        
-                        <!-- CTA Button -->
-                        <div class="flex justify-center mt-10">
-                            <a href="mailto:machlilieslimited@gmail.com" class="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white bg-[#1980e6] rounded-lg shadow-md transition duration-300 ease-out hover:bg-[#1668c4]">
-                                <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-[#1980e6] via-[#1668c4] to-[#0c4a94] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
-                                <span class="relative flex items-center">
-                                    Start Your Project
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
-                                </span>
-                            </a>
+                        <div class="ml-8 hidden lg:block">
+                            <div class="w-32 h-32 relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-full opacity-20 blur-xl"></div>
+                                <svg class="w-full h-full text-indigo-400 opacity-50" viewBox="0 0 200 200" fill="none">
+                                    <path d="M100 20L120 80L180 80L130 120L150 180L100 140L50 180L70 120L20 80L80 80L100 20Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<!-- Add this before the footer -->
-<div class="py-20 bg-gradient-to-r from-[#0a1219] to-[#151c24] relative overflow-hidden">
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-0 right-0 w-full h-full bg-[url('https://assets.website-files.com/62bea764d94f5f54358356b9/62beaf659401944b06ad3f26_Dots.svg')] bg-repeat opacity-20"></div>
-  </div>
-  
-  <div class="container mx-auto px-4 max-w-5xl relative z-10">
-    <div class="flex flex-col items-center text-center mb-10">
-      <div class="inline-flex items-center justify-center size-16 rounded-full bg-[#1980e6] bg-opacity-20 mb-6">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#1980e6]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      </div>
-      
-      <h2 class="text-white text-3xl md:text-4xl font-black mb-4 max-w-2xl">
-        Ready to transform your business with cutting-edge technology?
-      </h2>
-      
-      <p class="text-[#9dabb8] text-lg max-w-2xl mb-8">
-        Let's discuss how our custom solutions can address your specific challenges and help you achieve your business goals.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="mailto:machlilieslimited@gmail.com" class="group relative overflow-hidden rounded-lg bg-[#1980e6] px-8 py-4 text-white shadow-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(25,128,230,0.4)]">
-          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-[#1980e6] via-[#1668c4] to-[#0c4a94] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></span>
-          <span class="relative z-10 flex items-center justify-center font-bold">
-            Schedule a Free Consultation
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </span>
-        </a>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-10"></div>
         
-        <a href="#services" class="flex items-center justify-center rounded-lg border border-[#2a3038] px-8 py-4 text-white transition-all duration-300 hover:border-[#1980e6] hover:text-[#1980e6]">
-          <span class="font-medium">Explore Our Services</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Add a floating action button -->
-<div class="fixed bottom-6 right-6 z-50">
-  <a href="mailto:machlilieslimited@gmail.com" class="flex items-center justify-center size-14 bg-[#1980e6] rounded-full shadow-lg hover:shadow-[0_0_20px_rgba(25,128,230,0.4)] transition-all duration-300 group">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-    </svg>
-    <span class="absolute right-full mr-3 bg-[#1c2126] text-white text-sm py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-      Chat with us
-    </span>
-  </a>
-</div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">Our Work</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Explore our portfolio of successful projects that showcase our expertise and innovation.
+                </p>
+            </div>
+            
+            <!-- Project Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-3xl glass reveal">
+                    <div class="aspect-w-16 aspect-h-12 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="FinTech Dashboard" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold">FinTech</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">Dashboard</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-3">CryptoFlow Analytics</h3>
+                        <p class="text-gray-400 mb-6">
+                            Real-time cryptocurrency trading platform with advanced analytics, AI-powered predictions, and seamless wallet integration.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center text-sm text-gray-300">
+                                    <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                    <span>+450% ROI</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-300">
+                                    <svg class="w-4 h-4 mr-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                    <span>50K+ Users</span>
+                                </div>
+                            </div>
+                            
+                            <button class="text-blue-400 hover:text-blue-300 transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-3xl glass reveal" style="animation-delay: 0.2s;">
+                    <div class="aspect-w-16 aspect-h-12 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="HealthTech App" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">HealthTech</span>
+                            <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-xs font-semibold">Mobile App</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-3">MediConnect Pro</h3>
+                        <p class="text-gray-400 mb-6">
+                            Revolutionary telemedicine platform connecting patients with healthcare providers through AI-assisted diagnostics and real-time consultations.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center text-sm text-gray-300">
+                                    <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                    <span>4.9 Rating</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-300">
+                                    <svg class="w-4 h-4 mr-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>-60% Wait Time</span>
+                                </div>
+                            </div>
+                            
+                            <button class="text-blue-400 hover:text-blue-300 transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Projects -->
+            <div class="text-center mt-12 reveal">
+                <button class="group inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+                    <span>View All Projects</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute top-1/2 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-10 transform -translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div class="reveal">
+                    <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">About Us</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6">
+                        We're Building the <span class="gradient-text">Future</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Mach Lilies is a forward-thinking technology consultancy that transforms ambitious ideas into powerful digital solutions. Our team of experts combines cutting-edge technology with creative innovation to deliver exceptional results.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="glass p-6 rounded-2xl">
+                            <h3 class="text-3xl font-bold gradient-text mb-2">10+</h3>
+                            <p class="text-gray-400">Years of Excellence</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl">
+                            <h3 class="text-3xl font-bold gradient-text mb-2">500+</h3>
+                            <p class="text-gray-400">Solutions Delivered</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Innovation First</h4>
+                                <p class="text-gray-400 text-sm">We stay ahead of technology trends to deliver future-proof solutions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Client-Centric Approach</h4>
+                                <p class="text-gray-400 text-sm">Your success is our priority. We work closely with you at every step.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Agile Development</h4>
+                                <p class="text-gray-400 text-sm">Fast, iterative development ensures quick time-to-market.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image/Visual -->
+                <div class="relative reveal" style="animation-delay: 0.2s;">
+                    <div class="relative rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Team collaboration" 
+                             class="w-full h-full object-cover rounded-3xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Floating card -->
+                    <div class="absolute -bottom-8 -left-8 glass p-6 rounded-2xl max-w-xs">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Certified Excellence</h4>
+                                <p class="text-sm text-gray-400">ISO 27001 Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-5"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">
+                    What Our <span class="gradient-text">Clients Say</span>
+                </h2>
+            </div>
+            
+            <!-- Testimonial Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass rounded-3xl p-8 relative reveal">
+                    <div class="absolute top-6 right-6 text-blue-400 opacity-20">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex items-center space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        "Mach Lilies transformed our entire digital infrastructure. Their innovative solutions increased our efficiency by 300% and the team's expertise is unmatched."
+                    </p>
+                    
+                    <div class="flex items-center space-x-3">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=3B82F6&color=fff" 
+                             alt="Sarah Chen" 
+                             class="w-12 h-12 rounded-full">
+                        <div>
+                            <h4 class="font-semibold">Sarah Chen</h4>
+                            <p class="text-sm text-gray-400">CEO, TechVentures Inc</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="glass rounded-3xl p-8 relative reveal" style="animation-delay: 0.1s;">
+                    <div class="absolute top-6 right-6 text-purple-400 opacity-20">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex items-center space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        "The AI solutions developed by Mach Lilies revolutionized our customer service. Response times decreased by 80% and customer satisfaction soared."
+                    </p>
+                    
+                    <div class="flex items-center space-x-3">
+                        <img src="https://ui-avatars.com/api/?name=Marcus+Johnson&background=8B5CF6&color=fff" 
+                             alt="Marcus Johnson" 
+                             class="w-12 h-12 rounded-full">
+                        <div>
+                            <h4 class="font-semibold">Marcus Johnson</h4>
+                            <p class="text-sm text-gray-400">CTO, RetailFlow Systems</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="glass rounded-3xl p-8 relative reveal" style="animation-delay: 0.2s;">
+                    <div class="absolute top-6 right-6 text-green-400 opacity-20">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex items-center space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        "Working with Mach Lilies was a game-changer. Their cloud migration strategy saved us 40% in operational costs while improving performance."
+                    </p>
+                    
+                    <div class="flex items-center space-x-3">
+                        <img src="https://ui-avatars.com/api/?name=Emily+Rodriguez&background=10B981&color=fff" 
+                             alt="Emily Rodriguez" 
+                             class="w-12 h-12 rounded-full">
+                        <div>
+                            <h4 class="font-semibold">Emily Rodriguez</h4>
+                            <p class="text-sm text-gray-400">VP Engineering, CloudFirst</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Build Something <span class="gradient-text">Amazing?</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+                Let's discuss how we can transform your ideas into powerful digital solutions that drive real business impact.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:machlilieslimited@gmail.com" class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg text-white font-semibold overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                    <span class="relative z-10 flex items-center">
+                        Get Started Today
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                
+                <button class="group px-8 py-4 glass rounded-lg text-white font-semibold border border-white/20 hover:border-white/40 transition-all duration-300">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        Schedule a Call
+                    </span>
+                </button>
+            </div>
+            
+            <div class="mt-12 flex items-center justify-center space-x-6">
+                <div class="flex items-center space-x-2 text-gray-400">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Free Consultation</span>
+                </div>
+                <div class="flex items-center space-x-2 text-gray-400">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>No Commitment</span>
+                </div>
+                <div class="flex items-center space-x-2 text-gray-400">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Expert Guidance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="glass border-t border-white/10 px-6 py-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://i.ibb.co/twFVkng4/logo-size-invert.jpg" alt="Mach Lilies" class="w-10 h-10 rounded-full">
+                        <h3 class="text-xl font-bold gradient-text">Mach Lilies</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Transforming businesses through innovative technology solutions. We're your partner in digital excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold mb-4">Get in Touch</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:machlilieslimited@gmail.com" class="hover:text-white transition-colors">machlilieslimited@gmail.com</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>Global Remote Team</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Mach Lilies Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Cursor glow effect
+        const cursorGlow = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+        });
+        
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100 && elementBottom > 0) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+        
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-dark/90');
+            } else {
+                navbar.classList.remove('bg-dark/90');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        // Add mobile menu functionality as needed
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Magnetic button effect
+        document.querySelectorAll('.magnetic-btn').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+    </script>
 </body>
 </html>
