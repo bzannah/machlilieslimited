@@ -454,6 +454,152 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Technology Stack Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/30 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400/20 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.2, 0.8, 0.2],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
+              Cutting-Edge Technology Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We leverage the most advanced technologies to deliver scalable, secure, and innovative solutions
+            </p>
+          </motion.div>
+
+          {/* Technology Categories */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {[
+              {
+                category: "Frontend",
+                technologies: ["React", "Vue.js", "Angular", "Next.js", "TypeScript"],
+                icon: "🚀",
+                color: "from-blue-500 to-cyan-500"
+              },
+              {
+                category: "Backend",
+                technologies: ["Node.js", "Python", "Java", "Go", ".NET"],
+                icon: "⚙️",
+                color: "from-purple-500 to-blue-500"
+              },
+              {
+                category: "Cloud & DevOps",
+                technologies: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform"],
+                icon: "☁️",
+                color: "from-green-500 to-blue-500"
+              },
+              {
+                category: "AI & Data",
+                technologies: ["TensorFlow", "PyTorch", "Pandas", "Spark", "MongoDB"],
+                icon: "🧠",
+                color: "from-orange-500 to-red-500"
+              }
+            ].map((tech, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-500"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${tech.color} mb-4 text-2xl`}>
+                  {tech.icon}
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                  {tech.category}
+                </h3>
+                
+                <div className="space-y-2">
+                  {tech.technologies.map((technology, techIndex) => (
+                    <motion.div 
+                      key={techIndex}
+                      className="text-sm text-gray-400 py-1 px-3 bg-white/5 rounded-full inline-block mr-2 mb-2 hover:text-cyan-400 hover:bg-cyan-500/20 transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {technology}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Process Timeline */}
+          <motion.div 
+            className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
+              Our Proven Development Process
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+              {[
+                { step: "01", title: "Discovery", description: "Understanding your business needs and technical requirements" },
+                { step: "02", title: "Strategy", description: "Crafting the perfect technology roadmap for your goals" },
+                { step: "03", title: "Development", description: "Building with cutting-edge technologies and best practices" },
+                { step: "04", title: "Testing", description: "Rigorous quality assurance and performance optimization" },
+                { step: "05", title: "Launch", description: "Seamless deployment with ongoing support and monitoring" }
+              ].map((process, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center relative"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4 hover:scale-110 transition-transform duration-300">
+                      {process.step}
+                    </div>
+                    {index < 4 && (
+                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cyan-500/50 to-transparent" />
+                    )}
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">{process.title}</h4>
+                  <p className="text-sm text-gray-400">{process.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
