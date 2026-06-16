@@ -1,5 +1,5 @@
 # Mach Lilies — https://machlilies.com
-# Independent AI & technology consultancy.
+# Independent agentic operations & AI engineering consultancy.
 
 User-agent: *
 Allow: /

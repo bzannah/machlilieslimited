@@ -693,3 +693,52 @@
 
 .cap-link { display: inline-block; margin-top: 0.7rem; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid rgba(201,242,76,0.4); transition: color .3s; }
 .cap-link:hover { color: var(--accent-2); }
+
+/* ============================================================
+   AGENTIC MODULES — workflows, sprint, controls, foundation
+   (used on the homepage and the agentic service/offer pages)
+   ============================================================ */
+
+/* workflow flow-line shown on workflow / use-case cards */
+.flow {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+    padding-top: 1.3rem; margin-top: 1.4rem; border-top: 1px solid var(--line);
+    font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--bone-2);
+}
+.flow .fstep { white-space: nowrap; }
+.flow .fstep.act { color: var(--accent); }
+.flow .farr { color: var(--muted); }
+
+/* numbered step grid — sprint phases, engagement process */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.steps .step { background: var(--ink-2); padding: clamp(1.5rem, 3vw, 2.4rem); display: flex; flex-direction: column; gap: 0.55rem; min-height: 200px; transition: background .4s; }
+.steps .step:hover { background: var(--ink-3); }
+.steps .step .sn { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); letter-spacing: 0.12em; }
+.steps .step h3 { font-family: var(--display); font-weight: 400; font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.08; }
+.steps .step p { color: var(--muted); font-weight: 300; font-size: 0.92rem; }
+.steps .step .deliver { margin-top: auto; padding-top: 0.9rem; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bone-2); }
+.steps .step .deliver::before { content: "↳ "; color: var(--accent); }
+@media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
+
+/* signature offer panel (Agentic Operations Sprint feature block) */
+.offer-panel {
+    background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px;
+    padding: clamp(1.8rem, 4vw, 3.4rem);
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(1.6rem, 4vw, 3.6rem);
+    align-items: center; position: relative; overflow: hidden;
+}
+.offer-panel::before {
+    content: ""; position: absolute; right: -10%; top: -40%; width: 60%; height: 180%;
+    background: radial-gradient(circle, rgba(201,242,76,0.10), transparent 60%);
+    pointer-events: none;
+}
+.offer-panel .op-eyebrow { margin-bottom: 1.2rem; }
+.offer-panel h3 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.02; letter-spacing: -0.01em; margin-bottom: 1.1rem; }
+.offer-panel .op-body { color: var(--bone-2); font-weight: 300; font-size: clamp(1rem, 1.4vw, 1.15rem); margin-bottom: 2rem; max-width: 46ch; }
+.offer-panel .op-list { display: grid; gap: 0.65rem; }
+.offer-panel .op-list li { list-style: none; display: flex; gap: 0.7rem; align-items: flex-start; color: var(--bone-2); font-size: 0.95rem; font-weight: 300; }
+.offer-panel .op-list li::before { content: "→"; color: var(--accent); flex: 0 0 auto; }
+.offer-panel .op-list li b { color: var(--bone); font-weight: 500; }
+@media (max-width: 900px) { .offer-panel { grid-template-columns: 1fr; } }
