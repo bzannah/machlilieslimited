@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>AI Consulting Services — Mach Lilies</title>
+    <meta name="description" content="AI consulting that ships. Mach Lilies designs, builds and operates AI, LLM and machine-learning systems in production — from AI strategy to MLOps. Free first consultation." />
+    <link rel="canonical" href="https://machlilies.com/services/ai-consulting/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+    <meta name="keywords" content="AI consulting, AI consultancy, AI consulting services, machine learning consulting, LLM development, generative AI consultant, RAG, MLOps, AI strategy" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://machlilies.com/services/ai-consulting/" />
+    <meta property="og:title" content="AI Consulting Services — Mach Lilies" />
+    <meta property="og:description" content="Design, build and operate AI, LLM and machine-learning systems in production — from strategy to MLOps. Mach speed. Lily craft." />
+    <meta property="og:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Consulting Services — Mach Lilies" />
+    <meta name="twitter:description" content="Production AI, LLM and ML systems — strategy to MLOps. Mach speed. Lily craft." />
+    <meta name="twitter:image" content="https://machlilies.com/assets/og-image.png" />
+
+    <!-- Icons -->
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#c9f24c" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+    <!-- Fonts + shared design system -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+
+    <!-- page-specific bits -->
+    <style>
+        .crumb { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+        .crumb a { color: var(--muted); transition: color .3s; }
+        .crumb a:hover { color: var(--accent); }
+        .crumb b { color: var(--accent); font-weight: 400; }
+        .svc-hero { padding-top: 9rem; padding-bottom: 3rem; position: relative; overflow: hidden; }
+        .svc-hero h1 { font-size: clamp(2.6rem, 8vw, 6.5rem); margin: 1.4rem 0; }
+        .svc-lead { max-width: 60ch; color: var(--bone-2); font-size: clamp(1.05rem, 1.5vw, 1.3rem); font-weight: 300; }
+        .ind-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .ind-grid span { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bone-2); border: 1px solid var(--line); border-radius: 99px; padding: 0.6rem 1rem; transition: border-color .3s, color .3s; }
+        .ind-grid span:hover { border-color: var(--accent); color: var(--accent); }
+        .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+        .why-grid .why { background: var(--ink-2); padding: clamp(1.6rem, 3vw, 2.4rem); }
+        .why-grid .why .n { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); letter-spacing: 0.1em; }
+        .why-grid .why h3 { font-family: var(--display); font-size: clamp(1.3rem, 2.2vw, 1.8rem); font-weight: 400; margin: 0.8rem 0 0.5rem; }
+        .why-grid .why p { color: var(--muted); font-weight: 300; font-size: 0.95rem; }
+        @media (max-width: 760px) { .why-grid { grid-template-columns: 1fr; } }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://machlilies.com/#org",
+          "name": "Mach Lilies",
+          "legalName": "Mach Lilies Limited",
+          "url": "https://machlilies.com/",
+          "logo": "https://machlilies.com/assets/logo-mark.svg",
+          "email": "machlilieslimited@gmail.com",
+          "slogan": "Mach speed. Lily craft.",
+          "areaServed": { "@type": "Place", "name": "Worldwide" }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://machlilies.com/services/ai-consulting/#service",
+          "name": "AI Consulting",
+          "serviceType": "AI and machine learning consulting",
+          "url": "https://machlilies.com/services/ai-consulting/",
+          "provider": { "@id": "https://machlilies.com/#org" },
+          "areaServed": { "@type": "Place", "name": "Worldwide" },
+          "description": "AI consulting services from Mach Lilies: strategy, generative AI and LLM applications, RAG and knowledge systems, AI agents, custom machine learning, data and ML pipelines, and MLOps — designed, built and operated in production.",
+          "audience": { "@type": "Audience", "audienceType": "Startups and enterprises" },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "AI consulting services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Generative AI & LLM applications" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "RAG & knowledge systems" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI agents & automation" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom machine learning" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data & ML pipelines (MLOps)" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI strategy & readiness" } }
+            ]
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://machlilies.com/services/ai-consulting/#webpage",
+          "url": "https://machlilies.com/services/ai-consulting/",
+          "name": "AI Consulting Services — Mach Lilies",
+          "isPartOf": { "@id": "https://machlilies.com/#website" },
+          "about": { "@id": "https://machlilies.com/services/ai-consulting/#service" },
+          "primaryImageOfPage": "https://machlilies.com/assets/og-image.png",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://machlilies.com/services/ai-consulting/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://machlilies.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://machlilies.com/#capabilities" },
+            { "@type": "ListItem", "position": 3, "name": "AI Consulting", "item": "https://machlilies.com/services/ai-consulting/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://machlilies.com/services/ai-consulting/#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "What is AI consulting?", "acceptedAnswer": { "@type": "Answer", "text": "AI consulting is the practice of helping an organisation identify, design, build and operate artificial-intelligence and machine-learning systems that deliver measurable business value. A good AI consultancy covers the full path — from strategy and feasibility through to production engineering and ongoing MLOps — not just slideware or one-off demos." } },
+            { "@type": "Question", "name": "What AI consulting services does Mach Lilies offer?", "acceptedAnswer": { "@type": "Answer", "text": "We offer generative-AI and LLM application development, retrieval-augmented generation (RAG) and knowledge systems, AI agents and automation, custom machine-learning models, data and ML pipelines with MLOps, and AI strategy and readiness assessments." } },
+            { "@type": "Question", "name": "How much does AI consulting cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on scope. Most engagements begin with a free consultation and a short, fixed-fee discovery to validate the use case, followed by milestone-based delivery priced to outcomes rather than headcount. Contact us for a tailored quote." } },
+            { "@type": "Question", "name": "How long does an AI project take?", "acceptedAnswer": { "@type": "Answer", "text": "A working prototype is usually weeks, not months. Production-grade deployment depends on data readiness, integration and compliance, but our model is to ship something real early and harden it iteratively." } },
+            { "@type": "Question", "name": "Which AI models and providers do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "We are model-agnostic. We build with leading frontier models such as Anthropic Claude and OpenAI GPT, and with open-source models like Llama and Mistral when they fit better on cost, privacy or control. We recommend the right tool for the job rather than a single vendor." } },
+            { "@type": "Question", "name": "Should I use RAG or fine-tuning?", "acceptedAnswer": { "@type": "Answer", "text": "Most use cases that need current, proprietary or factual knowledge are best served by retrieval-augmented generation (RAG), which grounds the model in your data. Fine-tuning helps for fixed style, format or narrow tasks. We often combine both — and will advise based on your data and goals." } },
+            { "@type": "Question", "name": "Is our data kept secure and private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We design for data privacy and security from the start — including private deployments, isolation of sensitive data, and provider options that do not train on your data. We work to enterprise-grade standards and align with frameworks such as ISO 27001." } },
+            { "@type": "Question", "name": "Do you offer AI strategy, or only build?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We can run an AI readiness and opportunity assessment, advise on build-vs-buy and roadmaps, or act as a fractional AI/engineering leader — and we can take any of it through to production and operation." } }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Analytics scaffold (inert until you set a real GA4 Measurement ID) -->
+    <script>
+      window.GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+      (function () {
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return;
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, { anonymize_ip: true });
+      })();
+    </script>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="c-label">View</span></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="nav">
+        <a href="/" class="brand" data-cursor>
+            <img class="brand-mark" src="/assets/logo-mark.svg" alt="Mach Lilies" width="38" height="38" />
+            <span>
+                <span class="b-name">Mach Lilies</span>
+                <span class="b-sub">Technology Consultancy</span>
+            </span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/#work"><span class="idx">01</span>Work</a>
+            <a href="/#capabilities"><span class="idx">02</span>Capabilities</a>
+            <a href="/#method"><span class="idx">03</span>Method</a>
+            <a href="/#faq"><span class="idx">04</span>FAQ</a>
+        </div>
+        <a href="mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20enquiry" class="nav-cta magnetic" data-cursor>Start a project</a>
+        <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/#work"><span class="idx">01</span>Work</a>
+        <a href="/#capabilities"><span class="idx">02</span>Capabilities</a>
+        <a href="/#method"><span class="idx">03</span>Method</a>
+        <a href="/#faq"><span class="idx">04</span>FAQ</a>
+        <a href="/services/ai-consulting/"><span class="idx">05</span>AI Consulting</a>
+        <div class="mm-foot">machlilieslimited@gmail.com</div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <a href="/#capabilities">Services</a> <span>/</span> <b>AI Consulting</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">AI &amp; Machine Learning Consulting</span>
+            <h1 class="display reveal" data-d="1">AI consulting,<br/><span class="it accent-text">engineered into production.</span></h1>
+            <p class="svc-lead reveal" data-d="2">
+                Mach Lilies is an independent <strong>AI consultancy</strong> that takes artificial intelligence from idea to
+                impact. We design the strategy, build the LLM and machine-learning systems, and operate them in production —
+                so your AI doesn't stall as a demo. <strong>Mach speed. Lily craft.</strong>
+            </p>
+            <div class="hero-cta reveal" data-d="3" style="margin-top:2.2rem">
+                <a href="mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20enquiry" class="btn btn-solid magnetic" data-cursor>Book a free consultation <span class="arrow">→</span></a>
+                <a href="/#work" class="btn btn-ghost magnetic" data-cursor>See the work</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="block manifesto">
+        <div class="wrap">
+            <span class="eyebrow muted reveal">What is AI consulting</span>
+            <p class="reveal" data-d="1" style="margin-top:1.5rem">
+                AI consulting turns <span class="hl">artificial intelligence</span> into outcomes —
+                <span class="dim">strategy, build, and run</span>, not just slideware.
+            </p>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:2rem;max-width:70ch">
+                Most AI projects die between the proof of concept and production. We exist to close that gap. As a senior,
+                founder-led AI and machine-learning consultancy, Mach Lilies helps startups and enterprises find the use
+                cases that pay off, build generative-AI, LLM and ML systems that work under real load, and operate them with
+                proper MLOps. Every engagement is staffed by principals and handed off as clean, documented systems you own.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== AI SERVICES ===== -->
+    <section class="block" id="services">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">What we do</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">AI services, <span class="it accent-text">end to end.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">From generative AI and LLM apps to custom machine learning and MLOps — engaged together or à la carte.</p>
+            </div>
+            <div class="cap-list">
+                <div class="cap-row reveal" data-cursor>
+                    <div class="cap-no">01</div>
+                    <div class="cap-main"><h3>Generative AI &amp; LLM apps</h3><p class="cap-desc">Production LLM applications — copilots, assistants, and document and content workflows — built on Claude, GPT and open-source models.</p></div>
+                    <div class="cap-tags"><span>LLMs</span><span>Copilots</span><span>GenAI</span></div>
+                </div>
+                <div class="cap-row reveal" data-d="1" data-cursor>
+                    <div class="cap-no">02</div>
+                    <div class="cap-main"><h3>RAG &amp; knowledge systems</h3><p class="cap-desc">Retrieval-augmented generation over your own data: vector search, grounding, evaluation and guardrails that keep answers accurate.</p></div>
+                    <div class="cap-tags"><span>RAG</span><span>Vector DB</span><span>Embeddings</span></div>
+                </div>
+                <div class="cap-row reveal" data-d="2" data-cursor>
+                    <div class="cap-no">03</div>
+                    <div class="cap-main"><h3>AI agents &amp; automation</h3><p class="cap-desc">Tool-using agents and workflow automation that take real actions safely — with the right human-in-the-loop controls.</p></div>
+                    <div class="cap-tags"><span>Agents</span><span>Tools</span><span>Workflows</span></div>
+                </div>
+                <div class="cap-row reveal" data-cursor>
+                    <div class="cap-no">04</div>
+                    <div class="cap-main"><h3>Custom machine learning</h3><p class="cap-desc">Bespoke ML where it beats an LLM: forecasting, recommendation, classification, computer vision and NLP.</p></div>
+                    <div class="cap-tags"><span>ML</span><span>Forecasting</span><span>CV / NLP</span></div>
+                </div>
+                <div class="cap-row reveal" data-d="1" data-cursor>
+                    <div class="cap-no">05</div>
+                    <div class="cap-main"><h3>Data &amp; ML pipelines (MLOps)</h3><p class="cap-desc">The backbone that keeps AI working: pipelines, feature stores, training, deployment, evaluation, monitoring and cost control.</p></div>
+                    <div class="cap-tags"><span>MLOps</span><span>Pipelines</span><span>Monitoring</span></div>
+                </div>
+                <div class="cap-row reveal" data-d="2" data-cursor>
+                    <div class="cap-no">06</div>
+                    <div class="cap-main"><h3>AI strategy &amp; readiness</h3><p class="cap-desc">Where AI actually pays off: opportunity mapping, data readiness, build-vs-buy, roadmaps and technical due diligence.</p></div>
+                    <div class="cap-tags"><span>Strategy</span><span>Roadmap</span><span>Due diligence</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW WE DELIVER ===== -->
+    <section class="block method">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">How we deliver AI</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">From idea to MLOps.</h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">Four movements that take AI from a hypothesis to a system that keeps earning its keep.</p>
+            </div>
+            <div class="method-grid reveal" data-d="1">
+                <div class="method-step"><span class="ms-no">01 / Assess</span><h3>Find the value</h3><p>Identify the highest-value, lowest-risk AI use cases and validate data and feasibility.</p></div>
+                <div class="method-step"><span class="ms-no">02 / Prototype</span><h3>Prove it fast</h3><p>A working proof of concept in weeks, evaluated against real metrics — not a slideshow.</p></div>
+                <div class="method-step"><span class="ms-no">03 / Productionize</span><h3>Build for keeps</h3><p>Engineer it to production: tested, observable, secure, scalable and documented.</p></div>
+                <div class="method-step"><span class="ms-no">04 / Operate</span><h3>Keep it sharp</h3><p>MLOps: monitoring, evaluation, retraining and cost control so quality holds over time.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INDUSTRIES + WHY ===== -->
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Who we help</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">AI for <span class="it accent-text">real industries.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:32ch">We ship AI for regulated, high-stakes domains — for both venture-backed startups and enterprises.</p>
+            </div>
+            <div class="ind-grid reveal" data-d="1" style="margin-bottom:4rem">
+                <span>FinTech</span><span>HealthTech</span><span>Logistics</span><span>Retail &amp; Commerce</span><span>B2B SaaS</span><span>Startups</span><span>Enterprise</span>
+            </div>
+
+            <div class="why-grid reveal" data-d="1">
+                <div class="why"><span class="n">i</span><h3>Senior, founder-led</h3><p>The principals who scope your AI are the ones who build it. No hand-off to juniors.</p></div>
+                <div class="why"><span class="n">ii</span><h3>Production-first</h3><p>We optimise for systems that survive real users and real load — not demo-day theatre.</p></div>
+                <div class="why"><span class="n">iii</span><h3>Model-agnostic</h3><p>Claude, GPT, or open-source — we pick on cost, privacy and fit, never vendor loyalty.</p></div>
+                <div class="why"><span class="n">iv</span><h3>Yours to own</h3><p>Clean, documented, no lock-in. We engineer our own hand-off and your team inherits it.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROOF ===== -->
+    <section class="block manifesto">
+        <div class="wrap">
+            <span class="eyebrow muted reveal">Proof, in production</span>
+            <p class="reveal" data-d="1" style="margin-top:1.5rem;max-width:26ch">
+                AI that shipped: <span class="hl">+450% ROI</span>, <span class="hl">−60% wait times</span>,
+                <span class="hl">+28% margin.</span>
+            </p>
+            <div class="hero-cta reveal" data-d="2" style="margin-top:2.4rem">
+                <a href="/#work" class="btn btn-ghost magnetic" data-cursor>Read the case studies <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">AI consulting, <span class="it accent-text">answered.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+                <details class="faq-item"><summary><span>What is AI consulting?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>AI consulting is the practice of helping an organisation identify, design, build and operate artificial-intelligence and machine-learning systems that deliver measurable business value. A good AI consultancy covers the full path — from strategy and feasibility through to production engineering and ongoing MLOps — not just slideware or one-off demos.</p></div></details>
+                <details class="faq-item"><summary><span>What AI consulting services does Mach Lilies offer?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>We offer generative-AI and LLM application development, retrieval-augmented generation (RAG) and knowledge systems, AI agents and automation, custom machine-learning models, data and ML pipelines with MLOps, and AI strategy and readiness assessments.</p></div></details>
+                <details class="faq-item"><summary><span>How much does AI consulting cost?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>It depends on scope. Most engagements begin with a free consultation and a short, fixed-fee discovery to validate the use case, followed by milestone-based delivery priced to outcomes rather than headcount. <a href="mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20quote">Contact us</a> for a tailored quote.</p></div></details>
+                <details class="faq-item"><summary><span>How long does an AI project take?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>A working prototype is usually weeks, not months. Production-grade deployment depends on data readiness, integration and compliance, but our model is to ship something real early and harden it iteratively.</p></div></details>
+                <details class="faq-item"><summary><span>Which AI models and providers do you work with?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>We're model-agnostic. We build with leading frontier models such as Anthropic Claude and OpenAI GPT, and with open-source models like Llama and Mistral when they fit better on cost, privacy or control. We recommend the right tool for the job rather than a single vendor.</p></div></details>
+                <details class="faq-item"><summary><span>Should I use RAG or fine-tuning?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Most use cases that need current, proprietary or factual knowledge are best served by retrieval-augmented generation (RAG), which grounds the model in your data. Fine-tuning helps for fixed style, format or narrow tasks. We often combine both — and will advise based on your data and goals.</p></div></details>
+                <details class="faq-item"><summary><span>Is our data kept secure and private?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Yes. We design for data privacy and security from the start — including private deployments, isolation of sensitive data, and provider options that don't train on your data. We work to enterprise-grade standards and align with frameworks such as ISO 27001.</p></div></details>
+                <details class="faq-item"><summary><span>Do you offer AI strategy, or only build?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Both. We can run an AI readiness and opportunity assessment, advise on build-vs-buy and roadmaps, or act as a fractional AI/engineering leader — and we can take any of it through to production and operation.</p></div></details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="block contact" id="contact">
+        <img class="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" style="left:-12%;right:auto;opacity:0.16;width:min(50vw,520px)" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <span class="eyebrow muted reveal" style="justify-content:center;display:inline-flex">Let's begin</span>
+            <h2 class="big reveal" data-d="1">Put AI <span class="it">to work.</span></h2>
+            <p class="c-sub reveal" data-d="2">Tell us what you're building. We reply to every serious enquiry within one business day — and the first consultation is free.</p>
+            <div class="c-actions reveal" data-d="2">
+                <a href="mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20enquiry" class="btn btn-solid magnetic" data-cursor>machlilieslimited@gmail.com <span class="arrow">→</span></a>
+                <a href="/" class="btn btn-ghost magnetic" data-cursor>Back to home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="wrap">
+            <span class="foot-word">Mach<span class="it"> Lilies</span></span>
+            <div class="foot-cols">
+                <div class="foot-col">
+                    <h5>The practice</h5>
+                    <p>An independent AI &amp; technology consultancy. We design, engineer, and scale software worth keeping.</p>
+                </div>
+                <div class="foot-col">
+                    <h5>Navigate</h5>
+                    <a href="/#work">Work</a>
+                    <a href="/#capabilities">Capabilities</a>
+                    <a href="/#method">Method</a>
+                    <a href="/#faq">FAQ</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Services</h5>
+                    <a href="/services/ai-consulting/">AI Consulting</a>
+                    <a href="/#capabilities">Cloud &amp; Platform</a>
+                    <a href="/#capabilities">Data &amp; Analytics</a>
+                    <a href="/#capabilities">Strategy &amp; Advisory</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Contact</h5>
+                    <a href="mailto:machlilieslimited@gmail.com">machlilieslimited@gmail.com</a>
+                    <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
+                </div>
+            </div>
+            <div class="foot-base">
+                <span>© <span id="year">2026</span> Mach Lilies Limited. All rights reserved.</span>
+                <span class="tag">Mach speed. Lily craft.</span>
+                <a href="#top" data-cursor>Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
