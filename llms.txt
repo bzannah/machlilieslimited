@@ -1,0 +1,38 @@
+# Mach Lilies
+
+> Mach Lilies is an independent AI & technology consultancy. We design, engineer and scale software that moves fast and ages well — across applied AI, machine learning, cloud, data and product engineering. Tagline: "Mach speed. Lily craft."
+
+Mach Lilies Limited is a senior, founder-led technology consultancy serving ambitious startups and enterprises worldwide. We are a small studio by design: the people who pitch are the people who build. Engagements are staffed by principals end-to-end, shipped production-grade from day one, and handed off as clean, documented systems the client owns.
+
+- Contact: machlilieslimited@gmail.com
+- Website: https://machlilies.com
+- Model: global, remote-first studio; free first consultation; outcome-based scoping.
+
+## Capabilities
+
+- [Product Engineering](https://machlilies.com/#capabilities): Custom web and mobile platforms, full-stack, built to scale and engineered to last.
+- [Applied Intelligence (AI & ML)](https://machlilies.com/#capabilities): LLM and generative-AI products, ML pipelines, retrieval/agent systems, intelligent automation, and MLOps in production.
+- [Cloud & Platform](https://machlilies.com/#capabilities): Cloud-native architecture, Kubernetes, infrastructure-as-code, DevOps and site reliability.
+- [Data & Analytics](https://machlilies.com/#capabilities): Data pipelines, warehousing, business intelligence and decision-ready insight.
+- [Design & Experience](https://machlilies.com/#capabilities): Product, brand and motion design — interfaces that feel inevitable.
+- [Strategy & Advisory](https://machlilies.com/#capabilities): Technical due diligence, roadmaps and fractional CTO / technology leadership.
+
+## Selected work
+
+- CryptoFlow Analytics — real-time FinTech trading platform with predictive analytics; +450% ROI, 50K+ daily traders, 40ms p99 latency.
+- MediConnect Pro — HIPAA-grade telemedicine platform with AI-assisted triage; 4.9★ rating, −60% wait time, 120K consults/month.
+- Atlas Routing — continental fleet-optimisation engine; −31% fuel cost, 9.2M routes/day, 99.99% uptime.
+- Verve Commerce OS — unified retail platform with an LLM merchandising copilot; +28% margin, six legacy tools merged into one.
+
+## Industries
+
+FinTech, HealthTech, logistics, retail & commerce, and B2B SaaS — for both venture-backed startups and established enterprises.
+
+## FAQ
+
+- [Frequently asked questions](https://machlilies.com/#faq): what an AI & technology consultancy does, AI/ML services, industries, engagement model and pricing, and how to get started.
+
+## Contact
+
+- Email: machlilieslimited@gmail.com
+- Start a project: https://machlilies.com/#contact

@@ -4,20 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0d0c0a" />
-    <title>Mach Lilies — Technology Consultancy · Mach speed, Lily craft</title>
-    <meta name="description" content="Mach Lilies is an independent technology consultancy. We design, engineer, and scale software that moves fast and ages well. Mach speed. Lily craft." />
+    <meta name="color-scheme" content="dark" />
+
+    <title>AI &amp; Technology Consultancy — Mach Lilies</title>
+    <meta name="description" content="Mach Lilies is an independent AI &amp; technology consultancy. We design, engineer and scale software — AI, machine learning, cloud, data and product. Mach speed. Lily craft." />
+    <link rel="canonical" href="https://machlilies.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+    <meta name="keywords" content="AI consultancy, technology consultancy, AI consulting, machine learning consulting, software engineering, cloud consulting, data engineering, LLM development, digital transformation, technology services" />
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mach Lilies — Technology Consultancy" />
-    <meta property="og:description" content="We build the rare things. Software that moves at Mach speed and is finished with a maker's hand." />
-    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://machlilies.com/" />
+    <meta property="og:title" content="AI &amp; Technology Consultancy — Mach Lilies" />
+    <meta property="og:description" content="We build the rare things. AI, cloud, data and product engineering that moves at Mach speed and is finished with a maker's hand." />
+    <meta property="og:image" content="https://machlilies.com/assets/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mach Lilies — AI & technology consultancy. Mach speed. Lily craft." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mach Lilies — Technology Consultancy" />
-    <meta name="twitter:description" content="Mach speed. Lily craft. Software that moves fast and ages well." />
-    <meta name="twitter:image" content="assets/og-image.png" />
+    <meta name="twitter:title" content="AI &amp; Technology Consultancy — Mach Lilies" />
+    <meta name="twitter:description" content="Mach speed. Lily craft. AI, cloud, data and product engineering that ages well." />
+    <meta name="twitter:image" content="https://machlilies.com/assets/og-image.png" />
+
+    <!--
+      SEO scaffold — fill in and uncomment when you have the IDs:
+      <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN" />
+      <meta name="msvalidate.01" content="YOUR_BING_WEBMASTER_TOKEN" />
+      See docs/seo-strategy.md → "Measurement & verification".
+    -->
 
     <!-- Bespoke icon system -->
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -26,10 +43,12 @@
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="mask-icon" href="assets/favicon.svg" color="#c9f24c" />
     <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- Typeface system: Fraunces (editorial display) · Inter (interface) · Space Mono (technical) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
     <style>
@@ -591,6 +610,40 @@
     .quote .q-by span { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; }
 
     /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq-list { border-top: 1px solid var(--line); max-width: 920px; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary {
+        list-style: none; cursor: none; display: flex; align-items: center; justify-content: space-between;
+        gap: 1.5rem; padding: clamp(1.2rem, 2.6vh, 1.8rem) 0;
+        font-family: var(--display); font-weight: 400; font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+        line-height: 1.2; color: var(--bone); transition: color .35s var(--ease);
+    }
+    @media (hover: none) { .faq-item summary { cursor: pointer; } }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { color: var(--accent); }
+    .faq-item summary i {
+        position: relative; flex: 0 0 22px; width: 22px; height: 22px;
+    }
+    .faq-item summary i::before, .faq-item summary i::after {
+        content: ""; position: absolute; top: 50%; left: 50%; background: var(--accent);
+        transform: translate(-50%, -50%); transition: transform .35s var(--ease), opacity .35s;
+    }
+    .faq-item summary i::before { width: 14px; height: 1.6px; }
+    .faq-item summary i::after { width: 1.6px; height: 14px; }
+    .faq-item[open] summary { color: var(--accent); }
+    .faq-item[open] summary i::after { transform: translate(-50%, -50%) scaleY(0); opacity: 0; }
+    .faq-a { overflow: hidden; }
+    .faq-a p {
+        color: var(--bone-2); font-weight: 300; font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+        line-height: 1.65; max-width: 72ch; padding-bottom: clamp(1.2rem, 2.6vh, 1.8rem);
+    }
+    .faq-a a { color: var(--accent); border-bottom: 1px solid rgba(201,242,76,0.4); }
+    .faq-item[open] .faq-a { animation: faqOpen .5s var(--ease); }
+    @keyframes faqOpen { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+    /* ============================================================
        CONTACT
        ============================================================ */
     .contact { text-align: center; position: relative; overflow: hidden; }
@@ -670,6 +723,117 @@
         body { cursor: auto !important; }
         .cursor-dot, .cursor-ring, #petal-canvas { display: none !important; }
     </style></noscript>
+
+    <!-- ============================================================
+         Structured data (JSON-LD) — Organization / ProfessionalService,
+         WebSite, WebPage, Services catalog, FAQ, Breadcrumb.
+         NOTE: Review/AggregateRating is intentionally omitted — add it
+         only with real, attributable client reviews (Google policy).
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://machlilies.com/#org",
+          "name": "Mach Lilies",
+          "legalName": "Mach Lilies Limited",
+          "alternateName": "Mach Lilies Consultancy",
+          "url": "https://machlilies.com/",
+          "logo": { "@type": "ImageObject", "url": "https://machlilies.com/assets/logo-mark.svg", "width": 512, "height": 512 },
+          "image": "https://machlilies.com/assets/og-image.png",
+          "description": "Mach Lilies is an independent AI and technology consultancy. We design, engineer and scale software across AI, machine learning, cloud, data and product engineering.",
+          "slogan": "Mach speed. Lily craft.",
+          "email": "machlilieslimited@gmail.com",
+          "foundingDate": "2015",
+          "areaServed": { "@type": "Place", "name": "Worldwide" },
+          "availableLanguage": "English",
+          "knowsAbout": [
+            "Artificial Intelligence Consulting", "Machine Learning", "Large Language Models",
+            "Generative AI", "MLOps", "Software Engineering", "Cloud Architecture", "DevOps",
+            "Site Reliability Engineering", "Data Engineering", "Data Analytics", "Product Design",
+            "UX/UI Design", "Technology Strategy", "Digital Transformation", "Technical Due Diligence"
+          ],
+          "serviceType": [
+            "AI consulting", "Machine learning consulting", "Software engineering",
+            "Cloud and platform engineering", "Data engineering and analytics",
+            "Product and experience design", "Technology strategy and advisory"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Consulting services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product Engineering", "serviceType": "Custom software engineering", "description": "Custom web and mobile platforms, built to scale and engineered to last.", "provider": { "@id": "https://machlilies.com/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Applied Intelligence (AI & ML)", "serviceType": "AI and machine learning consulting", "description": "LLM systems, ML pipelines and automation that earns its keep in production.", "provider": { "@id": "https://machlilies.com/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud & Platform", "serviceType": "Cloud architecture and DevOps", "description": "Cloud-native architecture, DevOps and reliability you can sleep through.", "provider": { "@id": "https://machlilies.com/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data & Analytics", "serviceType": "Data engineering and analytics", "description": "Pipelines, warehousing and insight you can act on.", "provider": { "@id": "https://machlilies.com/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design & Experience", "serviceType": "Product and experience design", "description": "Interfaces that feel inevitable — the kind users forget they're using.", "provider": { "@id": "https://machlilies.com/#org" } } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategy & Advisory", "serviceType": "Technology strategy and advisory", "description": "Technical due diligence, roadmaps and fractional leadership when it counts.", "provider": { "@id": "https://machlilies.com/#org" } } }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://machlilies.com/#website",
+          "url": "https://machlilies.com/",
+          "name": "Mach Lilies",
+          "description": "Independent AI and technology consultancy.",
+          "publisher": { "@id": "https://machlilies.com/#org" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://machlilies.com/#webpage",
+          "url": "https://machlilies.com/",
+          "name": "AI & Technology Consultancy — Mach Lilies",
+          "isPartOf": { "@id": "https://machlilies.com/#website" },
+          "about": { "@id": "https://machlilies.com/#org" },
+          "primaryImageOfPage": "https://machlilies.com/assets/og-image.png",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://machlilies.com/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://machlilies.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Capabilities", "item": "https://machlilies.com/#capabilities" },
+            { "@type": "ListItem", "position": 3, "name": "Work", "item": "https://machlilies.com/#work" },
+            { "@type": "ListItem", "position": 4, "name": "FAQ", "item": "https://machlilies.com/#faq" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://machlilies.com/#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "What does Mach Lilies do?", "acceptedAnswer": { "@type": "Answer", "text": "Mach Lilies is an independent AI and technology consultancy. We design, engineer and scale software for ambitious teams — spanning applied AI and machine learning, cloud and platform engineering, data and analytics, product engineering, design, and technology strategy." } },
+            { "@type": "Question", "name": "What is an AI consultancy and what does an AI consultant do?", "acceptedAnswer": { "@type": "Answer", "text": "An AI consultancy helps organisations identify, build and deploy artificial intelligence and machine learning systems that deliver real business value. At Mach Lilies that means everything from LLM and generative-AI applications and ML pipelines to automation and MLOps — designed, shipped to production, and measured against outcomes." } },
+            { "@type": "Question", "name": "What AI and machine learning services do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "We build LLM and generative-AI products, retrieval and agent systems, custom machine-learning models, data and ML pipelines, and intelligent automation. Engagements include AI strategy, rapid prototyping, production engineering, and MLOps for reliability at scale." } },
+            { "@type": "Question", "name": "Which industries does Mach Lilies work with?", "acceptedAnswer": { "@type": "Answer", "text": "We work across FinTech, HealthTech, logistics, retail and commerce, and B2B SaaS — with both venture-backed startups and established enterprises. Our practice is global and fully remote, working across time zones." } },
+            { "@type": "Question", "name": "How do engagements and pricing work?", "acceptedAnswer": { "@type": "Answer", "text": "Most engagements start with a free consultation and a short, fixed-scope discovery to frame the problem, followed by milestone-based delivery. We staff every project with senior principals and scope pricing to outcomes rather than headcount. Contact us for a tailored proposal." } },
+            { "@type": "Question", "name": "What makes Mach Lilies different from other technology consultancies?", "acceptedAnswer": { "@type": "Answer", "text": "We are a small, senior, founder-led studio: the people who pitch are the people who build. We take few clients on purpose, ship production-grade work from day one, and engineer our own hand-off so you own clean, documented systems that outlive the engagement." } },
+            { "@type": "Question", "name": "Do you work with startups or enterprises, and are you remote?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We partner with early-stage startups needing a fractional CTO or first AI product, and with enterprises modernising platforms or adopting AI. Mach Lilies is a global, remote-first studio." } },
+            { "@type": "Question", "name": "How do I get started with Mach Lilies?", "acceptedAnswer": { "@type": "Answer", "text": "Email machlilieslimited@gmail.com with a few lines about what you're building. We reply to every serious enquiry within one business day and offer a free first consultation with no commitment." } }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Analytics scaffold (inert until you set a real GA4 Measurement ID) -->
+    <script>
+      window.GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // ← replace to activate Google Analytics 4
+      (function () {
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return; // stays off while placeholder
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, { anonymize_ip: true });
+      })();
+    </script>
 </head>
 <body>
     <!-- ===== Mach Lily mark (defined first so every <use> resolves) ===== -->
@@ -754,7 +918,7 @@
         </svg>
 
         <div class="wrap hero-inner">
-            <span class="eyebrow fade-up">Independent · Engineering &amp; Design · Est. for the bold</span>
+            <span class="eyebrow fade-up">Independent AI &amp; Technology Consultancy</span>
 
             <h1 class="display">
                 <span class="line"><span class="word" style="--i:0">We</span> <span class="word" style="--i:1">build</span> <span class="word" style="--i:2">the</span></span>
@@ -762,8 +926,9 @@
             </h1>
 
             <p class="sub fade-up">
-                Mach Lilies is a technology consultancy for ambitious teams. We design, engineer, and scale software that
-                <b>moves at Mach speed</b> — and is finished with a maker's hand.
+                Mach Lilies is an independent <b>AI and technology consultancy</b> for ambitious teams. We design,
+                engineer, and scale software — across AI, cloud, data and product — that <b>moves at Mach speed</b>
+                and is finished with a maker's hand.
             </p>
 
             <div class="hero-cta fade-up">
@@ -814,7 +979,7 @@
                     <span class="eyebrow muted reveal">02 — What we do</span>
                     <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Capabilities, <span class="it accent-text">end to end.</span></h2>
                 </div>
-                <p class="sec-no reveal" data-d="2" style="max-width:30ch">Six disciplines, one team. Engaged together or à la carte — whatever the work demands.</p>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">From AI and machine learning to cloud, data engineering, product and design — six disciplines, one senior team. Engaged together or à la carte.</p>
             </div>
 
             <div class="cap-list">
@@ -890,7 +1055,7 @@
                 <article class="work-card reveal" data-cursor>
                     <div class="work-media tilt">
                         <span class="work-num">— 01</span>
-                        <img src="assets/media/work-01.png" alt="CryptoFlow trading analytics platform" loading="lazy" />
+                        <img width="1200" height="820" decoding="async" src="assets/media/work-01.png" alt="CryptoFlow trading analytics platform" loading="lazy" />
                     </div>
                     <div class="work-body">
                         <div class="work-tags"><span>FinTech</span><span>Real-time</span><span>Applied AI</span></div>
@@ -907,7 +1072,7 @@
                 <article class="work-card reveal" data-d="1" data-cursor>
                     <div class="work-media tilt">
                         <span class="work-num">— 02</span>
-                        <img src="assets/media/work-02.png" alt="MediConnect telemedicine platform" loading="lazy" />
+                        <img width="1200" height="820" decoding="async" src="assets/media/work-02.png" alt="MediConnect telemedicine platform" loading="lazy" />
                     </div>
                     <div class="work-body">
                         <div class="work-tags"><span>HealthTech</span><span>Mobile</span><span>Compliance</span></div>
@@ -924,7 +1089,7 @@
                 <article class="work-card reveal" data-cursor>
                     <div class="work-media tilt">
                         <span class="work-num">— 03</span>
-                        <img src="assets/media/work-03.png" alt="Logistics optimisation platform" loading="lazy" />
+                        <img width="1200" height="820" decoding="async" src="assets/media/work-03.png" alt="Logistics optimisation platform" loading="lazy" />
                     </div>
                     <div class="work-body">
                         <div class="work-tags"><span>Logistics</span><span>Optimisation</span><span>Cloud</span></div>
@@ -941,7 +1106,7 @@
                 <article class="work-card reveal" data-d="1" data-cursor>
                     <div class="work-media tilt">
                         <span class="work-num">— 04</span>
-                        <img src="assets/media/work-04.png" alt="Retail intelligence dashboard" loading="lazy" />
+                        <img width="1200" height="820" decoding="async" src="assets/media/work-04.png" alt="Retail intelligence dashboard" loading="lazy" />
                     </div>
                     <div class="work-body">
                         <div class="work-tags"><span>Retail</span><span>Data</span><span>LLM</span></div>
@@ -1024,7 +1189,7 @@
                 </div>
 
                 <div class="about-visual reveal" data-d="1">
-                    <img src="assets/media/studio.png" alt="The Mach Lilies team at work" loading="lazy" />
+                    <img src="assets/media/studio.png" width="880" height="1080" alt="Mach Lilies — independent AI and technology consultancy studio" loading="lazy" decoding="async" />
                     <div class="about-badge">
                         <div><div class="bm">Certified</div><b>ISO 27001</b></div>
                     </div>
@@ -1059,6 +1224,54 @@
                     <p>The cloud migration saved us 40% in run cost while performance went up. Rare to find a partner who delivers both.</p>
                     <figcaption class="q-by"><span class="av">ER</span><span><b>Emily Rodriguez</b><span>VP Eng · CloudFirst</span></span></figcaption>
                 </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Frequently <span class="it accent-text">asked.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:32ch">What an AI &amp; technology consultancy actually does — and how working with Mach Lilies works.</p>
+            </div>
+
+            <div class="faq-list reveal" data-d="1">
+                <details class="faq-item">
+                    <summary><span>What does Mach Lilies do?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>Mach Lilies is an independent AI and technology consultancy. We design, engineer and scale software for ambitious teams — spanning applied AI and machine learning, cloud and platform engineering, data and analytics, product engineering, design, and technology strategy.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>What is an AI consultancy, and what does an AI consultant do?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>An AI consultancy helps organisations identify, build and deploy artificial-intelligence and machine-learning systems that deliver real business value. At Mach Lilies that runs from LLM and generative-AI applications, ML pipelines and intelligent automation through to MLOps — designed, shipped to production, and measured against outcomes rather than slideware.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>What AI and machine learning services do you offer?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>We build LLM and generative-AI products, retrieval and agent systems, custom machine-learning models, data and ML pipelines, and intelligent automation. Engagements span AI strategy, rapid prototyping, production engineering, and MLOps for reliability at scale.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>Which industries do you work with?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>We work across FinTech, HealthTech, logistics, retail and commerce, and B2B SaaS — with both venture-backed startups and established enterprises. The practice is global and fully remote, working across time zones.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>How do engagements and pricing work?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>Most engagements start with a free consultation and a short, fixed-scope discovery to frame the problem, followed by milestone-based delivery. Every project is staffed by senior principals, and we scope pricing to outcomes rather than headcount. Get in touch for a tailored proposal.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>What makes Mach Lilies different from other technology consultancies?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>We're a small, senior, founder-led studio — the people who pitch are the people who build. We take few clients on purpose, ship production-grade work from day one, and engineer our own hand-off so you own clean, documented systems that outlive the engagement.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>Do you work with startups or enterprises, and are you remote?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>Both. We partner with early-stage startups needing a fractional CTO or first AI product, and with enterprises modernising platforms or adopting AI. Mach Lilies is a global, remote-first studio.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>How do I get started?</span><i aria-hidden="true"></i></summary>
+                    <div class="faq-a"><p>Email <a href="mailto:machlilieslimited@gmail.com">machlilieslimited@gmail.com</a> with a few lines about what you're building. We reply to every serious enquiry within one business day and offer a free first consultation with no commitment.</p></div>
+                </details>
             </div>
         </div>
     </section>
@@ -1102,6 +1315,7 @@
                     <a href="#capabilities">Capabilities</a>
                     <a href="#method">Method</a>
                     <a href="#studio">Studio</a>
+                    <a href="#faq">FAQ</a>
                 </div>
                 <div class="foot-col">
                     <h5>Capabilities</h5>
@@ -1172,7 +1386,7 @@
                 ring.style.transform = "translate(" + rx + "px," + ry + "px) translate(-50%,-50%)";
                 requestAnimationFrame(loop);
             })();
-            var hoverSel = "a, button, .cap-row, .work-card, .quote, [data-cursor]";
+            var hoverSel = "a, button, summary, .cap-row, .work-card, .quote, [data-cursor]";
             document.querySelectorAll(hoverSel).forEach(function (el) {
                 el.addEventListener("mouseenter", function () {
                     var lbl = el.getAttribute("data-cursor");
