@@ -741,4 +741,9 @@
 .offer-panel .op-list li { list-style: none; display: flex; gap: 0.7rem; align-items: flex-start; color: var(--bone-2); font-size: 0.95rem; font-weight: 300; }
 .offer-panel .op-list li::before { content: "→"; color: var(--accent); flex: 0 0 auto; }
 .offer-panel .op-list li b { color: var(--bone); font-weight: 500; }
+
+/* "what to include" chips on the contact section */
+.contact .c-include { margin: -0.4rem auto 2.6rem; max-width: 660px; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.contact .c-include span { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bone-2); border: 1px solid var(--line); border-radius: 99px; padding: 0.5rem 0.9rem; transition: border-color .3s, color .3s; }
+.contact .c-include span:hover { border-color: var(--accent); color: var(--accent); }
 @media (max-width: 900px) { .offer-panel { grid-template-columns: 1fr; } }

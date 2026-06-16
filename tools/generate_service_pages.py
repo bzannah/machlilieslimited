@@ -348,6 +348,16 @@ SERVICES = {
   "ov_eyebrow": "What the Sprint is",
   "ov_hl": 'In one focused sprint: <span class="hl">map the workflows</span>, prototype the strongest, and leave with a <span class="hl">production plan.</span>',
   "ov_body": "The Agentic Operations Sprint is how most engagements with Mach Lilies begin. In a focused, fixed-scope sprint we map your highest-friction workflows, identify where agents can safely act, prototype the strongest opportunity against real inputs, and hand you a production rollout plan with governance, integrations, ROI and risk controls built in from the start. You finish with a working prototype, a clear business case, and a fixed-scope proposal — or a well-reasoned recommendation not to proceed.",
+  "timeline_h2": ("Six phases,", "one focused sprint."),
+  "timeline_note": "A clear sequence from mapping the work to a fixed-scope production proposal.",
+  "timeline": [
+    ("01","Workflow mapping","We interview operators, review tools and classify repeatable work — mapping handoffs and exceptions.","Workflow map & opportunity scorecard"),
+    ("02","Data & system readiness","We check source documents, data quality, APIs, identity, permissions and tool access.","Readiness assessment & integration plan"),
+    ("03","Risk & control design","We define where the agent can act, where humans approve, and what must be logged.","Control matrix & human-in-loop map"),
+    ("04","Prototype","We build a narrow, working agent against realistic data and tool calls.","Working demo & quality evaluation"),
+    ("05","Business case","We estimate time saved, error reduction, throughput and operational cost.","ROI model & production recommendation"),
+    ("06","Rollout plan","We define the architecture, scope, implementation path and managed-service model.","Fixed-scope production proposal"),
+  ],
   "svc_h2": ("What you", "walk away with."),
   "svc_note": "Concrete deliverables, not a slide deck — everything you need to make a confident production decision.",
   "services": [
@@ -845,6 +855,28 @@ def render_faqs(d):
         '''                <details class="faq-item"><summary><span>%s</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>%s</p></div></details>'''
         % (esc(q), esc(a)) for q,a in d["faqs"])
 
+def render_timeline(d):
+    if not d.get("timeline"): return ""
+    steps = "\n".join(
+        '                <div class="step"><span class="sn">%s</span><h3>%s</h3><p>%s</p><span class="deliver">%s</span></div>'
+        % (esc(no), esc(name), esc(desc), esc(out)) for no,name,desc,out in d["timeline"])
+    return '''    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">How the Sprint runs</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">%s <span class="it accent-text">%s</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">%s</p>
+            </div>
+            <div class="steps reveal" data-d="1">
+%s
+            </div>
+        </div>
+    </section>
+
+''' % (esc(d["timeline_h2"][0]), esc(d["timeline_h2"][1]), esc(d["timeline_note"]), steps)
+
 def render_related(slug):
     cards = []
     for s in RELATED.get(slug, [x for x in ORDER if x != slug][:3]):
@@ -949,7 +981,7 @@ def build(slug, d):
         </div>
     </section>
 
-    <section class="block" id="services">
+{timeline_section}    <section class="block" id="services">
         <div class="wrap">
             <div class="sec-head">
                 <div>
@@ -1060,6 +1092,7 @@ def build(slug, d):
         cta2_label=esc(d["cta2"]), cta2_href=d["cta2_href"],
         subject=contact_subject,
         ov_eyebrow=esc(d["ov_eyebrow"]), ov_hl=d["ov_hl"], ov_body=esc(d["ov_body"]),
+        timeline_section=render_timeline(d),
         svc_h2a=esc(d["svc_h2"][0]), svc_h2b=esc(d["svc_h2"][1]), svc_note=esc(d["svc_note"]),
         services=render_services(d),
         method_h2a=esc(d["method_h2"][0]), method_h2b=esc(d["method_h2"][1]),
