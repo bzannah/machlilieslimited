@@ -19,6 +19,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://machlilies.com"
 SPRINT = "agentic-operations-sprint"
 
+# --- live integrations (edit here; one source for every generated page) ---
+GA_ID = "G-PSM4267LV3"                                          # Google Analytics 4 measurement ID
+FORM_ENDPOINT = "https://formspree.io/f/xojzonkd"               # contact-form POST endpoint (Formspree)
+BOOKING_URL = "https://cal.eu/machlilies/agent-operations-sprint-intro"  # Cal booking link
+
 def esc(s): return html.escape(s, quote=False)
 
 # short name + blurb for the "Related services" mesh and footer
@@ -408,7 +413,7 @@ SERVICES = {
   ],
   "contact_h2": ("Book the", "Sprint."),
   "contact_sub": "Tell us the workflow you want to automate, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book the Sprint", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Book%20an%20Agentic%20Operations%20Sprint",
+  "cta": "Book the Sprint", "cta_href": BOOKING_URL,
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -1089,7 +1094,7 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
     </script>
 
     <script>
-      window.GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+      window.GA_MEASUREMENT_ID = "G-PSM4267LV3";
       (function () {{
         var id = window.GA_MEASUREMENT_ID;
         if (!id || id.indexOf("XXXX") !== -1) return;
@@ -1279,10 +1284,11 @@ def render_fields():
         reqattr = " required" if req else ""
         phattr = ' placeholder="%s"' % esc(ph) if ph else ""
         acattr = ' autocomplete="%s"' % ac if ac else ""
+        name = "email" if typ == "email" else label   # Formspree uses an "email" field for reply-to
         rows.append('''                <div class="%s">
                     <label for="%s">%s%s</label>
                     <input id="%s" name="%s" type="%s"%s%s%s />
-                </div>''' % (cls, fid, esc(label), reqmark, fid, esc(label), typ, reqattr, acattr, phattr))
+                </div>''' % (cls, fid, esc(label), reqmark, fid, esc(name), typ, reqattr, acattr, phattr))
     return "\n".join(rows)
 
 def build_contact():
@@ -1344,7 +1350,7 @@ def build_contact():
     </script>
 
     <script>
-      window.GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+      window.GA_MEASUREMENT_ID = "G-PSM4267LV3";
       (function () {{
         var id = window.GA_MEASUREMENT_ID;
         if (!id || id.indexOf("XXXX") !== -1) return;
@@ -1380,7 +1386,8 @@ def build_contact():
 
     <section class="block" id="enquiry" style="padding-top:0">
         <div class="wrap">
-            <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="">
+            <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="{endpoint}">
+                <input type="hidden" name="_subject" value="New Agentic Operations enquiry — machlilies.com" />
                 <div class="form-grid">
 {fields}
                     <div class="field half">
@@ -1398,8 +1405,9 @@ def build_contact():
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn btn-solid magnetic" data-cursor>Send enquiry <span class="arrow">→</span></button>
-                    <span class="form-note">Or email <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a> directly. We reply within one business day.</span>
+                    <a href="{booking}" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Or book a 30-min call</a>
                 </div>
+                <p class="form-note" style="margin-top:1rem">Prefer email? <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a> — we reply within one business day.</p>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
@@ -1410,7 +1418,8 @@ def build_contact():
     <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
-'''.format(title=esc(title), desc=esc(desc), url=url, base=BASE, ld=ld, nav=NAV, fields=render_fields(), footer=footer())
+'''.format(title=esc(title), desc=esc(desc), url=url, base=BASE, ld=ld, nav=NAV,
+           fields=render_fields(), footer=footer(), endpoint=FORM_ENDPOINT, booking=BOOKING_URL)
 
 if __name__ == "__main__":
     print("== service pages ==")
