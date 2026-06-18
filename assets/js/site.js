@@ -253,4 +253,54 @@
                 if (t) { e.preventDefault(); t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }
             });
         });
+
+        /* ---------- ANALYTICS EVENTS (inert until GA_MEASUREMENT_ID is set) ---------- */
+        document.querySelectorAll("[data-event]").forEach(function (el) {
+            el.addEventListener("click", function () {
+                if (!window.gtag) return;
+                var name = el.getAttribute("data-event");
+                var label = (el.getAttribute("data-label") || el.textContent || "").trim().slice(0, 80);
+                try { gtag("event", name, { event_category: "engagement", event_label: label }); } catch (e) { }
+            });
+        });
+
+        /* ---------- CONTACT FORM (progressive enhancement) ---------- */
+        var ef = document.getElementById("enquiry-form");
+        if (ef) {
+            var fstatus = document.getElementById("form-status");
+            var setStatus = function (msg, ok) {
+                if (!fstatus) return;
+                fstatus.textContent = msg;
+                fstatus.className = "form-status show " + (ok ? "ok" : "err");
+            };
+            ef.addEventListener("submit", function (e) {
+                if (!ef.checkValidity()) { ef.reportValidity(); return; }
+                e.preventDefault();
+                var data = {};
+                Array.prototype.forEach.call(ef.elements, function (el) {
+                    if (el.name && el.value && el.type !== "submit") data[el.name] = el.value;
+                });
+                if (window.gtag) { try { gtag("event", "form_submit", { event_category: "contact" }); } catch (e2) { } }
+                var endpoint = ef.getAttribute("data-endpoint");
+                if (endpoint) {
+                    setStatus("Sending…", true);
+                    fetch(endpoint, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                        body: JSON.stringify(data)
+                    }).then(function (r) {
+                        if (!r.ok) throw 0;
+                        ef.reset();
+                        setStatus("Thank you — your enquiry is on its way. We reply within one business day.", true);
+                    }).catch(function () {
+                        setStatus("Something went wrong. Please email machlilieslimited@gmail.com directly.", false);
+                    });
+                } else {
+                    var subject = "Agentic Operations enquiry — " + (data["Company"] || data["Name"] || "");
+                    var body = Object.keys(data).map(function (k) { return k + ": " + data[k]; }).join("\n\n");
+                    window.location.href = "mailto:machlilieslimited@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                    setStatus("Opening your email client… if nothing happens, email machlilieslimited@gmail.com directly.", true);
+                }
+            });
+        }
     })();

@@ -358,6 +358,14 @@ SERVICES = {
     ("05","Business case","We estimate time saved, error reduction, throughput and operational cost.","ROI model & production recommendation"),
     ("06","Rollout plan","We define the architecture, scope, implementation path and managed-service model.","Fixed-scope production proposal"),
   ],
+  "sample_h2": ("A sample opportunity", "scorecard."),
+  "sample_note": "Illustrative only — every Sprint produces this against your real workflows, not these examples.",
+  "sample": [
+    ("Renewal pack assembly","Value: high · Feasibility: high · Data readiness: medium","Recommendation: prototype first"),
+    ("Inbox triage & routing","Value: high · Feasibility: medium · Data readiness: high","Recommendation: strong candidate"),
+    ("Management report compilation","Value: medium · Feasibility: high · Data readiness: high","Recommendation: quick win"),
+    ("Free-text exception handling","Value: medium · Feasibility: low · Data readiness: low","Recommendation: hold for now"),
+  ],
   "svc_h2": ("What you", "walk away with."),
   "svc_note": "Concrete deliverables, not a slide deck — everything you need to make a confident production decision.",
   "services": [
@@ -736,6 +744,127 @@ SERVICES = {
 },
 }
 
+# ============================ INDUSTRY (VERTICAL) PAGES ============================
+IND_SHORT = {
+    "insurance-brokers":     "Insurance Brokers",
+    "accountancy-practices": "Accountancy Practices",
+}
+INDUSTRY_ORDER = ["insurance-brokers", "accountancy-practices"]
+
+INDUSTRIES = {
+"insurance-brokers": {
+  "title": "AI Agents for Insurance Brokers | Mach Lilies",
+  "desc": "Governed AI agents for broker inboxes, renewal packs, claims intake, missing-document chasing and compliance evidence — with broker approval and a clear audit trail.",
+  "keywords": "AI agents for insurance brokers, insurance broking automation, renewal pack automation, claims intake AI, broker workflow automation, insurance back-office AI",
+  "service_type": "Agentic operations for insurance brokers",
+  "eyebrow": "Agentic Operations for Insurance Brokers",
+  "h1": ("Renewal and claims admin,", "handled by governed AI agents."),
+  "lead": "Mach Lilies builds agentic workflows for broker inboxes, policy documents, renewal packs, claims intake, customer updates and compliance evidence — with broker approval and a clear audit trail. <strong>Mach speed. Lily craft.</strong>",
+  "ov_eyebrow": "The pain",
+  "ov_hl": 'Senior broker time disappears into <span class="dim">inboxes, chasing and paperwork</span> — not <span class="hl">advice and relationships.</span>',
+  "ov_body": "Broking runs on documents, email and deadlines: renewals to prepare, insurers to compare, claims to log, clients to chase for missing information, and evidence to keep for compliance. Most of it is repeatable, deadline-driven admin that consumes your most experienced people. Mach Lilies builds bounded AI agents that take the repetitive load off broker inboxes and documents — drafting, gathering and updating — while brokers approve anything that carries risk, and every step is logged for audit.",
+  "svc_h2": ("Broker workflows", "we operate."),
+  "svc_note": "Bounded agents for the repeatable, deadline-driven admin that consumes senior broker time.",
+  "services": [
+    ("Renewal pack agent", "Assembles renewal packs from policy systems and documents, flags gaps and prepares a draft for broker review.", ["Renewals","Documents","Drafting"]),
+    ("Policy comparison agent", "Extracts and compares cover, terms and exclusions across quotes to support a faster, clearer recommendation.", ["Comparison","Extraction","Quotes"]),
+    ("Claims intake agent", "Captures first notification of loss, records the detail, classifies and routes claims to the right handler.", ["Claims","FNOL","Routing"]),
+    ("Missing-document chase", "Identifies what's outstanding and drafts follow-ups to clients and insurers — politely and on schedule.", ["Chasing","Follow-up","Email"]),
+    ("Compliance evidence agent", "Gathers and files the evidence a broker needs to demonstrate process — every action logged.", ["Evidence","Audit","Records"]),
+    ("Customer update drafts", "Drafts clear status updates for clients at each step, ready for a broker to review and send.", ["Updates","Comms","Drafting"]),
+  ],
+  "method_h2": ("Map, prototype,", "govern, operate."),
+  "method_note": "How a broker workflow becomes a governed agent — with you in control at every step.",
+  "method": [
+    ("01 / Map","Pick the workflow","We start with the renewal, claims or chasing workflow that costs your team the most time."),
+    ("02 / Prototype","Prove it on real cases","A working agent against real, anonymised broker documents and cases, evaluated for accuracy."),
+    ("03 / Govern","Broker stays in control","Broker approval on anything that carries risk, least-privilege access, and a full audit trail."),
+    ("04 / Operate","Run and improve","We monitor quality, handle exceptions, and expand to the next workflow as confidence grows."),
+  ],
+  "ind_h2": ("Systems we", "work across."),
+  "ind_note": "Bounded, least-privilege connectors into the tools brokers already use.",
+  "industries": ["Email / Outlook","Broker CRM","Policy & quote systems","Document storage","Finance systems","Insurer portals","Acturis-style platforms","Spreadsheets"],
+  "why": [
+    ("i","Broker approval","Agents draft, gather and compare; a broker signs off anything that goes to a client or insurer."),
+    ("ii","Least-privilege access","Each agent only touches the systems and data its workflow needs — nothing more."),
+    ("iii","Full audit trail","Every action, document and approval is logged, so your process is evidenced for compliance."),
+    ("iv","Exception escalation","Anything unusual is flagged to a person rather than guessed at."),
+  ],
+  "proof_hl": 'Faster renewals and claims admin, fewer missed handoffs, and a <span class="hl">clear audit trail</span> — with <span class="hl">brokers in control.</span>',
+  "faq_h2": ("Brokers,", "answered."),
+  "faqs": [
+    ("Will an AI agent talk to my clients without me?", "No. Agents draft customer updates and chase missing documents, but a broker approves anything that goes out where it matters. The agent removes the preparation work; you keep the relationship and the final say."),
+    ("Can it work with our broker management system?", "Typically yes. We build least-privilege connectors into the systems brokers use — email, CRM, policy and quote systems, document storage and finance tools — scoped to the specific workflow."),
+    ("Is this compliant?", "We design for compliance support rather than making regulatory guarantees: least-privilege access, human approval where risk lives, and a complete audit trail of every action and approval, so you can evidence your process. We work to ISO 27001-aligned security practices."),
+    ("What's the first workflow you'd recommend?", "Usually renewal pack preparation or missing-document chasing — they're repeatable, deadline-driven and measurable, which makes them a strong, low-risk first agent."),
+    ("How do we start?", "With an Agentic Operations Sprint focused on one broker workflow: we map it, prototype an agent against real cases, and produce a rollout plan with governance built in."),
+  ],
+  "contact_h2": ("Map your first", "broker workflow."),
+  "contact_sub": "Tell us which broker workflow costs your team the most time — renewals, claims, chasing or compliance evidence — and the systems involved. We reply within one business day.",
+  "cta": "Map your first broker workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20insurance%20broking",
+  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+},
+
+"accountancy-practices": {
+  "title": "AI Agents for Accountancy Practices | Mach Lilies",
+  "desc": "Governed AI agents for client document chasing, invoice and receipt classification, month-end close, VAT preparation and exception triage — with accountant approval and a clear audit trail.",
+  "keywords": "AI agents for accountants, accountancy practice automation, client document chase, invoice classification AI, month-end close automation, VAT prep AI, bookkeeping automation",
+  "service_type": "Agentic operations for accountancy practices",
+  "eyebrow": "Agentic Operations for Accountancy Practices",
+  "h1": ("Client chasing and month-end,", "handled by governed AI agents."),
+  "lead": "Mach Lilies builds agentic workflows for client document chasing, invoice and receipt classification, month-end close, VAT preparation and exception triage — with accountant approval and a clear audit trail. <strong>Mach speed. Lily craft.</strong>",
+  "ov_eyebrow": "The pain",
+  "ov_hl": 'Practice capacity is eaten by <span class="dim">chasing clients and classifying paperwork</span> — not <span class="hl">advisory work.</span>',
+  "ov_body": "Practices lose enormous time to repetitive admin: chasing clients for records, classifying invoices and receipts, reconciling, preparing VAT returns and pushing through month-end. It's deadline-driven, high-volume and rules-based — exactly where bounded AI agents help. Mach Lilies builds agents that chase, classify and prepare, while your accountants approve and review the work, and every action is logged for audit.",
+  "svc_h2": ("Practice workflows", "we operate."),
+  "svc_note": "Bounded agents for the high-volume, deadline-driven admin that limits practice capacity.",
+  "services": [
+    ("Client document chase", "Identifies missing records and drafts polite, scheduled follow-ups to clients until the file is complete.", ["Chasing","Records","Follow-up"]),
+    ("Invoice & receipt classification", "Reads, classifies and codes invoices and receipts, flagging anything ambiguous for review.", ["Classification","Coding","Documents"]),
+    ("Month-end close assistant", "Runs the repeatable close checklist, reconciles routine items and surfaces exceptions to the team.", ["Close","Reconcile","Checklist"]),
+    ("VAT prep assistant", "Prepares VAT-return workings from the books and flags items that need an accountant's judgement.", ["VAT","Prep","Workings"]),
+    ("Exception triage", "Sorts and routes the exceptions that need a human, so accountants spend time only where it counts.", ["Exceptions","Triage","Routing"]),
+    ("Client update drafts", "Drafts status and request updates to clients, ready for review and sending.", ["Updates","Comms","Drafting"]),
+  ],
+  "method_h2": ("Map, prototype,", "govern, operate."),
+  "method_note": "How a practice workflow becomes a governed agent — reviewed by your accountants at every step.",
+  "method": [
+    ("01 / Map","Pick the workflow","We start with chasing, classification or close — whichever costs the practice the most time."),
+    ("02 / Prototype","Prove it on real files","A working agent against real, anonymised client records, evaluated for accuracy."),
+    ("03 / Govern","Accountant in control","Accountant approval on judgement calls, least-privilege access, and a full audit trail."),
+    ("04 / Operate","Run through the cycle","We operate it through month-end and quarter-end, improving it as volumes and rules change."),
+  ],
+  "ind_h2": ("Systems we", "work across."),
+  "ind_note": "Bounded, least-privilege connectors into the tools your practice already uses.",
+  "industries": ["Email / Outlook","Practice management","Xero / QuickBooks","Bookkeeping ledgers","Document portals","Client record stores","Spreadsheets","Workflow tools"],
+  "why": [
+    ("i","Accountant approval","Agents chase, classify and prepare; an accountant approves judgement calls and reviews the output."),
+    ("ii","Least-privilege access","Each agent only touches the records and systems its workflow needs."),
+    ("iii","Full audit trail","Every classification, chase and approval is logged, so the work is reviewable and evidenced."),
+    ("iv","Exception escalation","Ambiguous items are flagged for a human rather than guessed at."),
+  ],
+  "proof_hl": 'More capacity for advisory work, faster month-end, and a <span class="hl">clear audit trail</span> — with <span class="hl">accountants in control.</span>',
+  "faq_h2": ("Practices,", "answered."),
+  "faqs": [
+    ("Will an agent file returns or move money on its own?", "No. Agents prepare workings, classify and chase; an accountant approves and submits anything that carries risk or judgement. The agent removes preparation effort, not professional responsibility."),
+    ("Does it work with Xero or QuickBooks?", "Typically yes. We build least-privilege connectors into the practice-management, bookkeeping and document tools you already use, scoped to the specific workflow."),
+    ("Is client data kept secure?", "Yes. We design for least-privilege access, isolation of client data, human approval for sensitive actions, and a full audit trail — working to ISO 27001-aligned security practices."),
+    ("Which workflow should we automate first?", "Usually client document chasing or invoice and receipt classification — high-volume, repetitive and measurable, which makes a strong first agent."),
+    ("How do we start?", "With an Agentic Operations Sprint focused on one practice workflow: we map it, prototype an agent against real files, and produce a rollout plan with governance built in."),
+  ],
+  "contact_h2": ("Map your first", "practice workflow."),
+  "contact_sub": "Tell us which workflow limits your capacity — chasing, classification, close or VAT prep — and the systems involved. We reply within one business day.",
+  "cta": "Map your first practice workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20accountancy%20practices",
+  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+},
+}
+
+# related-services mesh for industry pages (targets are services)
+RELATED.update({
+    "insurance-brokers":     ["agentic-operations", "agentops-ai-governance", SPRINT],
+    "accountancy-practices": ["agentic-operations", "agentops-ai-governance", SPRINT],
+})
+
 # ---------------------------------------------------------------------------
 NAV = '''    <nav class="nav" id="nav">
         <a href="/" class="brand" data-cursor>
@@ -751,7 +880,7 @@ NAV = '''    <nav class="nav" id="nav">
             <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
             <a href="/services/ai-modernisation-factory/"><span class="idx">04</span>Modernization</a>
         </div>
-        <a href="/services/agentic-operations-sprint/" class="nav-cta magnetic" data-cursor>Book a Sprint</a>
+        <a href="/services/agentic-operations-sprint/" class="nav-cta magnetic" data-cursor data-event="cta_sprint">Book a Sprint</a>
         <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
     </nav>
     <div class="mobile-menu" id="mobile-menu">
@@ -760,7 +889,8 @@ NAV = '''    <nav class="nav" id="nav">
         <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
         <a href="/services/ai-assurance-evaluation/"><span class="idx">04</span>AI Assurance</a>
         <a href="/services/ai-modernisation-factory/"><span class="idx">05</span>Modernization</a>
-        <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>Book a Sprint</a>
+        <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>The Sprint</a>
+        <a href="/contact/"><span class="idx">07</span>Contact</a>
         <div class="mm-foot">machlilieslimited@gmail.com</div>
     </div>'''
 
@@ -768,6 +898,9 @@ def footer():
     svc_links = "\n".join(
         '                    <a href="/services/%s/">%s</a>' % (s, esc(SHORT[s][0]))
         for s in FOOTER_SERVICES)
+    ind_links = "\n".join(
+        '                    <a href="/industries/%s/">%s</a>' % (s, esc(IND_SHORT[s]))
+        for s in INDUSTRY_ORDER)
     return '''    <footer class="footer">
         <div class="wrap">
             <span class="foot-word">Mach<span class="it"> Lilies</span></span>
@@ -777,19 +910,18 @@ def footer():
                     <p>An independent agentic operations &amp; AI engineering consultancy. We design, govern and operate safe AI agent workflows that do real business work.</p>
                 </div>
                 <div class="foot-col">
-                    <h5>Navigate</h5>
-                    <a href="/#capabilities">What we do</a>
-                    <a href="/#sprint">The Sprint</a>
-                    <a href="/#work">Workflows</a>
-                    <a href="/#method">Method</a>
-                    <a href="/#faq">FAQ</a>
-                </div>
-                <div class="foot-col">
                     <h5>Services</h5>
 %s
                 </div>
                 <div class="foot-col">
+                    <h5>Industries</h5>
+%s
+                    <a href="/#capabilities" style="margin-top:0.4rem">What we do</a>
+                    <a href="/#faq">FAQ</a>
+                </div>
+                <div class="foot-col">
                     <h5>Contact</h5>
+                    <a href="/contact/">Start a conversation</a>
                     <a href="mailto:machlilieslimited@gmail.com">machlilieslimited@gmail.com</a>
                     <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
                 </div>
@@ -800,29 +932,28 @@ def footer():
                 <a href="#top" data-cursor>Back to top ↑</a>
             </div>
         </div>
-    </footer>''' % svc_links
+    </footer>''' % (svc_links, ind_links)
 
-def jsonld(slug, d):
-    url = "%s/services/%s/" % (BASE, slug)
+def jsonld(d, url, short_name, crumb_name, crumb_href):
     graph = [
         {"@type": ["Organization","ProfessionalService"], "@id": BASE+"/#org",
          "name":"Mach Lilies","legalName":"Mach Lilies Limited","url":BASE+"/",
          "logo":BASE+"/assets/logo-mark.svg","email":"machlilieslimited@gmail.com",
          "slogan":"Mach speed. Lily craft.","areaServed":{"@type":"Place","name":"Worldwide"}},
-        {"@type":"Service","@id":url+"#service","name":SHORT[slug][0],
+        {"@type":"Service","@id":url+"#service","name":short_name,
          "serviceType":d["service_type"],"url":url,
          "provider":{"@id":BASE+"/#org"},"areaServed":{"@type":"Place","name":"Worldwide"},
          "description":d["desc"],
          "audience":{"@type":"Audience","audienceType":"Founders, operations, technology and risk leaders"},
-         "hasOfferCatalog":{"@type":"OfferCatalog","name":SHORT[slug][0]+" services",
+         "hasOfferCatalog":{"@type":"OfferCatalog","name":short_name+" services",
             "itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":s[0]}} for s in d["services"]]}},
         {"@type":"WebPage","@id":url+"#webpage","url":url,"name":d["title"],
          "isPartOf":{"@id":BASE+"/#website"},"about":{"@id":url+"#service"},
          "primaryImageOfPage":BASE+"/assets/og-image.png","inLanguage":"en"},
         {"@type":"BreadcrumbList","@id":url+"#breadcrumb","itemListElement":[
             {"@type":"ListItem","position":1,"name":"Home","item":BASE+"/"},
-            {"@type":"ListItem","position":2,"name":"Services","item":BASE+"/#capabilities"},
-            {"@type":"ListItem","position":3,"name":SHORT[slug][0],"item":url}]},
+            {"@type":"ListItem","position":2,"name":crumb_name,"item":BASE+crumb_href},
+            {"@type":"ListItem","position":3,"name":short_name,"item":url}]},
         {"@type":"FAQPage","@id":url+"#faq","mainEntity":[
             {"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in d["faqs"]]},
     ]
@@ -877,6 +1008,28 @@ def render_timeline(d):
 
 ''' % (esc(d["timeline_h2"][0]), esc(d["timeline_h2"][1]), esc(d["timeline_note"]), steps)
 
+def render_sample(d):
+    if not d.get("sample"): return ""
+    cards = "\n".join(
+        '                <div class="why"><span class="n">%s</span><h3>%s</h3><p>%s<br/><b style="color:var(--accent);font-weight:500">%s</b></p></div>'
+        % (esc("Candidate"), esc(name), esc(scores), esc(rec)) for name,scores,rec in d["sample"])
+    return '''    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Inside the Sprint</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">%s <span class="it accent-text">%s</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">%s</p>
+            </div>
+            <div class="why-grid reveal" data-d="1">
+%s
+            </div>
+        </div>
+    </section>
+
+''' % (esc(d["sample_h2"][0]), esc(d["sample_h2"][1]), esc(d["sample_note"]), cards)
+
 def render_related(slug):
     cards = []
     for s in RELATED.get(slug, [x for x in ORDER if x != slug][:3]):
@@ -885,10 +1038,11 @@ def render_related(slug):
                      % (s, esc(name), esc(blurb)))
     return "\n".join(cards)
 
-def build(slug, d):
-    url = "%s/services/%s/" % (BASE, slug)
+def build(slug, d, base_path="services", short_name=None, crumb_name="Services", crumb_href="/#capabilities"):
+    short_name = short_name or SHORT[slug][0]
+    url = "%s/%s/%s/" % (BASE, base_path, slug)
     ind = "".join("<span>%s</span>" % esc(x) for x in d["industries"])
-    contact_subject = "Enquiry%20—%20" + SHORT[slug][0].replace(" ","%20").replace("&","and")
+    contact_subject = "Enquiry%20—%20" + short_name.replace(" ","%20").replace("&","and")
     return '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -961,13 +1115,13 @@ def build(slug, d):
         <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
         <div class="wrap" style="position:relative;z-index:2">
             <nav class="crumb reveal" aria-label="Breadcrumb">
-                <a href="/">Home</a> <span>/</span> <a href="/#capabilities">Services</a> <span>/</span> <b>{short}</b>
+                <a href="/">Home</a> <span>/</span> <a href="{crumb_href}">{crumb_name}</a> <span>/</span> <b>{short}</b>
             </nav>
             <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">{eyebrow}</span>
             <h1 class="display reveal" data-d="1">{h1a}<br/><span class="it accent-text">{h1b}</span></h1>
             <p class="svc-lead reveal" data-d="2">{lead}</p>
             <div class="hero-cta reveal" data-d="3" style="margin-top:2.2rem">
-                <a href="{cta_href}" class="btn btn-solid magnetic" data-cursor>{cta_label} <span class="arrow">→</span></a>
+                <a href="{cta_href}" class="btn btn-solid magnetic" data-cursor data-event="cta_primary" data-label="{cta_label}">{cta_label} <span class="arrow">→</span></a>
                 <a href="{cta2_href}" class="btn btn-ghost magnetic" data-cursor>{cta2_label}</a>
             </div>
         </div>
@@ -996,7 +1150,7 @@ def build(slug, d):
         </div>
     </section>
 
-    <section class="block method">
+{sample_section}    <section class="block method">
         <div class="wrap">
             <div class="sec-head">
                 <div>
@@ -1072,8 +1226,8 @@ def build(slug, d):
             <h2 class="big reveal" data-d="1">{contact_h2a} <span class="it">{contact_h2b}</span></h2>
             <p class="c-sub reveal" data-d="2">{contact_sub}</p>
             <div class="c-actions reveal" data-d="2">
-                <a href="mailto:machlilieslimited@gmail.com?subject={subject}" class="btn btn-solid magnetic" data-cursor>machlilieslimited@gmail.com <span class="arrow">→</span></a>
-                <a href="/" class="btn btn-ghost magnetic" data-cursor>Back to home</a>
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Start a conversation <span class="arrow">→</span></a>
+                <a href="mailto:machlilieslimited@gmail.com?subject={subject}" class="btn btn-ghost magnetic" data-cursor data-event="cta_email">Email us directly</a>
             </div>
         </div>
     </section>
@@ -1085,14 +1239,14 @@ def build(slug, d):
 </html>
 '''.format(
         title=esc(d["title"]), desc=esc(d["desc"]), url=url, base=BASE,
-        keywords=esc(d["keywords"]), jsonld=jsonld(slug, d), nav=NAV,
-        short=esc(SHORT[slug][0]), eyebrow=esc(d["eyebrow"]),
+        keywords=esc(d["keywords"]), jsonld=jsonld(d, url, short_name, crumb_name, crumb_href), nav=NAV,
+        short=esc(short_name), crumb_name=esc(crumb_name), crumb_href=crumb_href, eyebrow=esc(d["eyebrow"]),
         h1a=esc(d["h1"][0]), h1b=esc(d["h1"][1]), lead=d["lead"],
         cta_label=esc(d["cta"]), cta_href=d["cta_href"],
         cta2_label=esc(d["cta2"]), cta2_href=d["cta2_href"],
         subject=contact_subject,
         ov_eyebrow=esc(d["ov_eyebrow"]), ov_hl=d["ov_hl"], ov_body=esc(d["ov_body"]),
-        timeline_section=render_timeline(d),
+        timeline_section=render_timeline(d), sample_section=render_sample(d),
         svc_h2a=esc(d["svc_h2"][0]), svc_h2b=esc(d["svc_h2"][1]), svc_note=esc(d["svc_note"]),
         services=render_services(d),
         method_h2a=esc(d["method_h2"][0]), method_h2b=esc(d["method_h2"][1]),
@@ -1105,6 +1259,159 @@ def build(slug, d):
         contact_sub=esc(d["contact_sub"]), footer=footer(),
     )
 
+CONTACT_FIELDS = [
+    ("f-name","Name","text","",True,"name","half"),
+    ("f-company","Company","text","",True,"organization","half"),
+    ("f-role","Role","text","",False,"organization-title","half"),
+    ("f-email","Email","email","",True,"email","half"),
+    ("f-workflow","Which workflow do you want to automate?","text","e.g. renewal pack preparation, invoice exceptions, inbox triage",True,"","full"),
+    ("f-systems","Which systems are involved?","text","CRM, email, documents, finance, ERP, support…",False,"","full"),
+    ("f-effort","Current manual effort","text","e.g. ~20 hrs/week across 3 people",False,"","half"),
+    ("f-risk","Risk or compliance concerns","text","e.g. client data, audit evidence, approvals",False,"","half"),
+    ("f-ai","Current AI experiments (if any)","text","",False,"","full"),
+]
+
+def render_fields():
+    rows = []
+    for fid,label,typ,ph,req,ac,span in CONTACT_FIELDS:
+        cls = "field full" if span == "full" else "field"
+        reqmark = ' <span class="req">*</span>' if req else ""
+        reqattr = " required" if req else ""
+        phattr = ' placeholder="%s"' % esc(ph) if ph else ""
+        acattr = ' autocomplete="%s"' % ac if ac else ""
+        rows.append('''                <div class="%s">
+                    <label for="%s">%s%s</label>
+                    <input id="%s" name="%s" type="%s"%s%s%s />
+                </div>''' % (cls, fid, esc(label), reqmark, fid, esc(label), typ, reqattr, acattr, phattr))
+    return "\n".join(rows)
+
+def build_contact():
+    url = BASE + "/contact/"
+    title = "Contact | Book an Agentic Operations Sprint — Mach Lilies"
+    desc = "Start a conversation with Mach Lilies about an Agentic Operations Sprint. Tell us the workflow you want to automate, the systems involved and your risk concerns. We reply within one business day."
+    graph = [
+        {"@type":["Organization","ProfessionalService"],"@id":BASE+"/#org","name":"Mach Lilies",
+         "url":BASE+"/","email":"machlilieslimited@gmail.com","slogan":"Mach speed. Lily craft.",
+         "contactPoint":{"@type":"ContactPoint","email":"machlilieslimited@gmail.com","contactType":"sales","areaServed":"Worldwide","availableLanguage":"English"}},
+        {"@type":"ContactPage","@id":url+"#webpage","url":url,"name":title,
+         "isPartOf":{"@id":BASE+"/#website"},"about":{"@id":BASE+"/#org"},"inLanguage":"en"},
+        {"@type":"BreadcrumbList","@id":url+"#breadcrumb","itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":BASE+"/"},
+            {"@type":"ListItem","position":2,"name":"Contact","item":url}]},
+    ]
+    ld = json.dumps({"@context":"https://schema.org","@graph":graph}, indent=2, ensure_ascii=False)
+    return '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>{title}</title>
+    <meta name="description" content="{desc}" />
+    <link rel="canonical" href="{url}" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:url" content="{url}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{desc}" />
+    <meta property="og:image" content="{base}/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:description" content="{desc}" />
+    <meta name="twitter:image" content="{base}/assets/og-image.png" />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#c9f24c" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+
+    <script type="application/ld+json">
+{ld}
+    </script>
+
+    <script>
+      window.GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+      (function () {{
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return;
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {{ dataLayer.push(arguments); }}
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, {{ anonymize_ip: true }});
+      }})();
+    </script>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="c-label">View</span></div>
+    <div class="progress" aria-hidden="true"></div>
+
+{nav}
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <b>Contact</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Start a conversation</span>
+            <h1 class="display reveal" data-d="1">Book an Agentic<br/><span class="it accent-text">Operations Sprint.</span></h1>
+            <p class="svc-lead reveal" data-d="2">Tell us the workflow you want to automate and we'll reply within one business day with an honest first view — no funnels, no bots. Most engagements begin with a fixed-scope Agentic Operations Sprint.</p>
+        </div>
+    </header>
+
+    <section class="block" id="enquiry" style="padding-top:0">
+        <div class="wrap">
+            <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="">
+                <div class="form-grid">
+{fields}
+                    <div class="field half">
+                        <label for="f-urgency">How urgent is this?</label>
+                        <select id="f-urgency" name="Urgency">
+                            <option>This quarter</option>
+                            <option>Now</option>
+                            <option>Exploratory</option>
+                        </select>
+                    </div>
+                    <div class="field full">
+                        <label for="f-outcome">Desired business outcome <span class="req">*</span></label>
+                        <textarea id="f-outcome" name="Desired outcome" required placeholder="What would a good result look like in six months?"></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-solid magnetic" data-cursor>Send enquiry <span class="arrow">→</span></button>
+                    <span class="form-note">Or email <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a> directly. We reply within one business day.</span>
+                </div>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+{footer}
+
+    <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
+'''.format(title=esc(title), desc=esc(desc), url=url, base=BASE, ld=ld, nav=NAV, fields=render_fields(), footer=footer())
+
 if __name__ == "__main__":
     print("== service pages ==")
     for slug in ORDER:
@@ -1112,4 +1419,16 @@ if __name__ == "__main__":
         os.makedirs(os.path.dirname(path), exist_ok=True)
         open(path, "w").write(build(slug, SERVICES[slug]))
         print("  wrote services/%s/index.html" % slug)
+    print("== industry pages ==")
+    for slug in INDUSTRY_ORDER:
+        path = os.path.join(ROOT, "industries", slug, "index.html")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        open(path, "w").write(build(slug, INDUSTRIES[slug], base_path="industries",
+                                     short_name=IND_SHORT[slug], crumb_name="Industries", crumb_href="/#capabilities"))
+        print("  wrote industries/%s/index.html" % slug)
+    print("== contact ==")
+    cpath = os.path.join(ROOT, "contact", "index.html")
+    os.makedirs(os.path.dirname(cpath), exist_ok=True)
+    open(cpath, "w").write(build_contact())
+    print("  wrote contact/index.html")
     print("done.")

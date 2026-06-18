@@ -746,4 +746,28 @@
 .contact .c-include { margin: -0.4rem auto 2.6rem; max-width: 660px; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
 .contact .c-include span { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bone-2); border: 1px solid var(--line); border-radius: 99px; padding: 0.5rem 0.9rem; transition: border-color .3s, color .3s; }
 .contact .c-include span:hover { border-color: var(--accent); color: var(--accent); }
+
+/* contact form */
+.form-wrap { max-width: 760px; margin-inline: auto; text-align: left; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem 1.4rem; }
+.field { display: flex; flex-direction: column; gap: 0.5rem; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.field label .req { color: var(--accent); }
+.field input, .field select, .field textarea {
+    background: var(--ink-2); border: 1px solid var(--line); border-radius: 8px; color: var(--bone);
+    font-family: var(--sans); font-size: 0.95rem; padding: 0.85rem 1rem; width: 100%; cursor: auto;
+    transition: border-color .3s, background .3s;
+}
+.field textarea { min-height: 132px; resize: vertical; line-height: 1.55; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); background: var(--ink-3); }
+.field input::placeholder, .field textarea::placeholder { color: var(--muted); }
+.field select option { background: var(--ink-2); color: var(--bone); }
+.form-actions { margin-top: 1.8rem; display: flex; gap: 1.2rem 1.6rem; align-items: center; flex-wrap: wrap; }
+.form-note { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; color: var(--muted); max-width: 42ch; }
+.form-status { margin-top: 1.3rem; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; display: none; }
+.form-status.show { display: block; }
+.form-status.ok { color: var(--accent); }
+.form-status.err { color: #ff9b78; }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { .offer-panel { grid-template-columns: 1fr; } }
