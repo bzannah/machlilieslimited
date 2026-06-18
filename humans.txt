@@ -1,11 +1,12 @@
 /* TEAM */
-  Mach Lilies Limited — independent AI & technology consultancy
+  Mach Lilies Limited — independent agentic operations & AI engineering consultancy
   Contact: machlilieslimited@gmail.com
   Site: https://machlilies.com
 
 /* PHILOSOPHY */
   Mach speed. Lily craft.
-  Software that moves fast and ages well.
+  Safe AI agents that do real business work.
+  Bounded agents, clear permissions, human approval, full audit trail.
 
 /* SITE */
   Standards: HTML5, CSS3, vanilla JavaScript

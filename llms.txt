@@ -1,38 +1,51 @@
 # Mach Lilies
 
-> Mach Lilies is an independent AI & technology consultancy. We design, engineer and scale software that moves fast and ages well — across applied AI, machine learning, cloud, data and product engineering. Tagline: "Mach speed. Lily craft."
+> Mach Lilies is an independent agentic operations and AI engineering consultancy. We design, deploy, govern and operate safe AI agent workflows that perform real business processes — with secure integrations, human oversight, monitoring, evaluation, audit trails and measurable ROI. Tagline: "Mach speed. Lily craft."
 
-Mach Lilies Limited is a senior, founder-led technology consultancy serving ambitious startups and enterprises worldwide. We are a small studio by design: the people who pitch are the people who build. Engagements are staffed by principals end-to-end, shipped production-grade from day one, and handed off as clean, documented systems the client owns.
+Mach Lilies Limited is a senior, founder-led practice serving founders, operations, technology and risk leaders worldwide. In the era of AI coding agents, the value is no longer typing code faster — it is redesigning business operations around AI agents and operating them safely in production. We sell governed AI operations, not billable engineering hours. We are a small studio by design: the people who pitch are the people who build. Engagements are staffed by principals end to end, shipped production-grade, and handed off as clean, documented systems the client owns.
+
+Core principle: bounded agents, clear permissions, human approval, full audit trail. We design for human oversight and control, not uncontrolled autonomy.
 
 - Contact: machlilieslimited@gmail.com
 - Website: https://machlilies.com
-- Model: global, remote-first studio; free first consultation; outcome-based scoping.
+- Model: global, remote-first studio; most engagements begin with a fixed-scope Agentic Operations Sprint, followed by milestone-based production rollout and optional managed AgentOps support.
 
-## Capabilities
+## Services
 
-- [Product Engineering](https://machlilies.com/#capabilities): Custom web and mobile platforms, full-stack, built to scale and engineered to last.
-- [Applied Intelligence (AI & ML)](https://machlilies.com/#capabilities): LLM and generative-AI products, ML pipelines, retrieval/agent systems, intelligent automation, and MLOps in production.
-- [Cloud & Platform](https://machlilies.com/#capabilities): Cloud-native architecture, Kubernetes, infrastructure-as-code, DevOps and site reliability.
-- [Data & Analytics](https://machlilies.com/#capabilities): Data pipelines, warehousing, business intelligence and decision-ready insight.
-- [Design & Experience](https://machlilies.com/#capabilities): Product, brand and motion design — interfaces that feel inevitable.
-- [Strategy & Advisory](https://machlilies.com/#capabilities): Technical due diligence, roadmaps and fractional CTO / technology leadership.
+- [Agentic Operations](https://machlilies.com/services/agentic-operations/): AI agents that complete real workflows across your tools, documents, inboxes and systems — with humans in control where it matters. Workflow design, agent build, secure connectors, human-in-the-loop, monitoring and managed operation.
+- [AgentOps & AI Governance](https://machlilies.com/services/agentops-ai-governance/): The control tower for AI agents — registry, permissions, approval gates, action logs and audit trails, evaluation and regression testing, monitoring and cost control, incident response and governance reporting.
+- [AI Pilot Rescue](https://machlilies.com/services/ai-pilot-rescue/): We audit stuck AI pilots and turn the viable ones into production systems with clear value and controls — delivering a kill / fix / scale recommendation, ROI model, data readiness and risk review, and a production rollout plan.
+- [AI Assurance & Evaluation](https://machlilies.com/services/ai-assurance-evaluation/): Practical AI governance and assurance — AI system inventory, risk classification, usage policies, human oversight design, vendor AI due diligence and audit-ready evidence packs.
+- [AI-Native Modernization](https://machlilies.com/services/ai-modernisation-factory/): Modernize legacy software at agentic speed using coding agents, automated tests, documentation agents and senior engineering review — agents accelerate, seniors govern.
+- [Agentic Operations Sprint](https://machlilies.com/services/agentic-operations-sprint/): Flagship engagement. A focused, fixed-scope sprint that maps your highest-value AI agent workflows, prototypes the strongest one against real inputs, and prepares it for governed production with an ROI model and a rollout plan.
 
-## Selected work
+## Engineering bench (foundation disciplines)
 
-- CryptoFlow Analytics — real-time FinTech trading platform with predictive analytics; +450% ROI, 50K+ daily traders, 40ms p99 latency.
-- MediConnect Pro — HIPAA-grade telemedicine platform with AI-assisted triage; 4.9★ rating, −60% wait time, 120K consults/month.
-- Atlas Routing — continental fleet-optimisation engine; −31% fuel cost, 9.2M routes/day, 99.99% uptime.
-- Verve Commerce OS — unified retail platform with an LLM merchandising copilot; +28% margin, six legacy tools merged into one.
+- [AI Consulting](https://machlilies.com/services/ai-consulting/): LLM and generative-AI products, RAG and agent systems, custom machine learning, data and ML pipelines, and MLOps — the engineering behind the agents.
+- [Product Engineering](https://machlilies.com/services/product-engineering/): Custom web and mobile software, built to scale, accelerated by AI-assisted delivery and senior review.
+- [Cloud & Platform](https://machlilies.com/services/cloud-platform/): Cloud-native architecture, Kubernetes, DevOps and reliability — including the secure runtime production AI agents run on.
+- [Data & Analytics](https://machlilies.com/services/data-analytics/): Pipelines, warehousing, business intelligence and the AI-ready, grounded data foundation agents and models depend on.
+- [Design & Experience](https://machlilies.com/services/design-experience/): Product, brand and motion design — including the human-approval and oversight interfaces that govern AI agents.
+- [Strategy & Advisory](https://machlilies.com/services/strategy-advisory/): Technical due diligence, roadmaps, fractional CTO leadership, AI readiness and AI governance / AgentOps roadmaps.
 
-## Industries
+## Example agent workflows
 
-FinTech, HealthTech, logistics, retail & commerce, and B2B SaaS — for both venture-backed startups and established enterprises.
+These are illustrative playbooks of the kind of bounded, governed workflows we build — not named client case studies.
+
+- Inbox triage and document chase — classify and route mail, draft replies, chase missing documents, escalate sensitive items to a person.
+- Renewal and case preparation — assemble renewal packs and case files from policy systems and documents, flag gaps, prepare a draft for sign-off.
+- Invoice and payment exception handling — reconcile invoices, classify receipts, resolve routine exceptions, route anything over threshold to a human.
+- Compliance evidence and reporting — gather evidence, retrieve internal knowledge, assemble reporting packs with every source cited and every step logged.
+
+## Who we help
+
+Founders, CEOs, COOs, CTOs, operations directors, managing partners, transformation leaders, and compliance/risk leaders — at mid-market companies and scale-ups that know AI matters but need to productionise it safely. Document-heavy, inbox-heavy, admin-heavy sectors such as insurance broking, accountancy, property management, logistics and legal services are a strong fit.
 
 ## FAQ
 
-- [Frequently asked questions](https://machlilies.com/#faq): what an AI & technology consultancy does, AI/ML services, industries, engagement model and pricing, and how to get started.
+- [Frequently asked questions](https://machlilies.com/#faq): what agentic operations means, whether agents are autonomous, the Agentic Operations Sprint, how ROI is measured, which systems agents can access, and how to get started.
 
 ## Contact
 
 - Email: machlilieslimited@gmail.com
-- Start a project: https://machlilies.com/#contact
+- Book an Agentic Operations Sprint: https://machlilies.com/services/agentic-operations-sprint/
