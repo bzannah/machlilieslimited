@@ -95,7 +95,7 @@
     </script>
 
     <script>
-      window.GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+      window.GA_MEASUREMENT_ID = "G-PSM4267LV3";
       (function () {
         var id = window.GA_MEASUREMENT_ID;
         if (!id || id.indexOf("XXXX") !== -1) return;
@@ -157,7 +157,8 @@
 
     <section class="block" id="enquiry" style="padding-top:0">
         <div class="wrap">
-            <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="">
+            <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="https://formspree.io/f/xojzonkd">
+                <input type="hidden" name="_subject" value="New Agentic Operations enquiry — machlilies.com" />
                 <div class="form-grid">
                 <div class="field">
                     <label for="f-name">Name <span class="req">*</span></label>
@@ -173,7 +174,7 @@
                 </div>
                 <div class="field">
                     <label for="f-email">Email <span class="req">*</span></label>
-                    <input id="f-email" name="Email" type="email" required autocomplete="email" />
+                    <input id="f-email" name="email" type="email" required autocomplete="email" />
                 </div>
                 <div class="field full">
                     <label for="f-workflow">Which workflow do you want to automate? <span class="req">*</span></label>
@@ -210,8 +211,9 @@
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn btn-solid magnetic" data-cursor>Send enquiry <span class="arrow">→</span></button>
-                    <span class="form-note">Or email <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a> directly. We reply within one business day.</span>
+                    <a href="https://cal.eu/machlilies/agent-operations-sprint-intro" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Or book a 30-min call</a>
                 </div>
+                <p class="form-note" style="margin-top:1rem">Prefer email? <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a> — we reply within one business day.</p>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>

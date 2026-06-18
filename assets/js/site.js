@@ -297,7 +297,8 @@
                     });
                 } else {
                     var subject = "Agentic Operations enquiry — " + (data["Company"] || data["Name"] || "");
-                    var body = Object.keys(data).map(function (k) { return k + ": " + data[k]; }).join("\n\n");
+                    var body = Object.keys(data).filter(function (k) { return k.charAt(0) !== "_"; })
+                        .map(function (k) { return k + ": " + data[k]; }).join("\n\n");
                     window.location.href = "mailto:machlilieslimited@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
                     setStatus("Opening your email client… if nothing happens, email machlilieslimited@gmail.com directly.", true);
                 }
