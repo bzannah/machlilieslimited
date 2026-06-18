@@ -28,6 +28,11 @@ Core principle: bounded agents, clear permissions, human approval, full audit tr
 - [Design & Experience](https://machlilies.com/services/design-experience/): Product, brand and motion design — including the human-approval and oversight interfaces that govern AI agents.
 - [Strategy & Advisory](https://machlilies.com/services/strategy-advisory/): Technical due diligence, roadmaps, fractional CTO leadership, AI readiness and AI governance / AgentOps roadmaps.
 
+## Industries
+
+- [Insurance Brokers](https://machlilies.com/industries/insurance-brokers/): Governed AI agents for renewal packs, policy comparison, claims intake, missing-document chasing, compliance evidence and customer updates — with broker approval and an audit trail.
+- [Accountancy Practices](https://machlilies.com/industries/accountancy-practices/): Governed AI agents for client document chasing, invoice and receipt classification, month-end close, VAT preparation and exception triage — with accountant approval and an audit trail.
+
 ## Example agent workflows
 
 These are illustrative playbooks of the kind of bounded, governed workflows we build — not named client case studies.
@@ -47,5 +52,6 @@ Founders, CEOs, COOs, CTOs, operations directors, managing partners, transformat
 
 ## Contact
 
+- Contact / enquiry form: https://machlilies.com/contact/
 - Email: machlilieslimited@gmail.com
 - Book an Agentic Operations Sprint: https://machlilies.com/services/agentic-operations-sprint/
