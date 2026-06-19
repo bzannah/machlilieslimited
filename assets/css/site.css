@@ -771,15 +771,18 @@
 .form-status.err { color: #ff9b78; }
 @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
 
-/* contact path chooser — message (default) vs book-a-call */
-.contact-choice { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 2.5vw, 1.5rem); max-width: 860px; margin: 0 auto clamp(2.4rem, 6vh, 4rem); text-align: left; }
+/* contact path chooser — message (default, emphasised) vs book-a-call */
+.contact-choice { display: grid; grid-template-columns: 1.4fr 0.85fr; gap: clamp(1rem, 2.5vw, 1.5rem); max-width: 920px; margin: 0 auto clamp(2.4rem, 6vh, 4rem); text-align: left; align-items: stretch; }
 .choice { position: relative; border: 1px solid var(--line); border-radius: 12px; background: var(--ink-2); padding: clamp(1.5rem, 3vw, 2.2rem); display: flex; flex-direction: column; gap: 0.55rem; transition: border-color .4s, transform .5s var(--ease); }
 .choice:hover { border-color: rgba(201,242,76,0.35); transform: translateY(-4px); }
-.choice.is-default { border-color: rgba(201,242,76,0.40); }
 .choice .ch-tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
 .choice h2 { font-family: var(--display); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.05; }
 .choice p { color: var(--bone-2); font-weight: 300; font-size: 0.95rem; flex-grow: 1; }
 .choice .btn { align-self: flex-start; margin-top: 0.9rem; }
+/* the default (message) option is bigger and highlighted */
+.choice.is-default { border-color: var(--accent); padding: clamp(1.9rem, 3.6vw, 2.8rem); background: radial-gradient(130% 150% at 0% 0%, rgba(201,242,76,0.12), transparent 58%), var(--ink-2); box-shadow: 0 24px 60px rgba(0,0,0,0.28); }
+.choice.is-default h2 { font-size: clamp(2rem, 4.2vw, 2.9rem); }
+.choice.is-default p { color: var(--bone); font-size: 1rem; }
 @media (max-width: 700px) { .contact-choice { grid-template-columns: 1fr; } }
 
 /* team grid (photo auto-swaps in over the initials monogram when present) */
