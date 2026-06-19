@@ -4,6 +4,10 @@
 User-agent: *
 Allow: /
 
+# Legacy prototype files kept in-repo for reference only — not part of the site.
+Disallow: /archive_2.html
+Disallow: /arhive_.html
+
 # Welcome AI answer engines & assistants (Generative Engine Optimization).
 # We *want* to be read, summarised and cited by AI search.
 User-agent: GPTBot

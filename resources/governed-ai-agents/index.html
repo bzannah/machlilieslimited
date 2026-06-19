@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>Governed AI Agents: Oversight, Audit Trails &amp; Bounds | Mach Lilies</title>
+    <meta name="description" content="What it means to run governed AI agents: bounded least-privilege access, human oversight, audit trails, evaluation and incident response. Why governance belongs in delivery, not as an afterthought." />
+    <link rel="canonical" href="https://machlilies.com/resources/governed-ai-agents/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+    <meta name="keywords" content="governed AI agents, AI governance consulting, AgentOps, human oversight, AI audit trail, bounded agents, AI evaluation, agentic operations" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://machlilies.com/resources/governed-ai-agents/" />
+    <meta property="og:title" content="Governed AI Agents: Oversight, Audit Trails &amp; Bounds | Mach Lilies" />
+    <meta property="og:description" content="What it means to run governed AI agents: bounded least-privilege access, human oversight, audit trails, evaluation and incident response. Why governance belongs in delivery, not as an afterthought." />
+    <meta property="og:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mach Lilies — agentic operations &amp; AI engineering consultancy." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Governed AI Agents: Oversight, Audit Trails &amp; Bounds | Mach Lilies" />
+    <meta name="twitter:description" content="What it means to run governed AI agents: bounded least-privilege access, human oversight, audit trails, evaluation and incident response. Why governance belongs in delivery, not as an afterthought." />
+    <meta name="twitter:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Mach Lilies — safe, governed AI agents for real operations." />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#c9f24c" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://machlilies.com/#org",
+      "name": "Mach Lilies",
+      "legalName": "Mach Lilies Limited",
+      "url": "https://machlilies.com/",
+      "logo": "https://machlilies.com/assets/logo-mark.svg",
+      "email": "hey@machlilies.com",
+      "slogan": "Mach speed. Lily craft.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://machlilies.com/resources/governed-ai-agents/#article",
+      "headline": "Governed AI agents: human oversight, audit trails and bounded autonomy",
+      "description": "What it means to run governed AI agents: bounded least-privilege access, human oversight, audit trails, evaluation and incident response. Why governance belongs in delivery, not as an afterthought.",
+      "url": "https://machlilies.com/resources/governed-ai-agents/",
+      "datePublished": "2026-06-19",
+      "dateModified": "2026-06-19",
+      "author": {
+        "@type": "Person",
+        "@id": "https://machlilies.com/#zach-kosi",
+        "name": "Zach Kosi",
+        "jobTitle": "Chief Technology Officer",
+        "worksFor": {
+          "@id": "https://machlilies.com/#org"
+        }
+      },
+      "publisher": {
+        "@id": "https://machlilies.com/#org"
+      },
+      "image": "https://machlilies.com/assets/og-image.png",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://machlilies.com/#website"
+      },
+      "mainEntityOfPage": "https://machlilies.com/resources/governed-ai-agents/",
+      "keywords": "governed AI agents, AI governance consulting, AgentOps, human oversight, AI audit trail, bounded agents, AI evaluation, agentic operations"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://machlilies.com/resources/governed-ai-agents/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://machlilies.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides & resources",
+          "item": "https://machlilies.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Governed AI agents",
+          "item": "https://machlilies.com/resources/governed-ai-agents/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://machlilies.com/resources/governed-ai-agents/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes an AI agent \"governed\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A governed agent operates inside explicit limits: least-privilege access to only the tools and data its workflow needs, human approval gates for high-risk actions, a complete and queryable audit trail, evaluation suites that test behaviour against known cases, monitoring of quality and cost, and an incident process to pause or roll it back. Governance is the set of controls that let you account for everything the agent does."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Aren't fully autonomous agents more valuable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not in production. The strongest production systems are bounded, not maximally autonomous. Uncontrolled autonomy inside real business systems multiplies risk faster than value. Bounding an agent and keeping a human in the loop for high-risk actions is what makes its value durable and safe to scale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is AI governance different from AgentOps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AgentOps is the technical control layer for agents — permissions, logs, evaluations, monitoring and incident response. AI governance and assurance sit above it at the organisational level — inventory, risk classification, policy, oversight design and audit evidence. They reinforce each other; we deliver both, through our AgentOps and AI Assurance services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do governed agents slow the business down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Well-designed governance is proportionate: low-stakes actions run automatically, and only high-risk ones require approval. The result is faster throughput on the routine work and tighter control on the exceptions — not blanket friction."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <script>
+      window.GA_MEASUREMENT_ID = "G-PSM4267LV3";
+      (function () {
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return;
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, { anonymize_ip: true });
+      })();
+    </script>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="c-label">View</span></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="brand" data-cursor>
+            <img class="brand-mark" src="/assets/logo-mark.svg" alt="Mach Lilies" width="38" height="38" />
+            <span>
+                <span class="b-name">Mach Lilies</span>
+                <span class="b-sub">Agentic Operations</span>
+            </span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+            <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+            <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+            <a href="/services/ai-modernisation-factory/"><span class="idx">04</span>Modernization</a>
+        </div>
+        <a href="/contact/" class="nav-cta magnetic" data-cursor data-event="cta_contact">Send a message</a>
+        <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+        <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+        <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+        <a href="/services/ai-assurance-evaluation/"><span class="idx">04</span>AI Assurance</a>
+        <a href="/services/ai-modernisation-factory/"><span class="idx">05</span>Modernization</a>
+        <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>The Sprint</a>
+        <a href="/contact/"><span class="idx">07</span>Contact</a>
+        <div class="mm-foot">hey@machlilies.com</div>
+    </div>
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <a href="/resources/">Guides</a> <span>/</span> <b>Governed AI agents</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Guide</span>
+            <h1 class="display reveal" data-d="1">Governed<br/><span class="it accent-text">AI agents.</span></h1>
+            <div class="post-meta reveal" data-d="2">
+                <span class="pm-author">By <b>Zach Kosi</b>, Chief Technology Officer</span>
+                <span>Published 19 June 2026</span>
+                <span>7 min read</span>
+            </div>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:1.6rem">When an AI agent can use tools, update records and trigger actions, governance stops being optional. This guide covers what "governed" really means, the controls that make an agent safe, and why oversight belongs in delivery — not in a policy PDF.</p>
+        </div>
+    </header>
+
+    <section class="block" style="padding-top:0">
+        <div class="wrap">
+            <div class="takeaway reveal">
+                <span class="tk-label">Key takeaways</span>
+                <ul>
+                    <li>A governed agent is <b>bounded</b>: least-privilege access, human approval and a full audit trail.</li>
+                    <li>Governance is most effective when it is <b>built into delivery</b>, not added after an incident.</li>
+                    <li>Human oversight is a feature, not a limitation — it is what makes value <b>safe to scale</b>.</li>
+                    <li>Audit-ready evidence — who approved what, why, and at what cost — is what makes agents defensible.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" style="padding-top:clamp(2.5rem,6vh,4rem)">
+        <div class="wrap">
+            <div class="article-body reveal">
+<p>The moment an AI system stops answering questions and starts <em>taking actions</em> — sending an email, updating a record, moving a case forward — the conversation has to change. An agent that can act inside your business is an operational asset, and operational assets need governance. The good news is that governance, done well, is what unlocks scale rather than blocking it.</p>
+
+<h2>What "governed" means</h2>
+<p>A governed AI agent is a <strong>bounded</strong> one. It is not trusted with open-ended autonomy inside your systems; it is given exactly the access its workflow requires, asked to escalate anything risky to a person, and watched while it works. Three principles sit at the core:</p>
+<ul>
+  <li><b>Least privilege.</b> The agent can only ever act inside its specific workflow — scoped tools, scoped data, nothing more.</li>
+  <li><b>Human approval where it matters.</b> The agent drafts, classifies, routes and updates; people sign off on high-risk actions.</li>
+  <li><b>Full audit trail.</b> Every tool call, decision, escalation and approval is logged, so any action can be explained after the fact.</li>
+</ul>
+
+<h2>Six controls that make an agent safe</h2>
+<p>In practice, governing an agent means implementing a small number of concrete controls — the substance of our <a href="/services/agentops-ai-governance/">AgentOps &amp; AI governance</a> work:</p>
+<ul>
+  <li><b>Least-privilege access</b> — scoped, bounded permissions for each agent.</li>
+  <li><b>Approval gates</b> — review queues and escalation paths for high-risk actions.</li>
+  <li><b>Action logs &amp; audit</b> — a complete, queryable record built for audit from day one.</li>
+  <li><b>Evaluation suites</b> — regression tests for prompts, models and workflows.</li>
+  <li><b>Monitoring &amp; cost control</b> — dashboards for quality, throughput and spend.</li>
+  <li><b>Incident response</b> — the ability to pause, roll back or restrict an agent the moment behaviour changes.</li>
+</ul>
+
+<h2>Human oversight vs full autonomy</h2>
+<p>There is a persistent myth that the goal of agentic AI is to remove humans entirely. In production, the opposite is true. The most valuable systems keep a person in the loop precisely where judgement and risk concentrate, and automate confidently everywhere else. Oversight is not a tax on the agent's value — it is the mechanism that lets you extend that value into higher-stakes work without losing control.</p>
+
+<h2>Audit trails and evidence</h2>
+<p>For any action an agent takes, you should be able to answer four questions: what happened, why, who approved it, and what it cost. That record is what makes an agent defensible to leadership, auditors and regulators. It is also what turns a one-off success into something you can repeat and scale with confidence. Where governance needs to extend to the organisational level — inventories, risk classification and audit-ready evidence packs — that is the role of <a href="/services/ai-assurance-evaluation/">AI assurance and evaluation</a>.</p>
+
+<h2>Governance as part of delivery</h2>
+<p>The most important principle is the simplest: <strong>build governance in from the start</strong>. Controls bolted on after an incident are slower, weaker and more expensive than controls designed into the workflow from day one. At Mach Lilies, permissions, approvals, logging and evaluation are part of how we build an <a href="/services/agentic-operations/">agentic operations</a> workflow — not a separate phase, and never an afterthought. That is what lets a governed agent move from one safe workflow to the next.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Frequently <span class="it accent-text">asked.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+                <details class="faq-item"><summary><span>What makes an AI agent "governed"?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>A governed agent operates inside explicit limits: least-privilege access to only the tools and data its workflow needs, human approval gates for high-risk actions, a complete and queryable audit trail, evaluation suites that test behaviour against known cases, monitoring of quality and cost, and an incident process to pause or roll it back. Governance is the set of controls that let you account for everything the agent does.</p></div></details>
+                <details class="faq-item"><summary><span>Aren't fully autonomous agents more valuable?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Not in production. The strongest production systems are bounded, not maximally autonomous. Uncontrolled autonomy inside real business systems multiplies risk faster than value. Bounding an agent and keeping a human in the loop for high-risk actions is what makes its value durable and safe to scale.</p></div></details>
+                <details class="faq-item"><summary><span>How is AI governance different from AgentOps?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>AgentOps is the technical control layer for agents — permissions, logs, evaluations, monitoring and incident response. AI governance and assurance sit above it at the organisational level — inventory, risk classification, policy, oversight design and audit evidence. They reinforce each other; we deliver both, through our AgentOps and AI Assurance services.</p></div></details>
+                <details class="faq-item"><summary><span>Do governed agents slow the business down?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Well-designed governance is proportionate: low-stakes actions run automatically, and only high-risk ones require approval. The result is faster throughput on the routine work and tighter control on the exceptions — not blanket friction.</p></div></details>
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Where this leads</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Related <span class="it accent-text">services.</span></h2>
+                </div>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+                <a class="rel-card magnetic" href="/services/agentops-ai-governance/" data-cursor><span class="rel-n">↗</span><h3>AgentOps &amp; Governance</h3><p>Permissions, logs, evaluations, approvals and cost control for agents.</p></a>
+                <a class="rel-card magnetic" href="/services/ai-assurance-evaluation/" data-cursor><span class="rel-n">↗</span><h3>AI Assurance</h3><p>Inventories, risk classification, oversight and audit-ready evidence.</p></a>
+                <a class="rel-card magnetic" href="/services/agentic-operations/" data-cursor><span class="rel-n">↗</span><h3>Agentic Operations</h3><p>AI agents that run real business workflows, safely and governed.</p></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block contact" id="contact">
+        <img class="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" style="left:-12%;right:auto;opacity:0.16;width:min(50vw,520px)" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <span class="eyebrow muted reveal" style="justify-content:center;display:inline-flex">Let's begin</span>
+            <h2 class="big reveal" data-d="1">Put one workflow <span class="it">to work.</span></h2>
+            <p class="c-sub reveal" data-d="2">Tell us the workflow you want to automate, the systems involved and any risk or compliance concerns. We reply to every serious enquiry within one business day.</p>
+            <div class="c-actions reveal" data-d="2">
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="https://cal.eu/machlilies/agent-operations-sprint-intro" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a 30-min call</a>
+            </div>
+            <div class="c-trust reveal" data-d="3">
+                <span>Reply within one business day</span>
+                <span>Human oversight by design</span>
+                <span>Senior team, always</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <span class="foot-word">Mach<span class="it"> Lilies</span></span>
+            <div class="foot-cols">
+                <div class="foot-col">
+                    <h5>The practice</h5>
+                    <p>An independent agentic operations &amp; AI engineering consultancy. We design, govern and operate safe AI agent workflows that do real business work.</p>
+                </div>
+                <div class="foot-col">
+                    <h5>Services</h5>
+                    <a href="/services/">All services</a>
+                    <a href="/services/agentic-operations/">Agentic Operations</a>
+                    <a href="/services/agentops-ai-governance/">AgentOps &amp; Governance</a>
+                    <a href="/services/ai-pilot-rescue/">AI Pilot Rescue</a>
+                    <a href="/services/ai-assurance-evaluation/">AI Assurance</a>
+                    <a href="/services/ai-modernisation-factory/">AI-Native Modernization</a>
+                    <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Industries</h5>
+                    <a href="/industries/insurance-brokers/">Insurance Brokers</a>
+                    <a href="/industries/accountancy-practices/">Accountancy Practices</a>
+                    <a href="/#capabilities" style="margin-top:0.4rem">What we do</a>
+                    <a href="/resources/">Guides &amp; resources</a>
+                    <a href="/#faq">FAQ</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Contact</h5>
+                    <a href="/contact/">Start a conversation</a>
+                    <a href="mailto:hey@machlilies.com">hey@machlilies.com</a>
+                    <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
+                </div>
+            </div>
+            <div class="foot-base">
+                <span>© <span id="year">2026</span> Mach Lilies Limited. All rights reserved.</span>
+                <span class="tag">Mach speed. Lily craft.</span>
+                <a href="#top" data-cursor>Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

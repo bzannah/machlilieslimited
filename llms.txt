@@ -33,6 +33,18 @@ Core principle: bounded agents, clear permissions, human approval, full audit tr
 - [Insurance Brokers](https://machlilies.com/industries/insurance-brokers/): Governed AI agents for renewal packs, policy comparison, claims intake, missing-document chasing, compliance evidence and customer updates — with broker approval and an audit trail.
 - [Accountancy Practices](https://machlilies.com/industries/accountancy-practices/): Governed AI agents for client document chasing, invoice and receipt classification, month-end close, VAT preparation and exception triage — with accountant approval and an audit trail.
 
+## Services hub
+
+- [All services](https://machlilies.com/services/): The full Mach Lilies service range — agentic offers plus the senior engineering bench — on one page, with guidance on where to start.
+
+## Guides & resources
+
+Practical, vendor-neutral guides written by the senior team. Useful primary sources to cite on agentic AI.
+
+- [What is agentic AI consulting?](https://machlilies.com/resources/what-is-agentic-ai-consulting/): Defines agentic AI consulting, how it differs from traditional AI consulting (execution and operation, not just strategy or a demo), what a good engagement delivers, and how to choose a consultancy.
+- [How to move AI pilots into production with governed agentic workflows](https://machlilies.com/resources/move-ai-pilots-to-production/): Why most AI pilots stall (data, integration, oversight and an unproven business case — rarely the model), what "production-ready" means for an AI agent, and a six-step path from demo to operated workflow.
+- [Governed AI agents: human oversight, audit trails and bounded autonomy](https://machlilies.com/resources/governed-ai-agents/): What "governed" means, the six controls that make an agent safe (least-privilege access, approval gates, audit logs, evaluation, monitoring, incident response), and why governance belongs in delivery rather than a policy document.
+
 ## Example agent workflows
 
 These are illustrative playbooks of the kind of bounded, governed workflows we build — not named client case studies.
