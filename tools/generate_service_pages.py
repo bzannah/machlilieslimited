@@ -1713,7 +1713,16 @@ def build_services_hub():
     return body
 
 # --------------------------- RESOURCES / GUIDES ----------------------------
-RES_ORDER = ["what-is-agentic-ai-consulting", "move-ai-pilots-to-production", "governed-ai-agents"]
+RES_ORDER = [
+    "what-is-agentic-ai-consulting",
+    "how-to-choose-an-ai-consultancy",
+    "how-much-does-ai-consulting-cost",
+    "move-ai-pilots-to-production",
+    "measuring-ai-agent-roi",
+    "governed-ai-agents",
+    "ai-governance-checklist",
+    "agentops-vs-mlops",
+]
 
 RESOURCES = {
 
@@ -1923,6 +1932,327 @@ RESOURCES = {
 
 <h2>Governance as part of delivery</h2>
 <p>The most important principle is the simplest: <strong>build governance in from the start</strong>. Controls bolted on after an incident are slower, weaker and more expensive than controls designed into the workflow from day one. At Mach Lilies, permissions, approvals, logging and evaluation are part of how we build an <a href="/services/agentic-operations/">agentic operations</a> workflow — not a separate phase, and never an afterthought. That is what lets a governed agent move from one safe workflow to the next.</p>''',
+},
+
+"how-to-choose-an-ai-consultancy": {
+  "title": "How to Choose an AI Consultancy: A Buyer's Guide | Mach Lilies",
+  "short": "How to choose an AI consultancy",
+  "desc": "A practical buyer's guide to choosing an AI consultancy or agentic AI partner — the questions to ask, the red flags to avoid, and how to tell genuine AI experts from slideware.",
+  "keywords": "how to choose an AI consultancy, AI consulting, AI experts, AI agent consulting, agentic AI consulting, choosing an AI partner, AI consultancy buyer guide",
+  "category": "Buyer's guide",
+  "date": "2026-06-19",
+  "read": "8 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "How to choose an AI consultancy: a buyer's guide",
+  "h1": ("How to choose", "an AI consultancy."),
+  "lead": "The market is full of firms promising AI transformation. Choosing well comes down to a few questions that separate genuine AI experts from slideware. Here is what to ask, what to watch for, and how to judge a partner before you commit.",
+  "takeaways": [
+    "Choose on <b>outcomes and operating model</b>, not logos or buzzwords.",
+    "The best signal is seniority: the people who <b>scope the work should build and run it</b>.",
+    "Prefer partners who lead with <b>governance and measurable ROI</b> over promises of full autonomy.",
+    "Insist on <b>clean ownership and no lock-in</b> — you should be able to run what they build.",
+  ],
+  "related": ["ai-consulting", "agentic-operations", "agentic-operations-sprint"],
+  "faqs": [
+    ("What is the difference between an AI consultancy and a software agency?",
+     "A software agency builds what you specify. An AI consultancy helps you decide what is worth building, designs the AI system, and — in the best cases — operates it. For agentic work specifically, look for a partner who covers the full path from use-case selection through to a governed agent running in production, not just a model or a demo."),
+    ("How do I know if a consultancy has real AI expertise?",
+     "Ask to see how they handle the unglamorous parts: data readiness, integration, evaluation, human oversight, monitoring and incident response. Genuine experts talk fluently about production controls, not just models. Be wary of anyone who leads with vague transformation language or promises full autonomy with no mention of governance."),
+    ("Should we hire a big firm or a small senior studio?",
+     "Big firms offer scale and breadth; small senior studios offer principals doing the work end to end, faster decisions and no hand-off to juniors. For focused, high-stakes agentic work, a small senior practice often delivers more value per pound — provided it has genuine production experience."),
+    ("What questions should we ask in the first call?",
+     "Who will actually do the work? How do you build in human oversight and audit trails? How do you measure ROI before and after launch? Which models do you use and why? What do we own at the end, and is there any lock-in? The answers reveal more than any case study deck."),
+  ],
+  "body": '''<p>Almost every consultancy now sells AI. The pitches blur together: transformation, copilots, agents, efficiency. Choosing the right partner is less about the deck and more about a handful of questions that reveal whether a firm can actually ship — and operate — something that works.</p>
+
+<h2>Start with the outcome, not the technology</h2>
+<p>The strongest engagements begin with a business outcome, not a technology. Before you evaluate any partner, get specific about what you want to be true in six months: a workflow that runs with less manual effort, a pilot finally in production, a governance regime you can show an auditor. A good consultancy will push you toward that clarity; a weak one will lead with its toolset. If the conversation is all models and no measurable outcome, that is a signal.</p>
+
+<h2>Ten questions to ask any AI consultancy</h2>
+<p>Use these in the first one or two conversations. The quality of the answers matters more than the slides:</p>
+<ul>
+  <li><b>Who actually does the work?</b> Principals, or juniors after the sale?</li>
+  <li><b>What is your production track record?</b> Real systems under real load, not demos.</li>
+  <li><b>How do you build in human oversight?</b> Where does a person approve, and why?</li>
+  <li><b>What does your audit trail capture?</b> Can you explain any action after the fact?</li>
+  <li><b>How do you measure ROI?</b> Before the build and after launch.</li>
+  <li><b>Which models do you use, and why?</b> Look for model-agnostic reasoning, not vendor loyalty.</li>
+  <li><b>How do you handle our data?</b> Privacy, isolation, and whether providers train on it.</li>
+  <li><b>What happens when an agent misbehaves?</b> Pause, rollback, incident process.</li>
+  <li><b>What do we own at the end?</b> Source, runbooks, documentation — and any lock-in.</li>
+  <li><b>How do we start small?</b> A fixed-scope first step beats a sprawling programme.</li>
+</ul>
+
+<h2>Red flags</h2>
+<p>A few patterns reliably predict disappointment:</p>
+<ul>
+  <li><b>Full autonomy as a selling point.</b> In production, bounded beats autonomous. Uncontrolled autonomy inside your systems is risk, not value.</li>
+  <li><b>Guaranteed compliance.</b> No one can guarantee regulatory outcomes; be wary of anyone who claims to.</li>
+  <li><b>Hours over outcomes.</b> If the model is billable headcount with no outcome attached, incentives are misaligned.</li>
+  <li><b>No exit.</b> If you cannot run what they build without them, you have bought a dependency.</li>
+</ul>
+
+<h2>Generalists, specialists and "AI experts"</h2>
+<p>"AI experts" is an easy label to claim. The useful distinction is between firms that advise on AI and firms that have built and operated it. For <a href="/resources/what-is-agentic-ai-consulting/">agentic AI consulting</a> in particular, you want a partner whose senior people have shipped governed agents — because the hard problems live in operations, not in the model. A focused specialist with genuine production scars will usually serve you better than a generalist with a broad menu.</p>
+
+<h2>How Mach Lilies fits</h2>
+<p>We are a small, senior, founder-led practice: the principals who scope your work are the ones who build, govern and operate it. We sell governed AI operations, not billable hours; we are model-agnostic; and we hand over clean, documented systems you own. If that is the profile you are looking for, the clearest way to test it is a focused <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> — or simply read how we think about <a href="/services/ai-consulting/">AI consulting</a>.</p>''',
+},
+
+"how-much-does-ai-consulting-cost": {
+  "title": "How Much Does AI Consulting Cost? Pricing Explained | Mach Lilies",
+  "short": "How much does AI consulting cost?",
+  "desc": "How AI consulting is priced — day rates, fixed-fee discovery, milestone delivery and value-based models — the factors that drive cost, and how to budget for production rather than just a pilot.",
+  "keywords": "how much does AI consulting cost, AI consulting cost, AI consulting pricing, AI consultant rates, agentic AI cost, AI project budget, AI consulting fees",
+  "category": "Buyer's guide",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "How much does AI consulting cost? Pricing explained",
+  "h1": ("How much does", "AI consulting cost?"),
+  "lead": "There is no single price for AI consulting — and any firm that quotes one before understanding your problem is guessing. This guide explains the pricing models you will encounter, what actually drives the cost, and how to budget for production rather than just another pilot.",
+  "takeaways": [
+    "AI consulting is priced by <b>day rate, fixed-fee discovery, milestone delivery, value-based or retainer</b> — each fits a different stage.",
+    "Cost is driven mostly by <b>scope, data readiness, integration and the level of governance</b> — rarely the model.",
+    "Budget for <b>production and operation</b>, not just a proof of concept that stalls.",
+    "A small, fixed-scope first step is the cheapest way to <b>de-risk a larger investment</b>.",
+  ],
+  "related": ["ai-consulting", "agentic-operations-sprint", "agentic-operations"],
+  "faqs": [
+    ("Is AI consulting worth the cost?",
+     "It is when the engagement is tied to a measurable outcome — a workflow that removes manual effort, a pilot that finally reaches production, or a governance regime that reduces risk. The waste comes from open-ended projects with no business case. Insist on an ROI model before you commit, and the cost question largely answers itself."),
+    ("Should we pay day rates or a fixed price?",
+     "Day rates suit open-ended exploration where scope is genuinely unknown. Fixed-price, fixed-scope work suits a defined deliverable — like a discovery sprint or a production rollout — and shifts delivery risk onto the consultancy. For most buyers, a fixed-scope first step is the safer way to start."),
+    ("How much does it cost to move an AI pilot to production?",
+     "It depends on how far the pilot already is and what production demands — data clean-up, integrations, controls and evaluation. The honest answer comes from a short audit that scopes the work; that is exactly what an AI pilot rescue or discovery sprint produces, so you get a fixed number before committing to the build."),
+    ("Do you offer a free consultation?",
+     "Yes. Most engagements begin with a free first consultation and a short, fixed-fee discovery to validate the use case, followed by milestone-based delivery priced to outcomes. We share clear, indicative figures before any commitment."),
+  ],
+  "body": '''<p>"How much does AI consulting cost?" is the most reasonable question a buyer can ask, and the hardest to answer in a sentence. The cost of building a chatbot prototype and the cost of putting a governed agent into production differ by an order of magnitude. What you can do is understand the pricing models, the factors that move the number, and how to avoid paying for a pilot that never ships.</p>
+
+<h2>The pricing models you will encounter</h2>
+<p>Most AI consultancies use one or a blend of these:</p>
+<ul>
+  <li><b>Day rate / time-and-materials.</b> You pay for senior time. Flexible, but the risk of overrun sits with you. Best for genuinely open-ended exploration.</li>
+  <li><b>Fixed-fee discovery.</b> A short, scoped engagement that maps the opportunity and produces a plan and ROI model for a set price. Low risk, high clarity.</li>
+  <li><b>Milestone / fixed-scope delivery.</b> A defined build for a fixed price, delivered in stages. Risk shifts to the consultancy.</li>
+  <li><b>Value-based.</b> Pricing tied to outcomes rather than headcount. Powerful when the value is measurable and both sides trust the baseline.</li>
+  <li><b>Managed retainer.</b> Ongoing operation — monitoring, evaluation, optimisation — for a recurring fee. This is how operated agent workflows are usually priced after launch.</li>
+</ul>
+
+<h2>What actually drives the cost</h2>
+<p>The model is rarely the expensive part. Cost is driven by everything around it:</p>
+<ul>
+  <li><b>Scope.</b> One bounded workflow is far cheaper than a programme of them.</li>
+  <li><b>Data readiness.</b> Clean, accessible data lowers cost; messy or siloed data raises it.</li>
+  <li><b>Integration.</b> The number and complexity of systems an agent must connect to safely.</li>
+  <li><b>Governance.</b> The level of oversight, evaluation and audit your risk profile requires.</li>
+  <li><b>Operation.</b> Whether you need the workflow run as a managed service or handed over.</li>
+</ul>
+
+<h2>Budget for production, not just a pilot</h2>
+<p>The most common — and most expensive — mistake is budgeting for a proof of concept and treating production as an afterthought. A demo is cheap; the value lives on the other side of the line, in the hardening, controls and integration that make an agent safe to run. We wrote about that gap in <a href="/resources/move-ai-pilots-to-production/">how to move AI pilots into production</a>. Plan for it from the start and you avoid paying twice.</p>
+
+<h2>How Mach Lilies prices</h2>
+<p>We are deliberately transparent: most engagements begin with a free consultation and a fixed-scope <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> that produces a working prototype, an ROI model and a fixed-price rollout proposal — so you see clear numbers before committing to the build. After launch, operation is a managed retainer scoped to the number of agents and the oversight your risk profile needs. We price to outcomes, not headcount, and there is no lock-in. For a tailored quote, see <a href="/services/ai-consulting/">AI consulting</a> or get in touch.</p>''',
+},
+
+"measuring-ai-agent-roi": {
+  "title": "How to Measure the ROI of AI Agents | Mach Lilies",
+  "short": "Measuring the ROI of AI agents",
+  "desc": "How to measure the ROI of AI agents honestly — baselining manual effort, modelling time saved, error reduction and throughput, and tracking real cost and value after launch.",
+  "keywords": "AI agent ROI, measuring AI ROI, AI ROI model, measurable ROI AI agents, agentic operations ROI, AI business case, AI cost tracking",
+  "category": "Playbook",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "How to measure the ROI of AI agents",
+  "h1": ("How to measure the", "ROI of AI agents."),
+  "lead": "ROI is where most AI business cases get hand-waved. A governed agent should be held to a real number — before you build and after you launch. Here is a practical way to baseline, model and then actually measure the return.",
+  "takeaways": [
+    "Measure against a <b>baseline</b>: you cannot prove savings you never quantified.",
+    "The three levers are <b>time saved, error reduction and throughput</b>.",
+    "Always model the <b>cost side</b> — model spend, oversight time and maintenance.",
+    "Measure <b>after launch</b>, not just in the business case — real usage beats projections.",
+  ],
+  "related": ["agentic-operations", "ai-pilot-rescue", "agentic-operations-sprint"],
+  "howto": {
+    "name": "How to build an ROI model for an AI agent",
+    "desc": "A five-step method for estimating and then measuring the return on an AI agent workflow.",
+    "steps": [
+      ("Baseline the current workflow", "Quantify today's manual effort: volume, time per item, error rate and the cost of rework. This is the number you will measure against."),
+      ("Model the three levers", "Estimate time saved, error reduction and throughput gain the agent should deliver, with conservative and optimistic cases."),
+      ("Cost the agent honestly", "Add model and infrastructure spend, the human oversight time the workflow still needs, and ongoing maintenance and evaluation."),
+      ("Calculate net return and payback", "Subtract the agent's cost from the gross saving to get net ROI, and work out how long until it pays for itself."),
+      ("Measure after launch", "Track real usage, quality and cost in production, and report actuals against the model — refining the estimate as the workflow runs."),
+    ],
+  },
+  "faqs": [
+    ("How do you measure ROI on an AI agent?",
+     "Start with a baseline of the current manual effort — volume, time per item, error rate and rework cost. Estimate the agent's impact on time saved, error reduction and throughput, then subtract the agent's running cost (model spend, oversight time, maintenance). After launch, track real usage and cost so the return is measured, not assumed."),
+    ("What is a realistic ROI timeframe for an AI agent?",
+     "For a well-chosen, bounded workflow, payback is often measured in months rather than years, because the savings recur every time the workflow runs. Highly complex or low-volume workflows take longer and may not justify production at all — which is why baselining first matters."),
+    ("What costs do people forget when calculating AI ROI?",
+     "The recurring ones: model and infrastructure spend, the human time still needed for approvals and exceptions, evaluation and monitoring, and maintenance when models or processes change. Ignoring these inflates the apparent return and leads to disappointment later."),
+    ("How is ROI measured after the agent goes live?",
+     "Through monitoring and evaluation built into operation: dashboards for volume, quality and cost, compared against the baseline. This turns ROI from a one-off projection into an ongoing, reported metric you can act on."),
+  ],
+  "body": '''<p>Plenty of AI business cases promise efficiency and leave it there. A governed agent deserves better: a number you set before the build and check after launch. The good news is that the work to remove a process is also the work that lets you measure it — if you baseline first.</p>
+
+<h2>Why ROI gets hand-waved</h2>
+<p>Most AI ROI claims fail for one of two reasons: there was no baseline to measure against, or the cost side was ignored. "It saves time" is not a business case. "This workflow handles 1,200 items a month at nine minutes each, and the agent removes seven of those minutes at a model cost of pennies per item" is. The difference is rigour, not optimism.</p>
+
+<h2>Baseline before you build</h2>
+<p>Pick one workflow and quantify it honestly: how many items, how long each takes, the error and rework rate, and the fully loaded cost of the people doing it. This baseline is the single most valuable artefact in the whole exercise, because every later claim is measured against it. If you cannot baseline a workflow, that is a sign it may be the wrong first candidate.</p>
+
+<h2>The three levers</h2>
+<p>Agent value almost always comes from a combination of three things:</p>
+<ul>
+  <li><b>Time saved.</b> The manual minutes the agent removes, multiplied by volume.</li>
+  <li><b>Error reduction.</b> Fewer mistakes, less rework, and the downstream cost those errors would have caused.</li>
+  <li><b>Throughput.</b> More work handled in the same time, or the same work handled faster — capacity you can redeploy.</li>
+</ul>
+
+<h2>Do not forget the cost side</h2>
+<p>A credible model nets the savings against the agent's real running cost: model and infrastructure spend, the human oversight the workflow still requires, and the maintenance and evaluation needed to keep quality high. This is also where good <a href="/services/agentops-ai-governance/">AgentOps</a> earns its keep — cost monitoring and model routing keep the spend side predictable so the ROI holds.</p>
+
+<h2>Measure after launch, not just before</h2>
+<p>The business case is an estimate. The truth comes from production. Monitoring and evaluation should track real usage, quality and cost, reported against your baseline, so the operational impact is measured rather than assumed. That is how an ROI number stops being a sales artefact and becomes a management metric. It is built into how we run an <a href="/services/agentic-operations/">agentic operations</a> workflow — and the first estimate is exactly what an <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> produces.</p>''',
+},
+
+"ai-governance-checklist": {
+  "title": "AI Governance Checklist for Production AI Agents | Mach Lilies",
+  "short": "AI governance checklist",
+  "desc": "A practical AI governance checklist for teams putting AI agents into production — inventory, risk classification, least-privilege access, human oversight, evaluation, audit trails and incident response.",
+  "keywords": "AI governance checklist, AI governance consulting, AI governance, AgentOps, AI assurance, human oversight, AI audit trail, AI risk classification",
+  "category": "Checklist",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "An AI governance checklist for production AI agents",
+  "h1": ("An AI governance", "checklist."),
+  "lead": "Governance that lives in a policy document protects no one. This is a practical checklist for teams putting AI agents into production — eight controls that turn intent into something you can actually operate and evidence.",
+  "takeaways": [
+    "Governance is a set of <b>implemented controls</b>, not a document you file.",
+    "Make oversight <b>proportionate to risk</b> — automate the routine, gate the high-stakes.",
+    "If you cannot <b>evidence it</b>, you cannot defend it to an auditor.",
+    "Work the checklist <b>per workflow</b>, then scale it as more agents go live.",
+  ],
+  "related": ["agentops-ai-governance", "ai-assurance-evaluation", "agentic-operations"],
+  "howto": {
+    "name": "AI governance checklist for production AI agents",
+    "desc": "Eight controls to implement before and while running an AI agent in production.",
+    "steps": [
+      ("Inventory every agent", "Maintain a living register of each agent: what it does, the workflow it serves, the data and tools it can access, and who owns it."),
+      ("Classify the risk", "Rate each use case so oversight and controls are proportionate to the stakes — low-risk uses run lightly, high-risk ones get tighter gates."),
+      ("Apply least-privilege access", "Scope each agent's tools and data to exactly its workflow and nothing more."),
+      ("Design human oversight", "Define where a person must approve, how they review, and how exceptions escalate."),
+      ("Wire in evaluation", "Test prompts, models and workflows against known cases before and after every change."),
+      ("Capture an audit trail", "Log every tool call, decision, escalation and approval so any action can be explained after the fact."),
+      ("Monitor quality and cost", "Track throughput, quality and spend, with alerting when behaviour or cost drifts."),
+      ("Prepare incident response", "Be able to pause, roll back or restrict an agent instantly, with a defined process and owner."),
+    ],
+  },
+  "faqs": [
+    ("What should an AI governance checklist cover?",
+     "At minimum: an inventory of AI systems and agents, risk classification for each use case, least-privilege access, human oversight design, evaluation and regression testing, a complete audit trail, monitoring of quality and cost, and an incident-response process. Together these turn AI policy into controls you can operate and evidence."),
+    ("Who owns AI governance?",
+     "It is shared. Technology owns the implementation — permissions, logs, evaluation and incident response. Risk, compliance and leadership own the organisational layer — inventory, risk classification, policy and assurance. The two reinforce each other; gaps appear when one assumes the other has it covered."),
+    ("Is an AI policy enough for governance?",
+     "No. A policy states intent; governance proves it. The value is in implementing the controls and producing the evidence that shows they work in day-to-day operation. A policy with no implemented controls protects no one and convinces no auditor."),
+    ("How does this checklist relate to AgentOps and AI assurance?",
+     "AgentOps is the technical control layer — the permissions, logs, evaluation and incident response in this list. AI assurance is the organisational layer — inventory, risk classification, oversight and audit evidence. This checklist spans both, which is why we deliver them together."),
+  ],
+  "body": '''<p>Most organisations have an AI policy. Far fewer can show, for a given agent, what it can access, what it did, who approved it and what it cost. That gap — between stated intent and operated control — is where governance actually lives. This checklist is what we work through when we put an agent into production.</p>
+
+<h2>Why a checklist beats a policy</h2>
+<p>A policy is a statement; a checklist is a set of actions. Governance only protects you once each item is implemented and producing evidence. Treat the list below as per-workflow work: apply it to your first agent, then reuse it as more go live. None of it requires slowing the business down — well-designed controls run automatically for routine actions and only add friction where risk genuinely concentrates.</p>
+
+<h2>The eight controls</h2>
+<p>For each agent heading to production, confirm you have:</p>
+<ul>
+  <li><b>An inventory entry</b> — what it does, what it can touch, and who owns it.</li>
+  <li><b>A risk classification</b> — so controls are proportionate to the stakes.</li>
+  <li><b>Least-privilege access</b> — tools and data scoped to the workflow and nothing more.</li>
+  <li><b>Human oversight</b> — defined approval points, review and escalation.</li>
+  <li><b>Evaluation suites</b> — regression tests run before and after every change.</li>
+  <li><b>An audit trail</b> — every tool call, decision, escalation and approval logged.</li>
+  <li><b>Monitoring</b> — quality, throughput and cost, with alerting on drift.</li>
+  <li><b>Incident response</b> — the ability to pause, roll back or restrict, with an owner.</li>
+</ul>
+<p>If you want the reasoning behind these, we cover it in <a href="/resources/governed-ai-agents/">governed AI agents</a>; here the point is simply to have each one in place.</p>
+
+<h2>How to use the checklist</h2>
+<p>Run it as a gate, not a survey. An agent should not reach production with open items, and each item should point to evidence — a register entry, a permissions config, an evaluation report, a log query — not a tick in a spreadsheet. Reviewed this way, the checklist doubles as your audit-ready evidence base.</p>
+
+<h2>Where this sits</h2>
+<p>The first six controls are largely technical — the substance of <a href="/services/agentops-ai-governance/">AgentOps &amp; AI governance</a>. Inventory, risk classification and evidence extend to the organisational level, which is the role of <a href="/services/ai-assurance-evaluation/">AI assurance and evaluation</a>. We deliver both, so the checklist is implemented end to end rather than split across teams who each assume the other owns it.</p>''',
+},
+
+"agentops-vs-mlops": {
+  "title": "AgentOps vs MLOps: What's the Difference? | Mach Lilies",
+  "short": "AgentOps vs MLOps",
+  "desc": "AgentOps vs MLOps explained: how operating AI agents that take actions differs from operating ML models — permissions, approvals, audit trails and incident response on top of monitoring.",
+  "keywords": "AgentOps vs MLOps, AgentOps, MLOps, AI agent operations, AI governance, agent monitoring, LLMOps, production AI",
+  "category": "Comparison",
+  "date": "2026-06-19",
+  "read": "6 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "AgentOps vs MLOps: what's the difference?",
+  "h1": ("AgentOps vs MLOps:", "the difference."),
+  "lead": "MLOps keeps models trained, deployed and monitored. AgentOps governs what agents are allowed to do once they can take actions. As AI shifts from predicting to acting, the operational discipline has to shift with it. Here is how the two compare — and why most teams need both.",
+  "takeaways": [
+    "<b>MLOps</b> operates models; <b>AgentOps</b> governs agents that take actions.",
+    "AgentOps adds <b>permissions, approvals, action audit trails and incident response</b> on top of monitoring.",
+    "The trigger for AgentOps is <b>tool use</b> — the moment an agent can change something.",
+    "Most production AI now needs <b>both</b>: MLOps underneath, AgentOps around the actions.",
+  ],
+  "related": ["agentops-ai-governance", "ai-consulting", "agentic-operations"],
+  "faqs": [
+    ("What is the difference between AgentOps and MLOps?",
+     "MLOps is the discipline of keeping machine-learning models trained, deployed, monitored and retrained. AgentOps governs what AI agents are allowed to do once they can take actions — using tools, updating records, triggering workflows. AgentOps adds permissions, human approval, action audit trails and incident controls on top of the monitoring MLOps provides."),
+    ("Does AgentOps replace MLOps?",
+     "No — it sits alongside it. If your agents use models you train or fine-tune, you still need MLOps underneath for the model lifecycle. AgentOps governs the layer above: the actions the agent takes in your systems. Most production AI now needs both."),
+    ("When do we need AgentOps?",
+     "The moment an AI system can take an action rather than just produce an output — sending an email, updating a CRM, moving a case forward. That is when permissions, approval gates, action logging and an incident process become essential, because mistakes now have consequences in your systems."),
+    ("Is AgentOps the same as LLMOps?",
+     "They overlap but are not identical. LLMOps focuses on operating large language models — prompts, evaluation, cost and latency. AgentOps is broader: it governs agents that use those models to take actions, adding the access control, approval and audit layer that acting safely requires."),
+  ],
+  "body": '''<p>For a decade, operating AI meant MLOps: pipelines, training, deployment, monitoring and retraining. That discipline still matters. But it was built for systems that <em>predict</em> — that take an input and return an output. Agents are different. They <em>act</em>. And the moment an AI system can take an action inside your business, it needs a different kind of operational control.</p>
+
+<h2>The short answer</h2>
+<p>MLOps keeps a model healthy. AgentOps keeps an agent accountable. MLOps asks "is the model accurate, available and affordable?" AgentOps asks "what can this agent do, what did it do, who approved it, and how do we stop it if it goes wrong?" The two are complementary layers, not competitors.</p>
+
+<h2>What MLOps covers</h2>
+<p>MLOps is the backbone for the model lifecycle:</p>
+<ul>
+  <li>Data and feature pipelines.</li>
+  <li>Training, versioning and deployment.</li>
+  <li>Performance monitoring and drift detection.</li>
+  <li>Retraining and rollback of models.</li>
+</ul>
+<p>If you build or fine-tune models, you need this underneath everything else. It is necessary — but, for an agent that takes actions, not sufficient.</p>
+
+<h2>What AgentOps adds</h2>
+<p>AgentOps is the operating layer for agents that use tools and take actions. On top of monitoring, it adds the controls that acting safely requires:</p>
+<ul>
+  <li><b>Permissions &amp; access</b> — least-privilege boundaries on what each agent can touch.</li>
+  <li><b>Approval gates</b> — human sign-off for high-risk actions.</li>
+  <li><b>Action audit trails</b> — a complete record of every tool call and decision.</li>
+  <li><b>Evaluation &amp; regression</b> — testing behaviour, not just model accuracy.</li>
+  <li><b>Incident response</b> — pause, roll back or restrict an agent on demand.</li>
+</ul>
+
+<h2>A side-by-side view</h2>
+<ul>
+  <li><b>Unit of concern:</b> MLOps → a model; AgentOps → an agent and its actions.</li>
+  <li><b>Core question:</b> MLOps → is it accurate and available? AgentOps → what is it allowed to do, and what did it do?</li>
+  <li><b>Key controls:</b> MLOps → training, deployment, drift; AgentOps → permissions, approvals, audit, incident response.</li>
+  <li><b>Failure mode:</b> MLOps → degraded predictions; AgentOps → an unwanted action in a real system.</li>
+</ul>
+
+<h2>Do you need both?</h2>
+<p>Usually, yes. If your agents rely on models you train, MLOps keeps those models healthy while AgentOps governs the actions they drive. If you use frontier models via API, MLOps shrinks but AgentOps grows — because the risk has moved from the model to what the agent does with it. Either way, the action layer is what makes agents safe to run in production. That action layer is exactly what we build in <a href="/services/agentops-ai-governance/">AgentOps &amp; AI governance</a>, on top of the engineering covered in <a href="/services/ai-consulting/">AI consulting</a>.</p>''',
 },
 }
 
