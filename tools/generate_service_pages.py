@@ -413,8 +413,8 @@ SERVICES = {
   ],
   "contact_h2": ("Book the", "Sprint."),
   "contact_sub": "Tell us the workflow you want to automate, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book the Sprint", "cta_href": BOOKING_URL,
-  "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
+  "cta": "Book a 30-min call", "cta_href": BOOKING_URL,
+  "cta2": "Send a message", "cta2_href": "/contact/",
 },
 
 # ====================== FOUNDATION (delivery bench) ======================
@@ -1048,6 +1048,8 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
     url = "%s/%s/%s/" % (BASE, base_path, slug)
     ind = "".join("<span>%s</span>" % esc(x) for x in d["industries"])
     contact_subject = "Enquiry%20—%20" + short_name.replace(" ","%20").replace("&","and")
+    # default contact path is the form: route any mailto hero CTA to /contact/
+    cta_href = "/contact/" if d["cta_href"].startswith("mailto:") else d["cta_href"]
     return '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1231,8 +1233,12 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
             <h2 class="big reveal" data-d="1">{contact_h2a} <span class="it">{contact_h2b}</span></h2>
             <p class="c-sub reveal" data-d="2">{contact_sub}</p>
             <div class="c-actions reveal" data-d="2">
-                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Start a conversation <span class="arrow">→</span></a>
-                <a href="mailto:machlilieslimited@gmail.com?subject={subject}" class="btn btn-ghost magnetic" data-cursor data-event="cta_email">Email us directly</a>
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="{booking}" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a 30-min call</a>
+            </div>
+            <div class="c-trust reveal" data-d="3">
+                <span>Message us — we reply within one business day, no call required</span>
+                <span>Or book a 30-minute intro call</span>
             </div>
         </div>
     </section>
@@ -1247,9 +1253,9 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
         keywords=esc(d["keywords"]), jsonld=jsonld(d, url, short_name, crumb_name, crumb_href), nav=NAV,
         short=esc(short_name), crumb_name=esc(crumb_name), crumb_href=crumb_href, eyebrow=esc(d["eyebrow"]),
         h1a=esc(d["h1"][0]), h1b=esc(d["h1"][1]), lead=d["lead"],
-        cta_label=esc(d["cta"]), cta_href=d["cta_href"],
+        cta_label=esc(d["cta"]), cta_href=cta_href,
         cta2_label=esc(d["cta2"]), cta2_href=d["cta2_href"],
-        subject=contact_subject,
+        subject=contact_subject, booking=BOOKING_URL,
         ov_eyebrow=esc(d["ov_eyebrow"]), ov_hl=d["ov_hl"], ov_body=esc(d["ov_body"]),
         timeline_section=render_timeline(d), sample_section=render_sample(d),
         svc_h2a=esc(d["svc_h2"][0]), svc_h2b=esc(d["svc_h2"][1]), svc_note=esc(d["svc_note"]),
@@ -1378,14 +1384,34 @@ def build_contact():
             <nav class="crumb reveal" aria-label="Breadcrumb">
                 <a href="/">Home</a> <span>/</span> <b>Contact</b>
             </nav>
-            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Start a conversation</span>
-            <h1 class="display reveal" data-d="1">Book an Agentic<br/><span class="it accent-text">Operations Sprint.</span></h1>
-            <p class="svc-lead reveal" data-d="2">Tell us the workflow you want to automate and we'll reply within one business day with an honest first view — no funnels, no bots. Most engagements begin with a fixed-scope Agentic Operations Sprint.</p>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Contact</span>
+            <h1 class="display reveal" data-d="1">Start a<br/><span class="it accent-text">conversation.</span></h1>
+            <p class="svc-lead reveal" data-d="2">Two ways to reach us. <strong>Send a message</strong> and we'll reply within one business day — no call required. Or <strong>book a 30-minute intro call</strong> if you'd rather talk it through. No funnels, no bots.</p>
         </div>
     </header>
 
-    <section class="block" id="enquiry" style="padding-top:0">
+    <section class="block" style="padding-bottom:0">
         <div class="wrap">
+            <div class="contact-choice reveal" data-d="1">
+                <div class="choice is-default">
+                    <span class="ch-tag">Option 1 · Default</span>
+                    <h2>Send a message</h2>
+                    <p>The simplest way in. Tell us about your workflow in a short form and we'll reply within one business day — no call required.</p>
+                    <a href="#enquiry" class="btn btn-solid magnetic" data-cursor>Use the form ↓</a>
+                </div>
+                <div class="choice">
+                    <span class="ch-tag">Option 2</span>
+                    <h2>Book a 30-min call</h2>
+                    <p>Prefer to talk it through? Book a 30-minute intro call about an Agentic Operations Sprint at a time that suits you.</p>
+                    <a href="{booking}" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a call →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="enquiry" style="padding-top:clamp(2.5rem,6vh,4rem)">
+        <div class="wrap">
+            <span class="eyebrow muted reveal" style="display:inline-flex;margin-bottom:1.6rem">Option 1 — Send a message</span>
             <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="{endpoint}">
                 <input type="hidden" name="_subject" value="New Agentic Operations enquiry — machlilies.com" />
                 <div class="form-grid">
@@ -1404,10 +1430,10 @@ def build_contact():
                     </div>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-solid magnetic" data-cursor>Send enquiry <span class="arrow">→</span></button>
-                    <a href="{booking}" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Or book a 30-min call</a>
+                    <button type="submit" class="btn btn-solid magnetic" data-cursor>Send message <span class="arrow">→</span></button>
+                    <span class="form-note">We reply within one business day — no call required.</span>
                 </div>
-                <p class="form-note" style="margin-top:1rem">Prefer email? <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a> — we reply within one business day.</p>
+                <p class="form-note" style="margin-top:1rem">Prefer to talk? <a href="{booking}" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_book">Book a 30-min call</a>. Or email <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a>.</p>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
