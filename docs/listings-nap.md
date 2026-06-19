@@ -25,7 +25,7 @@ These mirror the on-site Organization schema, so on-site and off-site agree.
 | Website | https://machlilies.com |
 | Contact email | hey@machlilies.com |
 | Tagline | Mach speed. Lily craft. |
-| Founded | **2015** — ⚠️ verify before publishing (see §5) |
+| Founded | **2019** |
 | Area served | Worldwide (global, remote-first) |
 | Logo | https://machlilies.com/assets/logo-mark.svg (PNG: `/assets/icon-512.png`) |
 | Share image | https://machlilies.com/assets/og-image.png (1200×630) |
@@ -59,12 +59,10 @@ That's fine, but it changes the playbook:
 - For **GBP specifically**, Google still needs *either* a physical address *or* a
   defined service area, and usually a phone for verification. Decide §3 first.
 
-**Three decisions only you can make (needed before you publish):**
-1. **Founding year** — confirm 2015 is accurate. If not, tell me the right year and
-   I'll fix the schema too (it's the single source).
-2. **Phone** — will you publish a business number? GBP verification typically needs
+**Two decisions only you can make (needed before you publish):**
+1. **Phone** — will you publish a business number? GBP verification typically needs
    one. A VoIP/Google Voice number is acceptable if used consistently.
-3. **Address / service area** — a registered-office or coworking address (hidden,
+2. **Address / service area** — a registered-office or coworking address (hidden,
    service-area mode) makes GBP far easier. No address = skip GBP, lean on
    Crunchbase/Clutch/LinkedIn instead.
 
@@ -133,7 +131,7 @@ citations. Use the canonical block verbatim each time.
 Per `docs/seo-strategy.md`, false or unverifiable claims are an E-E-A-T and legal
 risk. Before publishing anywhere:
 
-- **Verify the founding year (2015).** Fix the schema if it's wrong.
+- **Founding year is 2019** (confirmed) — keep it identical on every profile.
 - **Don't invent** team credentials, client logos, project counts or review stats.
 - Only add **Review/AggregateRating**-type content from real, attributable clients.
 
