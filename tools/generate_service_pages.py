@@ -119,7 +119,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put one workflow", "to work."),
   "contact_sub": "Tell us the workflow you want to take off your team's plate — the systems involved, the manual effort today, and any risk or compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book an Agentic Operations Sprint", "cta_href": "/services/agentic-operations-sprint/",
+  "cta": "Map your first workflow", "cta_href": "/contact/",
   "cta2": "See agent workflows", "cta2_href": "/#work",
 },
 
@@ -176,7 +176,7 @@ SERVICES = {
   "contact_h2": ("Govern your", "first agent."),
   "contact_sub": "Tell us which agents or AI workflows are live or planned, the systems they touch, and your risk and compliance concerns. We reply to every serious enquiry within one business day.",
   "cta": "Govern your first agent workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Govern%20our%20AI%20agents%20%E2%80%94%20AgentOps",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
 "ai-pilot-rescue": {
@@ -230,7 +230,7 @@ SERVICES = {
   "contact_h2": ("Send us the pilot", "that stalled."),
   "contact_sub": "Tell us what you built, why it stalled, and what it was meant to achieve. We reply to every serious enquiry within one business day with an honest first view.",
   "cta": "Send us the pilot that stalled", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20pilot%20rescue%20enquiry",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
 "ai-assurance-evaluation": {
@@ -283,7 +283,7 @@ SERVICES = {
   ],
   "contact_h2": ("Make AI", "defensible."),
   "contact_sub": "Tell us where AI is being used or planned, and your risk and compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book an AI assurance review", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20assurance%20%26%20governance%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20assurance%20%26%20governance%20enquiry",
   "cta2": "Explore AgentOps", "cta2_href": "/services/agentops-ai-governance/",
 },
 
@@ -411,10 +411,10 @@ SERVICES = {
     ("What happens after the Sprint?", "If the business case holds, we move to a milestone-based production rollout with governance built in, and optionally operate the workflow as a managed service. If it doesn't, you'll have a clear, evidence-based recommendation not to proceed — which is valuable too."),
     ("How do we book a Sprint?", "Email machlilieslimited@gmail.com with the workflow you want to improve, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day."),
   ],
-  "contact_h2": ("Book the", "Sprint."),
+  "contact_h2": ("Start a", "conversation."),
   "contact_sub": "Tell us the workflow you want to automate, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book a 30-min call", "cta_href": BOOKING_URL,
-  "cta2": "Send a message", "cta2_href": "/contact/",
+  "cta": "Send a message", "cta_href": "/contact/",
+  "cta2": "Book a 30-min call", "cta2_href": BOOKING_URL,
 },
 
 # ====================== FOUNDATION (delivery bench) ======================
@@ -469,7 +469,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put AI", "to work."),
   "contact_sub": "Tell us what you're building. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -524,7 +524,7 @@ SERVICES = {
   ],
   "contact_h2": ("Build your", "product."),
   "contact_sub": "Tell us what you're building. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20engineering%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20engineering%20enquiry",
   "cta2": "See AI-native modernization", "cta2_href": "/services/ai-modernisation-factory/",
 },
 
@@ -579,7 +579,7 @@ SERVICES = {
   ],
   "contact_h2": ("Engineer your", "platform."),
   "contact_sub": "Tell us about your infrastructure. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Cloud%20%26%20platform%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Cloud%20%26%20platform%20enquiry",
   "cta2": "Explore AgentOps", "cta2_href": "/services/agentops-ai-governance/",
 },
 
@@ -634,7 +634,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put your data", "to work."),
   "contact_sub": "Tell us about your data. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Data%20%26%20analytics%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Data%20%26%20analytics%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -689,7 +689,7 @@ SERVICES = {
   ],
   "contact_h2": ("Design something", "rare."),
   "contact_sub": "Tell us what you're designing. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20design%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20design%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -744,7 +744,7 @@ SERVICES = {
   ],
   "contact_h2": ("Get the", "clarity."),
   "contact_sub": "Tell us the decision you're facing. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Strategy%20%26%20advisory%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Strategy%20%26%20advisory%20enquiry",
   "cta2": "See AI assurance", "cta2_href": "/services/ai-assurance-evaluation/",
 },
 }
@@ -807,7 +807,7 @@ INDUSTRIES = {
   "contact_h2": ("Map your first", "broker workflow."),
   "contact_sub": "Tell us which broker workflow costs your team the most time — renewals, claims, chasing or compliance evidence — and the systems involved. We reply within one business day.",
   "cta": "Map your first broker workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20insurance%20broking",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
 "accountancy-practices": {
@@ -860,7 +860,7 @@ INDUSTRIES = {
   "contact_h2": ("Map your first", "practice workflow."),
   "contact_sub": "Tell us which workflow limits your capacity — chasing, classification, close or VAT prep — and the systems involved. We reply within one business day.",
   "cta": "Map your first practice workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20accountancy%20practices",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 }
 
@@ -885,7 +885,7 @@ NAV = '''    <nav class="nav" id="nav">
             <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
             <a href="/services/ai-modernisation-factory/"><span class="idx">04</span>Modernization</a>
         </div>
-        <a href="/services/agentic-operations-sprint/" class="nav-cta magnetic" data-cursor data-event="cta_sprint">Book a Sprint</a>
+        <a href="/contact/" class="nav-cta magnetic" data-cursor data-event="cta_contact">Send a message</a>
         <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
     </nav>
     <div class="mobile-menu" id="mobile-menu">
@@ -1298,7 +1298,7 @@ def render_fields():
 
 def build_contact():
     url = BASE + "/contact/"
-    title = "Contact | Book an Agentic Operations Sprint — Mach Lilies"
+    title = "Contact | Start a conversation — Mach Lilies"
     desc = "Start a conversation with Mach Lilies about an Agentic Operations Sprint. Tell us the workflow you want to automate, the systems involved and your risk concerns. We reply within one business day."
     graph = [
         {"@type":["Organization","ProfessionalService"],"@id":BASE+"/#org","name":"Mach Lilies",
