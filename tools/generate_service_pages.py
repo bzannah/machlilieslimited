@@ -1715,14 +1715,24 @@ def build_services_hub():
 
 # --------------------------- RESOURCES / GUIDES ----------------------------
 RES_ORDER = [
+    "what-are-ai-agents",
+    "what-is-agentic-operations",
     "what-is-agentic-ai-consulting",
+    "generative-ai-vs-agentic-ai",
     "how-to-choose-an-ai-consultancy",
     "how-much-does-ai-consulting-cost",
+    "build-vs-buy-ai-agents",
     "move-ai-pilots-to-production",
     "measuring-ai-agent-roi",
     "governed-ai-agents",
+    "human-in-the-loop-ai",
+    "ai-agent-security",
     "ai-governance-checklist",
+    "eu-ai-act-guide",
     "agentops-vs-mlops",
+    "rag-vs-fine-tuning",
+    "ai-for-insurance-brokers",
+    "ai-for-accountancy-practices",
 ]
 
 RESOURCES = {
@@ -2255,6 +2265,554 @@ RESOURCES = {
 <h2>Do you need both?</h2>
 <p>Usually, yes. If your agents rely on models you train, MLOps keeps those models healthy while AgentOps governs the actions they drive. If you use frontier models via API, MLOps shrinks but AgentOps grows — because the risk has moved from the model to what the agent does with it. Either way, the action layer is what makes agents safe to run in production. That action layer is exactly what we build in <a href="/services/agentops-ai-governance/">AgentOps &amp; AI governance</a>, on top of the engineering covered in <a href="/services/ai-consulting/">AI consulting</a>.</p>''',
 },
+
+"what-are-ai-agents": {
+  "title": "What Are AI Agents? A Guide for Business Leaders | Mach Lilies",
+  "short": "What are AI agents?",
+  "desc": "What AI agents are, how they differ from chatbots and automation, what they can safely do in a business, and how to deploy them with human oversight and a clear audit trail.",
+  "keywords": "what are AI agents, AI agents, AI agents for business, AI agents explained, agentic AI, tool-using agents",
+  "category": "Guide",
+  "date": "2026-06-19",
+  "read": "8 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "What are AI agents? A guide for business leaders",
+  "h1": ("What are", "AI agents?"),
+  "lead": "Everyone is talking about AI agents, but the word covers everything from a clever chatbot to a system that can act inside your business. This guide explains what an agent actually is, what it can safely do, and how to put one to work without losing control.",
+  "takeaways": [
+    "An AI agent is software that can <b>take actions</b> toward a goal — using tools, not just answering questions.",
+    "Agents differ from chatbots (which talk) and RPA (which follows fixed rules) by <b>deciding and acting</b>.",
+    "The value and the risk both come from <b>action</b> — which is why bounded beats autonomous.",
+    "Deploy agents with <b>least-privilege access, human approval and an audit trail</b> from day one.",
+  ],
+  "related": ["agentic-operations", "ai-consulting", "agentops-ai-governance"],
+  "faqs": [
+    ("What is an AI agent?",
+     "An AI agent is a software system that uses an AI model to pursue a goal by taking actions — calling tools, reading and writing data, and making decisions about what to do next. Unlike a chatbot that only produces text, an agent can act: classify an email, update a record, assemble a document, or trigger a workflow, ideally with a human approving anything high-risk."),
+    ("What is the difference between an AI agent and a chatbot?",
+     "A chatbot converses — it takes a message and returns a message. An agent acts — it can use tools and take steps in your systems to complete a task. A chatbot might tell you how to process a refund; an agent can prepare the refund and route it to a person for approval."),
+    ("Are AI agents safe to use in a business?",
+     "They are when they are bounded and governed. The risk comes from giving an agent too much autonomy or access. Safe deployments use least-privilege access scoped to one workflow, human approval for high-risk actions, and a full audit trail of everything the agent did."),
+    ("How do I start using AI agents?",
+     "Start with one repeatable, document- or inbox-heavy workflow where an agent can create value without uncontrolled risk. Prototype it against real data, add the controls, measure the result, and only then expand. Most teams begin with a focused discovery sprint."),
+  ],
+  "body": '''<p>"AI agent" has become one of the most overused terms in technology, which makes it hard to know what people actually mean. For a business leader, the useful definition is simple and practical: an agent is software that can <em>act</em>, not just answer.</p>
+
+<h2>AI agents, defined</h2>
+<p>An AI agent is a system that uses an AI model to pursue a goal by taking actions. Given a task, it can decide what to do, call tools to do it — read a document, query a system, draft a message, update a record — observe the result, and take the next step. The model provides the reasoning; the tools give it hands. That ability to take action is what separates an agent from everything that came before.</p>
+
+<h2>How agents differ from chatbots and automation</h2>
+<p>Two comparisons make it clear:</p>
+<ul>
+  <li><b>Versus a chatbot.</b> A chatbot produces words. An agent produces outcomes — it can complete the task it is talking about, within limits you set.</li>
+  <li><b>Versus RPA (robotic process automation).</b> Traditional automation follows fixed, brittle rules and breaks when anything changes. An agent can handle ambiguity and variation, reading unstructured documents and adapting — which is exactly why it needs guardrails.</li>
+</ul>
+
+<h2>What an agent can actually do</h2>
+<p>In a business, the strongest agent workflows are bounded and repeatable:</p>
+<ul>
+  <li>Read incoming mail, classify it, draft replies and chase missing documents.</li>
+  <li>Assemble packs and case files from documents and systems, flagging gaps.</li>
+  <li>Reconcile and classify invoices or receipts, routing exceptions to a person.</li>
+  <li>Gather evidence and assemble reports, with every source cited and logged.</li>
+</ul>
+<p>These are the building blocks of <a href="/resources/what-is-agentic-operations/">agentic operations</a> — agents run like production systems rather than demos.</p>
+
+<h2>Why bounded beats autonomous</h2>
+<p>The instinct is to ask how autonomous an agent can be. The better question is how <em>bounded</em> it should be. The same capability that lets an agent save hours also lets it make a mistake at scale. So the strongest production systems give an agent least-privilege access to only the tools and data a workflow needs, keep a human in the loop for high-risk actions, and log every step. We cover the why in <a href="/resources/governed-ai-agents/">governed AI agents</a>.</p>
+
+<h2>Getting started safely</h2>
+<p>You do not adopt agents by buying a platform; you adopt them one workflow at a time. Pick a repeatable, high-friction process, prototype an agent against real inputs, wire in the controls, measure the result, and expand from there. That is exactly the path an <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> is designed to run — and the engineering behind it is our <a href="/services/ai-consulting/">AI consulting</a> practice.</p>''',
+},
+
+"what-is-agentic-operations": {
+  "title": "What Is Agentic Operations? A Definition & Guide | Mach Lilies",
+  "short": "What is agentic operations?",
+  "desc": "Agentic operations is the practice of running AI agents like production systems — designing, governing and operating bounded agent workflows that do real business work. A definition and guide.",
+  "keywords": "what is agentic operations, agentic operations, agentic operations definition, AI agent operations, production AI agents, AgentOps",
+  "category": "Guide",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "What is agentic operations? A definition and guide",
+  "h1": ("What is", "agentic operations?"),
+  "lead": "Agentic operations is the discipline of running AI agents like production systems, not experiments. This guide defines the term, explains why it matters now, and walks through how a workflow goes from manual drag to a governed agent in production.",
+  "takeaways": [
+    "Agentic operations means <b>designing, governing and operating</b> AI agent workflows — not just building demos.",
+    "It treats agents as <b>production systems</b>: monitored, evaluated and improved over time.",
+    "The method is four movements: <b>map, prototype, govern, operate</b>.",
+    "You buy a <b>workflow that runs</b> and keeps improving — not billable hours.",
+  ],
+  "related": ["agentic-operations", "agentops-ai-governance", "agentic-operations-sprint"],
+  "faqs": [
+    ("What is agentic operations?",
+     "Agentic operations is the design, deployment and ongoing operation of AI agents that perform real business workflows — bounded systems that read, draft, classify, update and route work across your tools, with human approval for high-risk actions and a full audit trail. It is the difference between an AI demo and an AI workflow that runs in production."),
+    ("How is agentic operations different from automation?",
+     "Traditional automation follows fixed rules and breaks on variation. Agentic operations uses AI agents that handle ambiguity and unstructured inputs — and wraps them in the controls, monitoring and human oversight needed to run safely in production. It is automation for the messy, document- and judgement-heavy work rules-based tools never reached."),
+    ("Is agentic operations the same as AgentOps?",
+     "They are related. AgentOps is the technical control layer — permissions, logs, evaluation, monitoring and incident response. Agentic operations is the broader practice of running agent workflows in production, of which AgentOps is the governance backbone."),
+    ("How do we start with agentic operations?",
+     "Most teams begin with a fixed-scope Agentic Operations Sprint: map the highest-value workflows, prototype the strongest one against real inputs, and produce a governed production plan with an ROI model. Then roll out one workflow, operate it, and expand."),
+  ],
+  "body": '''<p>The phrase "agentic operations" is new, but the idea behind it is the natural next step once AI agents can take real actions. If an agent is going to do work inside your business, someone has to run it — properly, like any other production system. That is what agentic operations means.</p>
+
+<h2>Agentic operations, defined</h2>
+<p>Agentic operations is the practice of putting AI agents to work on real, repeatable business processes — and then operating them like production systems, not experiments. It spans the whole life of a workflow: designing where an agent can safely act, building it against your real tools and data, wiring in governance, and running it with monitoring, evaluation and improvement over time.</p>
+
+<h2>From experiments to operations</h2>
+<p>Most organisations are stuck at the experiment stage: a promising demo that never quite runs the business. The gap is not the model — it is operations. Messy data, brittle integrations, missing oversight and an untested business case keep pilots in the lab. Agentic operations exists to cross that gap, which we describe in detail in <a href="/resources/move-ai-pilots-to-production/">moving AI pilots into production</a>.</p>
+
+<h2>The four movements</h2>
+<p>A workflow becomes a governed agent through four movements:</p>
+<ul>
+  <li><b>Map</b> — find the process where an agent creates value without uncontrolled risk, and agree the success measures.</li>
+  <li><b>Prototype</b> — build a narrow working agent against realistic data and tool calls, evaluated on measurable outputs.</li>
+  <li><b>Govern</b> — add permissions, approvals, evaluation, logs and incident controls before scale, not after.</li>
+  <li><b>Operate</b> — monitor quality and cost, expand scope carefully, and report on the workflow as it runs.</li>
+</ul>
+
+<h2>You operate it, not just build it</h2>
+<p>The word "operations" is the point. An agent is not finished at launch; it is the start of a system you run. Monitoring, evaluation, regression testing and optimisation keep quality high as models, prompts and processes change. This is where <a href="/resources/agentops-vs-mlops/">AgentOps</a> earns its keep — the control tower for production agents.</p>
+
+<h2>Where to start</h2>
+<p>Agentic operations is adopted one workflow at a time. Pick a high-friction, repeatable process, prove an agent against real inputs, govern it, and operate it — then move to the next. That sequence is exactly what our <a href="/services/agentic-operations/">Agentic Operations</a> service delivers, usually beginning with an <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>.</p>''',
+},
+
+"generative-ai-vs-agentic-ai": {
+  "title": "Generative AI vs Agentic AI: What's the Difference? | Mach Lilies",
+  "short": "Generative AI vs agentic AI",
+  "desc": "Generative AI produces content; agentic AI takes actions. A clear comparison of generative vs agentic AI, what changes when AI can act, and what it means for governance and value.",
+  "keywords": "generative AI vs agentic AI, agentic AI, generative AI, difference between generative and agentic AI, AI agents",
+  "category": "Comparison",
+  "date": "2026-06-19",
+  "read": "6 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "Generative AI vs agentic AI: what's the difference?",
+  "h1": ("Generative AI vs", "agentic AI."),
+  "lead": "Generative AI writes the email. Agentic AI sends it — after checking the account, drafting the reply and routing anything risky to a person. The shift from producing content to taking actions is the most important change in enterprise AI, and it changes everything about how you govern it.",
+  "takeaways": [
+    "<b>Generative AI</b> produces content; <b>agentic AI</b> takes actions toward a goal.",
+    "Agentic AI is usually <b>built on</b> generative models, plus tools, memory and control.",
+    "The jump from <b>output to action</b> is where real operational value — and real risk — appears.",
+    "Acting AI needs <b>governance</b>: permissions, approvals and audit trails generative AI never required.",
+  ],
+  "related": ["agentic-operations", "ai-consulting", "agentic-operations-sprint"],
+  "faqs": [
+    ("What is the difference between generative AI and agentic AI?",
+     "Generative AI produces content — text, code, images — in response to a prompt. Agentic AI uses models like those to pursue a goal by taking actions: calling tools, reading and updating systems, and deciding the next step. Generative AI answers; agentic AI acts."),
+    ("Is agentic AI just generative AI with extra steps?",
+     "Agentic AI is usually built on generative models, but the difference is meaningful. Adding tools, memory, planning and the ability to take actions turns a content generator into a system that can do work — and that requires permissions, oversight and audit controls a chatbot never needed."),
+    ("Which one does my business need?",
+     "Most businesses need both. Generative AI helps people draft and summarise faster. Agentic AI removes whole workflows by doing the work end to end with human approval. The highest operational ROI usually comes from the agentic side, applied to repeatable processes."),
+    ("Does agentic AI replace people?",
+     "In well-designed systems, no. Agents take on repetitive preparation and routing, while people keep judgement, approval and relationships. The goal is to remove drudgery and keep humans in control of what matters — not to remove oversight."),
+  ],
+  "body": '''<p>Generative AI made the world pay attention by writing essays and code on demand. Agentic AI is the next turn: the same underlying models, given tools and a goal, so they can take actions rather than just produce text. The distinction sounds academic until you realise it is the line between an AI that drafts a reply and an AI that can send it.</p>
+
+<h2>The short answer</h2>
+<p>Generative AI <em>produces</em>. Agentic AI <em>acts</em>. One returns content; the other pursues an outcome by using tools and making decisions along the way. Agentic systems are typically built on generative models, but wrap them in planning, memory, tool access and — crucially — control.</p>
+
+<h2>What generative AI does well</h2>
+<p>Generative AI is excellent at producing and transforming content: drafting documents, summarising long material, writing and explaining code, answering questions over text. It makes individual people faster. Its risk is mostly about accuracy and appropriateness of the output — which is real, but bounded, because a person reads the result before anything happens.</p>
+
+<h2>What agentic AI adds</h2>
+<p>Agentic AI adds the ability to take steps in the world: read a system, update a record, trigger a workflow, chase a document. That unlocks a different kind of value — removing entire workflows rather than speeding up tasks. It also changes the risk profile, because now the AI can <em>do</em> something, not just say something. We unpack what those agents are in <a href="/resources/what-are-ai-agents/">what are AI agents</a>.</p>
+
+<h2>A side-by-side view</h2>
+<ul>
+  <li><b>Output:</b> generative → content; agentic → actions and outcomes.</li>
+  <li><b>Interaction:</b> generative → prompt and response; agentic → goal, plan, tool use, iteration.</li>
+  <li><b>Value:</b> generative → faster tasks; agentic → removed workflows.</li>
+  <li><b>Risk:</b> generative → wrong output; agentic → wrong action in a real system.</li>
+</ul>
+
+<h2>Why the shift to action raises the stakes</h2>
+<p>When AI can act, governance stops being optional. An agent needs least-privilege access, human approval for high-risk steps, and a full audit trail — controls a content generator never required. That is the entire premise of <a href="/resources/governed-ai-agents/">governed AI agents</a>, and it is why moving to agentic AI is as much an operations decision as a technology one. The engineering sits in our <a href="/services/ai-consulting/">AI consulting</a> practice; running it safely is <a href="/services/agentic-operations/">agentic operations</a>.</p>''',
+},
+
+"human-in-the-loop-ai": {
+  "title": "Human-in-the-Loop AI: Designing Oversight That Works | Mach Lilies",
+  "short": "Human-in-the-loop AI",
+  "desc": "How to design human-in-the-loop oversight for AI agents — where a person must approve, how to avoid rubber-stamping, and how to keep humans in control without killing efficiency.",
+  "keywords": "human-in-the-loop AI, human oversight AI, AI approval workflow, human in the loop, AI agent oversight, AI review queue",
+  "category": "Guide",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "Human-in-the-loop AI: designing oversight that works",
+  "h1": ("Human-in-the-loop AI", "that works."),
+  "lead": "Keeping a human in the loop is the most cited safeguard for AI agents — and the most poorly implemented. Oversight that is too broad gets rubber-stamped; too narrow and it misses the moments that matter. This is how to design human oversight that actually controls risk.",
+  "takeaways": [
+    "Human oversight is a <b>design problem</b>, not a checkbox — where and how a person approves decides whether it works.",
+    "Make approval <b>risk-based</b>: gate the high-stakes actions, automate the routine ones.",
+    "The biggest failure is <b>rubber-stamping</b> — give reviewers context, not just a yes/no.",
+    "Good oversight <b>scales</b>: it should get lighter as confidence and evidence grow.",
+  ],
+  "related": ["agentops-ai-governance", "design-experience", "agentic-operations"],
+  "howto": {
+    "name": "How to design human oversight for an AI agent",
+    "desc": "A five-step approach to building human-in-the-loop oversight that controls risk without killing efficiency.",
+    "steps": [
+      ("Map the actions by risk", "List what the agent can do and rate each action by the cost of getting it wrong. This is what decides where a human is needed."),
+      ("Gate only the high-risk actions", "Require human approval for the actions that carry real consequences; let low-stakes actions run automatically with logging."),
+      ("Design the review for a decision", "Give the reviewer the draft, the agent's reasoning and the source evidence — enough to approve or reject confidently, not just a yes/no."),
+      ("Make rejection useful", "Capture why a reviewer rejected an action and feed it back into evaluation, so the agent improves and oversight tightens where it should."),
+      ("Tune oversight as confidence grows", "Use the evidence from monitoring to relax gates on actions the agent does reliably, and keep them on the ones that still need judgement."),
+    ],
+  },
+  "faqs": [
+    ("What is human-in-the-loop AI?",
+     "Human-in-the-loop AI keeps a person involved in an AI system's decisions — typically by requiring human approval before high-risk actions are taken. For agents, it means the system drafts, classifies and routes work, but a person signs off on anything that carries real consequence, with the full context needed to decide."),
+    ("Doesn't human oversight slow everything down?",
+     "Only if it is designed badly. Proportionate oversight gates just the high-risk actions and lets routine ones run automatically, so throughput stays high on the bulk of the work and control concentrates where it matters. Blanket approval of everything is what slows teams down — and what leads to rubber-stamping."),
+    ("How do you stop reviewers from rubber-stamping?",
+     "Give them a real decision, not a formality: the draft action, the agent's reasoning, and the underlying evidence, so reviewing is fast but meaningful. Capture rejections and feed them into evaluation. If a gate is always approved without thought, that is a signal to either improve the context or automate the action."),
+    ("Where does human oversight fit with governance?",
+     "It is one control among several. Human approval works alongside least-privilege access, action logging, evaluation and incident response. Together they form the governance layer — AgentOps — that makes an agent safe to operate."),
+  ],
+  "body": '''<p>Ask anyone how to make AI agents safe and "keep a human in the loop" is the first answer. It is the right instinct and, too often, the worst-implemented control. Oversight bolted on as a blanket approval step becomes a rubber stamp; oversight applied too narrowly misses the decisions that actually carry risk. Getting it right is a design problem.</p>
+
+<h2>Why oversight is a design problem</h2>
+<p>"A human approves it" is not a design — it is an aspiration. The useful questions are: which actions, reviewed by whom, with what information, and how does the review get faster as trust grows? Answer those and oversight becomes a genuine control. Skip them and you get a queue everyone clicks through.</p>
+
+<h2>Risk-based, not blanket</h2>
+<p>The foundation is to gate actions by risk. Map what the agent can do and rate each action by the cost of getting it wrong. Require approval for the high-stakes actions — anything that touches a customer, moves money, or is hard to reverse — and let the routine, low-stakes actions run automatically with logging. This keeps throughput high where volume lives and control tight where consequences live.</p>
+
+<h2>The failure mode: rubber-stamping</h2>
+<p>When every action needs sign-off, or when sign-off is a bare yes/no with no context, reviewers stop reading. The fix is to make each review a real decision: show the draft action, the agent's reasoning, and the source evidence, so a reviewer can approve in seconds <em>and</em> mean it. Capture the reason whenever they reject, and feed it back into evaluation.</p>
+
+<h2>Designing the approval experience</h2>
+<p>Oversight lives or dies in the interface. A good review queue surfaces the right context, makes approve/reject fast, and escalates the genuinely ambiguous cases to the right person. This is as much product design as engineering — which is why our <a href="/services/design-experience/">design practice</a> builds the human-approval and oversight interfaces alongside the agents themselves.</p>
+
+<h2>Oversight that scales</h2>
+<p>The goal is not maximum oversight forever; it is the right oversight, tuned over time. As monitoring shows an agent handling certain actions reliably, you can relax those gates and concentrate human attention on the actions that still need judgement. Oversight should get lighter as evidence accumulates — never by guesswork. That tuning is part of running a <a href="/services/agentops-ai-governance/">governed agent workflow</a>, and it sits at the heart of <a href="/resources/governed-ai-agents/">governed AI agents</a>.</p>''',
+},
+
+"ai-agent-security": {
+  "title": "AI Agent Security: Least-Privilege Access & Guardrails | Mach Lilies",
+  "short": "AI agent security",
+  "desc": "How to secure AI agents that take actions — least-privilege access, scoped credentials, guardrails, prompt-injection defence, action logging and incident response.",
+  "keywords": "AI agent security, AI security, least-privilege AI, prompt injection, AI guardrails, agent permissions, secure AI agents",
+  "category": "Guide",
+  "date": "2026-06-19",
+  "read": "8 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "AI agent security: least-privilege access and guardrails",
+  "h1": ("AI agent", "security."),
+  "lead": "An AI agent that can use tools is a new kind of insider — fast, capable and steerable by the text it reads. Securing one is less about the model and more about boundaries: what it can access, what it can do, and what happens when something goes wrong.",
+  "takeaways": [
+    "An agent's <b>permissions are its blast radius</b> — scope them to one workflow, nothing more.",
+    "<b>Prompt injection</b> is the defining new risk: untrusted input can try to steer the agent.",
+    "Defend in layers: <b>least privilege, guardrails, human gates and logging</b> — no single control is enough.",
+    "Assume something will go wrong and build the <b>pause, rollback and audit</b> path in advance.",
+  ],
+  "related": ["agentops-ai-governance", "ai-assurance-evaluation", "cloud-platform"],
+  "howto": {
+    "name": "How to secure an AI agent",
+    "desc": "Six controls to secure an AI agent that takes actions in your systems.",
+    "steps": [
+      ("Scope least-privilege access", "Give the agent credentials to only the tools and data its workflow needs — read-only where possible, and nothing beyond its task."),
+      ("Treat all input as untrusted", "Assume documents, emails and web content the agent reads may contain prompt-injection attempts, and constrain what the agent can do as a result."),
+      ("Put guardrails on actions", "Constrain and validate the agent's actions — allow-lists, limits and checks — so it cannot take an action outside its intended envelope."),
+      ("Gate high-risk actions with a human", "Require human approval for irreversible or high-consequence actions, so a person is the final check on the riskiest steps."),
+      ("Log everything for audit", "Record every tool call, decision and approval so any action can be reconstructed and investigated."),
+      ("Prepare incident response", "Be able to pause, roll back or restrict the agent instantly, with a defined process and owner for when behaviour changes."),
+    ],
+  },
+  "faqs": [
+    ("What are the main security risks of AI agents?",
+     "The biggest are over-broad access (an agent that can touch more than its task needs), prompt injection (untrusted input trying to steer the agent into unintended actions), unvalidated actions, and a lack of logging or a way to stop the agent. Most agent security work is about constraining the blast radius and being able to see and reverse what happened."),
+    ("What is prompt injection?",
+     "Prompt injection is when text the agent reads — a document, email, web page or tool output — contains instructions designed to override the agent's intended behaviour. Because agents act on what they read, untrusted input is an attack surface. The defence is to treat all external input as untrusted and tightly constrain what the agent is allowed to do, regardless of what it reads."),
+    ("How do you secure an agent's access to systems?",
+     "With least-privilege, scoped credentials: the agent gets access to only the specific tools and data its workflow requires, read-only wherever possible, with secrets managed properly and access logged. The principle is that the agent's permissions define its blast radius, so you keep that radius as small as the task allows."),
+    ("Can AI agents be made safe enough for regulated environments?",
+     "Yes, with the right controls and honest scoping. Least-privilege access, human approval for high-risk actions, complete audit trails, evaluation and incident response — aligned to recognised security practices such as ISO 27001 — make agents defensible. We do not make regulatory guarantees, but we design for evidence and control."),
+  ],
+  "body": '''<p>Securing an AI agent is unlike securing a normal application. The agent is non-deterministic, it reads untrusted content, and — unlike a chatbot — it can take actions. That combination creates a new attack surface. The reassuring part is that the defences are well understood: they are about boundaries and visibility, not about a perfect model.</p>
+
+<h2>A new attack surface</h2>
+<p>A traditional app does what its code says. An agent decides what to do based partly on the content it reads — which means a malicious document or email can attempt to influence its behaviour. So agent security has two jobs: limit what the agent is allowed to do, and limit what an attacker can achieve even if they steer it.</p>
+
+<h2>Least-privilege by default</h2>
+<p>The single most important control is access. An agent's permissions are its blast radius. Scope its credentials to only the tools and data its workflow needs, prefer read-only access, and never reuse a broad service account. If an agent only needs to read three systems and write to one, that is all it should be able to touch. This is the foundation of the <a href="/services/agentops-ai-governance/">AgentOps</a> control layer.</p>
+
+<h2>Prompt injection and untrusted input</h2>
+<p>Because agents act on what they read, any external content — documents, emails, web pages, tool outputs — is a potential injection vector. You cannot fully prevent a model from being influenced by text, so the defence is architectural: treat all input as untrusted, and constrain the agent so that even a successfully injected instruction cannot reach a dangerous action. The agent's <em>capabilities</em>, not its prompt, are your real boundary.</p>
+
+<h2>Guardrails and the human gate</h2>
+<p>On top of access, constrain the actions themselves: allow-lists for what the agent can call, validation and limits on each action, and human approval for anything irreversible or high-consequence. We cover how to design that approval well in <a href="/resources/human-in-the-loop-ai/">human-in-the-loop AI</a>. The point is defence in depth — least privilege, guardrails and a human gate together, because no single layer is sufficient.</p>
+
+<h2>Logging, monitoring and rollback</h2>
+<p>Finally, assume something will eventually go wrong and prepare for it. Log every tool call, decision and approval so any action can be reconstructed. Monitor for unusual behaviour and cost. And build the ability to pause, roll back or restrict the agent instantly, with a named owner and a defined process. Security is not just prevention; it is the speed and clarity of your response. That readiness is part of the <a href="/services/ai-assurance-evaluation/">assurance and evidence</a> we build into every deployment.</p>''',
+},
+
+"rag-vs-fine-tuning": {
+  "title": "RAG vs Fine-Tuning: Which Do You Need? | Mach Lilies",
+  "short": "RAG vs fine-tuning",
+  "desc": "RAG vs fine-tuning explained — when to ground a model in your data with retrieval, when to fine-tune for style or format, and why most production systems combine both.",
+  "keywords": "RAG vs fine-tuning, retrieval augmented generation, fine-tuning, RAG, LLM customization, grounding LLMs",
+  "category": "Comparison",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "RAG vs fine-tuning: which do you need?",
+  "h1": ("RAG vs", "fine-tuning."),
+  "lead": "When teams want an AI system to know their data, the question is usually framed as RAG or fine-tuning. They solve different problems — one gives a model knowledge, the other gives it behaviour — and the right answer is often both. Here is how to choose.",
+  "takeaways": [
+    "<b>RAG</b> gives a model access to current, proprietary <b>knowledge</b>; <b>fine-tuning</b> shapes its <b>behaviour</b>.",
+    "For factual, changing or private information, <b>start with RAG</b> — it grounds answers in your data.",
+    "Fine-tune for <b>fixed style, format or narrow tasks</b>, not to teach facts.",
+    "Most production systems <b>combine both</b> — and good data matters more than the choice.",
+  ],
+  "related": ["ai-consulting", "agentic-operations", "data-analytics"],
+  "faqs": [
+    ("What is the difference between RAG and fine-tuning?",
+     "RAG (retrieval-augmented generation) gives a model access to external knowledge at query time by retrieving relevant data and grounding the answer in it. Fine-tuning adjusts the model's weights on examples so it adopts a particular style, format or behaviour. In short: RAG changes what the model knows; fine-tuning changes how it behaves."),
+    ("Should I use RAG or fine-tuning?",
+     "For most use cases that need current, proprietary or factual knowledge, start with RAG — it keeps answers grounded in your data and is easy to update. Fine-tune when you need a fixed style, a strict output format, or strong performance on a narrow, repetitive task. Many production systems use both."),
+    ("Is fine-tuning a way to teach a model my company's facts?",
+     "It is usually the wrong tool for that. Fine-tuning bakes patterns into the model but is poor at reliably storing and updating facts, and it goes stale as your data changes. To give a model your knowledge accurately and keep it current, retrieval (RAG) is the better approach."),
+    ("What matters more than choosing RAG or fine-tuning?",
+     "Your data. A clean, well-structured, well-grounded knowledge base does more for answer quality than the choice between RAG and fine-tuning. Retrieval is only as good as what it retrieves, which is why an AI-ready data foundation is the real lever."),
+  ],
+  "body": '''<p>It is one of the most common questions in applied AI: should we use RAG or fine-tune the model? The framing is a little misleading, because the two techniques solve different problems. Once you see what each is actually for, the choice — and the frequent answer of "both" — becomes clear.</p>
+
+<h2>The short answer</h2>
+<p>RAG changes what a model <em>knows</em>; fine-tuning changes how it <em>behaves</em>. If your problem is "the model does not have access to our information," that is a knowledge problem, and RAG is the tool. If your problem is "the model does not respond in the right style or format," that is a behaviour problem, and fine-tuning helps.</p>
+
+<h2>What RAG is good for</h2>
+<p>Retrieval-augmented generation fetches relevant information from your data at query time and grounds the model's answer in it. It is the right choice when knowledge is factual, proprietary, large or changing — because you can update the underlying data without retraining anything, and you can cite sources. Most enterprise question-answering, document and knowledge workflows are RAG problems first.</p>
+
+<h2>What fine-tuning is good for</h2>
+<p>Fine-tuning adjusts the model on examples so it reliably adopts a particular style, tone, structure or narrow skill. It shines for fixed output formats, domain-specific phrasing, or high-volume, repetitive tasks where you want consistent behaviour. It is poor at storing facts reliably and goes stale as your information changes — so it is the wrong tool for teaching a model your company's knowledge.</p>
+
+<h2>A side-by-side view</h2>
+<ul>
+  <li><b>Changes:</b> RAG → knowledge available at query time; fine-tuning → model behaviour.</li>
+  <li><b>Best for:</b> RAG → current, factual, proprietary data; fine-tuning → style, format, narrow tasks.</li>
+  <li><b>Updating:</b> RAG → change the data, instantly; fine-tuning → retrain.</li>
+  <li><b>Citations:</b> RAG → can ground and cite sources; fine-tuning → cannot.</li>
+</ul>
+
+<h2>Most systems use both — and data wins</h2>
+<p>In practice, strong production systems often combine them: RAG for grounded knowledge, light fine-tuning for consistent behaviour. But the bigger lever than either is your data. Retrieval is only as good as what it can retrieve, so a clean, well-modelled, AI-ready <a href="/services/data-analytics/">data foundation</a> does more for quality than the RAG-versus-fine-tuning decision. We build both the retrieval systems and the data underneath them in our <a href="/services/ai-consulting/">AI consulting</a> practice.</p>''',
+},
+
+"eu-ai-act-guide": {
+  "title": "The EU AI Act: A Practical Guide for AI Agents | Mach Lilies",
+  "short": "The EU AI Act, practically",
+  "desc": "A practical, plain-English guide to the EU AI Act for teams deploying AI agents — the risk tiers, what they mean for agentic workflows, and pragmatic steps to prepare. Not legal advice.",
+  "keywords": "EU AI Act, AI Act compliance, AI regulation, high-risk AI, AI governance, AI compliance agents, AI Act guide",
+  "category": "Guide",
+  "date": "2026-06-19",
+  "read": "8 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "The EU AI Act: a practical guide for deploying AI agents",
+  "h1": ("The EU AI Act,", "practically."),
+  "lead": "The EU AI Act is the first comprehensive AI law, and it is phasing in now. You do not need to be a lawyer to prepare sensibly — you need to know which risk tier your AI falls into and have the controls and evidence to match. Here is the practical version. (This is guidance, not legal advice.)",
+  "takeaways": [
+    "The Act is <b>risk-based</b>: obligations scale with how risky the AI use is.",
+    "Most agent workflows land in <b>limited or minimal risk</b>, but some uses are <b>high-risk</b> with real obligations.",
+    "Transparency and <b>human oversight</b> are recurring themes — design for them now.",
+    "The practical prep — <b>inventory, risk classification, oversight, documentation</b> — is good governance anyway.",
+  ],
+  "related": ["ai-assurance-evaluation", "agentops-ai-governance", "strategy-advisory"],
+  "howto": {
+    "name": "How to prepare your AI agents for the EU AI Act",
+    "desc": "Five pragmatic steps to prepare AI agent deployments for the EU AI Act.",
+    "steps": [
+      ("Inventory your AI uses", "Build a register of where AI and agents are used, what they do, and what data and decisions they touch."),
+      ("Classify each use by risk", "Assess each use against the Act's tiers — prohibited, high-risk, limited or minimal — so obligations are clear."),
+      ("Add transparency where required", "Make sure people are told when they are interacting with AI, and that AI-generated outputs are disclosed where the Act expects it."),
+      ("Design human oversight", "Ensure high-stakes uses keep a person able to understand, intervene in and override the AI's actions."),
+      ("Document and keep evidence", "Maintain records — risk assessments, oversight, evaluations and decisions — so you can demonstrate diligence."),
+    ],
+  },
+  "faqs": [
+    ("What is the EU AI Act?",
+     "The EU AI Act is the European Union's comprehensive law regulating artificial intelligence. It takes a risk-based approach: it bans a small set of unacceptable uses, places significant obligations on high-risk uses, requires transparency for certain limited-risk uses, and leaves minimal-risk uses largely unregulated. Its obligations are phasing in over time."),
+    ("Does the EU AI Act apply to AI agents?",
+     "The Act regulates AI systems by how they are used and the risk they pose, rather than by whether they are called agents. An agentic workflow is assessed like any other AI use — by its purpose and risk tier. Many internal, bounded agent workflows fall into limited or minimal risk, but uses touching areas like employment, credit, or essential services can be high-risk."),
+    ("What are the risk tiers in the EU AI Act?",
+     "Broadly four: unacceptable risk (prohibited), high risk (strict obligations around risk management, data, documentation, human oversight and more), limited risk (transparency obligations, such as telling people they are dealing with AI), and minimal risk (largely unregulated). Where your use lands determines what you must do."),
+    ("How do we comply without slowing everything down?",
+     "Start with an inventory and a risk classification, then put proportionate controls where the risk actually is. For most agent workflows, the practical work — least-privilege access, human oversight, evaluation and documentation — is good governance you should want anyway. Treat compliance as a by-product of running agents well, not a separate burden. This is not legal advice; involve your legal and compliance teams."),
+  ],
+  "body": '''<p>The EU AI Act is the first comprehensive attempt to regulate artificial intelligence, and it is phasing into force now. For teams deploying AI agents it can feel daunting, but the core idea is pragmatic: the more risk an AI use carries, the more you have to do about it. Most of the preparation is good governance you would want regardless. <em>This is practical guidance, not legal advice — involve your legal and compliance teams on anything specific.</em></p>
+
+<h2>What the Act does, in plain terms</h2>
+<p>The Act regulates AI by use and risk rather than by technology. It bans a small set of unacceptable practices outright, imposes substantial obligations on a defined set of high-risk uses, requires transparency for certain limited-risk uses, and leaves the large minimal-risk category mostly alone. Obligations apply on a phased timeline, so different requirements take effect at different points.</p>
+
+<h2>The risk tiers</h2>
+<ul>
+  <li><b>Unacceptable risk</b> — prohibited uses (for example, certain manipulative or social-scoring systems).</li>
+  <li><b>High risk</b> — uses in sensitive areas carry strict obligations: risk management, data governance, documentation, human oversight, accuracy and more.</li>
+  <li><b>Limited risk</b> — transparency obligations, such as telling people they are interacting with AI or that content is AI-generated.</li>
+  <li><b>Minimal risk</b> — the majority of uses, largely unregulated.</li>
+</ul>
+
+<h2>Where AI agents usually land</h2>
+<p>An agent workflow is assessed like any other AI use — by what it does. Many internal, bounded workflows (triaging an inbox, preparing a draft, chasing a document) sit in limited or minimal risk. But agents used in areas such as recruitment, creditworthiness, or access to essential services can fall into the high-risk tier, with real obligations. The first job is therefore to classify each use honestly, which is exactly what our <a href="/services/ai-assurance-evaluation/">AI assurance</a> work does.</p>
+
+<h2>Transparency and human oversight</h2>
+<p>Two themes recur throughout the Act and are worth designing for now regardless of tier: transparency (people should know when they are dealing with AI) and human oversight (a person should be able to understand, intervene in and override high-stakes AI decisions). Both map directly onto how we already build agents — disclosure where appropriate, and the <a href="/resources/human-in-the-loop-ai/">human-in-the-loop</a> design that keeps people in control.</p>
+
+<h2>Practical steps to prepare</h2>
+<p>You do not prepare for the Act with a legal memo alone; you prepare by running AI well. Inventory your AI uses, classify each by risk, add transparency where required, design proportionate human oversight, and keep documentation and evidence so you can demonstrate diligence. That is the same evidence-led governance covered in our <a href="/resources/ai-governance-checklist/">AI governance checklist</a> — and where you need a roadmap for the board, our <a href="/services/strategy-advisory/">strategy and advisory</a> practice can help sequence it.</p>''',
+},
+
+"build-vs-buy-ai-agents": {
+  "title": "Build vs Buy AI Agents: How to Decide | Mach Lilies",
+  "short": "Build vs buy AI agents",
+  "desc": "Should you build custom AI agents, buy an off-the-shelf product, or partner to deliver? A decision framework covering control, data, differentiation, cost and governance.",
+  "keywords": "build vs buy AI agents, build or buy AI, custom AI agents, AI vendor vs build, AI agent platform, AI build buy decision",
+  "category": "Buyer's guide",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "Build vs buy AI agents: how to decide",
+  "h1": ("Build vs buy", "AI agents."),
+  "lead": "Every team adopting AI agents hits the same fork: build something custom, buy an off-the-shelf product, or partner to deliver. The right answer depends on how differentiating, data-specific and governed the workflow needs to be. Here is a framework to decide without regret.",
+  "takeaways": [
+    "<b>Buy</b> for common, non-differentiating workflows where a good product already exists.",
+    "<b>Build</b> when the workflow is core, data-specific or needs governance an off-the-shelf tool can't give.",
+    "A third option — <b>partner</b> — gets you a custom, owned system without hiring a whole AI team.",
+    "Whatever you choose, insist on <b>governance and ownership</b>: access control, audit, and no lock-in.",
+  ],
+  "related": ["agentic-operations", "agentic-operations-sprint", "ai-consulting"],
+  "faqs": [
+    ("Should I build or buy AI agents?",
+     "Buy when the workflow is common and not a source of competitive advantage, and a mature product already does it well. Build when the workflow is core to your business, depends on your specific data and systems, or needs governance and control an off-the-shelf tool cannot provide. Many teams take a third path: partner with a consultancy to build a custom, owned system."),
+    ("What are the risks of buying an off-the-shelf AI agent?",
+     "The main ones are fit (the product does it the vendor's way, not yours), data and integration limits, weaker governance and audit than you need, and lock-in. Off-the-shelf is excellent for commodity workflows, but for anything core or sensitive, the lack of control can become a real constraint."),
+    ("Is building AI agents in-house expensive?",
+     "It can be, mainly because the hard part is not the model but the production engineering around it — integration, evaluation, monitoring, oversight and security. That is why partnering is often the most cost-effective route: you get a custom, owned system and the production discipline, without standing up a full internal AI team."),
+    ("How do we avoid lock-in either way?",
+     "Insist on ownership and portability: your data and source, clean documentation, standard interfaces, and a model-agnostic design so you are not tied to one provider. Whether you buy, build or partner, the goal is a system you can operate and change without depending on a single vendor."),
+  ],
+  "body": '''<p>Once a team decides AI agents are worth pursuing, the next decision arrives fast: build it, buy it, or get help to deliver it. There is no universal answer, but there is a reliable way to reason about it — based on how differentiating the workflow is, how much it depends on your data, and how much governance it needs.</p>
+
+<h2>The real question</h2>
+<p>Build-versus-buy is really a question about advantage and control. If a workflow is common, not a source of differentiation, and a good product already exists, buying is usually right. If the workflow is core to how you compete, deeply tied to your data and systems, or subject to governance an external product cannot satisfy, that points to build.</p>
+
+<h2>When to buy</h2>
+<p>Buy for commodity workflows: well-trodden problems where a mature product does the job and your needs are close to the default. You get speed and a supported tool, and you avoid maintaining something that is not your advantage. The trade-offs are fit, data and integration limits, the vendor's governance model, and potential lock-in — acceptable when the workflow is not core.</p>
+
+<h2>When to build</h2>
+<p>Build when the workflow is differentiating, depends on your specific data and processes, or requires controls — least-privilege access, audit trails, human oversight — that an off-the-shelf product will not give you. Building means you own the system, the data and the governance. The cost is real, but it concentrates where the value is, and the hard part is rarely the model — it is the production engineering around it.</p>
+
+<h2>The third option: partner</h2>
+<p>Most teams do not actually want to choose between a rigid product and standing up a full internal AI team. Partnering is the middle path: a consultancy builds a custom, owned system with production discipline and governance built in, then hands it over for your team to run. You get the control of build without the cost and delay of hiring the whole capability — which is precisely the model behind our <a href="/services/agentic-operations/">agentic operations</a> work.</p>
+
+<h2>A decision framework</h2>
+<p>Run each candidate workflow through four questions: Is it differentiating? Does it depend on our specific data and systems? Does it need governance an external product cannot provide? Do we want to own and evolve it? The more yeses, the more it points to build or partner over buy. And whichever route you take, insist on governance and ownership — access control, audit trails, portability and no lock-in. The cleanest way to pressure-test the decision for a real workflow is a fixed-scope <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>, which produces a working prototype and an honest build recommendation.</p>''',
+},
+
+"ai-for-insurance-brokers": {
+  "title": "AI for Insurance Brokers: Governed Agent Workflows | Mach Lilies",
+  "short": "AI for insurance brokers",
+  "desc": "How insurance brokers use governed AI agents for renewals, claims intake, document chasing and compliance evidence — with broker approval and a full audit trail.",
+  "keywords": "AI for insurance brokers, insurance broking automation, renewal automation, claims intake AI, broker workflow AI, insurance back-office AI",
+  "category": "Industry guide",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "AI for insurance brokers: governed agent workflows",
+  "h1": ("AI for", "insurance brokers."),
+  "lead": "Broking runs on documents, email and deadlines — exactly the repetitive, judgement-light work that consumes senior broker time. Governed AI agents can take the preparation load off brokers while leaving every decision that matters with a person. Here is what that looks like in practice.",
+  "takeaways": [
+    "The best first workflows are <b>repeatable and deadline-driven</b>: renewals, chasing, claims intake.",
+    "Agents <b>draft, gather and compare</b>; the broker approves anything that reaches a client or insurer.",
+    "Every action is <b>logged for compliance</b>, with least-privilege access to broker systems.",
+    "Start with <b>one workflow</b> — usually renewal prep or document chasing — and expand.",
+  ],
+  "related": ["agentic-operations", "agentops-ai-governance", "agentic-operations-sprint"],
+  "faqs": [
+    ("How can insurance brokers use AI agents?",
+     "Brokers use governed AI agents for the repeatable, deadline-driven admin that eats senior time: assembling renewal packs, comparing policy cover, capturing and routing claims, chasing missing documents, drafting customer updates and gathering compliance evidence. The agent prepares the work; the broker approves anything that goes to a client or insurer, and every step is logged."),
+    ("Will an AI agent contact my clients without me?",
+     "No. Agents draft customer updates and chase missing documents, but a broker approves anything that goes out where it matters. The agent removes the preparation work; you keep the relationship and the final say."),
+    ("Can agents work with our broker management system?",
+     "Typically yes. We build least-privilege connectors into the systems brokers use — email, CRM, policy and quote systems, document storage and finance tools — scoped to the specific workflow and nothing more."),
+    ("What is a good first workflow to automate?",
+     "Usually renewal pack preparation or missing-document chasing. Both are repeatable, deadline-driven and measurable, which makes them a strong, low-risk first agent with a clear payback."),
+  ],
+  "body": '''<p>Insurance broking is a document-and-deadline business. Renewals to prepare, insurers to compare, claims to log, clients to chase for missing information, evidence to keep for compliance — most of it repeatable admin that consumes your most experienced people. It is precisely the kind of work bounded AI agents handle well, while brokers keep control of advice and relationships.</p>
+
+<h2>Where broker time goes</h2>
+<p>Senior brokers spend a surprising share of their week not advising but assembling: pulling documents together for a renewal, re-keying data between systems, drafting the same kinds of emails, and chasing clients and insurers for the one missing item that holds everything up. This work is high-volume, deadline-driven and rules-light — the signature of a good agent candidate.</p>
+
+<h2>The workflows agents handle well</h2>
+<ul>
+  <li><b>Renewal pack assembly</b> — gather documents and data, flag gaps, prepare a draft for review.</li>
+  <li><b>Policy comparison</b> — extract and compare cover, terms and exclusions across quotes.</li>
+  <li><b>Claims intake</b> — capture first notification of loss, record detail and route to the right handler.</li>
+  <li><b>Document chasing</b> — identify what is outstanding and draft polite, scheduled follow-ups.</li>
+  <li><b>Compliance evidence</b> — gather and file the records that demonstrate process, every action logged.</li>
+</ul>
+
+<h2>The broker stays in control</h2>
+<p>The model is not autonomy — it is governed assistance. Agents draft, gather and compare; a broker signs off anything that goes to a client or insurer. Each agent has least-privilege access to only the systems its workflow needs, anything unusual is escalated to a person, and every action and approval is logged, so your process is evidenced for compliance. This is the <a href="/resources/governed-ai-agents/">governed AI agents</a> approach applied to broking.</p>
+
+<h2>A realistic first workflow</h2>
+<p>The strongest place to start is usually renewal pack preparation or missing-document chasing. They are repeatable, measurable and low-risk, so you see a clear result quickly and build confidence before extending to claims, comparison and compliance. We prototype it against real, anonymised cases before anything goes live.</p>
+
+<h2>Getting started</h2>
+<p>Most engagements begin with an <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> focused on one broker workflow: we map it, prototype an agent against real cases, and produce a rollout plan with governance built in. You can see the full picture on our <a href="/industries/insurance-brokers/">insurance brokers</a> page, or read how we keep agents safe in <a href="/services/agentops-ai-governance/">AgentOps and AI governance</a>.</p>''',
+},
+
+"ai-for-accountancy-practices": {
+  "title": "AI for Accountancy Practices: Governed Agent Workflows | Mach Lilies",
+  "short": "AI for accountancy practices",
+  "desc": "How accountancy practices use governed AI agents for client chasing, invoice and receipt classification, month-end close and VAT prep — with accountant approval and an audit trail.",
+  "keywords": "AI for accountants, accountancy automation, bookkeeping automation, month-end close AI, VAT prep AI, client document chase",
+  "category": "Industry guide",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "AI for accountancy practices: governed agent workflows",
+  "h1": ("AI for", "accountancy practices."),
+  "lead": "Practice capacity is eaten by chasing clients and classifying paperwork — not by advisory work. Governed AI agents can take that high-volume admin off your team while accountants keep approval over every judgement call. Here is what that looks like in practice.",
+  "takeaways": [
+    "The best first workflows are <b>high-volume and rules-based</b>: chasing, classification, close.",
+    "Agents <b>chase, classify and prepare</b>; an accountant approves judgement calls and submissions.",
+    "Every classification and chase is <b>logged</b>, with least-privilege access to practice systems.",
+    "Start with <b>client document chasing or invoice classification</b> — measurable, low-risk wins.",
+  ],
+  "related": ["agentic-operations", "agentops-ai-governance", "agentic-operations-sprint"],
+  "faqs": [
+    ("How can accountancy practices use AI agents?",
+     "Practices use governed AI agents for the high-volume, deadline-driven admin that limits capacity: chasing clients for records, classifying and coding invoices and receipts, running the month-end close checklist, preparing VAT-return workings and triaging exceptions. The agent prepares and chases; an accountant approves judgement calls and anything that gets submitted, and every action is logged."),
+    ("Will an agent file returns or move money on its own?",
+     "No. Agents prepare workings, classify and chase; an accountant approves and submits anything that carries risk or judgement. The agent removes preparation effort, not professional responsibility."),
+    ("Does it work with Xero or QuickBooks?",
+     "Typically yes. We build least-privilege connectors into the practice-management, bookkeeping and document tools you already use, scoped to the specific workflow and nothing more."),
+    ("Which workflow should we automate first?",
+     "Usually client document chasing or invoice and receipt classification. Both are high-volume, repetitive and measurable, which makes a strong, low-risk first agent with quick payback."),
+  ],
+  "body": '''<p>Accountancy practices lose enormous time to repetitive admin: chasing clients for records, classifying invoices and receipts, reconciling, preparing VAT returns and pushing through month-end. It is deadline-driven, high-volume and rules-based — exactly where bounded AI agents help, while your accountants keep control of judgement and submission.</p>
+
+<h2>Where practice capacity goes</h2>
+<p>The constraint in most practices is not expertise but capacity, and capacity disappears into preparation: requesting and re-requesting client records, sorting and coding paperwork, reconciling routine items, and assembling the same workings every period. This is high-volume, rules-based work — the clearest candidate for a governed agent.</p>
+
+<h2>The workflows agents handle well</h2>
+<ul>
+  <li><b>Client document chasing</b> — identify missing records and draft polite, scheduled follow-ups until the file is complete.</li>
+  <li><b>Invoice and receipt classification</b> — read, classify and code, flagging anything ambiguous for review.</li>
+  <li><b>Month-end close</b> — run the repeatable checklist, reconcile routine items and surface exceptions.</li>
+  <li><b>VAT preparation</b> — prepare return workings and flag items that need an accountant's judgement.</li>
+  <li><b>Exception triage</b> — sort and route the items that genuinely need a human.</li>
+</ul>
+
+<h2>The accountant stays in control</h2>
+<p>Agents chase, classify and prepare; an accountant approves judgement calls and reviews the output, and nothing is filed or paid without sign-off. Each agent has least-privilege access to only the records and systems its workflow needs, ambiguous items are escalated rather than guessed, and every classification, chase and approval is logged — so the work is reviewable and evidenced. That is <a href="/resources/governed-ai-agents/">governed AI agents</a> applied to a practice.</p>
+
+<h2>A realistic first workflow</h2>
+<p>The strongest starting point is usually client document chasing or invoice and receipt classification. Both are high-volume, repetitive and measurable, so the result is visible quickly and the risk is low. We prototype against real, anonymised client files before anything runs live, and expand through the cycle as confidence grows.</p>
+
+<h2>Getting started</h2>
+<p>Most engagements begin with an <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> focused on one practice workflow: we map it, prototype an agent against real files, and produce a rollout plan with governance built in. See the full picture on our <a href="/industries/accountancy-practices/">accountancy practices</a> page, or read how we keep agents safe in <a href="/services/agentops-ai-governance/">AgentOps and AI governance</a>.</p>''',
+},
 }
 
 def article_jsonld(slug, a):
@@ -2452,20 +3010,20 @@ def build_resources_hub():
 
 # --------- service / industry  ->  guide cross-linking (the internal mesh) ---------
 SERVICE_GUIDES = {
-    "agentic-operations":        ["what-is-agentic-ai-consulting", "move-ai-pilots-to-production", "governed-ai-agents"],
-    "agentops-ai-governance":    ["governed-ai-agents", "ai-governance-checklist", "agentops-vs-mlops"],
-    "ai-pilot-rescue":           ["move-ai-pilots-to-production", "measuring-ai-agent-roi", "what-is-agentic-ai-consulting"],
-    "ai-assurance-evaluation":   ["ai-governance-checklist", "governed-ai-agents", "agentops-vs-mlops"],
-    "ai-modernisation-factory":  ["agentops-vs-mlops", "what-is-agentic-ai-consulting", "move-ai-pilots-to-production"],
-    "agentic-operations-sprint": ["what-is-agentic-ai-consulting", "measuring-ai-agent-roi", "move-ai-pilots-to-production"],
-    "ai-consulting":             ["what-is-agentic-ai-consulting", "how-to-choose-an-ai-consultancy", "how-much-does-ai-consulting-cost"],
-    "product-engineering":       ["how-to-choose-an-ai-consultancy", "what-is-agentic-ai-consulting", "move-ai-pilots-to-production"],
-    "cloud-platform":            ["agentops-vs-mlops", "ai-governance-checklist", "what-is-agentic-ai-consulting"],
-    "data-analytics":            ["what-is-agentic-ai-consulting", "measuring-ai-agent-roi", "governed-ai-agents"],
-    "design-experience":         ["governed-ai-agents", "what-is-agentic-ai-consulting", "how-to-choose-an-ai-consultancy"],
-    "strategy-advisory":         ["how-to-choose-an-ai-consultancy", "how-much-does-ai-consulting-cost", "ai-governance-checklist"],
-    "insurance-brokers":         ["what-is-agentic-ai-consulting", "governed-ai-agents", "move-ai-pilots-to-production"],
-    "accountancy-practices":     ["what-is-agentic-ai-consulting", "governed-ai-agents", "move-ai-pilots-to-production"],
+    "agentic-operations":        ["what-is-agentic-operations", "what-are-ai-agents", "governed-ai-agents"],
+    "agentops-ai-governance":    ["governed-ai-agents", "human-in-the-loop-ai", "ai-agent-security"],
+    "ai-pilot-rescue":           ["move-ai-pilots-to-production", "measuring-ai-agent-roi", "build-vs-buy-ai-agents"],
+    "ai-assurance-evaluation":   ["ai-governance-checklist", "eu-ai-act-guide", "governed-ai-agents"],
+    "ai-modernisation-factory":  ["agentops-vs-mlops", "what-is-agentic-operations", "move-ai-pilots-to-production"],
+    "agentic-operations-sprint": ["what-is-agentic-ai-consulting", "measuring-ai-agent-roi", "build-vs-buy-ai-agents"],
+    "ai-consulting":             ["what-are-ai-agents", "generative-ai-vs-agentic-ai", "rag-vs-fine-tuning"],
+    "product-engineering":       ["build-vs-buy-ai-agents", "what-are-ai-agents", "how-to-choose-an-ai-consultancy"],
+    "cloud-platform":            ["ai-agent-security", "agentops-vs-mlops", "what-is-agentic-operations"],
+    "data-analytics":            ["rag-vs-fine-tuning", "what-are-ai-agents", "measuring-ai-agent-roi"],
+    "design-experience":         ["human-in-the-loop-ai", "what-are-ai-agents", "governed-ai-agents"],
+    "strategy-advisory":         ["how-to-choose-an-ai-consultancy", "how-much-does-ai-consulting-cost", "eu-ai-act-guide"],
+    "insurance-brokers":         ["ai-for-insurance-brokers", "governed-ai-agents", "move-ai-pilots-to-production"],
+    "accountancy-practices":     ["ai-for-accountancy-practices", "governed-ai-agents", "move-ai-pilots-to-production"],
 }
 
 def render_guides(slug):
