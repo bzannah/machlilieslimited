@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>How to Measure the ROI of AI Agents | Mach Lilies</title>
+    <meta name="description" content="How to measure the ROI of AI agents honestly — baselining manual effort, modelling time saved, error reduction and throughput, and tracking real cost and value after launch." />
+    <link rel="canonical" href="https://machlilies.com/resources/measuring-ai-agent-roi/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+    <meta name="keywords" content="AI agent ROI, measuring AI ROI, AI ROI model, measurable ROI AI agents, agentic operations ROI, AI business case, AI cost tracking" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://machlilies.com/resources/measuring-ai-agent-roi/" />
+    <meta property="og:title" content="How to Measure the ROI of AI Agents | Mach Lilies" />
+    <meta property="og:description" content="How to measure the ROI of AI agents honestly — baselining manual effort, modelling time saved, error reduction and throughput, and tracking real cost and value after launch." />
+    <meta property="og:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mach Lilies — agentic operations &amp; AI engineering consultancy." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Measure the ROI of AI Agents | Mach Lilies" />
+    <meta name="twitter:description" content="How to measure the ROI of AI agents honestly — baselining manual effort, modelling time saved, error reduction and throughput, and tracking real cost and value after launch." />
+    <meta name="twitter:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Mach Lilies — safe, governed AI agents for real operations." />
+    <meta property="article:published_time" content="2026-06-19" />
+    <meta property="article:modified_time" content="2026-06-19" />
+    <meta property="article:author" content="Kai Krause" />
+    <meta property="article:section" content="Playbook" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#c9f24c" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <!-- no-JS fallback: never trap content behind scroll-reveal -->
+    <noscript><style>.fade-up,.reveal{ opacity:1 !important; transform:none !important; } body{ cursor:auto !important; } .cursor-dot,.cursor-ring{ display:none !important; }</style></noscript>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://machlilies.com/#org",
+      "name": "Mach Lilies",
+      "legalName": "Mach Lilies Limited",
+      "url": "https://machlilies.com/",
+      "logo": "https://machlilies.com/assets/logo-mark.svg",
+      "email": "hey@machlilies.com",
+      "slogan": "Mach speed. Lily craft.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://machlilies.com/resources/measuring-ai-agent-roi/#article",
+      "headline": "How to measure the ROI of AI agents",
+      "description": "How to measure the ROI of AI agents honestly — baselining manual effort, modelling time saved, error reduction and throughput, and tracking real cost and value after launch.",
+      "url": "https://machlilies.com/resources/measuring-ai-agent-roi/",
+      "datePublished": "2026-06-19",
+      "dateModified": "2026-06-19",
+      "author": {
+        "@type": "Person",
+        "@id": "https://machlilies.com/#kai-krause",
+        "name": "Kai Krause",
+        "jobTitle": "Chief Executive Officer",
+        "worksFor": {
+          "@id": "https://machlilies.com/#org"
+        }
+      },
+      "publisher": {
+        "@id": "https://machlilies.com/#org"
+      },
+      "image": "https://machlilies.com/assets/og-image.png",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://machlilies.com/#website"
+      },
+      "mainEntityOfPage": "https://machlilies.com/resources/measuring-ai-agent-roi/",
+      "keywords": "AI agent ROI, measuring AI ROI, AI ROI model, measurable ROI AI agents, agentic operations ROI, AI business case, AI cost tracking"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://machlilies.com/resources/measuring-ai-agent-roi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://machlilies.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides & resources",
+          "item": "https://machlilies.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Measuring the ROI of AI agents",
+          "item": "https://machlilies.com/resources/measuring-ai-agent-roi/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://machlilies.com/resources/measuring-ai-agent-roi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you measure ROI on an AI agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with a baseline of the current manual effort — volume, time per item, error rate and rework cost. Estimate the agent's impact on time saved, error reduction and throughput, then subtract the agent's running cost (model spend, oversight time, maintenance). After launch, track real usage and cost so the return is measured, not assumed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a realistic ROI timeframe for an AI agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a well-chosen, bounded workflow, payback is often measured in months rather than years, because the savings recur every time the workflow runs. Highly complex or low-volume workflows take longer and may not justify production at all — which is why baselining first matters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What costs do people forget when calculating AI ROI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The recurring ones: model and infrastructure spend, the human time still needed for approvals and exceptions, evaluation and monitoring, and maintenance when models or processes change. Ignoring these inflates the apparent return and leads to disappointment later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is ROI measured after the agent goes live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Through monitoring and evaluation built into operation: dashboards for volume, quality and cost, compared against the baseline. This turns ROI from a one-off projection into an ongoing, reported metric you can act on."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://machlilies.com/resources/measuring-ai-agent-roi/#howto",
+      "name": "How to build an ROI model for an AI agent",
+      "description": "A five-step method for estimating and then measuring the return on an AI agent workflow.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Baseline the current workflow",
+          "text": "Quantify today's manual effort: volume, time per item, error rate and the cost of rework. This is the number you will measure against."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Model the three levers",
+          "text": "Estimate time saved, error reduction and throughput gain the agent should deliver, with conservative and optimistic cases."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Cost the agent honestly",
+          "text": "Add model and infrastructure spend, the human oversight time the workflow still needs, and ongoing maintenance and evaluation."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Calculate net return and payback",
+          "text": "Subtract the agent's cost from the gross saving to get net ROI, and work out how long until it pays for itself."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Measure after launch",
+          "text": "Track real usage, quality and cost in production, and report actuals against the model — refining the estimate as the workflow runs."
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <script>
+      window.GA_MEASUREMENT_ID = "G-PSM4267LV3";
+      (function () {
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return;
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, { anonymize_ip: true });
+      })();
+    </script>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="c-label">View</span></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="brand" data-cursor>
+            <img class="brand-mark" src="/assets/logo-mark.svg" alt="Mach Lilies" width="38" height="38" />
+            <span>
+                <span class="b-name">Mach Lilies</span>
+                <span class="b-sub">Agentic Operations</span>
+            </span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+            <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+            <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+            <a href="/services/ai-modernisation-factory/"><span class="idx">04</span>Modernization</a>
+        </div>
+        <a href="/contact/" class="nav-cta magnetic" data-cursor data-event="cta_contact">Send a message</a>
+        <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+        <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+        <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+        <a href="/services/ai-assurance-evaluation/"><span class="idx">04</span>AI Assurance</a>
+        <a href="/services/ai-modernisation-factory/"><span class="idx">05</span>Modernization</a>
+        <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>The Sprint</a>
+        <a href="/contact/"><span class="idx">07</span>Contact</a>
+        <div class="mm-foot">hey@machlilies.com</div>
+    </div>
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <a href="/resources/">Guides</a> <span>/</span> <b>Measuring the ROI of AI agents</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Playbook</span>
+            <h1 class="display reveal" data-d="1">How to measure the<br/><span class="it accent-text">ROI of AI agents.</span></h1>
+            <div class="post-meta reveal" data-d="2">
+                <span class="pm-author">By <b>Kai Krause</b>, Chief Executive Officer</span>
+                <span>Published 19 June 2026</span>
+                <span>7 min read</span>
+            </div>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:1.6rem">ROI is where most AI business cases get hand-waved. A governed agent should be held to a real number — before you build and after you launch. Here is a practical way to baseline, model and then actually measure the return.</p>
+        </div>
+    </header>
+
+    <section class="block" style="padding-top:0">
+        <div class="wrap">
+            <div class="takeaway reveal">
+                <span class="tk-label">Key takeaways</span>
+                <ul>
+                    <li>Measure against a <b>baseline</b>: you cannot prove savings you never quantified.</li>
+                    <li>The three levers are <b>time saved, error reduction and throughput</b>.</li>
+                    <li>Always model the <b>cost side</b> — model spend, oversight time and maintenance.</li>
+                    <li>Measure <b>after launch</b>, not just in the business case — real usage beats projections.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" style="padding-top:clamp(2.5rem,6vh,4rem)">
+        <div class="wrap">
+            <div class="article-body reveal">
+<p>Plenty of AI business cases promise efficiency and leave it there. A governed agent deserves better: a number you set before the build and check after launch. The good news is that the work to remove a process is also the work that lets you measure it — if you baseline first.</p>
+
+<h2>Why ROI gets hand-waved</h2>
+<p>Most AI ROI claims fail for one of two reasons: there was no baseline to measure against, or the cost side was ignored. "It saves time" is not a business case. "This workflow handles 1,200 items a month at nine minutes each, and the agent removes seven of those minutes at a model cost of pennies per item" is. The difference is rigour, not optimism.</p>
+
+<h2>Baseline before you build</h2>
+<p>Pick one workflow and quantify it honestly: how many items, how long each takes, the error and rework rate, and the fully loaded cost of the people doing it. This baseline is the single most valuable artefact in the whole exercise, because every later claim is measured against it. If you cannot baseline a workflow, that is a sign it may be the wrong first candidate.</p>
+
+<h2>The three levers</h2>
+<p>Agent value almost always comes from a combination of three things:</p>
+<ul>
+  <li><b>Time saved.</b> The manual minutes the agent removes, multiplied by volume.</li>
+  <li><b>Error reduction.</b> Fewer mistakes, less rework, and the downstream cost those errors would have caused.</li>
+  <li><b>Throughput.</b> More work handled in the same time, or the same work handled faster — capacity you can redeploy.</li>
+</ul>
+
+<h2>Do not forget the cost side</h2>
+<p>A credible model nets the savings against the agent's real running cost: model and infrastructure spend, the human oversight the workflow still requires, and the maintenance and evaluation needed to keep quality high. This is also where good <a href="/services/agentops-ai-governance/">AgentOps</a> earns its keep — cost monitoring and model routing keep the spend side predictable so the ROI holds.</p>
+
+<h2>Measure after launch, not just before</h2>
+<p>The business case is an estimate. The truth comes from production. Monitoring and evaluation should track real usage, quality and cost, reported against your baseline, so the operational impact is measured rather than assumed. That is how an ROI number stops being a sales artefact and becomes a management metric. It is built into how we run an <a href="/services/agentic-operations/">agentic operations</a> workflow — and the first estimate is exactly what an <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> produces.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Frequently <span class="it accent-text">asked.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+                <details class="faq-item"><summary><span>How do you measure ROI on an AI agent?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Start with a baseline of the current manual effort — volume, time per item, error rate and rework cost. Estimate the agent's impact on time saved, error reduction and throughput, then subtract the agent's running cost (model spend, oversight time, maintenance). After launch, track real usage and cost so the return is measured, not assumed.</p></div></details>
+                <details class="faq-item"><summary><span>What is a realistic ROI timeframe for an AI agent?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>For a well-chosen, bounded workflow, payback is often measured in months rather than years, because the savings recur every time the workflow runs. Highly complex or low-volume workflows take longer and may not justify production at all — which is why baselining first matters.</p></div></details>
+                <details class="faq-item"><summary><span>What costs do people forget when calculating AI ROI?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>The recurring ones: model and infrastructure spend, the human time still needed for approvals and exceptions, evaluation and monitoring, and maintenance when models or processes change. Ignoring these inflates the apparent return and leads to disappointment later.</p></div></details>
+                <details class="faq-item"><summary><span>How is ROI measured after the agent goes live?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Through monitoring and evaluation built into operation: dashboards for volume, quality and cost, compared against the baseline. This turns ROI from a one-off projection into an ongoing, reported metric you can act on.</p></div></details>
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Where this leads</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Related <span class="it accent-text">services.</span></h2>
+                </div>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+                <a class="rel-card magnetic" href="/services/agentic-operations/" data-cursor><span class="rel-n">↗</span><h3>Agentic Operations</h3><p>AI agents that run real business workflows, safely and governed.</p></a>
+                <a class="rel-card magnetic" href="/services/ai-pilot-rescue/" data-cursor><span class="rel-n">↗</span><h3>AI Pilot Rescue</h3><p>Audit stuck AI pilots; kill, fix or scale with clear ROI and controls.</p></a>
+                <a class="rel-card magnetic" href="/services/agentic-operations-sprint/" data-cursor><span class="rel-n">↗</span><h3>Agentic Operations Sprint</h3><p>Map, prototype and business-case your first agent workflow.</p></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block contact" id="contact">
+        <img class="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" style="left:-12%;right:auto;opacity:0.16;width:min(50vw,520px)" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <span class="eyebrow muted reveal" style="justify-content:center;display:inline-flex">Let's begin</span>
+            <h2 class="big reveal" data-d="1">Put one workflow <span class="it">to work.</span></h2>
+            <p class="c-sub reveal" data-d="2">Tell us the workflow you want to automate, the systems involved and any risk or compliance concerns. We reply to every serious enquiry within one business day.</p>
+            <div class="c-actions reveal" data-d="2">
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="https://cal.eu/machlilies/agent-operations-sprint-intro" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a 30-min call</a>
+            </div>
+            <div class="c-trust reveal" data-d="3">
+                <span>Reply within one business day</span>
+                <span>Human oversight by design</span>
+                <span>Senior team, always</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <span class="foot-word">Mach<span class="it"> Lilies</span></span>
+            <div class="foot-cols">
+                <div class="foot-col">
+                    <h5>The practice</h5>
+                    <p>An independent agentic operations &amp; AI engineering consultancy. We design, govern and operate safe AI agent workflows that do real business work.</p>
+                </div>
+                <div class="foot-col">
+                    <h5>Services</h5>
+                    <a href="/services/">All services</a>
+                    <a href="/services/agentic-operations/">Agentic Operations</a>
+                    <a href="/services/agentops-ai-governance/">AgentOps &amp; Governance</a>
+                    <a href="/services/ai-pilot-rescue/">AI Pilot Rescue</a>
+                    <a href="/services/ai-assurance-evaluation/">AI Assurance</a>
+                    <a href="/services/ai-modernisation-factory/">AI-Native Modernization</a>
+                    <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Industries</h5>
+                    <a href="/industries/insurance-brokers/">Insurance Brokers</a>
+                    <a href="/industries/accountancy-practices/">Accountancy Practices</a>
+                    <a href="/#capabilities" style="margin-top:0.4rem">What we do</a>
+                    <a href="/resources/">Guides &amp; resources</a>
+                    <a href="/#faq">FAQ</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Contact</h5>
+                    <a href="/contact/">Start a conversation</a>
+                    <a href="mailto:hey@machlilies.com">hey@machlilies.com</a>
+                    <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
+                </div>
+            </div>
+            <div class="foot-base">
+                <span>© <span id="year">2026</span> Mach Lilies Limited. All rights reserved.</span>
+                <span class="tag">Mach speed. Lily craft.</span>
+                <a href="#top" data-cursor>Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
