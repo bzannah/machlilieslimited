@@ -1047,7 +1047,6 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
     short_name = short_name or SHORT[slug][0]
     url = "%s/%s/%s/" % (BASE, base_path, slug)
     ind = "".join("<span>%s</span>" % esc(x) for x in d["industries"])
-    contact_subject = "Enquiry%20—%20" + short_name.replace(" ","%20").replace("&","and")
     # default contact path is the form: route any mailto hero CTA to /contact/
     cta_href = "/contact/" if d["cta_href"].startswith("mailto:") else d["cta_href"]
     return '''<!DOCTYPE html>
@@ -1255,7 +1254,7 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
         h1a=esc(d["h1"][0]), h1b=esc(d["h1"][1]), lead=d["lead"],
         cta_label=esc(d["cta"]), cta_href=cta_href,
         cta2_label=esc(d["cta2"]), cta2_href=d["cta2_href"],
-        subject=contact_subject, booking=BOOKING_URL,
+        booking=BOOKING_URL,
         ov_eyebrow=esc(d["ov_eyebrow"]), ov_hl=d["ov_hl"], ov_body=esc(d["ov_body"]),
         timeline_section=render_timeline(d), sample_section=render_sample(d),
         svc_h2a=esc(d["svc_h2"][0]), svc_h2b=esc(d["svc_h2"][1]), svc_note=esc(d["svc_note"]),
