@@ -119,7 +119,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put one workflow", "to work."),
   "contact_sub": "Tell us the workflow you want to take off your team's plate — the systems involved, the manual effort today, and any risk or compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book an Agentic Operations Sprint", "cta_href": "/services/agentic-operations-sprint/",
+  "cta": "Map your first workflow", "cta_href": "/contact/",
   "cta2": "See agent workflows", "cta2_href": "/#work",
 },
 
@@ -175,8 +175,8 @@ SERVICES = {
   ],
   "contact_h2": ("Govern your", "first agent."),
   "contact_sub": "Tell us which agents or AI workflows are live or planned, the systems they touch, and your risk and compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Govern your first agent workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Govern%20our%20AI%20agents%20%E2%80%94%20AgentOps",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta": "Govern your first agent workflow", "cta_href": "mailto:hey@machlilies.com?subject=Govern%20our%20AI%20agents%20%E2%80%94%20AgentOps",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
 "ai-pilot-rescue": {
@@ -229,8 +229,8 @@ SERVICES = {
   ],
   "contact_h2": ("Send us the pilot", "that stalled."),
   "contact_sub": "Tell us what you built, why it stalled, and what it was meant to achieve. We reply to every serious enquiry within one business day with an honest first view.",
-  "cta": "Send us the pilot that stalled", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20pilot%20rescue%20enquiry",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta": "Send us the pilot that stalled", "cta_href": "mailto:hey@machlilies.com?subject=AI%20pilot%20rescue%20enquiry",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
 "ai-assurance-evaluation": {
@@ -283,7 +283,7 @@ SERVICES = {
   ],
   "contact_h2": ("Make AI", "defensible."),
   "contact_sub": "Tell us where AI is being used or planned, and your risk and compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book an AI assurance review", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20assurance%20%26%20governance%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=AI%20assurance%20%26%20governance%20enquiry",
   "cta2": "Explore AgentOps", "cta2_href": "/services/agentops-ai-governance/",
 },
 
@@ -337,7 +337,7 @@ SERVICES = {
   ],
   "contact_h2": ("Modernize the system", "holding you back."),
   "contact_sub": "Tell us about the legacy system, what it's blocking, and where it hurts most. We reply to every serious enquiry within one business day.",
-  "cta": "Modernize the system holding you back", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI-native%20modernization%20enquiry",
+  "cta": "Modernize the system holding you back", "cta_href": "mailto:hey@machlilies.com?subject=AI-native%20modernization%20enquiry",
   "cta2": "Talk to product engineering", "cta2_href": "/services/product-engineering/",
 },
 
@@ -409,12 +409,12 @@ SERVICES = {
     ("How long does the Sprint take?", "It's deliberately focused — a short, fixed-scope engagement rather than an open-ended project. We agree the exact scope and timeline up front, so you know precisely what you'll receive and when."),
     ("What does it cost?", "Most engagements start with a fixed-scope sprint, followed by milestone-based production rollout and optional managed AgentOps support. We scope and price the sprint to your workflows and share clear, indicative figures before any commitment."),
     ("What happens after the Sprint?", "If the business case holds, we move to a milestone-based production rollout with governance built in, and optionally operate the workflow as a managed service. If it doesn't, you'll have a clear, evidence-based recommendation not to proceed — which is valuable too."),
-    ("How do we book a Sprint?", "Email machlilieslimited@gmail.com with the workflow you want to improve, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day."),
+    ("How do we book a Sprint?", "Email hey@machlilies.com with the workflow you want to improve, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day."),
   ],
-  "contact_h2": ("Book the", "Sprint."),
+  "contact_h2": ("Start a", "conversation."),
   "contact_sub": "Tell us the workflow you want to automate, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Book the Sprint", "cta_href": BOOKING_URL,
-  "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
+  "cta": "Send a message", "cta_href": "/contact/",
+  "cta2": "Book a 30-min call", "cta2_href": BOOKING_URL,
 },
 
 # ====================== FOUNDATION (delivery bench) ======================
@@ -469,7 +469,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put AI", "to work."),
   "contact_sub": "Tell us what you're building. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=AI%20consulting%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -524,7 +524,7 @@ SERVICES = {
   ],
   "contact_h2": ("Build your", "product."),
   "contact_sub": "Tell us what you're building. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20engineering%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Product%20engineering%20enquiry",
   "cta2": "See AI-native modernization", "cta2_href": "/services/ai-modernisation-factory/",
 },
 
@@ -579,7 +579,7 @@ SERVICES = {
   ],
   "contact_h2": ("Engineer your", "platform."),
   "contact_sub": "Tell us about your infrastructure. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Cloud%20%26%20platform%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Cloud%20%26%20platform%20enquiry",
   "cta2": "Explore AgentOps", "cta2_href": "/services/agentops-ai-governance/",
 },
 
@@ -634,7 +634,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put your data", "to work."),
   "contact_sub": "Tell us about your data. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Data%20%26%20analytics%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Data%20%26%20analytics%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -689,7 +689,7 @@ SERVICES = {
   ],
   "contact_h2": ("Design something", "rare."),
   "contact_sub": "Tell us what you're designing. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20design%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Product%20design%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -744,7 +744,7 @@ SERVICES = {
   ],
   "contact_h2": ("Get the", "clarity."),
   "contact_sub": "Tell us the decision you're facing. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Book a free consultation", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Strategy%20%26%20advisory%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Strategy%20%26%20advisory%20enquiry",
   "cta2": "See AI assurance", "cta2_href": "/services/ai-assurance-evaluation/",
 },
 }
@@ -806,8 +806,8 @@ INDUSTRIES = {
   ],
   "contact_h2": ("Map your first", "broker workflow."),
   "contact_sub": "Tell us which broker workflow costs your team the most time — renewals, claims, chasing or compliance evidence — and the systems involved. We reply within one business day.",
-  "cta": "Map your first broker workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20insurance%20broking",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta": "Map your first broker workflow", "cta_href": "mailto:hey@machlilies.com?subject=AI%20agents%20for%20insurance%20broking",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
 "accountancy-practices": {
@@ -859,8 +859,8 @@ INDUSTRIES = {
   ],
   "contact_h2": ("Map your first", "practice workflow."),
   "contact_sub": "Tell us which workflow limits your capacity — chasing, classification, close or VAT prep — and the systems involved. We reply within one business day.",
-  "cta": "Map your first practice workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20accountancy%20practices",
-  "cta2": "Book an Agentic Operations Sprint", "cta2_href": "/services/agentic-operations-sprint/",
+  "cta": "Map your first practice workflow", "cta_href": "mailto:hey@machlilies.com?subject=AI%20agents%20for%20accountancy%20practices",
+  "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 }
 
@@ -885,7 +885,7 @@ NAV = '''    <nav class="nav" id="nav">
             <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
             <a href="/services/ai-modernisation-factory/"><span class="idx">04</span>Modernization</a>
         </div>
-        <a href="/services/agentic-operations-sprint/" class="nav-cta magnetic" data-cursor data-event="cta_sprint">Book a Sprint</a>
+        <a href="/contact/" class="nav-cta magnetic" data-cursor data-event="cta_contact">Send a message</a>
         <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
     </nav>
     <div class="mobile-menu" id="mobile-menu">
@@ -896,7 +896,7 @@ NAV = '''    <nav class="nav" id="nav">
         <a href="/services/ai-modernisation-factory/"><span class="idx">05</span>Modernization</a>
         <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>The Sprint</a>
         <a href="/contact/"><span class="idx">07</span>Contact</a>
-        <div class="mm-foot">machlilieslimited@gmail.com</div>
+        <div class="mm-foot">hey@machlilies.com</div>
     </div>'''
 
 def footer():
@@ -916,18 +916,20 @@ def footer():
                 </div>
                 <div class="foot-col">
                     <h5>Services</h5>
+                    <a href="/services/">All services</a>
 %s
                 </div>
                 <div class="foot-col">
                     <h5>Industries</h5>
 %s
                     <a href="/#capabilities" style="margin-top:0.4rem">What we do</a>
+                    <a href="/resources/">Guides &amp; resources</a>
                     <a href="/#faq">FAQ</a>
                 </div>
                 <div class="foot-col">
                     <h5>Contact</h5>
                     <a href="/contact/">Start a conversation</a>
-                    <a href="mailto:machlilieslimited@gmail.com">machlilieslimited@gmail.com</a>
+                    <a href="mailto:hey@machlilies.com">hey@machlilies.com</a>
                     <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
                 </div>
             </div>
@@ -943,7 +945,7 @@ def jsonld(d, url, short_name, crumb_name, crumb_href):
     graph = [
         {"@type": ["Organization","ProfessionalService"], "@id": BASE+"/#org",
          "name":"Mach Lilies","legalName":"Mach Lilies Limited","url":BASE+"/",
-         "logo":BASE+"/assets/logo-mark.svg","email":"machlilieslimited@gmail.com",
+         "logo":BASE+"/assets/logo-mark.svg","email":"hey@machlilies.com",
          "slogan":"Mach speed. Lily craft.","areaServed":{"@type":"Place","name":"Worldwide"}},
         {"@type":"Service","@id":url+"#service","name":short_name,
          "serviceType":d["service_type"],"url":url,
@@ -1047,7 +1049,8 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
     short_name = short_name or SHORT[slug][0]
     url = "%s/%s/%s/" % (BASE, base_path, slug)
     ind = "".join("<span>%s</span>" % esc(x) for x in d["industries"])
-    contact_subject = "Enquiry%20—%20" + short_name.replace(" ","%20").replace("&","and")
+    # default contact path is the form: route any mailto hero CTA to /contact/
+    cta_href = "/contact/" if d["cta_href"].startswith("mailto:") else d["cta_href"]
     return '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1231,8 +1234,12 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
             <h2 class="big reveal" data-d="1">{contact_h2a} <span class="it">{contact_h2b}</span></h2>
             <p class="c-sub reveal" data-d="2">{contact_sub}</p>
             <div class="c-actions reveal" data-d="2">
-                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Start a conversation <span class="arrow">→</span></a>
-                <a href="mailto:machlilieslimited@gmail.com?subject={subject}" class="btn btn-ghost magnetic" data-cursor data-event="cta_email">Email us directly</a>
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="{booking}" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a 30-min call</a>
+            </div>
+            <div class="c-trust reveal" data-d="3">
+                <span>Message us — we reply within one business day, no call required</span>
+                <span>Or book a 30-minute intro call</span>
             </div>
         </div>
     </section>
@@ -1247,9 +1254,9 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
         keywords=esc(d["keywords"]), jsonld=jsonld(d, url, short_name, crumb_name, crumb_href), nav=NAV,
         short=esc(short_name), crumb_name=esc(crumb_name), crumb_href=crumb_href, eyebrow=esc(d["eyebrow"]),
         h1a=esc(d["h1"][0]), h1b=esc(d["h1"][1]), lead=d["lead"],
-        cta_label=esc(d["cta"]), cta_href=d["cta_href"],
+        cta_label=esc(d["cta"]), cta_href=cta_href,
         cta2_label=esc(d["cta2"]), cta2_href=d["cta2_href"],
-        subject=contact_subject,
+        booking=BOOKING_URL,
         ov_eyebrow=esc(d["ov_eyebrow"]), ov_hl=d["ov_hl"], ov_body=esc(d["ov_body"]),
         timeline_section=render_timeline(d), sample_section=render_sample(d),
         svc_h2a=esc(d["svc_h2"][0]), svc_h2b=esc(d["svc_h2"][1]), svc_note=esc(d["svc_note"]),
@@ -1265,15 +1272,10 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
     )
 
 CONTACT_FIELDS = [
-    ("f-name","Name","text","",True,"name","half"),
-    ("f-company","Company","text","",True,"organization","half"),
-    ("f-role","Role","text","",False,"organization-title","half"),
+    ("f-name","Full name","text","",True,"name","half"),
     ("f-email","Email","email","",True,"email","half"),
-    ("f-workflow","Which workflow do you want to automate?","text","e.g. renewal pack preparation, invoice exceptions, inbox triage",True,"","full"),
-    ("f-systems","Which systems are involved?","text","CRM, email, documents, finance, ERP, support…",False,"","full"),
-    ("f-effort","Current manual effort","text","e.g. ~20 hrs/week across 3 people",False,"","half"),
-    ("f-risk","Risk or compliance concerns","text","e.g. client data, audit evidence, approvals",False,"","half"),
-    ("f-ai","Current AI experiments (if any)","text","",False,"","full"),
+    ("f-company","Company","text","",False,"organization","half"),
+    ("f-phone","Phone number","tel","",False,"tel","half"),
 ]
 
 def render_fields():
@@ -1293,12 +1295,12 @@ def render_fields():
 
 def build_contact():
     url = BASE + "/contact/"
-    title = "Contact | Book an Agentic Operations Sprint — Mach Lilies"
+    title = "Contact | Start a conversation — Mach Lilies"
     desc = "Start a conversation with Mach Lilies about an Agentic Operations Sprint. Tell us the workflow you want to automate, the systems involved and your risk concerns. We reply within one business day."
     graph = [
         {"@type":["Organization","ProfessionalService"],"@id":BASE+"/#org","name":"Mach Lilies",
-         "url":BASE+"/","email":"machlilieslimited@gmail.com","slogan":"Mach speed. Lily craft.",
-         "contactPoint":{"@type":"ContactPoint","email":"machlilieslimited@gmail.com","contactType":"sales","areaServed":"Worldwide","availableLanguage":"English"}},
+         "url":BASE+"/","email":"hey@machlilies.com","slogan":"Mach speed. Lily craft.",
+         "contactPoint":{"@type":"ContactPoint","email":"hey@machlilies.com","contactType":"sales","areaServed":"Worldwide","availableLanguage":"English"}},
         {"@type":"ContactPage","@id":url+"#webpage","url":url,"name":title,
          "isPartOf":{"@id":BASE+"/#website"},"about":{"@id":BASE+"/#org"},"inLanguage":"en"},
         {"@type":"BreadcrumbList","@id":url+"#breadcrumb","itemListElement":[
@@ -1378,36 +1380,48 @@ def build_contact():
             <nav class="crumb reveal" aria-label="Breadcrumb">
                 <a href="/">Home</a> <span>/</span> <b>Contact</b>
             </nav>
-            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Start a conversation</span>
-            <h1 class="display reveal" data-d="1">Book an Agentic<br/><span class="it accent-text">Operations Sprint.</span></h1>
-            <p class="svc-lead reveal" data-d="2">Tell us the workflow you want to automate and we'll reply within one business day with an honest first view — no funnels, no bots. Most engagements begin with a fixed-scope Agentic Operations Sprint.</p>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Contact</span>
+            <h1 class="display reveal" data-d="1">Start a<br/><span class="it accent-text">conversation.</span></h1>
+            <p class="svc-lead reveal" data-d="2">Two ways to reach us. <strong>Send a message</strong> and we'll reply within one business day — no call required. Or <strong>book a 30-minute intro call</strong> if you'd rather talk it through. No funnels, no bots.</p>
         </div>
     </header>
 
-    <section class="block" id="enquiry" style="padding-top:0">
+    <section class="block" style="padding-bottom:0">
         <div class="wrap">
-            <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="{endpoint}">
+            <div class="contact-choice reveal" data-d="1">
+                <div class="choice is-default">
+                    <span class="ch-tag">Option 1 · Default</span>
+                    <h2>Send a message</h2>
+                    <p>The simplest way in. Tell us about your workflow in a short form and we'll reply within one business day — no call required.</p>
+                    <a href="#enquiry" class="btn btn-solid magnetic" data-cursor>Use the form ↓</a>
+                </div>
+                <div class="choice">
+                    <span class="ch-tag">Option 2</span>
+                    <h2>Book a 30-min call</h2>
+                    <p>Prefer to talk it through? Book a 30-minute intro call about an Agentic Operations Sprint at a time that suits you.</p>
+                    <a href="{booking}" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a call →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="enquiry" style="padding-top:clamp(2.5rem,6vh,4rem)">
+        <div class="wrap">
+            <span class="eyebrow muted reveal" style="display:inline-flex;margin-bottom:1.6rem">Option 1 — Send a message</span>
+            <form class="form-wrap" id="enquiry-form" action="mailto:hey@machlilies.com" method="post" enctype="text/plain" data-endpoint="{endpoint}">
                 <input type="hidden" name="_subject" value="New Agentic Operations enquiry — machlilies.com" />
                 <div class="form-grid">
 {fields}
-                    <div class="field half">
-                        <label for="f-urgency">How urgent is this?</label>
-                        <select id="f-urgency" name="Urgency">
-                            <option>This quarter</option>
-                            <option>Now</option>
-                            <option>Exploratory</option>
-                        </select>
-                    </div>
                     <div class="field full">
-                        <label for="f-outcome">Desired business outcome <span class="req">*</span></label>
-                        <textarea id="f-outcome" name="Desired outcome" required placeholder="What would a good result look like in six months?"></textarea>
+                        <label for="f-message">How can we help? <span class="req">*</span></label>
+                        <textarea id="f-message" name="Message" required placeholder="Tell us what you're working on — the workflow you'd like to automate, the systems involved, and what a good outcome looks like."></textarea>
                     </div>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-solid magnetic" data-cursor>Send enquiry <span class="arrow">→</span></button>
-                    <a href="{booking}" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Or book a 30-min call</a>
+                    <button type="submit" class="btn btn-solid magnetic" data-cursor>Send message <span class="arrow">→</span></button>
+                    <span class="form-note">We reply within one business day — no call required.</span>
                 </div>
-                <p class="form-note" style="margin-top:1rem">Prefer email? <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a> — we reply within one business day.</p>
+                <p class="form-note" style="margin-top:1rem">Prefer to talk? <a href="{booking}" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_book">Book a 30-min call</a>. Or email <a href="mailto:hey@machlilies.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">hey@machlilies.com</a>.</p>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
@@ -1420,6 +1434,690 @@ def build_contact():
 </html>
 '''.format(title=esc(title), desc=esc(desc), url=url, base=BASE, ld=ld, nav=NAV,
            fields=render_fields(), footer=footer(), endpoint=FORM_ENDPOINT, booking=BOOKING_URL)
+
+# ===========================================================================
+#  ADDITIVE PAGES — services pillar hub + resources/guides hub + long-form
+#  articles. These reuse the same NAV, footer, <head> scaffold, CSS classes
+#  and GA snippet as every other page, so they blend in exactly. Nothing here
+#  changes any existing page's output.
+# ===========================================================================
+
+ORG_NODE = {
+    "@type": ["Organization", "ProfessionalService"], "@id": BASE + "/#org",
+    "name": "Mach Lilies", "legalName": "Mach Lilies Limited", "url": BASE + "/",
+    "logo": BASE + "/assets/logo-mark.svg", "email": "hey@machlilies.com",
+    "slogan": "Mach speed. Lily craft.", "areaServed": {"@type": "Place", "name": "Worldwide"},
+}
+
+def ga_snippet():
+    return '''    <script>
+      window.GA_MEASUREMENT_ID = "%s";
+      (function () {
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return;
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, { anonymize_ip: true });
+      })();
+    </script>''' % GA_ID
+
+CHROME = '''    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="c-label">View</span></div>
+    <div class="progress" aria-hidden="true"></div>
+
+''' + NAV
+
+SCRIPTS_FOOT = '''
+    <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
+'''
+
+def head(title, desc, url, ld, keywords=None, og_type="website", extra_meta=""):
+    """Full <!DOCTYPE> … </head> — mirrors the service-page head exactly,
+    with og:image:alt / twitter:image:alt added. ld and ga are injected as
+    values so the template literal contains no braces to escape."""
+    kw = ('    <meta name="keywords" content="%s" />\n' % esc(keywords)) if keywords else ""
+    return '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>{title}</title>
+    <meta name="description" content="{desc}" />
+    <link rel="canonical" href="{url}" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+{kw}
+    <meta property="og:type" content="{og_type}" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="{url}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{desc}" />
+    <meta property="og:image" content="{base}/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mach Lilies — agentic operations &amp; AI engineering consultancy." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:description" content="{desc}" />
+    <meta name="twitter:image" content="{base}/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Mach Lilies — safe, governed AI agents for real operations." />
+{extra_meta}
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#c9f24c" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <!-- no-JS fallback: never trap content behind scroll-reveal -->
+    <noscript><style>.fade-up,.reveal{{ opacity:1 !important; transform:none !important; }} body{{ cursor:auto !important; }} .cursor-dot,.cursor-ring{{ display:none !important; }}</style></noscript>
+
+    <script type="application/ld+json">
+{ld}
+    </script>
+
+{ga}
+</head>'''.format(title=esc(title), desc=esc(desc), url=url, base=BASE, kw=kw,
+                  og_type=og_type, ld=ld, ga=ga_snippet(), extra_meta=extra_meta)
+
+def rel_cards(slugs):
+    return "\n".join(
+        '''                <a class="rel-card magnetic" href="/services/%s/" data-cursor><span class="rel-n">↗</span><h3>%s</h3><p>%s</p></a>'''
+        % (s, esc(SHORT[s][0]), esc(SHORT[s][1])) for s in slugs)
+
+def contact_cta(h2a, h2b, sub):
+    return '''    <section class="block contact" id="contact">
+        <img class="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" style="left:-12%%;right:auto;opacity:0.16;width:min(50vw,520px)" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <span class="eyebrow muted reveal" style="justify-content:center;display:inline-flex">Let's begin</span>
+            <h2 class="big reveal" data-d="1">%s <span class="it">%s</span></h2>
+            <p class="c-sub reveal" data-d="2">%s</p>
+            <div class="c-actions reveal" data-d="2">
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="%s" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a 30-min call</a>
+            </div>
+            <div class="c-trust reveal" data-d="3">
+                <span>Reply within one business day</span>
+                <span>Human oversight by design</span>
+                <span>Senior team, always</span>
+            </div>
+        </div>
+    </section>''' % (esc(h2a), esc(h2b), esc(sub), BOOKING_URL)
+
+# --------------------------- SERVICES PILLAR HUB ---------------------------
+def services_hub_jsonld():
+    url = BASE + "/services/"
+    title = "AI Consulting & Agentic AI Services | Mach Lilies"
+    items = [{"@type": "ListItem", "position": i + 1, "name": SHORT[s][0],
+              "url": "%s/services/%s/" % (BASE, s)} for i, s in enumerate(ORDER)]
+    graph = [
+        ORG_NODE,
+        {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": title,
+         "description": "The full range of Mach Lilies services — agentic operations, AgentOps governance, AI pilot rescue, AI assurance, AI-native modernization and the senior engineering bench behind them.",
+         "isPartOf": {"@id": BASE + "/#website"}, "about": {"@id": BASE + "/#org"}, "inLanguage": "en"},
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": url}]},
+        {"@type": "ItemList", "@id": url + "#list", "name": "Mach Lilies services", "itemListElement": items},
+    ]
+    return json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False)
+
+def build_services_hub():
+    url = BASE + "/services/"
+    title = "AI Consulting & Agentic AI Services | Mach Lilies"
+    desc = ("Mach Lilies is a senior, founder-led AI consultancy. Explore agentic operations, AgentOps "
+            "governance, AI pilot rescue, AI assurance and AI-native modernization — production-ready, "
+            "governed AI agents with human oversight and measurable ROI.")
+    keywords = ("AI consulting, agentic AI consulting, AI experts, AI agent consulting, agentic operations, "
+                "AI governance consulting, production-ready AI agents, governed AI agents, AI consultancy services")
+    agentic_rows = []
+    for i, s in enumerate(AGENTIC + [SPRINT], 1):
+        name, blurb = SHORT[s]
+        dd = ' data-d="%d"' % ((i - 1) % 3) if (i - 1) % 3 else ""
+        agentic_rows.append('''                <div class="cap-row reveal"%s data-cursor>
+                    <div class="cap-no">%02d</div>
+                    <div class="cap-main">
+                        <h3>%s</h3>
+                        <p class="cap-desc">%s</p>
+                        <a class="cap-link" href="/services/%s/">Explore %s →</a>
+                    </div>
+                </div>''' % (dd, i, esc(name), esc(blurb), s, esc(name.lower())))
+    faqs = [
+        ("What is agentic AI consulting?",
+         "Agentic AI consulting is the practice of helping a company design, deploy, govern and operate AI agents that perform real business workflows — not just advising on AI in the abstract. At Mach Lilies it means mapping a workflow, building a bounded agent against your real tools and data, wiring in human approval and audit trails, and operating it in production with measurable ROI."),
+        ("Which service should we start with?",
+         "Most engagements begin with an Agentic Operations Sprint: a focused, fixed-scope sprint that maps your highest-value workflows, prototypes the strongest one and produces a governed production plan. If you have a stalled pilot, AI Pilot Rescue is the faster entry point; if your priority is control over agents already running, start with AgentOps & AI Governance."),
+        ("Are you AI experts or generalists?",
+         "We are a small, senior, founder-led team of AI and engineering specialists. The principals who scope your work are the ones who build, govern and operate it — there is no hand-off to juniors. Agentic operations is our focus, supported by a full engineering bench across AI, cloud, data, product and strategy."),
+        ("Do you only build agents, or run them too?",
+         "Both. We design and build governed agent workflows and then operate them as a managed service — monitoring, evaluation, regression testing and optimisation — or hand over clean, documented systems your team owns. We sell governed AI operations, not billable hours."),
+    ]
+    body = '''{head}
+<body>
+{chrome}
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <b>Services</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">AI consulting &amp; agentic operations</span>
+            <h1 class="display reveal" data-d="1">AI consulting and<br/><span class="it accent-text">agentic AI services.</span></h1>
+            <p class="svc-lead reveal" data-d="2">Mach Lilies is a senior, founder-led AI consultancy. We design, deploy, govern and operate <strong>production-ready, governed AI agents</strong> for real business workflows — backed by a full engineering bench across AI, cloud, data, product and strategy. <strong>Mach speed. Lily craft.</strong></p>
+            <div class="hero-cta reveal" data-d="3" style="margin-top:2.2rem">
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="/services/agentic-operations-sprint/" class="btn btn-ghost magnetic" data-cursor>Start with the Sprint</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="block manifesto">
+        <div class="wrap">
+            <span class="eyebrow muted reveal">The practice</span>
+            <p class="reveal" data-d="1" style="margin-top:1.5rem">From <span class="hl">AI strategy</span> to <span class="hl">governed agents in production</span> — <span class="dim">one senior team, end to end.</span></p>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:2rem;max-width:72ch">Our work divides into two layers. The <strong>agentic offers</strong> design, govern and operate the AI agent workflows that do real business work. Beneath them sits the <strong>engineering bench</strong> — AI consulting, product, cloud, data, design and strategy — the senior delivery foundation those agents stand on. Engage a single service, or the whole path from idea to operated workflow.</p>
+        </div>
+    </section>
+
+    <section class="block" id="agentic">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Agentic offers</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Build, govern, <span class="it accent-text">operate.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">Safe AI agents put to work on real workflows — and kept governed in production.</p>
+            </div>
+            <div class="cap-list">
+{agentic_rows}
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">The engineering bench</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Senior engineering, <span class="it accent-text">when agents need it.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">Agentic operations stands on real engineering. The same senior team delivers the foundations — on their own, or behind an agent workflow.</p>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+{foundation_cards}
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">By industry</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Agents for <span class="it accent-text">your sector.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">Document-heavy, deadline-driven work is where governed agents pay off fastest.</p>
+            </div>
+            <div class="rel-grid reveal" data-d="1" style="grid-template-columns:repeat(2,1fr)">
+                <a class="rel-card magnetic" href="/industries/insurance-brokers/" data-cursor><span class="rel-n">↗</span><h3>Insurance Brokers</h3><p>Governed agents for renewals, claims intake, document chasing and compliance evidence.</p></a>
+                <a class="rel-card magnetic" href="/industries/accountancy-practices/" data-cursor><span class="rel-n">↗</span><h3>Accountancy Practices</h3><p>Governed agents for client chasing, classification, month-end close and VAT prep.</p></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Choosing a <span class="it accent-text">service.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+{faqs}
+            </div>
+        </div>
+    </section>
+
+{contact}
+
+{footer}
+{scripts}'''.format(
+        head=head(title, desc, url, services_hub_jsonld(), keywords=keywords),
+        chrome=CHROME,
+        agentic_rows="\n".join(agentic_rows),
+        foundation_cards=rel_cards(FOUNDATION),
+        faqs=render_faqs({"faqs": faqs}),
+        contact=contact_cta("Find the right", "first step.",
+                            "Tell us the workflow you want to take off your team's plate, or the AI problem you're stuck on. We reply to every serious enquiry within one business day."),
+        footer=footer(),
+        scripts=SCRIPTS_FOOT,
+    )
+    return body
+
+# --------------------------- RESOURCES / GUIDES ----------------------------
+RES_ORDER = ["what-is-agentic-ai-consulting", "move-ai-pilots-to-production", "governed-ai-agents"]
+
+RESOURCES = {
+
+"what-is-agentic-ai-consulting": {
+  "title": "What Is Agentic AI Consulting? A Practical Guide | Mach Lilies",
+  "short": "What is agentic AI consulting?",
+  "desc": "Agentic AI consulting helps companies design, govern and operate AI agents that run real workflows — not just advise on AI. A practical guide to what it is, how it differs from traditional AI consulting, and how to choose a consultancy.",
+  "keywords": "agentic AI consulting, agentic consulting, AI agent consulting, AI experts, AI consulting, agentic operations, governed AI agents",
+  "category": "Guide",
+  "date": "2026-06-19",
+  "read": "8 min read",
+  "author": ("Kai Krause", "Chief Executive Officer", "kai-krause"),
+  "headline": "What is agentic AI consulting? A practical guide",
+  "h1": ("What is agentic", "AI consulting?"),
+  "lead": "Agentic AI consulting is a newer, sharper discipline than the AI consulting most companies have bought before. This guide explains what it is, how it differs from classic AI advisory work, and what to look for when you hire.",
+  "takeaways": [
+    "Agentic AI consulting is about putting <b>AI agents to work on real workflows</b> — and operating them — not producing strategy decks.",
+    "The defining feature is <b>governance</b>: bounded access, human approval and audit trails, built in from the start.",
+    "Good agentic AI consultants sell <b>outcomes and operated workflows</b>, not billable engineering hours.",
+    "Start small — one high-value workflow, prototyped against real data — then expand once it is proven and governed.",
+  ],
+  "related": ["agentic-operations", "agentops-ai-governance", "agentic-operations-sprint"],
+  "faqs": [
+    ("How is agentic AI consulting different from AI consulting?",
+     "Traditional AI consulting often ends at strategy, a model, or a proof of concept. Agentic AI consulting goes further: it designs, builds, governs and operates AI agents that take real actions inside your systems — reading, drafting, classifying, updating and routing work — with human oversight and a full audit trail. The deliverable is a workflow that runs in production, not a recommendation."),
+    ("Do we need agentic AI consulting if we already have a data team?",
+     "Often, yes. Internal data and ML teams are excellent at models and analytics but rarely have bandwidth for the operational layer agents need — permissions, approval gates, evaluation suites, monitoring and incident response. A good agentic AI consultancy brings that production discipline and hands it over so your team can run it."),
+    ("Is agentic AI consulting only for large enterprises?",
+     "No. Mid-market companies and scale-ups in document-heavy, admin-heavy sectors — insurance broking, accountancy, property, logistics, legal — are often the best fit, because they have repeatable, deadline-driven workflows where a governed agent pays off quickly."),
+    ("What should we look for in an agentic AI consultant?",
+     "Senior people who build what they pitch, a bias toward bounded and governed agents over uncontrolled autonomy, a model-agnostic stance, measurable ROI rather than vague promises, and a clean hand-off with no lock-in. Be wary of anyone selling full autonomy or guaranteeing regulatory compliance."),
+  ],
+  "body": '''<p>Most leaders have already bought "AI consulting" in some form — a strategy workshop, a model built by a data science team, a chatbot pilot. Useful as those can be, they tend to stop short of the thing that actually changes how a business runs. <strong>Agentic AI consulting</strong> is the discipline that closes that gap.</p>
+
+<h2>Agentic AI consulting, defined</h2>
+<p>Agentic AI consulting is the practice of helping an organisation <strong>design, deploy, govern and operate AI agents that perform real business workflows</strong>. An agent here is not a chatbot. It is a bounded, tool-using system that can read a document, classify an email, draft a reply, update a record in your CRM, or assemble a report — and then route the result to a person for approval where it matters.</p>
+<p>The consultant's job is to find the workflow where that creates value without uncontrolled risk, build the agent against your real tools and data, wire in the controls, and operate it as a production system. The output is an <a href="/services/agentic-operations/">agentic operations</a> capability, not a slide deck.</p>
+
+<h2>How it differs from traditional AI consulting</h2>
+<p>The difference is where the work ends. Classic AI consulting often delivers one of three things: a strategy, a model, or a demo. Agentic AI consulting treats those as the starting line.</p>
+<ul>
+  <li><b>From advice to execution.</b> Strategy matters, but a governed workflow that removes manual drag is what you can actually measure.</li>
+  <li><b>From model to system.</b> The model is rarely the hard part. The hard part is permissions, integrations, human approval, evaluation, monitoring and audit — the operational layer around the model.</li>
+  <li><b>From demo to production.</b> A demo proves an agent <em>can</em> work. Production proves it <em>does</em> — on real data, real users and real risk. Most value lives on the production side of that line, which is exactly where pilots stall. (If yours has, see <a href="/services/ai-pilot-rescue/">AI pilot rescue</a>.)</li>
+</ul>
+
+<h2>What a good agentic AI consultant delivers</h2>
+<p>A strong engagement produces concrete artefacts you can own and operate, not just knowledge transfer:</p>
+<ul>
+  <li>A <b>workflow map</b> and an opportunity scorecard ranking candidates by value, feasibility, data readiness and risk.</li>
+  <li>A <b>working agent</b> built against realistic inputs, with a quality evaluation.</li>
+  <li>A <b>control matrix</b>: where the agent can act, where a human approves, and what is logged.</li>
+  <li>An <b>ROI model</b> grounded in time saved, error reduction and throughput.</li>
+  <li>A <b>governance plan</b> — the permissions, approvals, evaluation and incident controls covered in our <a href="/services/agentops-ai-governance/">AgentOps &amp; AI governance</a> work.</li>
+</ul>
+
+<h2>Bounded by design: why governance comes first</h2>
+<p>The strongest production systems are not the most autonomous ones. They are <strong>bounded</strong>: the agent gets least-privilege access to only the tools and data its workflow needs, humans approve high-risk actions, and every step is logged. This is not a constraint on value — it is what makes the value durable, defensible and safe to scale. A consultant who leads with "full autonomy" is selling risk, not results.</p>
+
+<h2>How to choose an agentic AI consultancy</h2>
+<p>Use these as a checklist when you evaluate partners:</p>
+<ul>
+  <li><b>Senior, end to end.</b> The people who scope the work should be the people who build and operate it.</li>
+  <li><b>Governance as delivery.</b> Controls, evaluation and audit trails built in from day one — not bolted on after an incident.</li>
+  <li><b>Model-agnostic.</b> The right model chosen on cost, privacy and fit, not vendor loyalty.</li>
+  <li><b>Measurable ROI.</b> A clear business case before the build, and real measurement after launch.</li>
+  <li><b>No lock-in.</b> Clean, documented systems your team can own and run.</li>
+</ul>
+<p>If that is the kind of partner you are looking for, the clearest first step is an <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a> — a focused, fixed-scope engagement that maps your highest-value workflows and prototypes the strongest one against real inputs.</p>''',
+},
+
+"move-ai-pilots-to-production": {
+  "title": "How to Move AI Pilots into Production (Governed Agents) | Mach Lilies",
+  "short": "Move AI pilots into production",
+  "desc": "A practical playbook for moving AI pilots into production with governed agentic workflows — why pilots stall, what production-ready means for an AI agent, and a six-step path from demo to operated workflow.",
+  "keywords": "move AI pilots to production, AI pilot rescue, production-ready AI agents, AI proof of concept to production, agentic workflows, AI productionization",
+  "category": "Playbook",
+  "date": "2026-06-19",
+  "read": "9 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "How to move AI pilots into production with governed agentic workflows",
+  "h1": ("Move AI pilots", "into production."),
+  "lead": "Most AI pilots don't fail because the model is weak. They stall on everything around it — data, integration, controls and an untested business case. Here is a practical, governed path from a promising demo to a workflow that actually runs.",
+  "takeaways": [
+    "Pilots rarely fail on the model; they fail on <b>data, integration, oversight and an unproven business case</b>.",
+    "\"Production-ready\" for an agent means <b>bounded access, human approval, logging, evaluation and a rollback path</b>.",
+    "Move one workflow at a time: <b>harden, govern, operate</b> — then expand.",
+    "A clear decision to <b>stop</b> a pilot is a valid, valuable outcome too.",
+  ],
+  "related": ["ai-pilot-rescue", "agentic-operations", "agentic-operations-sprint"],
+  "howto": {
+    "name": "How to move an AI pilot into production with a governed agentic workflow",
+    "desc": "A six-step path from a stalled AI pilot to a governed, operated production workflow.",
+    "steps": [
+      ("Audit the pilot", "Understand what was built, why it stalled, and what it was really meant to achieve — separate model issues from workflow, data and integration issues."),
+      ("Make the kill / fix / scale call", "Give an honest, evidence-based recommendation. Stopping a pilot that cannot justify production frees budget for one that can."),
+      ("Fix data and integrations", "Address the messy data, brittle connectors, identity and permissions the pilot needs to work against real systems."),
+      ("Add the controls", "Wire in least-privilege access, human approval for high-risk actions, action logs, evaluation suites and an incident/rollback path."),
+      ("Prove ROI on real inputs", "Run the hardened agent against realistic data, measure quality and cost, and confirm the business case before scaling."),
+      ("Operate and expand", "Monitor quality and cost in production, tune as processes change, then extend to the next highest-value workflow."),
+    ],
+  },
+  "faqs": [
+    ("Why do most AI pilots fail to reach production?",
+     "Rarely because of the model. They stall on messy data, brittle integrations, missing human oversight, unclear value and a business case no one stress-tested. Industry research consistently attributes most cancellations to unclear value, cost and inadequate controls — all of which are knowable early and mostly fixable."),
+    ("What does \"production-ready\" mean for an AI agent?",
+     "A production-ready agent has least-privilege access scoped to its workflow, human approval gates for high-risk actions, a complete action log and audit trail, evaluation suites that catch regressions when prompts or models change, monitoring of quality and cost, and a way to pause, roll back or restrict it instantly. The demo proves capability; these controls make it safe to run."),
+    ("How long does it take to move a pilot to production?",
+     "It varies with data readiness, integration complexity and compliance needs, but the model is to ship one workflow early and harden it iteratively rather than attempt a big-bang rollout. A focused audit and rollout plan is usually measured in weeks, not quarters."),
+    ("Should we ever just kill a pilot?",
+     "Yes. A clear, well-reasoned decision to stop a pilot is a valuable outcome — it frees budget and attention for the workflows that will actually pay off. A good partner will tell you to stop when stopping is right."),
+  ],
+  "body": '''<p>Almost every organisation now has at least one AI pilot that impressed everyone in a demo and then quietly stalled. The instinct is to blame the model or wait for the next one. Usually that is the wrong diagnosis. The model is rarely the problem — the gap is everything around it.</p>
+
+<h2>Why pilots stall</h2>
+<p>A demo runs in a controlled setting: clean inputs, a forgiving audience, no real consequences. Production is the opposite. When you point the same pilot at real data, real users and real risk, the cracks appear in predictable places:</p>
+<ul>
+  <li><b>Data.</b> Real inputs are messy, inconsistent and incomplete in ways the demo never showed.</li>
+  <li><b>Integration.</b> The pilot needs least-privilege access to live systems — CRM, email, document stores, finance — with identity and permissions that were never wired up.</li>
+  <li><b>Oversight.</b> No one designed where a human must approve, so the pilot is either unsafe to trust or too manual to be worth it.</li>
+  <li><b>Business case.</b> The value was assumed, not measured, so it cannot survive a budget conversation.</li>
+</ul>
+<p>Industry research is consistent on this: most AI and agentic projects are abandoned because of unclear value, cost or inadequate controls — not model quality. That is good news, because those are fixable, or at least knowable early.</p>
+
+<h2>What "production-ready" actually means</h2>
+<p>Moving to production is not about a bigger model. It is about wrapping the agent in the operational layer that makes it safe to run:</p>
+<ul>
+  <li><b>Bounded access</b> — least-privilege tools and data, scoped to the workflow and nothing more.</li>
+  <li><b>Human approval</b> — high-risk actions pass a person; the agent drafts, routes and classifies.</li>
+  <li><b>Action logs &amp; audit trail</b> — every tool call, decision, escalation and approval recorded.</li>
+  <li><b>Evaluation suites</b> — known cases tested before and after every prompt or model change.</li>
+  <li><b>Monitoring &amp; rollback</b> — visibility into quality and cost, and the ability to pause or restrict the agent instantly.</li>
+</ul>
+<p>This is the difference between a clever demo and a <a href="/services/agentic-operations/">governed agentic workflow</a> you can defend to an auditor.</p>
+
+<h2>A six-step path from demo to operated workflow</h2>
+<p>The route is deliberately incremental — one workflow at a time, hardened and governed before it scales:</p>
+<ul>
+  <li><b>1 · Audit the pilot.</b> Separate model issues from workflow, data and integration issues, and clarify the goal.</li>
+  <li><b>2 · Decide: kill, fix or scale.</b> An honest recommendation, including the pilots you should stop.</li>
+  <li><b>3 · Fix data and integrations.</b> Clean the inputs and build the least-privilege connectors the agent needs.</li>
+  <li><b>4 · Add the controls.</b> Permissions, approval gates, logging, evaluation and an incident/rollback path.</li>
+  <li><b>5 · Prove ROI on real inputs.</b> Measure quality and cost against realistic data before scaling.</li>
+  <li><b>6 · Operate and expand.</b> Monitor in production, tune as the process changes, then move to the next workflow.</li>
+</ul>
+
+<h2>When to kill a pilot</h2>
+<p>Not every pilot deserves production, and pretending otherwise is expensive. If the value is thin, the data is not there, or the risk cannot be controlled proportionately, the right answer is to stop — clearly and early. A clean kill decision is a result, because it returns budget and attention to the workflows that will pay off.</p>
+<p>If you have a stalled pilot and want an honest first view, that is exactly what our <a href="/services/ai-pilot-rescue/">AI pilot rescue</a> engagement is for — and most production journeys begin with a focused <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>.</p>''',
+},
+
+"governed-ai-agents": {
+  "title": "Governed AI Agents: Oversight, Audit Trails & Bounds | Mach Lilies",
+  "short": "Governed AI agents",
+  "desc": "What it means to run governed AI agents: bounded least-privilege access, human oversight, audit trails, evaluation and incident response. Why governance belongs in delivery, not as an afterthought.",
+  "keywords": "governed AI agents, AI governance consulting, AgentOps, human oversight, AI audit trail, bounded agents, AI evaluation, agentic operations",
+  "category": "Guide",
+  "date": "2026-06-19",
+  "read": "7 min read",
+  "author": ("Zach Kosi", "Chief Technology Officer", "zach-kosi"),
+  "headline": "Governed AI agents: human oversight, audit trails and bounded autonomy",
+  "h1": ("Governed", "AI agents."),
+  "lead": "When an AI agent can use tools, update records and trigger actions, governance stops being optional. This guide covers what \"governed\" really means, the controls that make an agent safe, and why oversight belongs in delivery — not in a policy PDF.",
+  "takeaways": [
+    "A governed agent is <b>bounded</b>: least-privilege access, human approval and a full audit trail.",
+    "Governance is most effective when it is <b>built into delivery</b>, not added after an incident.",
+    "Human oversight is a feature, not a limitation — it is what makes value <b>safe to scale</b>.",
+    "Audit-ready evidence — who approved what, why, and at what cost — is what makes agents defensible.",
+  ],
+  "related": ["agentops-ai-governance", "ai-assurance-evaluation", "agentic-operations"],
+  "faqs": [
+    ("What makes an AI agent \"governed\"?",
+     "A governed agent operates inside explicit limits: least-privilege access to only the tools and data its workflow needs, human approval gates for high-risk actions, a complete and queryable audit trail, evaluation suites that test behaviour against known cases, monitoring of quality and cost, and an incident process to pause or roll it back. Governance is the set of controls that let you account for everything the agent does."),
+    ("Aren't fully autonomous agents more valuable?",
+     "Not in production. The strongest production systems are bounded, not maximally autonomous. Uncontrolled autonomy inside real business systems multiplies risk faster than value. Bounding an agent and keeping a human in the loop for high-risk actions is what makes its value durable and safe to scale."),
+    ("How is AI governance different from AgentOps?",
+     "AgentOps is the technical control layer for agents — permissions, logs, evaluations, monitoring and incident response. AI governance and assurance sit above it at the organisational level — inventory, risk classification, policy, oversight design and audit evidence. They reinforce each other; we deliver both, through our AgentOps and AI Assurance services."),
+    ("Do governed agents slow the business down?",
+     "Well-designed governance is proportionate: low-stakes actions run automatically, and only high-risk ones require approval. The result is faster throughput on the routine work and tighter control on the exceptions — not blanket friction."),
+  ],
+  "body": '''<p>The moment an AI system stops answering questions and starts <em>taking actions</em> — sending an email, updating a record, moving a case forward — the conversation has to change. An agent that can act inside your business is an operational asset, and operational assets need governance. The good news is that governance, done well, is what unlocks scale rather than blocking it.</p>
+
+<h2>What "governed" means</h2>
+<p>A governed AI agent is a <strong>bounded</strong> one. It is not trusted with open-ended autonomy inside your systems; it is given exactly the access its workflow requires, asked to escalate anything risky to a person, and watched while it works. Three principles sit at the core:</p>
+<ul>
+  <li><b>Least privilege.</b> The agent can only ever act inside its specific workflow — scoped tools, scoped data, nothing more.</li>
+  <li><b>Human approval where it matters.</b> The agent drafts, classifies, routes and updates; people sign off on high-risk actions.</li>
+  <li><b>Full audit trail.</b> Every tool call, decision, escalation and approval is logged, so any action can be explained after the fact.</li>
+</ul>
+
+<h2>Six controls that make an agent safe</h2>
+<p>In practice, governing an agent means implementing a small number of concrete controls — the substance of our <a href="/services/agentops-ai-governance/">AgentOps &amp; AI governance</a> work:</p>
+<ul>
+  <li><b>Least-privilege access</b> — scoped, bounded permissions for each agent.</li>
+  <li><b>Approval gates</b> — review queues and escalation paths for high-risk actions.</li>
+  <li><b>Action logs &amp; audit</b> — a complete, queryable record built for audit from day one.</li>
+  <li><b>Evaluation suites</b> — regression tests for prompts, models and workflows.</li>
+  <li><b>Monitoring &amp; cost control</b> — dashboards for quality, throughput and spend.</li>
+  <li><b>Incident response</b> — the ability to pause, roll back or restrict an agent the moment behaviour changes.</li>
+</ul>
+
+<h2>Human oversight vs full autonomy</h2>
+<p>There is a persistent myth that the goal of agentic AI is to remove humans entirely. In production, the opposite is true. The most valuable systems keep a person in the loop precisely where judgement and risk concentrate, and automate confidently everywhere else. Oversight is not a tax on the agent's value — it is the mechanism that lets you extend that value into higher-stakes work without losing control.</p>
+
+<h2>Audit trails and evidence</h2>
+<p>For any action an agent takes, you should be able to answer four questions: what happened, why, who approved it, and what it cost. That record is what makes an agent defensible to leadership, auditors and regulators. It is also what turns a one-off success into something you can repeat and scale with confidence. Where governance needs to extend to the organisational level — inventories, risk classification and audit-ready evidence packs — that is the role of <a href="/services/ai-assurance-evaluation/">AI assurance and evaluation</a>.</p>
+
+<h2>Governance as part of delivery</h2>
+<p>The most important principle is the simplest: <strong>build governance in from the start</strong>. Controls bolted on after an incident are slower, weaker and more expensive than controls designed into the workflow from day one. At Mach Lilies, permissions, approvals, logging and evaluation are part of how we build an <a href="/services/agentic-operations/">agentic operations</a> workflow — not a separate phase, and never an afterthought. That is what lets a governed agent move from one safe workflow to the next.</p>''',
+},
+}
+
+def article_jsonld(slug, a):
+    url = "%s/resources/%s/" % (BASE, slug)
+    author = {"@type": "Person", "@id": BASE + "/#" + a["author"][2],
+              "name": a["author"][0], "jobTitle": a["author"][1],
+              "worksFor": {"@id": BASE + "/#org"}}
+    graph = [
+        ORG_NODE,
+        {"@type": a.get("article_type", "Article"), "@id": url + "#article",
+         "headline": a["headline"], "description": a["desc"], "url": url,
+         "datePublished": a["date"], "dateModified": a.get("modified", a["date"]),
+         "author": author, "publisher": {"@id": BASE + "/#org"},
+         "image": BASE + "/assets/og-image.png", "inLanguage": "en",
+         "isPartOf": {"@id": BASE + "/#website"}, "mainEntityOfPage": url,
+         "keywords": a["keywords"]},
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides & resources", "item": BASE + "/resources/"},
+            {"@type": "ListItem", "position": 3, "name": a["short"], "item": url}]},
+        {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": ans}}
+            for q, ans in a["faqs"]]},
+    ]
+    if a.get("howto"):
+        graph.append({"@type": "HowTo", "@id": url + "#howto", "name": a["howto"]["name"],
+                      "description": a["howto"]["desc"],
+                      "step": [{"@type": "HowToStep", "position": i + 1, "name": n, "text": t}
+                               for i, (n, t) in enumerate(a["howto"]["steps"])]})
+    return json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False)
+
+def build_article(slug, a):
+    url = "%s/resources/%s/" % (BASE, slug)
+    takeaways = "\n".join("                    <li>%s</li>" % t for t in a["takeaways"])
+    art_meta = (
+        '    <meta property="article:published_time" content="%s" />\n'
+        '    <meta property="article:modified_time" content="%s" />\n'
+        '    <meta property="article:author" content="%s" />\n'
+        '    <meta property="article:section" content="%s" />'
+        % (a["date"], a.get("modified", a["date"]), esc(a["author"][0]), esc(a["category"]))
+    )
+    return '''{head}
+<body>
+{chrome}
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <a href="/resources/">Guides</a> <span>/</span> <b>{short}</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">{category}</span>
+            <h1 class="display reveal" data-d="1">{h1a}<br/><span class="it accent-text">{h1b}</span></h1>
+            <div class="post-meta reveal" data-d="2">
+                <span class="pm-author">By <b>{author}</b>, {role}</span>
+                <span>{date_h}</span>
+                <span>{read}</span>
+            </div>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:1.6rem">{lead}</p>
+        </div>
+    </header>
+
+    <section class="block" style="padding-top:0">
+        <div class="wrap">
+            <div class="takeaway reveal">
+                <span class="tk-label">Key takeaways</span>
+                <ul>
+{takeaways}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" style="padding-top:clamp(2.5rem,6vh,4rem)">
+        <div class="wrap">
+            <div class="article-body reveal">
+{body}
+            </div>
+        </div>
+    </section>
+
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Frequently <span class="it accent-text">asked.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+{faqs}
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Where this leads</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Related <span class="it accent-text">services.</span></h2>
+                </div>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+{related}
+            </div>
+        </div>
+    </section>
+
+{contact}
+
+{footer}
+{scripts}'''.format(
+        head=head(a["title"], a["desc"], url, article_jsonld(slug, a),
+                  keywords=a["keywords"], og_type="article", extra_meta=art_meta),
+        chrome=CHROME,
+        short=esc(a["short"]), category=esc(a["category"]),
+        h1a=esc(a["h1"][0]), h1b=esc(a["h1"][1]),
+        author=esc(a["author"][0]), role=esc(a["author"][1]),
+        date_h=esc("Published 19 June 2026"), read=esc(a["read"]),
+        lead=a["lead"], takeaways=takeaways, body=a["body"],
+        faqs=render_faqs({"faqs": a["faqs"]}),
+        related=rel_cards(a["related"]),
+        contact=contact_cta("Put one workflow", "to work.",
+                            "Tell us the workflow you want to automate, the systems involved and any risk or compliance concerns. We reply to every serious enquiry within one business day."),
+        footer=footer(), scripts=SCRIPTS_FOOT,
+    )
+
+def resources_hub_jsonld():
+    url = BASE + "/resources/"
+    title = "Guides & Resources on Agentic AI | Mach Lilies"
+    items = [{"@type": "ListItem", "position": i + 1, "name": RESOURCES[s]["short"],
+              "url": "%s/resources/%s/" % (BASE, s)} for i, s in enumerate(RES_ORDER)]
+    graph = [
+        ORG_NODE,
+        {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": title,
+         "description": "Practical guides on agentic AI consulting, governed AI agents and moving AI pilots into production.",
+         "isPartOf": {"@id": BASE + "/#website"}, "inLanguage": "en"},
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides & resources", "item": url}]},
+        {"@type": "ItemList", "@id": url + "#list", "name": "Mach Lilies guides", "itemListElement": items},
+    ]
+    return json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False)
+
+def build_resources_hub():
+    url = BASE + "/resources/"
+    title = "Guides & Resources on Agentic AI | Mach Lilies"
+    desc = ("Practical guides from the senior team at Mach Lilies — agentic AI consulting, governed AI agents, "
+            "moving AI pilots into production, AgentOps and AI governance.")
+    keywords = ("agentic AI guides, governed AI agents, AI pilot to production, AgentOps, AI governance, "
+                "agentic operations resources, AI consulting guides")
+    cards = []
+    for s in RES_ORDER:
+        a = RESOURCES[s]
+        cards.append('''                <a class="rel-card magnetic" href="/resources/%s/" data-cursor>
+                    <span class="rel-n">%s · %s</span>
+                    <h3>%s</h3>
+                    <p>%s</p>
+                </a>''' % (s, esc(a["category"]), esc(a["read"]), esc(a["short"]), esc(a["desc"])))
+    return '''{head}
+<body>
+{chrome}
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <b>Guides &amp; resources</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Guides &amp; resources</span>
+            <h1 class="display reveal" data-d="1">Guides for<br/><span class="it accent-text">agentic operations.</span></h1>
+            <p class="svc-lead reveal" data-d="2">Practical, opinionated writing from the senior team at Mach Lilies on agentic AI consulting, governed AI agents, and moving AI from experiments into production. No fluff, no hype. <strong>Mach speed. Lily craft.</strong></p>
+        </div>
+    </header>
+
+    <section class="block" style="padding-top:0">
+        <div class="wrap">
+            <div class="rel-grid reveal" data-d="1">
+{cards}
+            </div>
+        </div>
+    </section>
+
+{contact}
+
+{footer}
+{scripts}'''.format(
+        head=head(title, desc, url, resources_hub_jsonld(), keywords=keywords),
+        chrome=CHROME, cards="\n".join(cards),
+        contact=contact_cta("From reading", "to running.",
+                            "When you're ready to move from theory to a working, governed agent, tell us the workflow you want to automate. We reply to every serious enquiry within one business day."),
+        footer=footer(), scripts=SCRIPTS_FOOT,
+    )
 
 if __name__ == "__main__":
     print("== service pages ==")
@@ -1440,4 +2138,18 @@ if __name__ == "__main__":
     os.makedirs(os.path.dirname(cpath), exist_ok=True)
     open(cpath, "w").write(build_contact())
     print("  wrote contact/index.html")
+    print("== services hub ==")
+    spath = os.path.join(ROOT, "services", "index.html")
+    open(spath, "w").write(build_services_hub())
+    print("  wrote services/index.html")
+    print("== resources hub + articles ==")
+    rpath = os.path.join(ROOT, "resources", "index.html")
+    os.makedirs(os.path.dirname(rpath), exist_ok=True)
+    open(rpath, "w").write(build_resources_hub())
+    print("  wrote resources/index.html")
+    for slug in RES_ORDER:
+        apath = os.path.join(ROOT, "resources", slug, "index.html")
+        os.makedirs(os.path.dirname(apath), exist_ok=True)
+        open(apath, "w").write(build_article(slug, RESOURCES[slug]))
+        print("  wrote resources/%s/index.html" % slug)
     print("done.")

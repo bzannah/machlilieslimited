@@ -771,6 +771,20 @@
 .form-status.err { color: #ff9b78; }
 @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
 
+/* contact path chooser — message (default, emphasised) vs book-a-call */
+.contact-choice { display: grid; grid-template-columns: 1.4fr 0.85fr; gap: clamp(1rem, 2.5vw, 1.5rem); max-width: 920px; margin: 0 auto clamp(2.4rem, 6vh, 4rem); text-align: left; align-items: stretch; }
+.choice { position: relative; border: 1px solid var(--line); border-radius: 12px; background: var(--ink-2); padding: clamp(1.5rem, 3vw, 2.2rem); display: flex; flex-direction: column; gap: 0.55rem; transition: border-color .4s, transform .5s var(--ease); }
+.choice:hover { border-color: rgba(201,242,76,0.35); transform: translateY(-4px); }
+.choice .ch-tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.choice h2 { font-family: var(--display); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.05; }
+.choice p { color: var(--bone-2); font-weight: 300; font-size: 0.95rem; flex-grow: 1; }
+.choice .btn { align-self: flex-start; margin-top: 0.9rem; }
+/* the default (message) option is bigger and highlighted */
+.choice.is-default { border-color: var(--accent); padding: clamp(1.9rem, 3.6vw, 2.8rem); background: radial-gradient(130% 150% at 0% 0%, rgba(201,242,76,0.12), transparent 58%), var(--ink-2); box-shadow: 0 24px 60px rgba(0,0,0,0.28); }
+.choice.is-default h2 { font-size: clamp(2rem, 4.2vw, 2.9rem); }
+.choice.is-default p { color: var(--bone); font-size: 1rem; }
+@media (max-width: 700px) { .contact-choice { grid-template-columns: 1fr; } }
+
 /* team grid (photo auto-swaps in over the initials monogram when present) */
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 3vw, 2.2rem); }
 .team-card { background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; transition: border-color .4s, transform .5s var(--ease); }
@@ -785,3 +799,32 @@
 .team-body p { color: var(--muted); font-weight: 300; font-size: 0.92rem; margin-top: 0.85rem; }
 @media (max-width: 760px) { .team-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; } }
 @media (max-width: 900px) { .offer-panel { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   RESOURCES / GUIDES + LONG-FORM ARTICLES
+   Additive only — these selectors are used exclusively by the new
+   /resources/ hub and /resources/<slug>/ article pages. No existing
+   element uses them, so this block cannot alter any current page.
+   ============================================================ */
+.post-meta { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; margin-top: 1.6rem; }
+.post-meta .pm-author { color: var(--bone-2); }
+.post-meta .pm-author b { color: var(--accent); font-weight: 400; }
+
+.article-body { max-width: 74ch; }
+.article-body > * + * { margin-top: 1.45rem; }
+.article-body p { color: var(--bone-2); font-weight: 300; font-size: clamp(1rem, 1.25vw, 1.12rem); line-height: 1.78; }
+.article-body h2 { font-family: var(--display); font-weight: 400; font-size: clamp(1.7rem, 3.4vw, 2.7rem); line-height: 1.04; letter-spacing: -0.02em; margin-top: 3.2rem; }
+.article-body h3 { font-family: var(--display); font-weight: 500; font-size: clamp(1.25rem, 2.2vw, 1.65rem); line-height: 1.12; margin-top: 2.2rem; }
+.article-body ul, .article-body ol { padding-left: 1.35rem; display: grid; gap: 0.6rem; }
+.article-body li { color: var(--bone-2); font-weight: 300; font-size: clamp(0.98rem, 1.2vw, 1.08rem); line-height: 1.65; }
+.article-body li::marker { color: var(--accent); }
+.article-body li b, .article-body p b, .article-body strong { color: var(--bone); font-weight: 500; }
+.article-body a { color: var(--accent); border-bottom: 1px solid rgba(201,242,76,0.4); transition: border-color .3s; }
+.article-body a:hover { border-color: var(--accent); }
+
+/* key-takeaways / callout box — reuses the palette and card surface */
+.takeaway { border: 1px solid var(--line); background: var(--ink-2); border-left: 2px solid var(--accent); padding: clamp(1.4rem, 3vw, 2.1rem); border-radius: 4px; max-width: 74ch; }
+.takeaway .tk-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 1rem; }
+.takeaway ul { padding-left: 1.2rem; display: grid; gap: 0.55rem; margin: 0; }
+.takeaway li { color: var(--bone-2); font-weight: 300; font-size: 0.98rem; line-height: 1.55; }
+.takeaway li::marker { color: var(--accent); }

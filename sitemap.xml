@@ -12,6 +12,14 @@
     </image:image>
   </url>
 
+  <!-- Services pillar hub -->
+  <url>
+    <loc>https://machlilies.com/services/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Agentic offers -->
   <url>
     <loc>https://machlilies.com/services/agentic-operations/</loc>
@@ -62,6 +70,32 @@
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Guides & resources hub + articles -->
+  <url>
+    <loc>https://machlilies.com/resources/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://machlilies.com/resources/what-is-agentic-ai-consulting/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://machlilies.com/resources/move-ai-pilots-to-production/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://machlilies.com/resources/governed-ai-agents/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Contact -->

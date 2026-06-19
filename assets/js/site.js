@@ -293,14 +293,14 @@
                         ef.reset();
                         setStatus("Thank you — your enquiry is on its way. We reply within one business day.", true);
                     }).catch(function () {
-                        setStatus("Something went wrong. Please email machlilieslimited@gmail.com directly.", false);
+                        setStatus("Something went wrong. Please email hey@machlilies.com directly.", false);
                     });
                 } else {
                     var subject = "Agentic Operations enquiry — " + (data["Company"] || data["Name"] || "");
                     var body = Object.keys(data).filter(function (k) { return k.charAt(0) !== "_"; })
                         .map(function (k) { return k + ": " + data[k]; }).join("\n\n");
-                    window.location.href = "mailto:machlilieslimited@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-                    setStatus("Opening your email client… if nothing happens, email machlilieslimited@gmail.com directly.", true);
+                    window.location.href = "mailto:hey@machlilies.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                    setStatus("Opening your email client… if nothing happens, email hey@machlilies.com directly.", true);
                 }
             });
         }
