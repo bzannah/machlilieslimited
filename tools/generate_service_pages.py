@@ -1478,7 +1478,7 @@ SCRIPTS_FOOT = '''
 </html>
 '''
 
-def head(title, desc, url, ld, keywords=None, og_type="website"):
+def head(title, desc, url, ld, keywords=None, og_type="website", extra_meta=""):
     """Full <!DOCTYPE> … </head> — mirrors the service-page head exactly,
     with og:image:alt / twitter:image:alt added. ld and ga are injected as
     values so the template literal contains no braces to escape."""
@@ -1512,7 +1512,7 @@ def head(title, desc, url, ld, keywords=None, og_type="website"):
     <meta name="twitter:description" content="{desc}" />
     <meta name="twitter:image" content="{base}/assets/og-image.png" />
     <meta name="twitter:image:alt" content="Mach Lilies — safe, governed AI agents for real operations." />
-
+{extra_meta}
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
@@ -1525,6 +1525,8 @@ def head(title, desc, url, ld, keywords=None, og_type="website"):
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/site.css" />
+    <!-- no-JS fallback: never trap content behind scroll-reveal -->
+    <noscript><style>.fade-up,.reveal{{ opacity:1 !important; transform:none !important; }} body{{ cursor:auto !important; }} .cursor-dot,.cursor-ring{{ display:none !important; }}</style></noscript>
 
     <script type="application/ld+json">
 {ld}
@@ -1532,7 +1534,7 @@ def head(title, desc, url, ld, keywords=None, og_type="website"):
 
 {ga}
 </head>'''.format(title=esc(title), desc=esc(desc), url=url, base=BASE, kw=kw,
-                  og_type=og_type, ld=ld, ga=ga_snippet())
+                  og_type=og_type, ld=ld, ga=ga_snippet(), extra_meta=extra_meta)
 
 def rel_cards(slugs):
     return "\n".join(
@@ -1956,6 +1958,13 @@ def article_jsonld(slug, a):
 def build_article(slug, a):
     url = "%s/resources/%s/" % (BASE, slug)
     takeaways = "\n".join("                    <li>%s</li>" % t for t in a["takeaways"])
+    art_meta = (
+        '    <meta property="article:published_time" content="%s" />\n'
+        '    <meta property="article:modified_time" content="%s" />\n'
+        '    <meta property="article:author" content="%s" />\n'
+        '    <meta property="article:section" content="%s" />'
+        % (a["date"], a.get("modified", a["date"]), esc(a["author"][0]), esc(a["category"]))
+    )
     return '''{head}
 <body>
 {chrome}
@@ -2029,7 +2038,7 @@ def build_article(slug, a):
 {footer}
 {scripts}'''.format(
         head=head(a["title"], a["desc"], url, article_jsonld(slug, a),
-                  keywords=a["keywords"], og_type="article"),
+                  keywords=a["keywords"], og_type="article", extra_meta=art_meta),
         chrome=CHROME,
         short=esc(a["short"]), category=esc(a["category"]),
         h1a=esc(a["h1"][0]), h1b=esc(a["h1"][1]),
