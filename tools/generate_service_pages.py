@@ -175,7 +175,7 @@ SERVICES = {
   ],
   "contact_h2": ("Govern your", "first agent."),
   "contact_sub": "Tell us which agents or AI workflows are live or planned, the systems they touch, and your risk and compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Govern your first agent workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Govern%20our%20AI%20agents%20%E2%80%94%20AgentOps",
+  "cta": "Govern your first agent workflow", "cta_href": "mailto:hey@machlilies.com?subject=Govern%20our%20AI%20agents%20%E2%80%94%20AgentOps",
   "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
@@ -229,7 +229,7 @@ SERVICES = {
   ],
   "contact_h2": ("Send us the pilot", "that stalled."),
   "contact_sub": "Tell us what you built, why it stalled, and what it was meant to achieve. We reply to every serious enquiry within one business day with an honest first view.",
-  "cta": "Send us the pilot that stalled", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20pilot%20rescue%20enquiry",
+  "cta": "Send us the pilot that stalled", "cta_href": "mailto:hey@machlilies.com?subject=AI%20pilot%20rescue%20enquiry",
   "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
@@ -283,7 +283,7 @@ SERVICES = {
   ],
   "contact_h2": ("Make AI", "defensible."),
   "contact_sub": "Tell us where AI is being used or planned, and your risk and compliance concerns. We reply to every serious enquiry within one business day.",
-  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20assurance%20%26%20governance%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=AI%20assurance%20%26%20governance%20enquiry",
   "cta2": "Explore AgentOps", "cta2_href": "/services/agentops-ai-governance/",
 },
 
@@ -337,7 +337,7 @@ SERVICES = {
   ],
   "contact_h2": ("Modernize the system", "holding you back."),
   "contact_sub": "Tell us about the legacy system, what it's blocking, and where it hurts most. We reply to every serious enquiry within one business day.",
-  "cta": "Modernize the system holding you back", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI-native%20modernization%20enquiry",
+  "cta": "Modernize the system holding you back", "cta_href": "mailto:hey@machlilies.com?subject=AI-native%20modernization%20enquiry",
   "cta2": "Talk to product engineering", "cta2_href": "/services/product-engineering/",
 },
 
@@ -409,7 +409,7 @@ SERVICES = {
     ("How long does the Sprint take?", "It's deliberately focused — a short, fixed-scope engagement rather than an open-ended project. We agree the exact scope and timeline up front, so you know precisely what you'll receive and when."),
     ("What does it cost?", "Most engagements start with a fixed-scope sprint, followed by milestone-based production rollout and optional managed AgentOps support. We scope and price the sprint to your workflows and share clear, indicative figures before any commitment."),
     ("What happens after the Sprint?", "If the business case holds, we move to a milestone-based production rollout with governance built in, and optionally operate the workflow as a managed service. If it doesn't, you'll have a clear, evidence-based recommendation not to proceed — which is valuable too."),
-    ("How do we book a Sprint?", "Email machlilieslimited@gmail.com with the workflow you want to improve, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day."),
+    ("How do we book a Sprint?", "Email hey@machlilies.com with the workflow you want to improve, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day."),
   ],
   "contact_h2": ("Start a", "conversation."),
   "contact_sub": "Tell us the workflow you want to automate, the systems involved, the current manual effort, and any risk or compliance concerns. We reply to every serious enquiry within one business day.",
@@ -469,7 +469,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put AI", "to work."),
   "contact_sub": "Tell us what you're building. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20consulting%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=AI%20consulting%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -524,7 +524,7 @@ SERVICES = {
   ],
   "contact_h2": ("Build your", "product."),
   "contact_sub": "Tell us what you're building. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20engineering%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Product%20engineering%20enquiry",
   "cta2": "See AI-native modernization", "cta2_href": "/services/ai-modernisation-factory/",
 },
 
@@ -579,7 +579,7 @@ SERVICES = {
   ],
   "contact_h2": ("Engineer your", "platform."),
   "contact_sub": "Tell us about your infrastructure. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Cloud%20%26%20platform%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Cloud%20%26%20platform%20enquiry",
   "cta2": "Explore AgentOps", "cta2_href": "/services/agentops-ai-governance/",
 },
 
@@ -634,7 +634,7 @@ SERVICES = {
   ],
   "contact_h2": ("Put your data", "to work."),
   "contact_sub": "Tell us about your data. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Data%20%26%20analytics%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Data%20%26%20analytics%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -689,7 +689,7 @@ SERVICES = {
   ],
   "contact_h2": ("Design something", "rare."),
   "contact_sub": "Tell us what you're designing. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Product%20design%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Product%20design%20enquiry",
   "cta2": "Explore Agentic Operations", "cta2_href": "/services/agentic-operations/",
 },
 
@@ -744,7 +744,7 @@ SERVICES = {
   ],
   "contact_h2": ("Get the", "clarity."),
   "contact_sub": "Tell us the decision you're facing. We reply to every serious enquiry within one business day — and the first consultation is free.",
-  "cta": "Send a message", "cta_href": "mailto:machlilieslimited@gmail.com?subject=Strategy%20%26%20advisory%20enquiry",
+  "cta": "Send a message", "cta_href": "mailto:hey@machlilies.com?subject=Strategy%20%26%20advisory%20enquiry",
   "cta2": "See AI assurance", "cta2_href": "/services/ai-assurance-evaluation/",
 },
 }
@@ -806,7 +806,7 @@ INDUSTRIES = {
   ],
   "contact_h2": ("Map your first", "broker workflow."),
   "contact_sub": "Tell us which broker workflow costs your team the most time — renewals, claims, chasing or compliance evidence — and the systems involved. We reply within one business day.",
-  "cta": "Map your first broker workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20insurance%20broking",
+  "cta": "Map your first broker workflow", "cta_href": "mailto:hey@machlilies.com?subject=AI%20agents%20for%20insurance%20broking",
   "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 
@@ -859,7 +859,7 @@ INDUSTRIES = {
   ],
   "contact_h2": ("Map your first", "practice workflow."),
   "contact_sub": "Tell us which workflow limits your capacity — chasing, classification, close or VAT prep — and the systems involved. We reply within one business day.",
-  "cta": "Map your first practice workflow", "cta_href": "mailto:machlilieslimited@gmail.com?subject=AI%20agents%20for%20accountancy%20practices",
+  "cta": "Map your first practice workflow", "cta_href": "mailto:hey@machlilies.com?subject=AI%20agents%20for%20accountancy%20practices",
   "cta2": "Explore the Sprint", "cta2_href": "/services/agentic-operations-sprint/",
 },
 }
@@ -896,7 +896,7 @@ NAV = '''    <nav class="nav" id="nav">
         <a href="/services/ai-modernisation-factory/"><span class="idx">05</span>Modernization</a>
         <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>The Sprint</a>
         <a href="/contact/"><span class="idx">07</span>Contact</a>
-        <div class="mm-foot">machlilieslimited@gmail.com</div>
+        <div class="mm-foot">hey@machlilies.com</div>
     </div>'''
 
 def footer():
@@ -927,7 +927,7 @@ def footer():
                 <div class="foot-col">
                     <h5>Contact</h5>
                     <a href="/contact/">Start a conversation</a>
-                    <a href="mailto:machlilieslimited@gmail.com">machlilieslimited@gmail.com</a>
+                    <a href="mailto:hey@machlilies.com">hey@machlilies.com</a>
                     <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
                 </div>
             </div>
@@ -943,7 +943,7 @@ def jsonld(d, url, short_name, crumb_name, crumb_href):
     graph = [
         {"@type": ["Organization","ProfessionalService"], "@id": BASE+"/#org",
          "name":"Mach Lilies","legalName":"Mach Lilies Limited","url":BASE+"/",
-         "logo":BASE+"/assets/logo-mark.svg","email":"machlilieslimited@gmail.com",
+         "logo":BASE+"/assets/logo-mark.svg","email":"hey@machlilies.com",
          "slogan":"Mach speed. Lily craft.","areaServed":{"@type":"Place","name":"Worldwide"}},
         {"@type":"Service","@id":url+"#service","name":short_name,
          "serviceType":d["service_type"],"url":url,
@@ -1270,15 +1270,10 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
     )
 
 CONTACT_FIELDS = [
-    ("f-name","Name","text","",True,"name","half"),
-    ("f-company","Company","text","",True,"organization","half"),
-    ("f-role","Role","text","",False,"organization-title","half"),
+    ("f-name","Full name","text","",True,"name","half"),
     ("f-email","Email","email","",True,"email","half"),
-    ("f-workflow","Which workflow do you want to automate?","text","e.g. renewal pack preparation, invoice exceptions, inbox triage",True,"","full"),
-    ("f-systems","Which systems are involved?","text","CRM, email, documents, finance, ERP, support…",False,"","full"),
-    ("f-effort","Current manual effort","text","e.g. ~20 hrs/week across 3 people",False,"","half"),
-    ("f-risk","Risk or compliance concerns","text","e.g. client data, audit evidence, approvals",False,"","half"),
-    ("f-ai","Current AI experiments (if any)","text","",False,"","full"),
+    ("f-company","Company","text","",False,"organization","half"),
+    ("f-phone","Phone number","tel","",False,"tel","half"),
 ]
 
 def render_fields():
@@ -1302,8 +1297,8 @@ def build_contact():
     desc = "Start a conversation with Mach Lilies about an Agentic Operations Sprint. Tell us the workflow you want to automate, the systems involved and your risk concerns. We reply within one business day."
     graph = [
         {"@type":["Organization","ProfessionalService"],"@id":BASE+"/#org","name":"Mach Lilies",
-         "url":BASE+"/","email":"machlilieslimited@gmail.com","slogan":"Mach speed. Lily craft.",
-         "contactPoint":{"@type":"ContactPoint","email":"machlilieslimited@gmail.com","contactType":"sales","areaServed":"Worldwide","availableLanguage":"English"}},
+         "url":BASE+"/","email":"hey@machlilies.com","slogan":"Mach speed. Lily craft.",
+         "contactPoint":{"@type":"ContactPoint","email":"hey@machlilies.com","contactType":"sales","areaServed":"Worldwide","availableLanguage":"English"}},
         {"@type":"ContactPage","@id":url+"#webpage","url":url,"name":title,
          "isPartOf":{"@id":BASE+"/#website"},"about":{"@id":BASE+"/#org"},"inLanguage":"en"},
         {"@type":"BreadcrumbList","@id":url+"#breadcrumb","itemListElement":[
@@ -1411,28 +1406,20 @@ def build_contact():
     <section class="block" id="enquiry" style="padding-top:clamp(2.5rem,6vh,4rem)">
         <div class="wrap">
             <span class="eyebrow muted reveal" style="display:inline-flex;margin-bottom:1.6rem">Option 1 — Send a message</span>
-            <form class="form-wrap" id="enquiry-form" action="mailto:machlilieslimited@gmail.com" method="post" enctype="text/plain" data-endpoint="{endpoint}">
+            <form class="form-wrap" id="enquiry-form" action="mailto:hey@machlilies.com" method="post" enctype="text/plain" data-endpoint="{endpoint}">
                 <input type="hidden" name="_subject" value="New Agentic Operations enquiry — machlilies.com" />
                 <div class="form-grid">
 {fields}
-                    <div class="field half">
-                        <label for="f-urgency">How urgent is this?</label>
-                        <select id="f-urgency" name="Urgency">
-                            <option>This quarter</option>
-                            <option>Now</option>
-                            <option>Exploratory</option>
-                        </select>
-                    </div>
                     <div class="field full">
-                        <label for="f-outcome">Desired business outcome <span class="req">*</span></label>
-                        <textarea id="f-outcome" name="Desired outcome" required placeholder="What would a good result look like in six months?"></textarea>
+                        <label for="f-message">How can we help? <span class="req">*</span></label>
+                        <textarea id="f-message" name="Message" required placeholder="Tell us what you're working on — the workflow you'd like to automate, the systems involved, and what a good outcome looks like."></textarea>
                     </div>
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn btn-solid magnetic" data-cursor>Send message <span class="arrow">→</span></button>
                     <span class="form-note">We reply within one business day — no call required.</span>
                 </div>
-                <p class="form-note" style="margin-top:1rem">Prefer to talk? <a href="{booking}" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_book">Book a 30-min call</a>. Or email <a href="mailto:machlilieslimited@gmail.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">machlilieslimited@gmail.com</a>.</p>
+                <p class="form-note" style="margin-top:1rem">Prefer to talk? <a href="{booking}" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_book">Book a 30-min call</a>. Or email <a href="mailto:hey@machlilies.com" style="color:var(--accent);border-bottom:1px solid rgba(201,242,76,0.4)" data-event="cta_email">hey@machlilies.com</a>.</p>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>

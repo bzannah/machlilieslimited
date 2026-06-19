@@ -6,7 +6,7 @@ Mach Lilies Limited is a senior, founder-led practice serving founders, operatio
 
 Core principle: bounded agents, clear permissions, human approval, full audit trail. We design for human oversight and control, not uncontrolled autonomy.
 
-- Contact: machlilieslimited@gmail.com
+- Contact: hey@machlilies.com
 - Website: https://machlilies.com
 - Model: global, remote-first studio; most engagements begin with a fixed-scope Agentic Operations Sprint, followed by milestone-based production rollout and optional managed AgentOps support.
 
@@ -53,5 +53,5 @@ Founders, CEOs, COOs, CTOs, operations directors, managing partners, transformat
 ## Contact
 
 - Contact / enquiry form: https://machlilies.com/contact/
-- Email: machlilieslimited@gmail.com
+- Email: hey@machlilies.com
 - Book an Agentic Operations Sprint: https://machlilies.com/services/agentic-operations-sprint/
