@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>RAG vs Fine-Tuning: Which Do You Need? | Mach Lilies</title>
+    <meta name="description" content="RAG vs fine-tuning explained — when to ground a model in your data with retrieval, when to fine-tune for style or format, and why most production systems combine both." />
+    <link rel="canonical" href="https://machlilies.com/resources/rag-vs-fine-tuning/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+    <meta name="keywords" content="RAG vs fine-tuning, retrieval augmented generation, fine-tuning, RAG, LLM customization, grounding LLMs" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://machlilies.com/resources/rag-vs-fine-tuning/" />
+    <meta property="og:title" content="RAG vs Fine-Tuning: Which Do You Need? | Mach Lilies" />
+    <meta property="og:description" content="RAG vs fine-tuning explained — when to ground a model in your data with retrieval, when to fine-tune for style or format, and why most production systems combine both." />
+    <meta property="og:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mach Lilies — agentic operations &amp; AI engineering consultancy." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RAG vs Fine-Tuning: Which Do You Need? | Mach Lilies" />
+    <meta name="twitter:description" content="RAG vs fine-tuning explained — when to ground a model in your data with retrieval, when to fine-tune for style or format, and why most production systems combine both." />
+    <meta name="twitter:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Mach Lilies — safe, governed AI agents for real operations." />
+    <meta property="article:published_time" content="2026-06-19" />
+    <meta property="article:modified_time" content="2026-06-19" />
+    <meta property="article:author" content="Zach Kosi" />
+    <meta property="article:section" content="Comparison" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#c9f24c" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <!-- no-JS fallback: never trap content behind scroll-reveal -->
+    <noscript><style>.fade-up,.reveal{ opacity:1 !important; transform:none !important; } body{ cursor:auto !important; } .cursor-dot,.cursor-ring{ display:none !important; }</style></noscript>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://machlilies.com/#org",
+      "name": "Mach Lilies",
+      "legalName": "Mach Lilies Limited",
+      "url": "https://machlilies.com/",
+      "logo": "https://machlilies.com/assets/logo-mark.svg",
+      "email": "hey@machlilies.com",
+      "slogan": "Mach speed. Lily craft.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://machlilies.com/resources/rag-vs-fine-tuning/#article",
+      "headline": "RAG vs fine-tuning: which do you need?",
+      "description": "RAG vs fine-tuning explained — when to ground a model in your data with retrieval, when to fine-tune for style or format, and why most production systems combine both.",
+      "url": "https://machlilies.com/resources/rag-vs-fine-tuning/",
+      "datePublished": "2026-06-19",
+      "dateModified": "2026-06-19",
+      "author": {
+        "@type": "Person",
+        "@id": "https://machlilies.com/#zach-kosi",
+        "name": "Zach Kosi",
+        "jobTitle": "Chief Technology Officer",
+        "worksFor": {
+          "@id": "https://machlilies.com/#org"
+        }
+      },
+      "publisher": {
+        "@id": "https://machlilies.com/#org"
+      },
+      "image": "https://machlilies.com/assets/og-image.png",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://machlilies.com/#website"
+      },
+      "mainEntityOfPage": "https://machlilies.com/resources/rag-vs-fine-tuning/",
+      "keywords": "RAG vs fine-tuning, retrieval augmented generation, fine-tuning, RAG, LLM customization, grounding LLMs"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://machlilies.com/resources/rag-vs-fine-tuning/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://machlilies.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides & resources",
+          "item": "https://machlilies.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "RAG vs fine-tuning",
+          "item": "https://machlilies.com/resources/rag-vs-fine-tuning/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://machlilies.com/resources/rag-vs-fine-tuning/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between RAG and fine-tuning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RAG (retrieval-augmented generation) gives a model access to external knowledge at query time by retrieving relevant data and grounding the answer in it. Fine-tuning adjusts the model's weights on examples so it adopts a particular style, format or behaviour. In short: RAG changes what the model knows; fine-tuning changes how it behaves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use RAG or fine-tuning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most use cases that need current, proprietary or factual knowledge, start with RAG — it keeps answers grounded in your data and is easy to update. Fine-tune when you need a fixed style, a strict output format, or strong performance on a narrow, repetitive task. Many production systems use both."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is fine-tuning a way to teach a model my company's facts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is usually the wrong tool for that. Fine-tuning bakes patterns into the model but is poor at reliably storing and updating facts, and it goes stale as your data changes. To give a model your knowledge accurately and keep it current, retrieval (RAG) is the better approach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What matters more than choosing RAG or fine-tuning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your data. A clean, well-structured, well-grounded knowledge base does more for answer quality than the choice between RAG and fine-tuning. Retrieval is only as good as what it retrieves, which is why an AI-ready data foundation is the real lever."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <script>
+      window.GA_MEASUREMENT_ID = "G-PSM4267LV3";
+      (function () {
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return;
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, { anonymize_ip: true });
+      })();
+    </script>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="c-label">View</span></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="brand" data-cursor>
+            <img class="brand-mark" src="/assets/logo-mark.svg" alt="Mach Lilies" width="38" height="38" />
+            <span>
+                <span class="b-name">Mach Lilies</span>
+                <span class="b-sub">Agentic Operations</span>
+            </span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+            <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+            <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+            <a href="/services/ai-modernisation-factory/"><span class="idx">04</span>Modernization</a>
+        </div>
+        <a href="/contact/" class="nav-cta magnetic" data-cursor data-event="cta_contact">Send a message</a>
+        <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+        <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+        <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+        <a href="/services/ai-assurance-evaluation/"><span class="idx">04</span>AI Assurance</a>
+        <a href="/services/ai-modernisation-factory/"><span class="idx">05</span>Modernization</a>
+        <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>The Sprint</a>
+        <a href="/contact/"><span class="idx">07</span>Contact</a>
+        <div class="mm-foot">hey@machlilies.com</div>
+    </div>
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <a href="/resources/">Guides</a> <span>/</span> <b>RAG vs fine-tuning</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Comparison</span>
+            <h1 class="display reveal" data-d="1">RAG vs<br/><span class="it accent-text">fine-tuning.</span></h1>
+            <div class="post-meta reveal" data-d="2">
+                <span class="pm-author">By <b>Zach Kosi</b>, Chief Technology Officer</span>
+                <span>Published 19 June 2026</span>
+                <span>7 min read</span>
+            </div>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:1.6rem">When teams want an AI system to know their data, the question is usually framed as RAG or fine-tuning. They solve different problems — one gives a model knowledge, the other gives it behaviour — and the right answer is often both. Here is how to choose.</p>
+        </div>
+    </header>
+
+    <section class="block" style="padding-top:0">
+        <div class="wrap">
+            <div class="takeaway reveal">
+                <span class="tk-label">Key takeaways</span>
+                <ul>
+                    <li><b>RAG</b> gives a model access to current, proprietary <b>knowledge</b>; <b>fine-tuning</b> shapes its <b>behaviour</b>.</li>
+                    <li>For factual, changing or private information, <b>start with RAG</b> — it grounds answers in your data.</li>
+                    <li>Fine-tune for <b>fixed style, format or narrow tasks</b>, not to teach facts.</li>
+                    <li>Most production systems <b>combine both</b> — and good data matters more than the choice.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" style="padding-top:clamp(2.5rem,6vh,4rem)">
+        <div class="wrap">
+            <div class="article-body reveal">
+<p>It is one of the most common questions in applied AI: should we use RAG or fine-tune the model? The framing is a little misleading, because the two techniques solve different problems. Once you see what each is actually for, the choice — and the frequent answer of "both" — becomes clear.</p>
+
+<h2>The short answer</h2>
+<p>RAG changes what a model <em>knows</em>; fine-tuning changes how it <em>behaves</em>. If your problem is "the model does not have access to our information," that is a knowledge problem, and RAG is the tool. If your problem is "the model does not respond in the right style or format," that is a behaviour problem, and fine-tuning helps.</p>
+
+<h2>What RAG is good for</h2>
+<p>Retrieval-augmented generation fetches relevant information from your data at query time and grounds the model's answer in it. It is the right choice when knowledge is factual, proprietary, large or changing — because you can update the underlying data without retraining anything, and you can cite sources. Most enterprise question-answering, document and knowledge workflows are RAG problems first.</p>
+
+<h2>What fine-tuning is good for</h2>
+<p>Fine-tuning adjusts the model on examples so it reliably adopts a particular style, tone, structure or narrow skill. It shines for fixed output formats, domain-specific phrasing, or high-volume, repetitive tasks where you want consistent behaviour. It is poor at storing facts reliably and goes stale as your information changes — so it is the wrong tool for teaching a model your company's knowledge.</p>
+
+<h2>A side-by-side view</h2>
+<ul>
+  <li><b>Changes:</b> RAG → knowledge available at query time; fine-tuning → model behaviour.</li>
+  <li><b>Best for:</b> RAG → current, factual, proprietary data; fine-tuning → style, format, narrow tasks.</li>
+  <li><b>Updating:</b> RAG → change the data, instantly; fine-tuning → retrain.</li>
+  <li><b>Citations:</b> RAG → can ground and cite sources; fine-tuning → cannot.</li>
+</ul>
+
+<h2>Most systems use both — and data wins</h2>
+<p>In practice, strong production systems often combine them: RAG for grounded knowledge, light fine-tuning for consistent behaviour. But the bigger lever than either is your data. Retrieval is only as good as what it can retrieve, so a clean, well-modelled, AI-ready <a href="/services/data-analytics/">data foundation</a> does more for quality than the RAG-versus-fine-tuning decision. We build both the retrieval systems and the data underneath them in our <a href="/services/ai-consulting/">AI consulting</a> practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Frequently <span class="it accent-text">asked.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+                <details class="faq-item"><summary><span>What is the difference between RAG and fine-tuning?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>RAG (retrieval-augmented generation) gives a model access to external knowledge at query time by retrieving relevant data and grounding the answer in it. Fine-tuning adjusts the model's weights on examples so it adopts a particular style, format or behaviour. In short: RAG changes what the model knows; fine-tuning changes how it behaves.</p></div></details>
+                <details class="faq-item"><summary><span>Should I use RAG or fine-tuning?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>For most use cases that need current, proprietary or factual knowledge, start with RAG — it keeps answers grounded in your data and is easy to update. Fine-tune when you need a fixed style, a strict output format, or strong performance on a narrow, repetitive task. Many production systems use both.</p></div></details>
+                <details class="faq-item"><summary><span>Is fine-tuning a way to teach a model my company's facts?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>It is usually the wrong tool for that. Fine-tuning bakes patterns into the model but is poor at reliably storing and updating facts, and it goes stale as your data changes. To give a model your knowledge accurately and keep it current, retrieval (RAG) is the better approach.</p></div></details>
+                <details class="faq-item"><summary><span>What matters more than choosing RAG or fine-tuning?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Your data. A clean, well-structured, well-grounded knowledge base does more for answer quality than the choice between RAG and fine-tuning. Retrieval is only as good as what it retrieves, which is why an AI-ready data foundation is the real lever.</p></div></details>
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Where this leads</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Related <span class="it accent-text">services.</span></h2>
+                </div>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+                <a class="rel-card magnetic" href="/services/ai-consulting/" data-cursor><span class="rel-n">↗</span><h3>AI Consulting</h3><p>AI, LLM and machine-learning systems, strategy to production.</p></a>
+                <a class="rel-card magnetic" href="/services/agentic-operations/" data-cursor><span class="rel-n">↗</span><h3>Agentic Operations</h3><p>AI agents that run real business workflows, safely and governed.</p></a>
+                <a class="rel-card magnetic" href="/services/data-analytics/" data-cursor><span class="rel-n">↗</span><h3>Data &amp; Analytics</h3><p>Pipelines, warehousing and analytics you can act on.</p></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block contact" id="contact">
+        <img class="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" style="left:-12%;right:auto;opacity:0.16;width:min(50vw,520px)" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <span class="eyebrow muted reveal" style="justify-content:center;display:inline-flex">Let's begin</span>
+            <h2 class="big reveal" data-d="1">Put one workflow <span class="it">to work.</span></h2>
+            <p class="c-sub reveal" data-d="2">Tell us the workflow you want to automate, the systems involved and any risk or compliance concerns. We reply to every serious enquiry within one business day.</p>
+            <div class="c-actions reveal" data-d="2">
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="https://cal.eu/machlilies/agent-operations-sprint-intro" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a 30-min call</a>
+            </div>
+            <div class="c-trust reveal" data-d="3">
+                <span>Reply within one business day</span>
+                <span>Human oversight by design</span>
+                <span>Senior team, always</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <span class="foot-word">Mach<span class="it"> Lilies</span></span>
+            <div class="foot-cols">
+                <div class="foot-col">
+                    <h5>The practice</h5>
+                    <p>An independent agentic operations &amp; AI engineering consultancy. We design, govern and operate safe AI agent workflows that do real business work.</p>
+                </div>
+                <div class="foot-col">
+                    <h5>Services</h5>
+                    <a href="/services/">All services</a>
+                    <a href="/services/agentic-operations/">Agentic Operations</a>
+                    <a href="/services/agentops-ai-governance/">AgentOps &amp; Governance</a>
+                    <a href="/services/ai-pilot-rescue/">AI Pilot Rescue</a>
+                    <a href="/services/ai-assurance-evaluation/">AI Assurance</a>
+                    <a href="/services/ai-modernisation-factory/">AI-Native Modernization</a>
+                    <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Industries</h5>
+                    <a href="/industries/insurance-brokers/">Insurance Brokers</a>
+                    <a href="/industries/accountancy-practices/">Accountancy Practices</a>
+                    <a href="/#capabilities" style="margin-top:0.4rem">What we do</a>
+                    <a href="/about/">About the team</a>
+                    <a href="/resources/">Guides &amp; resources</a>
+                    <a href="/#faq">FAQ</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Contact</h5>
+                    <a href="/contact/">Start a conversation</a>
+                    <a href="mailto:hey@machlilies.com">hey@machlilies.com</a>
+                    <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
+                </div>
+            </div>
+            <div class="foot-base">
+                <span>© <span id="year">2026</span> Mach Lilies Limited. All rights reserved.</span>
+                <span class="tag">Mach speed. Lily craft.</span>
+                <a href="#top" data-cursor>Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

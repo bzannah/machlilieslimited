@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>Build vs Buy AI Agents: How to Decide | Mach Lilies</title>
+    <meta name="description" content="Should you build custom AI agents, buy an off-the-shelf product, or partner to deliver? A decision framework covering control, data, differentiation, cost and governance." />
+    <link rel="canonical" href="https://machlilies.com/resources/build-vs-buy-ai-agents/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mach Lilies Limited" />
+    <meta name="keywords" content="build vs buy AI agents, build or buy AI, custom AI agents, AI vendor vs build, AI agent platform, AI build buy decision" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Mach Lilies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://machlilies.com/resources/build-vs-buy-ai-agents/" />
+    <meta property="og:title" content="Build vs Buy AI Agents: How to Decide | Mach Lilies" />
+    <meta property="og:description" content="Should you build custom AI agents, buy an off-the-shelf product, or partner to deliver? A decision framework covering control, data, differentiation, cost and governance." />
+    <meta property="og:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mach Lilies — agentic operations &amp; AI engineering consultancy." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Build vs Buy AI Agents: How to Decide | Mach Lilies" />
+    <meta name="twitter:description" content="Should you build custom AI agents, buy an off-the-shelf product, or partner to deliver? A decision framework covering control, data, differentiation, cost and governance." />
+    <meta name="twitter:image" content="https://machlilies.com/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Mach Lilies — safe, governed AI agents for real operations." />
+    <meta property="article:published_time" content="2026-06-19" />
+    <meta property="article:modified_time" content="2026-06-19" />
+    <meta property="article:author" content="Kai Krause" />
+    <meta property="article:section" content="Buyer's guide" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/favicon.svg" color="#c9f24c" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <!-- no-JS fallback: never trap content behind scroll-reveal -->
+    <noscript><style>.fade-up,.reveal{ opacity:1 !important; transform:none !important; } body{ cursor:auto !important; } .cursor-dot,.cursor-ring{ display:none !important; }</style></noscript>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://machlilies.com/#org",
+      "name": "Mach Lilies",
+      "legalName": "Mach Lilies Limited",
+      "url": "https://machlilies.com/",
+      "logo": "https://machlilies.com/assets/logo-mark.svg",
+      "email": "hey@machlilies.com",
+      "slogan": "Mach speed. Lily craft.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://machlilies.com/resources/build-vs-buy-ai-agents/#article",
+      "headline": "Build vs buy AI agents: how to decide",
+      "description": "Should you build custom AI agents, buy an off-the-shelf product, or partner to deliver? A decision framework covering control, data, differentiation, cost and governance.",
+      "url": "https://machlilies.com/resources/build-vs-buy-ai-agents/",
+      "datePublished": "2026-06-19",
+      "dateModified": "2026-06-19",
+      "author": {
+        "@type": "Person",
+        "@id": "https://machlilies.com/#kai-krause",
+        "name": "Kai Krause",
+        "jobTitle": "Chief Executive Officer",
+        "worksFor": {
+          "@id": "https://machlilies.com/#org"
+        }
+      },
+      "publisher": {
+        "@id": "https://machlilies.com/#org"
+      },
+      "image": "https://machlilies.com/assets/og-image.png",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://machlilies.com/#website"
+      },
+      "mainEntityOfPage": "https://machlilies.com/resources/build-vs-buy-ai-agents/",
+      "keywords": "build vs buy AI agents, build or buy AI, custom AI agents, AI vendor vs build, AI agent platform, AI build buy decision"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://machlilies.com/resources/build-vs-buy-ai-agents/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://machlilies.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides & resources",
+          "item": "https://machlilies.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Build vs buy AI agents",
+          "item": "https://machlilies.com/resources/build-vs-buy-ai-agents/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://machlilies.com/resources/build-vs-buy-ai-agents/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I build or buy AI agents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buy when the workflow is common and not a source of competitive advantage, and a mature product already does it well. Build when the workflow is core to your business, depends on your specific data and systems, or needs governance and control an off-the-shelf tool cannot provide. Many teams take a third path: partner with a consultancy to build a custom, owned system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the risks of buying an off-the-shelf AI agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The main ones are fit (the product does it the vendor's way, not yours), data and integration limits, weaker governance and audit than you need, and lock-in. Off-the-shelf is excellent for commodity workflows, but for anything core or sensitive, the lack of control can become a real constraint."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is building AI agents in-house expensive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can be, mainly because the hard part is not the model but the production engineering around it — integration, evaluation, monitoring, oversight and security. That is why partnering is often the most cost-effective route: you get a custom, owned system and the production discipline, without standing up a full internal AI team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we avoid lock-in either way?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Insist on ownership and portability: your data and source, clean documentation, standard interfaces, and a model-agnostic design so you are not tied to one provider. Whether you buy, build or partner, the goal is a system you can operate and change without depending on a single vendor."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <script>
+      window.GA_MEASUREMENT_ID = "G-PSM4267LV3";
+      (function () {
+        var id = window.GA_MEASUREMENT_ID;
+        if (!id || id.indexOf("XXXX") !== -1) return;
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag; gtag("js", new Date()); gtag("config", id, { anonymize_ip: true });
+      })();
+    </script>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="c-label">View</span></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="brand" data-cursor>
+            <img class="brand-mark" src="/assets/logo-mark.svg" alt="Mach Lilies" width="38" height="38" />
+            <span>
+                <span class="b-name">Mach Lilies</span>
+                <span class="b-sub">Agentic Operations</span>
+            </span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+            <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+            <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+            <a href="/services/ai-modernisation-factory/"><span class="idx">04</span>Modernization</a>
+        </div>
+        <a href="/contact/" class="nav-cta magnetic" data-cursor data-event="cta_contact">Send a message</a>
+        <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/services/agentic-operations/"><span class="idx">01</span>Agentic Ops</a>
+        <a href="/services/agentops-ai-governance/"><span class="idx">02</span>AgentOps</a>
+        <a href="/services/ai-pilot-rescue/"><span class="idx">03</span>Pilot Rescue</a>
+        <a href="/services/ai-assurance-evaluation/"><span class="idx">04</span>AI Assurance</a>
+        <a href="/services/ai-modernisation-factory/"><span class="idx">05</span>Modernization</a>
+        <a href="/services/agentic-operations-sprint/"><span class="idx">06</span>The Sprint</a>
+        <a href="/contact/"><span class="idx">07</span>Contact</a>
+        <div class="mm-foot">hey@machlilies.com</div>
+    </div>
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <a href="/resources/">Guides</a> <span>/</span> <b>Build vs buy AI agents</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">Buyer's guide</span>
+            <h1 class="display reveal" data-d="1">Build vs buy<br/><span class="it accent-text">AI agents.</span></h1>
+            <div class="post-meta reveal" data-d="2">
+                <span class="pm-author">By <b>Kai Krause</b>, Chief Executive Officer</span>
+                <span>Published 19 June 2026</span>
+                <span>7 min read</span>
+            </div>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:1.6rem">Every team adopting AI agents hits the same fork: build something custom, buy an off-the-shelf product, or partner to deliver. The right answer depends on how differentiating, data-specific and governed the workflow needs to be. Here is a framework to decide without regret.</p>
+        </div>
+    </header>
+
+    <section class="block" style="padding-top:0">
+        <div class="wrap">
+            <div class="takeaway reveal">
+                <span class="tk-label">Key takeaways</span>
+                <ul>
+                    <li><b>Buy</b> for common, non-differentiating workflows where a good product already exists.</li>
+                    <li><b>Build</b> when the workflow is core, data-specific or needs governance an off-the-shelf tool can't give.</li>
+                    <li>A third option — <b>partner</b> — gets you a custom, owned system without hiring a whole AI team.</li>
+                    <li>Whatever you choose, insist on <b>governance and ownership</b>: access control, audit, and no lock-in.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" style="padding-top:clamp(2.5rem,6vh,4rem)">
+        <div class="wrap">
+            <div class="article-body reveal">
+<p>Once a team decides AI agents are worth pursuing, the next decision arrives fast: build it, buy it, or get help to deliver it. There is no universal answer, but there is a reliable way to reason about it — based on how differentiating the workflow is, how much it depends on your data, and how much governance it needs.</p>
+
+<h2>The real question</h2>
+<p>Build-versus-buy is really a question about advantage and control. If a workflow is common, not a source of differentiation, and a good product already exists, buying is usually right. If the workflow is core to how you compete, deeply tied to your data and systems, or subject to governance an external product cannot satisfy, that points to build.</p>
+
+<h2>When to buy</h2>
+<p>Buy for commodity workflows: well-trodden problems where a mature product does the job and your needs are close to the default. You get speed and a supported tool, and you avoid maintaining something that is not your advantage. The trade-offs are fit, data and integration limits, the vendor's governance model, and potential lock-in — acceptable when the workflow is not core.</p>
+
+<h2>When to build</h2>
+<p>Build when the workflow is differentiating, depends on your specific data and processes, or requires controls — least-privilege access, audit trails, human oversight — that an off-the-shelf product will not give you. Building means you own the system, the data and the governance. The cost is real, but it concentrates where the value is, and the hard part is rarely the model — it is the production engineering around it.</p>
+
+<h2>The third option: partner</h2>
+<p>Most teams do not actually want to choose between a rigid product and standing up a full internal AI team. Partnering is the middle path: a consultancy builds a custom, owned system with production discipline and governance built in, then hands it over for your team to run. You get the control of build without the cost and delay of hiring the whole capability — which is precisely the model behind our <a href="/services/agentic-operations/">agentic operations</a> work.</p>
+
+<h2>A decision framework</h2>
+<p>Run each candidate workflow through four questions: Is it differentiating? Does it depend on our specific data and systems? Does it need governance an external product cannot provide? Do we want to own and evolve it? The more yeses, the more it points to build or partner over buy. And whichever route you take, insist on governance and ownership — access control, audit trails, portability and no lock-in. The cleanest way to pressure-test the decision for a real workflow is a fixed-scope <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>, which produces a working prototype and an honest build recommendation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Frequently <span class="it accent-text">asked.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+                <details class="faq-item"><summary><span>Should I build or buy AI agents?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Buy when the workflow is common and not a source of competitive advantage, and a mature product already does it well. Build when the workflow is core to your business, depends on your specific data and systems, or needs governance and control an off-the-shelf tool cannot provide. Many teams take a third path: partner with a consultancy to build a custom, owned system.</p></div></details>
+                <details class="faq-item"><summary><span>What are the risks of buying an off-the-shelf AI agent?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>The main ones are fit (the product does it the vendor's way, not yours), data and integration limits, weaker governance and audit than you need, and lock-in. Off-the-shelf is excellent for commodity workflows, but for anything core or sensitive, the lack of control can become a real constraint.</p></div></details>
+                <details class="faq-item"><summary><span>Is building AI agents in-house expensive?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>It can be, mainly because the hard part is not the model but the production engineering around it — integration, evaluation, monitoring, oversight and security. That is why partnering is often the most cost-effective route: you get a custom, owned system and the production discipline, without standing up a full internal AI team.</p></div></details>
+                <details class="faq-item"><summary><span>How do we avoid lock-in either way?</span><i aria-hidden="true"></i></summary><div class="faq-a"><p>Insist on ownership and portability: your data and source, clean documentation, standard interfaces, and a model-agnostic design so you are not tied to one provider. Whether you buy, build or partner, the goal is a system you can operate and change without depending on a single vendor.</p></div></details>
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Where this leads</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Related <span class="it accent-text">services.</span></h2>
+                </div>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+                <a class="rel-card magnetic" href="/services/agentic-operations/" data-cursor><span class="rel-n">↗</span><h3>Agentic Operations</h3><p>AI agents that run real business workflows, safely and governed.</p></a>
+                <a class="rel-card magnetic" href="/services/agentic-operations-sprint/" data-cursor><span class="rel-n">↗</span><h3>Agentic Operations Sprint</h3><p>Map, prototype and business-case your first agent workflow.</p></a>
+                <a class="rel-card magnetic" href="/services/ai-consulting/" data-cursor><span class="rel-n">↗</span><h3>AI Consulting</h3><p>AI, LLM and machine-learning systems, strategy to production.</p></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block contact" id="contact">
+        <img class="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" style="left:-12%;right:auto;opacity:0.16;width:min(50vw,520px)" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <span class="eyebrow muted reveal" style="justify-content:center;display:inline-flex">Let's begin</span>
+            <h2 class="big reveal" data-d="1">Put one workflow <span class="it">to work.</span></h2>
+            <p class="c-sub reveal" data-d="2">Tell us the workflow you want to automate, the systems involved and any risk or compliance concerns. We reply to every serious enquiry within one business day.</p>
+            <div class="c-actions reveal" data-d="2">
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="https://cal.eu/machlilies/agent-operations-sprint-intro" class="btn btn-ghost magnetic" data-cursor data-event="cta_book">Book a 30-min call</a>
+            </div>
+            <div class="c-trust reveal" data-d="3">
+                <span>Reply within one business day</span>
+                <span>Human oversight by design</span>
+                <span>Senior team, always</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <span class="foot-word">Mach<span class="it"> Lilies</span></span>
+            <div class="foot-cols">
+                <div class="foot-col">
+                    <h5>The practice</h5>
+                    <p>An independent agentic operations &amp; AI engineering consultancy. We design, govern and operate safe AI agent workflows that do real business work.</p>
+                </div>
+                <div class="foot-col">
+                    <h5>Services</h5>
+                    <a href="/services/">All services</a>
+                    <a href="/services/agentic-operations/">Agentic Operations</a>
+                    <a href="/services/agentops-ai-governance/">AgentOps &amp; Governance</a>
+                    <a href="/services/ai-pilot-rescue/">AI Pilot Rescue</a>
+                    <a href="/services/ai-assurance-evaluation/">AI Assurance</a>
+                    <a href="/services/ai-modernisation-factory/">AI-Native Modernization</a>
+                    <a href="/services/agentic-operations-sprint/">Agentic Operations Sprint</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Industries</h5>
+                    <a href="/industries/insurance-brokers/">Insurance Brokers</a>
+                    <a href="/industries/accountancy-practices/">Accountancy Practices</a>
+                    <a href="/#capabilities" style="margin-top:0.4rem">What we do</a>
+                    <a href="/about/">About the team</a>
+                    <a href="/resources/">Guides &amp; resources</a>
+                    <a href="/#faq">FAQ</a>
+                </div>
+                <div class="foot-col">
+                    <h5>Contact</h5>
+                    <a href="/contact/">Start a conversation</a>
+                    <a href="mailto:hey@machlilies.com">hey@machlilies.com</a>
+                    <p style="margin-top:0.6rem">Global remote studio.<br/>Working across time zones.</p>
+                </div>
+            </div>
+            <div class="foot-base">
+                <span>© <span id="year">2026</span> Mach Lilies Limited. All rights reserved.</span>
+                <span class="tag">Mach speed. Lily craft.</span>
+                <a href="#top" data-cursor>Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
