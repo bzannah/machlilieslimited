@@ -12,6 +12,14 @@
     </image:image>
   </url>
 
+  <!-- About (E-E-A-T / trust) -->
+  <url>
+    <loc>https://machlilies.com/about/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Services pillar hub -->
   <url>
     <loc>https://machlilies.com/services/</loc>
