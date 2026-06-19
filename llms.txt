@@ -33,6 +33,10 @@ Core principle: bounded agents, clear permissions, human approval, full audit tr
 - [Insurance Brokers](https://machlilies.com/industries/insurance-brokers/): Governed AI agents for renewal packs, policy comparison, claims intake, missing-document chasing, compliance evidence and customer updates — with broker approval and an audit trail.
 - [Accountancy Practices](https://machlilies.com/industries/accountancy-practices/): Governed AI agents for client document chasing, invoice and receipt classification, month-end close, VAT preparation and exception triage — with accountant approval and an audit trail.
 
+## About
+
+- [About Mach Lilies](https://machlilies.com/about/): A small, senior, founder-led team of AI experts. Meet the principals — Kai Krause (CEO), Zach Kosi (CTO) and Mo Satoh (Business Development) — who scope, build, govern and operate the AI agents. Senior end to end, governed by default, measurable ROI, model-agnostic, ISO 27001-aligned, no lock-in.
+
 ## Services hub
 
 - [All services](https://machlilies.com/services/): The full Mach Lilies service range — agentic offers plus the senior engineering bench — on one page, with guidance on where to start.

@@ -923,6 +923,7 @@ def footer():
                     <h5>Industries</h5>
 %s
                     <a href="/#capabilities" style="margin-top:0.4rem">What we do</a>
+                    <a href="/about/">About the team</a>
                     <a href="/resources/">Guides &amp; resources</a>
                     <a href="/#faq">FAQ</a>
                 </div>
@@ -1213,7 +1214,7 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
         </div>
     </section>
 
-    <section class="block">
+{further_reading}    <section class="block">
         <div class="wrap">
             <div class="sec-head">
                 <div>
@@ -1266,7 +1267,7 @@ def build(slug, d, base_path="services", short_name=None, crumb_name="Services",
         ind_h2a=esc(d["ind_h2"][0]), ind_h2b=esc(d["ind_h2"][1]), ind_note=esc(d["ind_note"]),
         industries=ind, why=render_why(d), proof_hl=d["proof_hl"],
         faq_h2a=esc(d["faq_h2"][0]), faq_h2b=esc(d["faq_h2"][1]), faqs=render_faqs(d),
-        related=render_related(slug),
+        related=render_related(slug), further_reading=render_guides(slug),
         contact_h2a=esc(d["contact_h2"][0]), contact_h2b=esc(d["contact_h2"][1]),
         contact_sub=esc(d["contact_sub"]), footer=footer(),
     )
@@ -2449,6 +2450,224 @@ def build_resources_hub():
         footer=footer(), scripts=SCRIPTS_FOOT,
     )
 
+# --------- service / industry  ->  guide cross-linking (the internal mesh) ---------
+SERVICE_GUIDES = {
+    "agentic-operations":        ["what-is-agentic-ai-consulting", "move-ai-pilots-to-production", "governed-ai-agents"],
+    "agentops-ai-governance":    ["governed-ai-agents", "ai-governance-checklist", "agentops-vs-mlops"],
+    "ai-pilot-rescue":           ["move-ai-pilots-to-production", "measuring-ai-agent-roi", "what-is-agentic-ai-consulting"],
+    "ai-assurance-evaluation":   ["ai-governance-checklist", "governed-ai-agents", "agentops-vs-mlops"],
+    "ai-modernisation-factory":  ["agentops-vs-mlops", "what-is-agentic-ai-consulting", "move-ai-pilots-to-production"],
+    "agentic-operations-sprint": ["what-is-agentic-ai-consulting", "measuring-ai-agent-roi", "move-ai-pilots-to-production"],
+    "ai-consulting":             ["what-is-agentic-ai-consulting", "how-to-choose-an-ai-consultancy", "how-much-does-ai-consulting-cost"],
+    "product-engineering":       ["how-to-choose-an-ai-consultancy", "what-is-agentic-ai-consulting", "move-ai-pilots-to-production"],
+    "cloud-platform":            ["agentops-vs-mlops", "ai-governance-checklist", "what-is-agentic-ai-consulting"],
+    "data-analytics":            ["what-is-agentic-ai-consulting", "measuring-ai-agent-roi", "governed-ai-agents"],
+    "design-experience":         ["governed-ai-agents", "what-is-agentic-ai-consulting", "how-to-choose-an-ai-consultancy"],
+    "strategy-advisory":         ["how-to-choose-an-ai-consultancy", "how-much-does-ai-consulting-cost", "ai-governance-checklist"],
+    "insurance-brokers":         ["what-is-agentic-ai-consulting", "governed-ai-agents", "move-ai-pilots-to-production"],
+    "accountancy-practices":     ["what-is-agentic-ai-consulting", "governed-ai-agents", "move-ai-pilots-to-production"],
+}
+
+def render_guides(slug):
+    """A 'Further reading' block of guide cards for a service/industry page.
+    Returns '' when the slug has no mapped guides, so it drops out cleanly."""
+    slugs = SERVICE_GUIDES.get(slug)
+    if not slugs:
+        return ""
+    cards = "\n".join(
+        '''                <a class="rel-card magnetic" href="/resources/%s/" data-cursor><span class="rel-n">%s · %s</span><h3>%s</h3><p>%s</p></a>'''
+        % (s, esc(RESOURCES[s]["category"]), esc(RESOURCES[s]["read"]),
+           esc(RESOURCES[s]["short"]), esc(RESOURCES[s]["desc"]))
+        for s in slugs)
+    return '''    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Further reading</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">From the <span class="it accent-text">guides.</span></h2>
+                </div>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+%s
+            </div>
+        </div>
+    </section>
+
+''' % cards
+
+# ------------------------------- ABOUT PAGE -------------------------------
+ABOUT_TEAM = [
+    ("kai-krause", "KK", "Kai Krause", "Chief Executive Officer",
+     "Kai sets the agentic operations strategy and leads client engagements end to end. He works directly with operations, technology and risk leaders to find the workflows where a governed agent creates real value, and stays close to delivery from the first call through to production."),
+    ("zach-kosi", "ZK", "Zach Kosi", "Chief Technology Officer",
+     "Zach owns architecture, security and delivery quality across every agent workflow we ship. He designs the bounded, least-privilege systems and the AgentOps controls — permissions, evaluation, audit trails and incident response — that make agents safe to run in production."),
+    ("mo-satoh", "MS", "Mo Satoh", "Business Development",
+     "Mo is your first point of contact, scoping the Agentic Operations Sprint and the right first workflow. He makes sure every engagement starts with a clear problem, the systems involved, and an honest view of where AI will and will not pay off."),
+]
+
+ABOUT_WHY = [
+    ("i", "Senior, end to end", "The principals who scope your work are the people who build, govern and operate it. No account managers, no hand-off to juniors."),
+    ("ii", "Governed by default", "Bounded agents, least-privilege access, human approval and a full audit trail. Control is part of delivery, not an afterthought."),
+    ("iii", "Measurable ROI", "Every engagement is tied to a real number — time saved, error reduction and throughput — measured after launch, not just promised."),
+    ("iv", "Model-agnostic", "Claude, GPT, Gemini or open-source — chosen on cost, privacy and fit, never vendor loyalty."),
+    ("v", "Security-first", "We work to ISO 27001-aligned security practices, with privacy and data isolation designed in from the start."),
+    ("vi", "Yours to own", "Clean, documented systems with runbooks and knowledge transfer. We engineer our own exit — no lock-in."),
+]
+
+ABOUT_FAQS = [
+    ("Who are Mach Lilies?",
+     "Mach Lilies is an independent, founder-led agentic operations and AI engineering consultancy. We are a small, senior team that designs, deploys, governs and operates safe AI agent workflows for real business processes — with human oversight, audit trails and measurable ROI."),
+    ("Are you AI experts or generalists?",
+     "We are senior AI and engineering specialists. Agentic operations is our focus, supported by a full bench across AI, cloud, data, product and strategy. The people who scope your work are the ones who build and run it — there is no hand-off to juniors."),
+    ("Where are you based?",
+     "We are a global, remote-first studio working across time zones. Engagements are run remotely, with senior delivery wherever you are."),
+    ("How do you work with clients?",
+     "Most engagements begin with a fixed-scope Agentic Operations Sprint, followed by milestone-based production rollout and optional managed AgentOps support. We reply to every serious enquiry within one business day."),
+]
+
+def about_jsonld():
+    url = BASE + "/about/"
+    title = "About Mach Lilies — Senior, Founder-Led AI Experts"
+    person_nodes = [
+        {"@type": "Person", "@id": BASE + "/#" + pid, "name": nm, "jobTitle": jt,
+         "worksFor": {"@id": BASE + "/#org"}, "description": bio}
+        for pid, _mono, nm, jt, bio in ABOUT_TEAM]
+    graph = [
+        ORG_NODE,
+        {"@type": "AboutPage", "@id": url + "#webpage", "url": url, "name": title,
+         "description": "Meet Mach Lilies — a small, senior, founder-led team of AI experts who design, govern and operate production-ready AI agents.",
+         "isPartOf": {"@id": BASE + "/#website"}, "about": {"@id": BASE + "/#org"}, "inLanguage": "en"},
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "About", "item": url}]},
+        {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in ABOUT_FAQS]},
+    ] + person_nodes
+    return json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False)
+
+def build_about():
+    url = BASE + "/about/"
+    title = "About Mach Lilies — Senior, Founder-Led AI Experts"
+    desc = ("Mach Lilies is a small, senior, founder-led team of AI experts. Meet the people who design, "
+            "govern and operate your AI agents — the principals who scope the work are the ones who build and run it.")
+    keywords = ("AI experts, about Mach Lilies, AI consultancy team, senior AI consultants, founder-led AI, "
+                "agentic AI experts, AI consulting team")
+    team_cards = "\n".join('''                <article class="team-card" data-cursor>
+                    <div class="team-photo">
+                        <span class="team-mono" aria-hidden="true">%s</span>
+                        <img src="/assets/media/team/%s.jpg" alt="%s, %s of Mach Lilies" width="640" height="640" loading="lazy" decoding="async" onerror="this.remove()" />
+                    </div>
+                    <div class="team-body">
+                        <h3>%s</h3>
+                        <span class="team-role">%s</span>
+                        <p>%s</p>
+                    </div>
+                </article>''' % (mono, slug, esc(nm), esc(jt), esc(nm), esc(jt), esc(bio))
+        for slug, mono, nm, jt, bio in ABOUT_TEAM)
+    why = "\n".join(
+        '                <div class="why"><span class="n">%s</span><h3>%s</h3><p>%s</p></div>'
+        % (esc(n), esc(h), esc(p)) for n, h, p in ABOUT_WHY)
+    return '''{head}
+<body>
+{chrome}
+
+    <header class="svc-hero" id="top">
+        <img class="hero-lily" id="hero-lily" src="/assets/logo-mark-line.svg" alt="" aria-hidden="true" />
+        <div class="wrap" style="position:relative;z-index:2">
+            <nav class="crumb reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <b>About</b>
+            </nav>
+            <span class="eyebrow reveal" data-d="1" style="margin-top:1.4rem;display:inline-flex">About Mach Lilies</span>
+            <h1 class="display reveal" data-d="1">Senior AI experts,<br/><span class="it accent-text">founder-led.</span></h1>
+            <p class="svc-lead reveal" data-d="2">Mach Lilies is an independent, founder-led consultancy and a small, senior team of AI experts. We design, deploy, govern and operate <strong>production-ready AI agents</strong> for real business workflows — and the principals who scope your work are the ones who build and run it. <strong>Mach speed. Lily craft.</strong></p>
+            <div class="hero-cta reveal" data-d="3" style="margin-top:2.2rem">
+                <a href="/contact/" class="btn btn-solid magnetic" data-cursor data-event="cta_contact">Send a message <span class="arrow">→</span></a>
+                <a href="/services/" class="btn btn-ghost magnetic" data-cursor>See what we do</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="block manifesto">
+        <div class="wrap">
+            <span class="eyebrow muted reveal">The studio</span>
+            <p class="reveal" data-d="1" style="margin-top:1.5rem">A small studio with an <span class="hl">outsized standard</span> — and <span class="dim">the talent is the product.</span></p>
+            <p class="svc-lead reveal" data-d="2" style="margin-top:2rem;max-width:72ch">We take few clients, on purpose, so each one gets the whole of our attention. In the era of AI coding agents, the advantage is no longer typing code faster — it is redesigning operations around AI agents and operating them safely in production. That is the work we do, and we sell governed AI operations, not billable engineering hours.</p>
+        </div>
+    </section>
+
+    <section class="block" id="team">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">The team</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">The people who <span class="it accent-text">build and run it.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">Senior and founder-led. The people who scope your agentic workflows are the people who build, govern and operate them.</p>
+            </div>
+            <div class="team-grid reveal" data-d="1">
+{team_cards}
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Why Mach Lilies</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">How we <span class="it accent-text">work.</span></h2>
+                </div>
+                <p class="sec-no reveal" data-d="2" style="max-width:34ch">The principles behind every engagement — the senior-led difference, in practice.</p>
+            </div>
+            <div class="why-grid reveal" data-d="1">
+{why}
+            </div>
+        </div>
+    </section>
+
+    <section class="block faq" id="faq">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Questions</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">About <span class="it accent-text">us.</span></h2>
+                </div>
+            </div>
+            <div class="faq-list reveal" data-d="1">
+{faqs}
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="wrap">
+            <div class="sec-head">
+                <div>
+                    <span class="eyebrow muted reveal">Explore</span>
+                    <h2 class="display reveal" data-d="1" style="margin-top:1.2rem">Where to <span class="it accent-text">go next.</span></h2>
+                </div>
+            </div>
+            <div class="rel-grid reveal" data-d="1">
+                <a class="rel-card magnetic" href="/services/" data-cursor><span class="rel-n">↗</span><h3>All services</h3><p>Agentic offers plus the senior engineering bench, on one page.</p></a>
+                <a class="rel-card magnetic" href="/resources/" data-cursor><span class="rel-n">↗</span><h3>Guides &amp; resources</h3><p>Practical writing on agentic AI, governed agents and production.</p></a>
+                <a class="rel-card magnetic" href="/services/agentic-operations-sprint/" data-cursor><span class="rel-n">↗</span><h3>The Sprint</h3><p>The clearest first step from AI experiments to agentic operations.</p></a>
+            </div>
+        </div>
+    </section>
+
+{contact}
+
+{footer}
+{scripts}'''.format(
+        head=head(title, desc, url, about_jsonld(), keywords=keywords),
+        chrome=CHROME, team_cards=team_cards, why=why,
+        faqs=render_faqs({"faqs": ABOUT_FAQS}),
+        contact=contact_cta("Work with the", "senior team.",
+                            "Tell us the workflow you want to take off your team's plate, or the AI problem you're stuck on. We reply to every serious enquiry within one business day."),
+        footer=footer(), scripts=SCRIPTS_FOOT,
+    )
+
 if __name__ == "__main__":
     print("== service pages ==")
     for slug in ORDER:
@@ -2468,6 +2687,11 @@ if __name__ == "__main__":
     os.makedirs(os.path.dirname(cpath), exist_ok=True)
     open(cpath, "w").write(build_contact())
     print("  wrote contact/index.html")
+    print("== about ==")
+    apath = os.path.join(ROOT, "about", "index.html")
+    os.makedirs(os.path.dirname(apath), exist_ok=True)
+    open(apath, "w").write(build_about())
+    print("  wrote about/index.html")
     print("== services hub ==")
     spath = os.path.join(ROOT, "services", "index.html")
     open(spath, "w").write(build_services_hub())
